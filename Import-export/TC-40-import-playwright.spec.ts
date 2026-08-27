@@ -1,18 +1,25 @@
 import { leapwork } from "./leapwork";
 
+import { teamName } from "@assets/Utilities/random-team";
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
-import { CreateNewTeam } from "@assets/Utilities/Create New Team";
-import { RandomTeam, teamName } from "@assets/Utilities/random-team";
-import { RenameTeam } from "@assets/Utilities/Rename Team";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
+import { CreateNewTeam } from "@assets/Utilities/Create New Team";
+import { RenameTeam } from "@assets/Utilities/Rename Team";
 
 leapwork.configuration({
-  enableSelfHeal: false,
-  timeoutMs: 5000
+  timeoutMs: Number(
+    leapwork.team.settings.get("timeoutMs")
+    ?? leapwork.workspace.settings.get("timeoutMs")
+  ) || 5000,
+  enableSelfHeal:
+    (leapwork.team.settings.get("enableSelfHeal")
+      ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
 leapwork.variables.set("userId", "user_39");
 leapwork.variables.set("teamName", teamName);
+
+await logInfo(leapwork.generateTOTP("wcmdl7bkddwddktm"))
 
 
 // ai-studio-step-id: 2c298fad
@@ -30,7 +37,6 @@ await leapwork.step("Use test case: Rename Team", async () => {
     return await RenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-
 // ai-studio-step-id: pw18d3uub0
 await leapwork.step("Right-click the \"${teamName}\" folder on the Leapwork AI Studio page", async () => {
     const regression = page.locator('.explorer-list').getByText(teamName, { exact: true });
@@ -40,7 +46,7 @@ await leapwork.step("Right-click the \"${teamName}\" folder on the Leapwork AI S
 // ai-studio-step-id: pw10trlo80
 await leapwork.step(`Click the Import submenu in the ${teamName} context menu`, async () => {
     // Click div
-    await page.getByText('Import›').click();
+    await page.getByText('Import').click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw1e376f50

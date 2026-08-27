@@ -3,8 +3,13 @@ import { leapwork } from "./leapwork";
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 
 leapwork.configuration({
-  enableSelfHeal: false,
-  timeoutMs: 5000
+  timeoutMs: Number(
+    leapwork.team.settings.get("timeoutMs")
+    ?? leapwork.workspace.settings.get("timeoutMs")
+  ) || 5000,
+  enableSelfHeal:
+    (leapwork.team.settings.get("enableSelfHeal")
+      ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
 leapwork.variables.set("userId", "user_41");
@@ -13,7 +18,6 @@ leapwork.variables.set("userId", "user_41");
 await leapwork.step("Use test case: Microsoft Login", async () => {
     return await MicrosoftLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
 
 // ai-studio-step-id: pwxspsol00
 await leapwork.step("Click the Test-41 Play (Personal) button", async () => {
@@ -26,6 +30,12 @@ await leapwork.step("Click the Account and settings option to open the Account a
     const target = page.getByText('Account and settings', { exact: true });
     await target.click({ force: true });
 });
+
+// ai-studio-step-id: pw8ybfxz00
+await leapwork.step("Click the Credits button in the settings navigation", async () => {
+    // Click button "Credits"
+    await page.getByRole('button', { name: 'Credits' }).click();
+}, { action: "click" });
 
 // ai-studio-step-id: pwdnapzp00
 await leapwork.step("Validate that the Credits heading shows 'Credits' on the Leapwork Play page", async () => {
@@ -68,8 +78,15 @@ await leapwork.step("Validate that the Audit logs button shows 'Audit logs' on L
 }, { action: "validate"});
 
 // ai-studio-step-id: pw1wekowj0
-await leapwork.step("Click the Close account and settings button", async () => {
-    const closeAccountAndSettings = page.getByRole('button', { name: 'Close account and settings', exact: true });
-    await closeAccountAndSettings.click({ force: true });
+await leapwork.step("Click the page background in Leapwork AI Studio", async () => {
+    const body = page.locator('body');
+    await body.click({ force: true });
 });
 
+
+
+// ai-studio-step-id: pw1vf24p70
+await leapwork.step("Click the Account & Settings tab in Leapwork Play", async () => {
+    // Click button "Account & Settings close"
+    await page.getByRole('button', { name: 'Account & Settings close' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[1]/div/div/div[1]" });

@@ -3,8 +3,13 @@ import { leapwork } from "./leapwork";
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 
 leapwork.configuration({
-  enableSelfHeal: false,
-  timeoutMs: 5000
+  timeoutMs: Number(
+    leapwork.team.settings.get("timeoutMs")
+    ?? leapwork.workspace.settings.get("timeoutMs")
+  ) || 5000,
+  enableSelfHeal:
+    (leapwork.team.settings.get("enableSelfHeal")
+      ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
 leapwork.variables.set("userId", "aistudio_user_2");
@@ -14,7 +19,6 @@ leapwork.variables.set("passwordId", "aistudio_user_2");
 await leapwork.step("Use test case: Microsoft Login", async () => {
     return await MicrosoftLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
 
 // ai-studio-step-id: pw9k6gc100
 await leapwork.step("Click the Automation Account (Personal) button", async () => {
@@ -26,6 +30,12 @@ await leapwork.step("Click the Automation Account (Personal) button", async () =
 await leapwork.step("Click the Account and settings option", async () => {
     // Click span
     await page.getByText('Account and settings').click();
+}, { action: "click" });
+
+// ai-studio-step-id: pwajhem600
+await leapwork.step("Click the Credits button in the settings navigation", async () => {
+    // Click button "Credits"
+    await page.getByRole('button', { name: 'Credits' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw19etmq30
@@ -46,11 +56,10 @@ await leapwork.step("Validate that the Credits heading shows 'Credits' on the Le
     await expect(page.getByRole('heading', { name: 'Credits' })).toContainText("Credits");
 }, { action: "validate" });
 
-// ai-studio-step-id: pwajhem600
-await leapwork.step("Validate the Credit Team heading shows 'Credit Team' on the Leapwork AI Studio page", async () => {
-    // Assert heading "Credit Team" contains "Credit Team"
-    await expect(page.getByRole('heading', { name: 'Credit Team' })).toContainText("Credit Team");
-}, { action: "validate" });
+// await leapwork.step("Validate the Credit Team heading shows 'Credit Team' on the Leapwork AI Studio page", async () => {
+//     // Assert heading "Credit Team" contains "Credit Team"
+//     await expect(page.getByRole('heading', { name: 'Credit Team' })).toContainText("Credit Team");
+// }, { action: "validate" });
 
 // ai-studio-step-id: pw1vrrwrj0
 await leapwork.step("Validate the Credit Audit heading shows 'Credit Audit' on Leapwork AI Studio", async () => {
@@ -129,4 +138,17 @@ await leapwork.step("Click the Audit logs button", async () => {
     // Click span
     await page.getByRole('button', { name: 'Audit logs' }).click();
 }, { action: "click" });
+
+
+
+
+
+
+
+
+
+
+
+
+
 

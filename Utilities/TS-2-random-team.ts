@@ -10,14 +10,14 @@ export const microsoftUsers = {
     //TC-189 Documentation - Build a Knowledge Base
     //TC-199 Admin Section - Validation
     //TC-187 Admin Section - Assertion
-    //TC-201 Account & Settings - Credit
+    //TC-58 Account & Settings - Credit
     //TC-109 Credit Transfer
     //TC-170 Workspace Change Validation
     "aistudio_user_2": "aistudio02@outlook.com", // admin account used in above TCs
     "aistudio_user_3": "aistudio03@outlook.com", // workspace change validation
     "aistudio_user_4": "jindgar-dummy@outlook.com", //TC-224 BYOK-Create-Edit-Delete
     "user_6": "test-play-6@outlook.com", //TC-103 Agent-Create-Delete
-    "user_7": "test-play-7@outlook.com", //TC-164 Create Duplicate
+    "user_7": "test-play-7@outlook.com", //TC-28 Create Duplicate
     "user_8": "test-play-8@outlook.com", //TC-138 KB to BP creation validation
     "user_9": "test-play-9@outlook.com", //TC-102 Folder-Create-Delete
     "user_10": "test-play-10@outlook.com", //TC-101 KnowledgeBase-Create-Delete
@@ -30,7 +30,7 @@ export const microsoftUsers = {
     "user_17": "test-play-17@outlook.com", //TC-217 Invitation to already existing user
     "user_18": "test-play-18@outlook.com", //TC-174 Seach Assest
     "user_19": "test-play-19@outlook.com", //TC-136 Category
-    "user_20": "test-play-20@outlook.com", //TC-135 Environment
+    "user_20": "test-play-20@outlook.com", //TC-53 Environment
     "user_21": "test-play-21@outlook.com", //TC-175 Source control
     "user_22": "test-play-22@outlook.com", //TC-247 Create Custom adapter
     "user_23": "test-play-23@outlook.com", //TC-177 Secret
@@ -41,23 +41,28 @@ export const microsoftUsers = {
     "user_28": "test-play-28@outlook.com", //TC-235 Logout Validation
     "user_29": "test-play-29@outlook.com", //TC-238 Add Category to a test case
     "user_30": "test-play-30@outlook.com", //TC-178 Record TC-RL-Add tag-Run RL- Validate RL Run
-    "user_31": "test-play-31@outlook.com", //TC-243 Schedule RL
+    "user_31": "test-play-31@outlook.com", //TC-142 Schedule RL
     "user_32": "test-play-32@outlook.com", //TC-236 Add tag to a test case
     "user_33": "test-play-33@outlook.com", //TC-229 Record a test case
     "user_34": "test-play-34@outlook.com", //TC-223 Workspace Settings page
     "user_35": "test-k-play-35@outlook.com", //TC-176 Adapter
     "user_38": "test-play-38@outlook.com", //TC-163 File-Create-Delete
-    "user_39": "test-play-39@outlook.com", //TC-165 import playwright
+    "user_39": "test-play-39@outlook.com", //TC-40 import playwright
     "user_40": "test-play-40@outlook.com", //TC-170 Workspace Change Validation
-    "user_41": "test-play-41@outlook.com", //TC-185 Account & Settings - Audit Log
+    "user_41": "test-play-41@outlook.com", //TC-57 Account & Settings - Audit Log
     "user_44": "test-play-44@outlook.com", //TC-192 LLM Chat Improved
     "user_45": "test-play-45@outlook.com", //TC-193 LLM Command Test
     "user_49": "test-play-49@outlook.com", //TC-218 Invite to a new user from team settings
     "user_50": "test-play-50@outlook.com", //TC-219 KB with git
     "user_51": "test-play-51@outlook.com", //TC-240 Navigate to Play landing page,
+    "user_53": "test-play-53@outlook.com", //TC-287 Add settings in team
+    "user_55": "test-play-55@outlook.com", //TC-252 Copy paste            Note: Don't use it for other test case
     "user_56": "test-play-56@outlook.com", //TC-123 Playwright)modify-ExecuteTC
+    "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
     "reg_1": "regression-user-1@outlook.com", //TC-117 Context menu of a step
+    "reg_3": "regression_kd_1@outlook.com",  // TC-290 CRUD TC Status
     "reg_12": "regression-user-jp-5@outlook.com", // TC-305 Import test case using file
+    "reg_11": "regression-user-jp-4@outlook.com", // TC-139 Import playwright from file
 }
 
 export const passwords = {
