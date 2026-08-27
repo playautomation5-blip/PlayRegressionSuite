@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T11:18:04.424Z",
+  "generatedAt": "2026-08-27T11:41:29.732Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -268,6 +268,21 @@
       ]
     },
     {
+      "assetId": 15705,
+      "displayId": "FD-32",
+      "name": "Logout",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 15706,
+          "displayId": "TC-127",
+          "name": "Logout Validation",
+          "kind": "test-case",
+          "repoPath": "Logout/TC-127-Logout-Validation.spec.ts"
+        }
+      ]
+    },
+    {
       "assetId": 8312,
       "displayId": "FD-15",
       "name": "Search Assets",
@@ -358,6 +373,36 @@
           "name": "Tag",
           "kind": "test-case",
           "repoPath": "Team configuration/TC-56-Tag.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 15413,
+      "displayId": "FD-29",
+      "name": "Test Case",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 15726,
+          "displayId": "FD-34",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 15748,
+              "displayId": "TC-137",
+              "name": "Add Category",
+              "kind": "test-case",
+              "repoPath": "Test Case/Utilities/TC-137-Add-Category.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 15712,
+          "displayId": "TC-129",
+          "name": "Add Category to a test case",
+          "kind": "test-case",
+          "repoPath": "Test Case/TC-129-Add-Category-to-a-test-case.spec.ts"
         }
       ]
     },
@@ -829,6 +874,14 @@
       "parentAssetId": 11438
     },
     {
+      "assetId": 15706,
+      "assetKind": "test-case",
+      "displayId": "TC-127",
+      "name": "Logout Validation",
+      "repoPath": "Logout/TC-127-Logout-Validation.spec.ts",
+      "parentAssetId": 15705
+    },
+    {
       "assetId": 8463,
       "assetKind": "test-case",
       "displayId": "TC-48",
@@ -915,6 +968,22 @@
       "name": "Add Tag",
       "repoPath": "Team configuration/Utilities/TC-50-Add-Tag.spec.ts",
       "parentAssetId": 8485
+    },
+    {
+      "assetId": 15712,
+      "assetKind": "test-case",
+      "displayId": "TC-129",
+      "name": "Add Category to a test case",
+      "repoPath": "Test Case/TC-129-Add-Category-to-a-test-case.spec.ts",
+      "parentAssetId": 15413
+    },
+    {
+      "assetId": 15748,
+      "assetKind": "test-case",
+      "displayId": "TC-137",
+      "name": "Add Category",
+      "repoPath": "Test Case/Utilities/TC-137-Add-Category.spec.ts",
+      "parentAssetId": 15726
     },
     {
       "assetId": 9721,
