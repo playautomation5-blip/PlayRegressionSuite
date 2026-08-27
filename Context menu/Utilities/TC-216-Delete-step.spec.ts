@@ -25,7 +25,7 @@ await leapwork.step("Click Delete step for step 3 \"This is an inserted step - 2
 }, { action: "click" });
 
 // ai-studio-step-id: pw14iilii0
-await leapwork.step("Validate 1 new step was deleted", async () => {
+await leapwork.step("Validate 1 step was deleted", async () => {
     const steps = page.locator('.testcase-step-row');
     await expect(steps).toHaveCount(initialStepCount - 1);
 }, { action: "validate", timeoutMs: 30000 });

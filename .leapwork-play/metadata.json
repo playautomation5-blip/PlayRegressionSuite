@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T07:20:14.469Z",
+  "generatedAt": "2026-08-27T13:13:39.405Z",
   "repo": {
     "connectorId": 76,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -414,6 +414,43 @@
           "name": "Playwright-Modify-ExecuteTC",
           "kind": "test-case",
           "repoPath": "Playwright/TC-47-Playwright-Modify-ExecuteTC.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 10272,
+      "displayId": "FD-33",
+      "name": "RBAC",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 10276,
+          "displayId": "FD-34",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 10273,
+              "displayId": "TC-217",
+              "name": "login-54",
+              "kind": "test-case",
+              "repoPath": "RBAC/Utilities/TC-217-login-54.spec.ts"
+            },
+            {
+              "assetId": 10274,
+              "displayId": "TC-218",
+              "name": "login-59",
+              "kind": "test-case",
+              "repoPath": "RBAC/Utilities/TC-218-login-59.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 10275,
+          "displayId": "TC-219",
+          "name": "Team - RBAC",
+          "kind": "test-case",
+          "repoPath": "RBAC/TC-219-Team-RBAC.spec.ts"
         }
       ]
     },
@@ -1320,6 +1357,30 @@
       "name": "Playwright-Modify-ExecuteTC",
       "repoPath": "Playwright/TC-47-Playwright-Modify-ExecuteTC.spec.ts",
       "parentAssetId": 8059
+    },
+    {
+      "assetId": 10275,
+      "assetKind": "test-case",
+      "displayId": "TC-219",
+      "name": "Team - RBAC",
+      "repoPath": "RBAC/TC-219-Team-RBAC.spec.ts",
+      "parentAssetId": 10272
+    },
+    {
+      "assetId": 10273,
+      "assetKind": "test-case",
+      "displayId": "TC-217",
+      "name": "login-54",
+      "repoPath": "RBAC/Utilities/TC-217-login-54.spec.ts",
+      "parentAssetId": 10276
+    },
+    {
+      "assetId": 10274,
+      "assetKind": "test-case",
+      "displayId": "TC-218",
+      "name": "login-59",
+      "repoPath": "RBAC/Utilities/TC-218-login-59.spec.ts",
+      "parentAssetId": 10276
     },
     {
       "assetId": 8230,

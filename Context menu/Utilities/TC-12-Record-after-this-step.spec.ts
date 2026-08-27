@@ -14,8 +14,15 @@ await leapwork.step("Click “Record after this step” in the step context menu
     await page.getByText('Record after this step').click();
 }, { action: "click" });
 
+// ai-studio-step-id: pwirk05e00
+await leapwork.step("Validate that the Stop recording button is visible", async () => {
+    // Click button "Stop recording"
+    await expect(page.getByRole('button', { name: 'Stop recording' })).toBeEnabled({ timeout: 30000 });
+    await page.waitForTimeout(2000);
+}, { action: "click" });
+
 // ai-studio-step-id: pw1reg5yk0
-await leapwork.step("Click the “Waiting for video stream...” video canvas in Leapwork Play", async () => {
+await leapwork.step("Click the video canvas showing \"Waiting for video stream...\"", async () => {
     // Click canvas
     await page.locator('canvas').first().click();
 }, { action: "click" });

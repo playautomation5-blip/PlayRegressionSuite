@@ -40,8 +40,8 @@ leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetType", "New test case");
 leapwork.variables.set("assetName", "created");
 leapwork.variables.set("renamedAssetName", "renamed");
-leapwork.variables.set("envName", "Leapwork");
-leapwork.variables.set("envUrl", "https://leapwork.com");
+leapwork.variables.set("envName", "LeapnLeash");
+leapwork.variables.set("envUrl", "https://demoapps.leapwork.ai/retail/");
 
 // ai-studio-step-id: 2b84abf9
 await leapwork.step("Use test case: Microsoft Login", async () => {
@@ -132,7 +132,7 @@ await leapwork.step("Wait for 2 seconds", async () => {
 // ai-studio-step-id: pwkrgmey00
 await leapwork.step("Use test case: Record after this step", async () => {
     return await RecordAfterThisStep();
-}, { action: "asset_reference", linkedAssetType: "test-case", continueOnFailure: true });
+}, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pw1wmuthp0
 await leapwork.step("Wait for 2 seconds", async () => {
