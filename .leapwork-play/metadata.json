@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T12:27:07.381Z",
+  "generatedAt": "2026-08-27T12:27:21.066Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -61,6 +61,21 @@
           "name": "import login",
           "kind": "test-case",
           "repoPath": "check/TC-103-import-login.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 15322,
+      "displayId": "FD-28",
+      "name": "Context menu",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 15723,
+          "displayId": "TC-132",
+          "name": "Copy Paste",
+          "kind": "test-case",
+          "repoPath": "Context menu/TC-132-Copy-Paste.spec.ts"
         }
       ]
     },
@@ -726,6 +741,14 @@
       "name": "import login",
       "repoPath": "check/TC-103-import-login.spec.ts",
       "parentAssetId": 10102
+    },
+    {
+      "assetId": 15723,
+      "assetKind": "test-case",
+      "displayId": "TC-132",
+      "name": "Copy Paste",
+      "repoPath": "Context menu/TC-132-Copy-Paste.spec.ts",
+      "parentAssetId": 15322
     },
     {
       "assetId": 8251,
