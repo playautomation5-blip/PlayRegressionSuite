@@ -1,7 +1,7 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
+import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { RenameAsset } from "@assets/Utilities/Rename Asset";
@@ -9,8 +9,13 @@ import { DeleteAsset } from "@assets/Utilities/Delete Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 
 leapwork.configuration({
-  enableSelfHeal: false,
-  timeoutMs: 5000
+  timeoutMs: Number(
+    leapwork.team.settings.get("timeoutMs")
+    ?? leapwork.workspace.settings.get("timeoutMs")
+  ) || 5000,
+  enableSelfHeal:
+    (leapwork.team.settings.get("enableSelfHeal")
+      ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
 leapwork.variables.set("userId", "user_9");

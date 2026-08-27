@@ -54,7 +54,10 @@ export const microsoftUsers = {
     "user_45": "test-play-45@outlook.com", //TC-193 LLM Command Test
     "user_49": "test-play-49@outlook.com", //TC-218 Invite to a new user from team settings
     "user_50": "test-play-50@outlook.com", //TC-219 KB with git
-    "user_51": "test-play-51@outlook.com", //TC-240 Navigate to Play landing page
+    "user_51": "test-play-51@outlook.com", //TC-240 Navigate to Play landing page,
+    "user_56": "test-play-56@outlook.com", //TC-123 Playwright)modify-ExecuteTC
+    "reg_1": "regression-user-1@outlook.com", //TC-117 Context menu of a step
+    "reg_12": "regression-user-jp-5@outlook.com", // TC-305 Import test case using file
 }
 
 export const passwords = {

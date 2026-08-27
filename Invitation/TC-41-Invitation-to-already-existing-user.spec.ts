@@ -1,14 +1,19 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
-import { RandomTeam, teamName } from "@assets/Utilities/random-team";
+import { RandomTeam2, RandomTeam, teamName, password } from "@assets/Utilities/random-team";
 import { ConstantORExtensions, invitationEmail } from "@assets/Utilities/ConstantORExtensions";
+import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 
 //Invitation to user who already exists in the system
 
 leapwork.configuration({
-  enableSelfHeal: false,
-  timeoutMs: 5000
+  timeoutMs: Number(
+    leapwork.team.settings.get("timeoutMs")
+    ?? leapwork.workspace.settings.get("timeoutMs")
+  ) || 5000,
+  enableSelfHeal:
+    (leapwork.team.settings.get("enableSelfHeal")
+      ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
 leapwork.variables.set("userId", "user_17");
@@ -22,12 +27,13 @@ await leapwork.step("Use test case: Microsoft Login", async () => {
     return await MicrosoftLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
+
+
 // ai-studio-step-id: pwqkbaxl00
 await leapwork.step("Validate that the \"Invite your colleague\" button shows \"Invite your colleague\" on Leapwork Play", async () => {
     // Assert span contains "Invite your colleague"
     await expect(page.getByRole('button', { name: 'Invite your colleague' })).toContainText("Invite your colleague");
 }, { action: "validate" });
-
 
 // ai-studio-step-id: pwlm49pq00
 await leapwork.step("Click the Invite your colleague button", async () => {
@@ -54,9 +60,9 @@ await leapwork.step("Click the Send invitation button in the Invite your colleag
 }, { action: "click" });
 
 // ai-studio-step-id: pwwgnvrg00
-await leapwork.step("Validate the Leapwork Play invite popup shows 'User already invited.'", async () => {
+await leapwork.step("Validate the Leapwork Play invite popup shows 'User already exists'", async () => {
     // Assert paragraph contains "User already invited."
-    await expect(page.getByText('User already invited.')).toContainText("User already invited.");
+    await expect(page.getByText('User already exists')).toContainText("User already exists");
 }, { action: "validate" });
 
 // ai-studio-step-id: pwn08weh00

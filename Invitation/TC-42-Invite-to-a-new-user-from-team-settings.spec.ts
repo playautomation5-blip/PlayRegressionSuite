@@ -1,22 +1,29 @@
 import { leapwork } from "./leapwork";
 
+import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { ConstantORExtensions, generateRandomEmail } from "@assets/Utilities/ConstantORExtensions";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
+import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 
 //Invitation to a user from team settings section
 
 leapwork.configuration({
-  enableSelfHeal: false,
-  timeoutMs: 5000
+  timeoutMs: Number(
+    leapwork.team.settings.get("timeoutMs")
+    ?? leapwork.workspace.settings.get("timeoutMs")
+  ) || 5000,
+  enableSelfHeal:
+    (leapwork.team.settings.get("enableSelfHeal")
+      ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
 const invitationEmail = generateRandomEmail();
 leapwork.variables.set("userId", "user_49");
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("renamedAssetName", "renamed");
+
 
 // ai-studio-step-id: e11324dd
 await leapwork.step("Use test case: Microsoft Login", async () => {
@@ -29,10 +36,15 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 
+// await leapwork.step(`Double-click the ${teamName} item`, async () => {
+//     // Double-click "team 33897"
+//     await page.getByText(teamName).dblclick();
+// }, { action: "click" });
+
 // ai-studio-step-id: pw1xsyupg0
-await leapwork.step(`Double-click the ${teamName} item`, async () => {
-    // Double-click "team 33897"
-    await page.getByText(teamName).dblclick();
+await leapwork.step("Click the “team 66689” team in Leapwork Play", async () => {
+    // Click "team 66689"
+    await page.getByText('team').first().dblclick();
 }, { action: "click" });
 
 // ai-studio-step-id: pwf2kshn00
@@ -53,6 +65,11 @@ await leapwork.step("Click the Role dropdown set to Write", async () => {
     await page.getByRole('combobox', { name: 'Role' }).click();
 }, { action: "click" });
 
+// ai-studio-step-id: pw1vk1iju0
+await leapwork.step("Validate the permission dropdown on Leapwork Play shows \"Administrator\"", async () => {
+    // Assert option "Administrator" contains "Administrator"
+    await expect(page.getByRole('option', { name: 'Administrator' })).toContainText("Administrator");
+}, { action: "validate", relativeXpath: "//*[@id=\"fluent-option_r_3_\"]" });
 
 
 
@@ -84,4 +101,3 @@ await leapwork.step("Click the Done button on the invitation sent popup", async 
 await leapwork.step("Use test case: Delete Team", async () => {
     return await DeleteTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
