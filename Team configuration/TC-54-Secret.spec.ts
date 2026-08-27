@@ -1,9 +1,9 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
-import { RandomTeam, teamName } from "@assets/Utilities/random-team";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
+import { RandomTeam, teamName } from "@assets/Utilities/random-team";
+import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 
 leapwork.variables.set("secretName", "secetr 1", leapwork.storage.LOCAL);
 const lw__secretName = leapwork.variables.get("secretName", leapwork.storage.LOCAL) as string;
@@ -22,7 +22,8 @@ leapwork.configuration({
 leapwork.variables.set("userId", "user_23");
 leapwork.variables.set("teamName", teamName);
 
-// ai-studio-step-id: 64004d9e
+
+// ai-studio-step-id: pw1vs03ju0
 await leapwork.step("Use test case: Microsoft Login", async () => {
     return await MicrosoftLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
