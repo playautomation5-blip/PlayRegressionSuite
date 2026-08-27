@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T11:41:29.732Z",
+  "generatedAt": "2026-08-27T12:27:07.381Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -157,6 +157,13 @@
       "kind": "folder",
       "children": [
         {
+          "assetId": 15770,
+          "displayId": "TC-139",
+          "name": "import playwright from file",
+          "kind": "test-case",
+          "repoPath": "Import-export/TC-139-import-playwright-from-file.spec.ts"
+        },
+        {
           "assetId": 8426,
           "displayId": "TC-40",
           "name": "import playwright",
@@ -279,6 +286,21 @@
           "name": "Logout Validation",
           "kind": "test-case",
           "repoPath": "Logout/TC-127-Logout-Validation.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 15416,
+      "displayId": "FD-30",
+      "name": "Runlist",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 15780,
+          "displayId": "TC-142",
+          "name": "Schedule RL",
+          "kind": "test-case",
+          "repoPath": "Runlist/TC-142-Schedule-RL.spec.ts"
         }
       ]
     },
@@ -794,6 +816,14 @@
       "parentAssetId": 8308
     },
     {
+      "assetId": 15770,
+      "assetKind": "test-case",
+      "displayId": "TC-139",
+      "name": "import playwright from file",
+      "repoPath": "Import-export/TC-139-import-playwright-from-file.spec.ts",
+      "parentAssetId": 8308
+    },
+    {
       "assetId": 8344,
       "assetKind": "test-case",
       "displayId": "TC-39",
@@ -880,6 +910,14 @@
       "name": "Logout Validation",
       "repoPath": "Logout/TC-127-Logout-Validation.spec.ts",
       "parentAssetId": 15705
+    },
+    {
+      "assetId": 15780,
+      "assetKind": "test-case",
+      "displayId": "TC-142",
+      "name": "Schedule RL",
+      "repoPath": "Runlist/TC-142-Schedule-RL.spec.ts",
+      "parentAssetId": 15416
     },
     {
       "assetId": 8463,
