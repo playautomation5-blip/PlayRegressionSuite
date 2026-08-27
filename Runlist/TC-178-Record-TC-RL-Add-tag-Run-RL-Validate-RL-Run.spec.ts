@@ -63,11 +63,6 @@ await leapwork.step("Use test case: Create New Asset", async () => {
     return await CreateNewAsset();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-
-// await leapwork.step("Use test case: Add Tag", async () => {
-//     return await AddTag();
-// }, { action: "asset_reference", linkedAssetType: "test-case" });
-
 // ai-studio-step-id: a9323cad
 await leapwork.step("Use test case: Record", async () => {
     return await Record();
@@ -138,11 +133,11 @@ await leapwork.step("Click the Major (S2) severity option in Selection criteria"
     await page.locator('div').filter({ hasText: /^Major \(S2\)$/ }).nth(1).click();
 }, { action: "click" });
 
-
-// await leapwork.step("Validate that \"TC-1 Test Case\" appears in the Selected test cases table on Leapwork Play", async () => {
-//     // Assert span contains "TC-1 Test Case"
-//     await expect(page.getByText('TC-1 Test Case')).toContainText("TC-1 Test Case");
-// }, { action: "validate" });
+// ai-studio-step-id: pw6b088r00
+await leapwork.step("Validate that \"TC-1 Test Case\" appears in the Selected test cases table on Leapwork Play", async () => {
+    // Assert span contains "TC-1 Test Case"
+    await expect(page.getByText('TC-1 Test Case')).toContainText("TC-1 Test Case");
+}, { action: "validate" });
 
 // ai-studio-step-id: V42Ys9Cd
 await leapwork.step("Click the Run now button in the Selection criteria section", async () => {
@@ -150,10 +145,11 @@ await leapwork.step("Click the Run now button in the Selection criteria section"
     await page.getByRole('button', { name: 'Run now' }).click();
 }, { action: "click" });
 
-// await leapwork.step("Validate that the run status shows 'Pending' on the Leapwork Play run list", async () => {
-//     // Assert span contains "Pending"
-//     await expect(page.getByText('Pending')).toContainText("Pending");
-// }, { action: "validate" });
+// ai-studio-step-id: pwoklu1j00
+await leapwork.step("Validate that the run status shows 'Pending' on the Leapwork Play run list", async () => {
+    // Assert span contains "Pending"
+    await expect(page.getByText('Pending')).toContainText("Pending");
+}, { action: "validate" });
 
 // await leapwork.step("Click the Explorer button", async () => {
 //     // Click button "Explorer"
