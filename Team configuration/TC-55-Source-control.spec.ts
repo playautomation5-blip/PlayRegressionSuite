@@ -11,8 +11,8 @@ const lw__myGithubConnector = leapwork.variables.get("myGithubConnector", leapwo
 leapwork.variables.set("ownerOrganizationWorkspace", "leapwork", leapwork.storage.LOCAL);
 const lw__ownerOrganizationWorkspace = leapwork.variables.get("ownerOrganizationWorkspace", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("personalAccessToken", "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", leapwork.storage.LOCAL);
-const lw__personalAccessToken = leapwork.variables.get("personalAccessToken", leapwork.storage.LOCAL) as string;
+//PAT token set as a team secret
+const lw__personalAccessToken = leapwork.variables.getSecret("SourceControlPAT", leapwork.storage.LOCAL) as string;
 
 leapwork.variables.set("myGithubConnector2", "connector-edited", leapwork.storage.LOCAL);
 const lw__myGithubConnector2 = leapwork.variables.get("myGithubConnector2", leapwork.storage.LOCAL) as string;
