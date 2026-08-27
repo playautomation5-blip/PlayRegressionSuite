@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T07:29:42.812Z",
+  "generatedAt": "2026-08-27T10:53:40.582Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -162,6 +162,13 @@
           "name": "import playwright",
           "kind": "test-case",
           "repoPath": "Import-export/TC-40-import-playwright.spec.ts"
+        },
+        {
+          "assetId": 15395,
+          "displayId": "TC-110",
+          "name": "Import test case using file",
+          "kind": "test-case",
+          "repoPath": "Import-export/TC-110-Import-test-case-using-file.spec.ts"
         },
         {
           "assetId": 8344,
@@ -511,6 +518,13 @@
           "repoPath": "Utilities/TC-6-Delete-Create-Rename-Team.spec.ts"
         },
         {
+          "assetId": 15394,
+          "displayId": "TC-109",
+          "name": "Import Tests or Playwright",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-109-Import-Tests-or-Playwright.spec.ts"
+        },
+        {
           "assetId": 8213,
           "displayId": "TC-11",
           "name": "Microsoft Login",
@@ -711,6 +725,14 @@
       "name": "Credit Transfer",
       "repoPath": "Credit Management/TC-37-Credit-Transfer.spec.ts",
       "parentAssetId": 8307
+    },
+    {
+      "assetId": 15395,
+      "assetKind": "test-case",
+      "displayId": "TC-110",
+      "name": "Import test case using file",
+      "repoPath": "Import-export/TC-110-Import-test-case-using-file.spec.ts",
+      "parentAssetId": 8308
     },
     {
       "assetId": 8344,
@@ -966,6 +988,14 @@
       "displayId": "TC-106",
       "name": "Add company",
       "repoPath": "Utilities/TC-106-Add-company.spec.ts",
+      "parentAssetId": 8195
+    },
+    {
+      "assetId": 15394,
+      "assetKind": "test-case",
+      "displayId": "TC-109",
+      "name": "Import Tests or Playwright",
+      "repoPath": "Utilities/TC-109-Import-Tests-or-Playwright.spec.ts",
       "parentAssetId": 8195
     },
     {
