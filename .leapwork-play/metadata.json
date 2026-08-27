@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T12:35:50.316Z",
+  "generatedAt": "2026-08-27T12:36:40.434Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -377,6 +377,13 @@
           "repoPath": "Team configuration/TC-51-Adapter.spec.ts"
         },
         {
+          "assetId": 15668,
+          "displayId": "TC-124",
+          "name": "Add settings in team",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-124-Add-settings-in-team.spec.ts"
+        },
+        {
           "assetId": 8489,
           "displayId": "TC-52",
           "name": "Category",
@@ -541,6 +548,13 @@
           "name": "Admin Section - Validation",
           "kind": "test-case",
           "repoPath": "User Profile/TC-60-Admin-Section-Validation.spec.ts"
+        },
+        {
+          "assetId": 15728,
+          "displayId": "TC-134",
+          "name": "Admin Section - Whats new",
+          "kind": "test-case",
+          "repoPath": "User Profile/TC-134-Admin-Section-Whats-new.spec.ts"
         },
         {
           "assetId": 8523,
@@ -988,6 +1002,14 @@
       "parentAssetId": 17
     },
     {
+      "assetId": 15668,
+      "assetKind": "test-case",
+      "displayId": "TC-124",
+      "name": "Add settings in team",
+      "repoPath": "Team configuration/TC-124-Add-settings-in-team.spec.ts",
+      "parentAssetId": 8313
+    },
+    {
       "assetId": 15676,
       "assetKind": "test-case",
       "displayId": "TC-125",
@@ -1130,6 +1152,14 @@
       "name": "Expand collapse",
       "repoPath": "Trash Can/Utilities/TC-101-Expand-collapse.spec.ts",
       "parentAssetId": 9684
+    },
+    {
+      "assetId": 15728,
+      "assetKind": "test-case",
+      "displayId": "TC-134",
+      "name": "Admin Section - Whats new",
+      "repoPath": "User Profile/TC-134-Admin-Section-Whats-new.spec.ts",
+      "parentAssetId": 8314
     },
     {
       "assetId": 8519,
