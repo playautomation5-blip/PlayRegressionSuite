@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { RandomTeam2, RandomTeam, teamName } from "@assets/Utilities/random-team";
+import { teamName } from "@assets/Utilities/random-team";
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
