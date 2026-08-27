@@ -67,11 +67,6 @@ await leapwork.step("Use test case: Record", async () => {
     return await Record();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// await leapwork.step("Click the Explorer button", async () => {
-//     // Click button "Explorer"
-//     await page.getByRole('button', { name: 'Explorer' }).click();
-// }, { action: "click" });
-
 // ai-studio-step-id: pwiz7nek00
 await leapwork.step("Click the Select tags dropdown in the test case metadata panel", async () => {
     // Click div
