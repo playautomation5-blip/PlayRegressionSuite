@@ -1,0 +1,14 @@
+import { leapwork } from "./leapwork";
+
+// ai-studio-step-id: pwyjrrsg00
+await leapwork.step("Delete the teams", async () => {
+    await page.waitForTimeout(3000);
+    while (await page.locator('.explorer-item[data-explorer-item-id]').count()) {
+        const team = page.locator('.explorer-item[data-explorer-item-id]').first();
+
+        await team.click({ button: 'right', force: true });
+        await page.getByText('Delete', { exact: true }).click();
+        const deleteButton = page.getByRole('button', { name: 'Delete', exact: true });
+        await deleteButton.click({ force: true });
+    }
+});
