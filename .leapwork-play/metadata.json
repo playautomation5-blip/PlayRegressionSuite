@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T12:27:21.066Z",
+  "generatedAt": "2026-08-27T12:35:50.316Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -311,6 +311,13 @@
       "kind": "folder",
       "children": [
         {
+          "assetId": 15721,
+          "displayId": "TC-130",
+          "name": "Record TC-RL-Add tag-Run RL- Validate RL Run",
+          "kind": "test-case",
+          "repoPath": "Runlist/TC-130-Record-TC-RL-Add-tag-Run-RL-Validate-RL-Run.spec.ts"
+        },
+        {
           "assetId": 15780,
           "displayId": "TC-142",
           "name": "Schedule RL",
@@ -431,6 +438,20 @@
               "name": "Add Category",
               "kind": "test-case",
               "repoPath": "Test Case/Utilities/TC-137-Add-Category.spec.ts"
+            },
+            {
+              "assetId": 15729,
+              "displayId": "TC-135",
+              "name": "Add Env to a test case",
+              "kind": "test-case",
+              "repoPath": "Test Case/Utilities/TC-135-Add-Env-to-a-test-case.spec.ts"
+            },
+            {
+              "assetId": 15727,
+              "displayId": "TC-133",
+              "name": "Record",
+              "kind": "test-case",
+              "repoPath": "Test Case/Utilities/TC-133-Record.spec.ts"
             }
           ]
         },
@@ -935,6 +956,14 @@
       "parentAssetId": 15705
     },
     {
+      "assetId": 15721,
+      "assetKind": "test-case",
+      "displayId": "TC-130",
+      "name": "Record TC-RL-Add tag-Run RL- Validate RL Run",
+      "repoPath": "Runlist/TC-130-Record-TC-RL-Add-tag-Run-RL-Validate-RL-Run.spec.ts",
+      "parentAssetId": 15416
+    },
+    {
       "assetId": 15780,
       "assetKind": "test-case",
       "displayId": "TC-142",
@@ -1037,6 +1066,22 @@
       "name": "Add Category to a test case",
       "repoPath": "Test Case/TC-129-Add-Category-to-a-test-case.spec.ts",
       "parentAssetId": 15413
+    },
+    {
+      "assetId": 15727,
+      "assetKind": "test-case",
+      "displayId": "TC-133",
+      "name": "Record",
+      "repoPath": "Test Case/Utilities/TC-133-Record.spec.ts",
+      "parentAssetId": 15726
+    },
+    {
+      "assetId": 15729,
+      "assetKind": "test-case",
+      "displayId": "TC-135",
+      "name": "Add Env to a test case",
+      "repoPath": "Test Case/Utilities/TC-135-Add-Env-to-a-test-case.spec.ts",
+      "parentAssetId": 15726
     },
     {
       "assetId": 15748,

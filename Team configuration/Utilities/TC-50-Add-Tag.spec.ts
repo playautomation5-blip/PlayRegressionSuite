@@ -1,15 +1,14 @@
 import { leapwork } from "./leapwork";
 
-
 const teamName = leapwork.variables.get("teamName") as string;
 const lw__tagName = leapwork.variables.get("tagName") as string;
 const lw__tagDescription = leapwork.variables.get("tagDescription") as string;
 
 // ai-studio-step-id: pwcegcfi00
-await leapwork.step(`Double click the \"${teamName}\" folder in Leapwork AI Studio`, async () => {
-    const tempTeam = page.getByText(teamName, { exact: true });
-    await tempTeam.click({ clickCount: 2, force: true });
-});
+await leapwork.step("Double-click team twice", async () => {
+    // Double-click textbox "Search"
+    await page.getByText('team').first().dblclick();
+}, { action: "dblclick" });
 
 // ai-studio-step-id: pw18012db0
 await leapwork.step("Click the disabled + Add Tag button in Leapwork AI Studio", async () => {
