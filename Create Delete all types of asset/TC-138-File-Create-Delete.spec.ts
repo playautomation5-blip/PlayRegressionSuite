@@ -27,6 +27,7 @@ leapwork.variables.set("renamedAssetName", "renamed");
 
 const lw__text = "abc";
 const lw__text2 = "def";
+const checkGitVar ="1245";
 
 // ai-studio-step-id: pw1vs03ju0
 await leapwork.step("Use test case: Microsoft Login", async () => {
