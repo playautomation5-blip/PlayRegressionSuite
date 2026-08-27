@@ -33,41 +33,35 @@ await leapwork.step("Use test case: Create New Asset", async () => {
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 
-// ai-studio-step-id: pw1j34xxb0
-await leapwork.step("Validate the Import from Git button shows 'Import from Git' on the Leapwork Play page", async () => {
-    // Assert button "Import from Git" contains "Import from Git"
-    await expect(page.getByRole('button', { name: 'Import from Git' })).toContainText("Import from Git");
-}, { action: "validate" });
+// ai-studio-step-id: pwzdld5300
+await leapwork.step("Validate the text shows 'Add connections' on the Leapwork Play page.", async () => {
+    // Assert strong contains "Add connections"
+    await expect(page.getByText('Add connections')).toContainText("Add connections");
+}, { action: "validate", relativeXpath: ".//div[2]/div/div[2]/div/div[2]/strong" });
 
-// ai-studio-step-id: pw1937h3g0
-await leapwork.step("Click the Import from Git button in the Git repositories section", async () => {
-    // Click button "Import from Git"
-    await page.getByRole('button', { name: 'Import from Git' }).click();
-}, { action: "click" });
+// ai-studio-step-id: pw1ccqh6k0
+await leapwork.step("Click the Add connection combobox", async () => {
+    // Click span
+    await page.getByRole('combobox', { name: 'Add connection' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div/div[3]/div/button[@aria-label=\"Add connection\"]/span[1]" });
 
-// ai-studio-step-id: pw1x0m9150
-await leapwork.step("Validate that the Connector label shows 'Connector' on the Leapwork Play asset page", async () => {
-    // Assert label contains "Connector"
-    await expect(page.getByText('Connector', { exact: true })).toContainText("Connector");
-}, { action: "validate" });
+// ai-studio-step-id: pw15skxhf0
+await leapwork.step("Validate the option shows 'Atlassian' on the Leapwork Play page.", async () => {
+    // Assert span contains "Atlassian"
+    await expect(page.getByText('Atlassian')).toContainText("Atlassian");
+}, { action: "validate", relativeXpath: "//*[@id=\"fluent-option_r_5_\"]/span[2]/span" });
 
-// ai-studio-step-id: pw1wxdsj60
-await leapwork.step("Validate the \"Subpath (optional)\" label is visible on the Leapwork Play repository form", async () => {
-    // Assert label contains "Subpath (optional)"
-    await expect(page.getByText('Subpath (optional)')).toContainText("Subpath (optional)");
-}, { action: "validate" });
+// ai-studio-step-id: pw1bsl35a0
+await leapwork.step("Validate the option shows 'GitHub' on the Leapwork Play page", async () => {
+    // Assert span contains "GitHub"
+    await expect(page.getByText('GitHub')).toContainText("GitHub");
+}, { action: "validate", relativeXpath: "//*[@id=\"fluent-option_r_6_\"]/span[2]/span" });
 
-// ai-studio-step-id: pw17zro3f0
-await leapwork.step("Validate on Leapwork Play that the Include globs label shows 'Include globs (optional, one per line)'", async () => {
-    // Assert label contains "Include globs (optional, one per line)"
-    await expect(page.getByText('Include globs (optional, one')).toContainText("Include globs (optional, one per line)");
-}, { action: "validate" });
-
-// ai-studio-step-id: pw16rya600
-await leapwork.step("Validate that the Exclude globs label shows 'Exclude globs (optional, one per line)'", async () => {
-    // Assert label contains "Exclude globs (optional, one per line)"
-    await expect(page.getByText('Exclude globs (optional, one')).toContainText("Exclude globs (optional, one per line)");
-}, { action: "validate"});
+// ai-studio-step-id: pw1tv79p10
+await leapwork.step("Validate that the button shows 'Create blueprint generator' on the Leapwork Play page.", async () => {
+    // Assert button "Create blueprint generator" contains "Create blueprint generator"
+    await expect(page.getByRole('button', { name: 'Create blueprint generator' })).toContainText("Create blueprint generator");
+}, { action: "validate", relativeXpath: ".//div[2]/div/div[1]/div[2]/span[2]/button" });
 
 // ai-studio-step-id: 39143cb9
 await leapwork.step("Use test case: Delete Team", async () => {
