@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T12:51:34.881Z",
+  "generatedAt": "2026-08-27T14:06:40.180Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -498,6 +498,13 @@
           "name": "Add Category to a test case",
           "kind": "test-case",
           "repoPath": "Test Case/TC-129-Add-Category-to-a-test-case.spec.ts"
+        },
+        {
+          "assetId": 15889,
+          "displayId": "TC-150",
+          "name": "Record a test case",
+          "kind": "test-case",
+          "repoPath": "Test Case/TC-150-Record-a-test-case.spec.ts"
         }
       ]
     },
@@ -539,9 +546,9 @@
         {
           "assetId": 9722,
           "displayId": "TC-98",
-          "name": "Empty trash can",
+          "name": "Empty trash can- old",
           "kind": "test-case",
-          "repoPath": "Trash Can/TC-98-Empty-trash-can.spec.ts"
+          "repoPath": "Trash Can/TC-98-Empty-trash-can-old.spec.ts"
         },
         {
           "assetId": 9723,
@@ -1136,6 +1143,14 @@
       "parentAssetId": 15413
     },
     {
+      "assetId": 15889,
+      "assetKind": "test-case",
+      "displayId": "TC-150",
+      "name": "Record a test case",
+      "repoPath": "Test Case/TC-150-Record-a-test-case.spec.ts",
+      "parentAssetId": 15413
+    },
+    {
       "assetId": 15727,
       "assetKind": "test-case",
       "displayId": "TC-133",
@@ -1171,8 +1186,8 @@
       "assetId": 9722,
       "assetKind": "test-case",
       "displayId": "TC-98",
-      "name": "Empty trash can",
-      "repoPath": "Trash Can/TC-98-Empty-trash-can.spec.ts",
+      "name": "Empty trash can- old",
+      "repoPath": "Trash Can/TC-98-Empty-trash-can-old.spec.ts",
       "parentAssetId": 9683
     },
     {
