@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T12:36:40.434Z",
+  "generatedAt": "2026-08-27T12:51:34.881Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -162,6 +162,36 @@
           "name": "Credit Transfer",
           "kind": "test-case",
           "repoPath": "Credit Management/TC-37-Credit-Transfer.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 15855,
+      "displayId": "FD-36",
+      "name": "External Adapter",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 15856,
+          "displayId": "TC-147",
+          "name": "External Adapter Filter Hook",
+          "kind": "test-case",
+          "repoPath": "External Adapter/TC-147-External-Adapter-Filter-Hook.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 15822,
+      "displayId": "FD-35",
+      "name": "Git",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 15823,
+          "displayId": "TC-144",
+          "name": "Github Connector",
+          "kind": "test-case",
+          "repoPath": "Git/TC-144-Github-Connector.spec.ts"
         }
       ]
     },
@@ -864,6 +894,22 @@
       "name": "Credit Transfer",
       "repoPath": "Credit Management/TC-37-Credit-Transfer.spec.ts",
       "parentAssetId": 8307
+    },
+    {
+      "assetId": 15856,
+      "assetKind": "test-case",
+      "displayId": "TC-147",
+      "name": "External Adapter Filter Hook",
+      "repoPath": "External Adapter/TC-147-External-Adapter-Filter-Hook.spec.ts",
+      "parentAssetId": 15855
+    },
+    {
+      "assetId": 15823,
+      "assetKind": "test-case",
+      "displayId": "TC-144",
+      "name": "Github Connector",
+      "repoPath": "Git/TC-144-Github-Connector.spec.ts",
+      "parentAssetId": 15822
     },
     {
       "assetId": 15395,
