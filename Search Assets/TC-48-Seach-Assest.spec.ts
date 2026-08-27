@@ -1,10 +1,10 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { RenameTeam } from "@assets/Utilities/Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
+import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 
 leapwork.variables.set("search", "shivani", leapwork.storage.LOCAL);
 const lw__search = leapwork.variables.get("search", leapwork.storage.LOCAL) as string;
@@ -38,7 +38,7 @@ leapwork.variables.set("teamName",teamName);
 leapwork.variables.set("assetType", "New test case");
 
 
-// ai-studio-step-id: 678520c3
+// ai-studio-step-id: f5724df9
 await leapwork.step("Use test case: Microsoft Login", async () => {
     return await MicrosoftLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
@@ -58,7 +58,7 @@ await leapwork.step("Use test case: Rename Team", async () => {
     return await RenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: f5724df9
+// ai-studio-step-id: pwy56vpc00
 await leapwork.step("Use test case: Create New Asset", async () => {
       const entries = Object.entries(assetDictionary);
     for (let i = 0; i < 5; i++) {
