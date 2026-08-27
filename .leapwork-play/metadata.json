@@ -1,0 +1,1720 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-27T07:27:54.717Z",
+  "repo": {
+    "connectorId": 352,
+    "repoSlug": "playautomation5-blip/PlayRegressionSuite",
+    "baseBranch": "feature/stagingRegression"
+  },
+  "team": {
+    "assetId": 1638,
+    "displayId": "TM-1",
+    "name": "Regression"
+  },
+  "tree": [
+    {
+      "assetId": 19592,
+      "displayId": "FD-42",
+      "name": "BYOK",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 20526,
+          "displayId": "FD-53",
+          "name": "utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 20529,
+              "displayId": "TC-248",
+              "name": "Delete existing models",
+              "kind": "test-case",
+              "repoPath": "BYOK/utilities/TC-248-Delete-existing-models.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 19593,
+          "displayId": "TC-224",
+          "name": "BYOK-Create-Edit-Delete",
+          "kind": "test-case",
+          "repoPath": "BYOK/TC-224-BYOK-Create-Edit-Delete.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 25768,
+      "displayId": "FD-62",
+      "name": "Context menu",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 25804,
+          "displayId": "TC-289",
+          "name": "Context menu of a step",
+          "kind": "test-case",
+          "repoPath": "Context menu/TC-289-Context-menu-of-a-step.spec.ts"
+        },
+        {
+          "assetId": 24280,
+          "displayId": "TC-252",
+          "name": "Copy Paste",
+          "kind": "test-case",
+          "repoPath": "Context menu/TC-252-Copy-Paste.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 2315,
+      "displayId": "FO-2",
+      "name": "Create-Delete all type of Assets",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 2973,
+          "displayId": "TC-103",
+          "name": "Agent -Create-Delete",
+          "kind": "test-case",
+          "repoPath": "Create-Delete all type of Assets/TC-103-Agent-Create-Delete.spec.ts"
+        },
+        {
+          "assetId": 9081,
+          "displayId": "TC-164",
+          "name": "Create Duplicate",
+          "kind": "test-case",
+          "repoPath": "Create-Delete all type of Assets/TC-164-Create-Duplicate.spec.ts"
+        },
+        {
+          "assetId": 9076,
+          "displayId": "TC-163",
+          "name": "File-Create-Delete",
+          "kind": "test-case",
+          "repoPath": "Create-Delete all type of Assets/TC-163-File-Create-Delete.spec.ts"
+        },
+        {
+          "assetId": 2972,
+          "displayId": "TC-102",
+          "name": "Folder-Create-Delete",
+          "kind": "test-case",
+          "repoPath": "Create-Delete all type of Assets/TC-102-Folder-Create-Delete.spec.ts"
+        },
+        {
+          "assetId": 2971,
+          "displayId": "TC-101",
+          "name": "KnowledgeBase-Create-Delete",
+          "kind": "test-case",
+          "repoPath": "Create-Delete all type of Assets/TC-101-KnowledgeBase-Create-Delete.spec.ts"
+        },
+        {
+          "assetId": 2970,
+          "displayId": "TC-100",
+          "name": "Runlist-Create-Delete",
+          "kind": "test-case",
+          "repoPath": "Create-Delete all type of Assets/TC-100-Runlist-Create-Delete.spec.ts"
+        },
+        {
+          "assetId": 2969,
+          "displayId": "TC-99",
+          "name": "Team-Create-Delete",
+          "kind": "test-case",
+          "repoPath": "Create-Delete all type of Assets/TC-99-Team-Create-Delete.spec.ts"
+        },
+        {
+          "assetId": 2968,
+          "displayId": "TC-98",
+          "name": "Test case-Create-Delete",
+          "kind": "test-case",
+          "repoPath": "Create-Delete all type of Assets/TC-98-Test-case-Create-Delete.spec.ts"
+        },
+        {
+          "assetId": 2967,
+          "displayId": "TC-97",
+          "name": "Typescript-Create-Delete",
+          "kind": "test-case",
+          "repoPath": "Create-Delete all type of Assets/TC-97-Typescript-Create-Delete.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 2991,
+      "displayId": "FO-27",
+      "name": "Credit Management",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 2992,
+          "displayId": "TC-109",
+          "name": "Credit Transfer",
+          "kind": "test-case",
+          "repoPath": "Credit Management/TC-109-Credit-Transfer.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 30302,
+      "displayId": "FD-67",
+      "name": "Execution",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 30433,
+          "displayId": "TC-310",
+          "name": "New test case",
+          "kind": "test-case",
+          "repoPath": "Execution/TC-310-New-test-case.spec.ts"
+        },
+        {
+          "assetId": 30303,
+          "displayId": "TC-309",
+          "name": "Xpath execution",
+          "kind": "test-case",
+          "repoPath": "Execution/TC-309-Xpath-execution.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 22874,
+      "displayId": "FD-54",
+      "name": "External Adapter",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 30969,
+          "displayId": "TC-312",
+          "name": "Enable Llm Over Native Using External Adapter",
+          "kind": "test-case",
+          "repoPath": "External Adapter/TC-312-Enable-Llm-Over-Native-Using-External-Adapter.spec.ts"
+        },
+        {
+          "assetId": 22875,
+          "displayId": "TC-251",
+          "name": "External Adapter Filter Hook",
+          "kind": "test-case",
+          "repoPath": "External Adapter/TC-251-External-Adapter-Filter-Hook.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 25814,
+      "displayId": "FD-65",
+      "name": "Git",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 25815,
+          "displayId": "TC-291",
+          "name": "github connector",
+          "kind": "test-case",
+          "repoPath": "Git/TC-291-github-connector.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 2841,
+      "displayId": "FO-15",
+      "name": "Import-export",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 26030,
+          "displayId": "TC-304",
+          "name": "Import playwright from file",
+          "kind": "test-case",
+          "repoPath": "Import-export/TC-304-Import-playwright-from-file.spec.ts"
+        },
+        {
+          "assetId": 9617,
+          "displayId": "TC-165",
+          "name": "import playwright",
+          "kind": "test-case",
+          "repoPath": "Import-export/TC-165-import-playwright.spec.ts"
+        },
+        {
+          "assetId": 26036,
+          "displayId": "TC-305",
+          "name": "Import test case using file",
+          "kind": "test-case",
+          "repoPath": "Import-export/TC-305-Import-test-case-using-file.spec.ts"
+        },
+        {
+          "assetId": 3163,
+          "displayId": "TC-137",
+          "name": "import-export tests",
+          "kind": "test-case",
+          "repoPath": "Import-export/TC-137-import-export-tests.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 2376,
+      "displayId": "FO-8",
+      "name": "Invitation",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 18914,
+          "displayId": "TC-217",
+          "name": "Invitation to already existing user",
+          "kind": "test-case",
+          "repoPath": "Invitation/TC-217-Invitation-to-already-existing-user.spec.ts"
+        },
+        {
+          "assetId": 18998,
+          "displayId": "TC-218",
+          "name": "Invite to a new user from team settings",
+          "kind": "test-case",
+          "repoPath": "Invitation/TC-218-Invite-to-a-new-user-from-team-settings.spec.ts"
+        },
+        {
+          "assetId": 3085,
+          "displayId": "TC-132",
+          "name": "Invite to new user from top banner without adding to workspace",
+          "kind": "test-case",
+          "repoPath": "Invitation/TC-132-Invite-to-new-user-from-top-banner-without-adding-to-workspace.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 2840,
+      "displayId": "FO-14",
+      "name": "KnowledgeBase",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 3195,
+          "displayId": "TC-138",
+          "name": "KB to BP creation validation",
+          "kind": "test-case",
+          "repoPath": "KnowledgeBase/TC-138-KB-to-BP-creation-validation.spec.ts"
+        },
+        {
+          "assetId": 19040,
+          "displayId": "TC-219",
+          "name": "KB with git",
+          "kind": "test-case",
+          "repoPath": "KnowledgeBase/TC-219-KB-with-git.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 13755,
+      "displayId": "FD-37",
+      "name": "LLM Chat",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 26041,
+          "displayId": "TC-306",
+          "name": "Edit playwright step using chat",
+          "kind": "test-case",
+          "repoPath": "LLM Chat/TC-306-Edit-playwright-step-using-chat.spec.ts"
+        },
+        {
+          "assetId": 13670,
+          "displayId": "TC-192",
+          "name": "LLM Chat Working",
+          "kind": "test-case",
+          "repoPath": "LLM Chat/TC-192-LLM-Chat-Working.spec.ts"
+        },
+        {
+          "assetId": 13702,
+          "displayId": "TC-193",
+          "name": "URL Navigation Via Chat",
+          "kind": "test-case",
+          "repoPath": "LLM Chat/TC-193-URL-Navigation-Via-Chat.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 20096,
+      "displayId": "FD-48",
+      "name": "Logout",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 20097,
+          "displayId": "TC-235",
+          "name": "Logout Validation",
+          "kind": "test-case",
+          "repoPath": "Logout/TC-235-Logout-Validation.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 20196,
+      "displayId": "FD-49",
+      "name": "Navigation",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 20197,
+          "displayId": "TC-240",
+          "name": "Navigate to Play landing page",
+          "kind": "test-case",
+          "repoPath": "Navigation/TC-240-Navigate-to-Play-landing-page.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 2503,
+      "displayId": "FO-13",
+      "name": "Non-leapwork-Play flows in considration",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 4118,
+          "displayId": "TC-152",
+          "name": "AmazonDelayTest",
+          "kind": "test-case",
+          "repoPath": "Non-leapwork-Play flows in considration/TC-152-AmazonDelayTest.spec.ts"
+        },
+        {
+          "assetId": 3967,
+          "displayId": "TC-151",
+          "name": "Delayed PoPup",
+          "kind": "test-case",
+          "repoPath": "Non-leapwork-Play flows in considration/TC-151-Delayed-PoPup.spec.ts"
+        },
+        {
+          "assetId": 2938,
+          "displayId": "TC-85",
+          "name": "New test case",
+          "kind": "test-case",
+          "repoPath": "Non-leapwork-Play flows in considration/TC-85-New-test-case.spec.ts"
+        },
+        {
+          "assetId": 2607,
+          "displayId": "TC-76",
+          "name": "PopUp test",
+          "kind": "test-case",
+          "repoPath": "Non-leapwork-Play flows in considration/TC-76-PopUp-test.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 25745,
+      "displayId": "FD-57",
+      "name": "Playwright",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 25749,
+          "displayId": "TC-256",
+          "name": "Playwright-Modify-ExecuteTC",
+          "kind": "test-case",
+          "repoPath": "Playwright/TC-256-Playwright-Modify-ExecuteTC.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 10065,
+      "displayId": "FD-34",
+      "name": "Runlist",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 25873,
+          "displayId": "FD-66",
+          "name": "Utility",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 25874,
+              "displayId": "TC-293",
+              "name": "Basic Flow",
+              "kind": "test-case",
+              "repoPath": "Runlist/Utility/TC-293-Basic-Flow.spec.ts"
+            },
+            {
+              "assetId": 25878,
+              "displayId": "TC-295",
+              "name": "Runlist- Default Execution Mode",
+              "kind": "test-case",
+              "repoPath": "Runlist/Utility/TC-295-Runlist-Default-Execution-Mode.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 10066,
+          "displayId": "TC-178",
+          "name": "Record TC-RL-Add tag-Run RL- Validate RL Run",
+          "kind": "test-case",
+          "repoPath": "Runlist/TC-178-Record-TC-RL-Add-tag-Run-RL-Validate-RL-Run.spec.ts"
+        },
+        {
+          "assetId": 25870,
+          "displayId": "TC-292",
+          "name": "Runlist Execution and Screenshot Validation",
+          "kind": "test-case",
+          "repoPath": "Runlist/TC-292-Runlist-Execution-and-Screenshot-Validation.spec.ts"
+        },
+        {
+          "assetId": 20307,
+          "displayId": "TC-243",
+          "name": "Schedule RL",
+          "kind": "test-case",
+          "repoPath": "Runlist/TC-243-Schedule-RL.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 9806,
+      "displayId": "FD-33",
+      "name": "Search Assets",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 9856,
+          "displayId": "TC-174",
+          "name": "Seach Assest",
+          "kind": "test-case",
+          "repoPath": "Search Assets/TC-174-Seach-Assest.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 2371,
+      "displayId": "FO-7",
+      "name": "Team configuration",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 19706,
+          "displayId": "FD-43",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 20184,
+              "displayId": "TC-239",
+              "name": "Add Category",
+              "kind": "test-case",
+              "repoPath": "Team configuration/Utilities/TC-239-Add-Category.spec.ts"
+            },
+            {
+              "assetId": 19707,
+              "displayId": "TC-226",
+              "name": "Add Tag",
+              "kind": "test-case",
+              "repoPath": "Team configuration/Utilities/TC-226-Add-Tag.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 9884,
+          "displayId": "TC-176",
+          "name": "Adapter",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-176-Adapter.spec.ts"
+        },
+        {
+          "assetId": 25795,
+          "displayId": "TC-287",
+          "name": "Add settings in team",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-287-Add-settings-in-team.spec.ts"
+        },
+        {
+          "assetId": 3090,
+          "displayId": "TC-136",
+          "name": "Category",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-136-Category.spec.ts"
+        },
+        {
+          "assetId": 25813,
+          "displayId": "TC-290",
+          "name": "Crud TC Status",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-290-Crud-TC-Status.spec.ts"
+        },
+        {
+          "assetId": 3089,
+          "displayId": "TC-135",
+          "name": "Environment",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-135-Environment.spec.ts"
+        },
+        {
+          "assetId": 9885,
+          "displayId": "TC-177",
+          "name": "Secret",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-177-Secret.spec.ts"
+        },
+        {
+          "assetId": 9883,
+          "displayId": "TC-175",
+          "name": "Source control",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-175-Source-control.spec.ts"
+        },
+        {
+          "assetId": 3087,
+          "displayId": "TC-133",
+          "name": "Tag",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-133-Tag.spec.ts"
+        },
+        {
+          "assetId": 25908,
+          "displayId": "TC-297",
+          "name": "Update \"Delete\" Action to \"Remove from Team\" for Team Members",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-297-Update-Delete-Action-to-Remove-from-Team-for-Team-Members.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 19724,
+      "displayId": "FD-46",
+      "name": "Test Case",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 19727,
+          "displayId": "FD-47",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 20207,
+              "displayId": "TC-241",
+              "name": "Add Category",
+              "kind": "test-case",
+              "repoPath": "Test Case/Utilities/TC-241-Add-Category.spec.ts"
+            },
+            {
+              "assetId": 19728,
+              "displayId": "TC-230",
+              "name": "Add Env to a test case",
+              "kind": "test-case",
+              "repoPath": "Test Case/Utilities/TC-230-Add-Env-to-a-test-case.spec.ts"
+            },
+            {
+              "assetId": 20100,
+              "displayId": "TC-237",
+              "name": "Add Tag",
+              "kind": "test-case",
+              "repoPath": "Test Case/Utilities/TC-237-Add-Tag.spec.ts"
+            },
+            {
+              "assetId": 19730,
+              "displayId": "TC-231",
+              "name": "Record",
+              "kind": "test-case",
+              "repoPath": "Test Case/Utilities/TC-231-Record.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 20167,
+          "displayId": "TC-238",
+          "name": "Add Category to a test case",
+          "kind": "test-case",
+          "repoPath": "Test Case/TC-238-Add-Category-to-a-test-case.spec.ts"
+        },
+        {
+          "assetId": 20098,
+          "displayId": "TC-236",
+          "name": "Add tag to a test case",
+          "kind": "test-case",
+          "repoPath": "Test Case/TC-236-Add-tag-to-a-test-case.spec.ts"
+        },
+        {
+          "assetId": 25897,
+          "displayId": "TC-296",
+          "name": "Display User Name as Owner and Fallback to Email When User Name Is Unavailable",
+          "kind": "test-case",
+          "repoPath": "Test Case/TC-296-Display-User-Name-as-Owner-and-Fallback-to-Email-When-User-Name-Is-Unavailable.spec.ts"
+        },
+        {
+          "assetId": 19725,
+          "displayId": "TC-229",
+          "name": "Record a test Case",
+          "kind": "test-case",
+          "repoPath": "Test Case/TC-229-Record-a-test-Case.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 2382,
+      "displayId": "FO-9",
+      "name": "Trash Can",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 20420,
+          "displayId": "FD-50",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 20623,
+              "displayId": "TC-249",
+              "name": "delete multiple assets",
+              "kind": "test-case",
+              "repoPath": "Trash Can/Utilities/TC-249-delete-multiple-assets.spec.ts"
+            },
+            {
+              "assetId": 20421,
+              "displayId": "TC-245",
+              "name": "Expand collapse",
+              "kind": "test-case",
+              "repoPath": "Trash Can/Utilities/TC-245-Expand-collapse.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 3233,
+          "displayId": "TC-144",
+          "name": "Delete multiple",
+          "kind": "test-case",
+          "repoPath": "Trash Can/TC-144-Delete-multiple.spec.ts"
+        },
+        {
+          "assetId": 3231,
+          "displayId": "TC-142",
+          "name": "Empty trash can",
+          "kind": "test-case",
+          "repoPath": "Trash Can/TC-142-Empty-trash-can.spec.ts"
+        },
+        {
+          "assetId": 3230,
+          "displayId": "TC-141",
+          "name": "Restore & delete permanently",
+          "kind": "test-case",
+          "repoPath": "Trash Can/TC-141-Restore-&-delete-permanently.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 2993,
+      "displayId": "FO-28",
+      "name": "User Profile",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 13222,
+          "displayId": "TC-185",
+          "name": "Account & Settings - Audit Log",
+          "kind": "test-case",
+          "repoPath": "User Profile/TC-185-Account-&-Settings-Audit-Log.spec.ts"
+        },
+        {
+          "assetId": 14243,
+          "displayId": "TC-201",
+          "name": "Account & Settings - Credit",
+          "kind": "test-case",
+          "repoPath": "User Profile/TC-201-Account-&-Settings-Credit.spec.ts"
+        },
+        {
+          "assetId": 14201,
+          "displayId": "TC-199",
+          "name": "Admin Section - Validation",
+          "kind": "test-case",
+          "repoPath": "User Profile/TC-199-Admin-Section-Validation.spec.ts"
+        },
+        {
+          "assetId": 25948,
+          "displayId": "TC-298",
+          "name": "Admin Section - Whats new",
+          "kind": "test-case",
+          "repoPath": "User Profile/TC-298-Admin-Section-Whats-new.spec.ts"
+        },
+        {
+          "assetId": 2997,
+          "displayId": "TC-113",
+          "name": "AI Studio Monitor",
+          "kind": "test-case",
+          "repoPath": "User Profile/TC-113-AI-Studio-Monitor.spec.ts"
+        },
+        {
+          "assetId": 13229,
+          "displayId": "TC-189",
+          "name": "Documentation - Build a Knowledge Base",
+          "kind": "test-case",
+          "repoPath": "User Profile/TC-189-Documentation-Build-a-Knowledge-Base.spec.ts"
+        },
+        {
+          "assetId": 14242,
+          "displayId": "TC-200",
+          "name": "Documentation - Search document",
+          "kind": "test-case",
+          "repoPath": "User Profile/TC-200-Documentation-Search-document.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 18385,
+      "displayId": "FD-39",
+      "name": "Utilities",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 33225,
+          "displayId": "TC-316",
+          "name": "Add company",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-316-Add-company.spec.ts"
+        },
+        {
+          "assetId": 25786,
+          "displayId": "TC-282",
+          "name": "Add Env to a test case",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-282-Add-Env-to-a-test-case.spec.ts"
+        },
+        {
+          "assetId": 25760,
+          "displayId": "TC-262",
+          "name": "Add Status",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-262-Add-Status.spec.ts"
+        },
+        {
+          "assetId": 18847,
+          "displayId": "TS-12",
+          "name": "ConstantORExtensions",
+          "kind": "typescript",
+          "repoPath": "Utilities/TS-12-ConstantORExtensions.ts"
+        },
+        {
+          "assetId": 18430,
+          "displayId": "TC-207",
+          "name": "Create New Asset",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-207-Create-New-Asset.spec.ts"
+        },
+        {
+          "assetId": 18643,
+          "displayId": "TC-214",
+          "name": "Create New Team",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-214-Create-New-Team.spec.ts"
+        },
+        {
+          "assetId": 18640,
+          "displayId": "TC-213",
+          "name": "Delete All Teams",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-213-Delete-All-Teams.spec.ts"
+        },
+        {
+          "assetId": 18502,
+          "displayId": "TC-210",
+          "name": "Delete Asset",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-210-Delete-Asset.spec.ts"
+        },
+        {
+          "assetId": 18474,
+          "displayId": "TC-208",
+          "name": "Delete Team",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-208-Delete-Team.spec.ts"
+        },
+        {
+          "assetId": 18427,
+          "displayId": "TC-206",
+          "name": "Delete-Create-Rename Team",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-206-Delete-Create-Rename-Team.spec.ts"
+        },
+        {
+          "assetId": 26027,
+          "displayId": "TC-303",
+          "name": "Import Tests or Playwright",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-303-Import-Tests-or-Playwright.spec.ts"
+        },
+        {
+          "assetId": 18416,
+          "displayId": "TC-205",
+          "name": "Microsoft Login",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-205-Microsoft-Login.spec.ts"
+        },
+        {
+          "assetId": 6835,
+          "displayId": "TS-10",
+          "name": "random-team",
+          "kind": "typescript",
+          "repoPath": "Utilities/TS-10-random-team.ts"
+        },
+        {
+          "assetId": 25789,
+          "displayId": "TC-285",
+          "name": "Record after this step",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-285-Record-after-this-step.spec.ts"
+        },
+        {
+          "assetId": 25787,
+          "displayId": "TC-283",
+          "name": "Record",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-283-Record.spec.ts"
+        },
+        {
+          "assetId": 18713,
+          "displayId": "TC-216",
+          "name": "Recover Asset",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-216-Recover-Asset.spec.ts"
+        },
+        {
+          "assetId": 18493,
+          "displayId": "TC-209",
+          "name": "Rename Asset",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-209-Rename-Asset.spec.ts"
+        },
+        {
+          "assetId": 18644,
+          "displayId": "TC-215",
+          "name": "Rename Team",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-215-Rename-Team.spec.ts"
+        },
+        {
+          "assetId": 25788,
+          "displayId": "TC-284",
+          "name": "Run to here",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-284-Run-to-here.spec.ts"
+        },
+        {
+          "assetId": 22490,
+          "displayId": "TC-250",
+          "name": "SkipOnboardingTour",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-250-SkipOnboardingTour.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 9774,
+      "displayId": "FD-32",
+      "name": "Workspaces",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 19270,
+          "displayId": "FD-41",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 19272,
+              "displayId": "TC-222",
+              "name": "Enter Workspace",
+              "kind": "test-case",
+              "repoPath": "Workspaces/Utilities/TC-222-Enter-Workspace.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 9817,
+          "displayId": "TC-170",
+          "name": "Workspace Change Validation",
+          "kind": "test-case",
+          "repoPath": "Workspaces/TC-170-Workspace-Change-Validation.spec.ts"
+        },
+        {
+          "assetId": 19566,
+          "displayId": "TC-223",
+          "name": "Workspace Settings page",
+          "kind": "test-case",
+          "repoPath": "Workspaces/TC-223-Workspace-Settings-page.spec.ts"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "assetId": 19593,
+      "assetKind": "test-case",
+      "displayId": "TC-224",
+      "name": "BYOK-Create-Edit-Delete",
+      "repoPath": "BYOK/TC-224-BYOK-Create-Edit-Delete.spec.ts",
+      "parentAssetId": 19592
+    },
+    {
+      "assetId": 20529,
+      "assetKind": "test-case",
+      "displayId": "TC-248",
+      "name": "Delete existing models",
+      "repoPath": "BYOK/utilities/TC-248-Delete-existing-models.spec.ts",
+      "parentAssetId": 20526
+    },
+    {
+      "assetId": 24280,
+      "assetKind": "test-case",
+      "displayId": "TC-252",
+      "name": "Copy Paste",
+      "repoPath": "Context menu/TC-252-Copy-Paste.spec.ts",
+      "parentAssetId": 25768
+    },
+    {
+      "assetId": 25804,
+      "assetKind": "test-case",
+      "displayId": "TC-289",
+      "name": "Context menu of a step",
+      "repoPath": "Context menu/TC-289-Context-menu-of-a-step.spec.ts",
+      "parentAssetId": 25768
+    },
+    {
+      "assetId": 2970,
+      "assetKind": "test-case",
+      "displayId": "TC-100",
+      "name": "Runlist-Create-Delete",
+      "repoPath": "Create-Delete all type of Assets/TC-100-Runlist-Create-Delete.spec.ts",
+      "parentAssetId": 2315
+    },
+    {
+      "assetId": 2971,
+      "assetKind": "test-case",
+      "displayId": "TC-101",
+      "name": "KnowledgeBase-Create-Delete",
+      "repoPath": "Create-Delete all type of Assets/TC-101-KnowledgeBase-Create-Delete.spec.ts",
+      "parentAssetId": 2315
+    },
+    {
+      "assetId": 2972,
+      "assetKind": "test-case",
+      "displayId": "TC-102",
+      "name": "Folder-Create-Delete",
+      "repoPath": "Create-Delete all type of Assets/TC-102-Folder-Create-Delete.spec.ts",
+      "parentAssetId": 2315
+    },
+    {
+      "assetId": 2973,
+      "assetKind": "test-case",
+      "displayId": "TC-103",
+      "name": "Agent -Create-Delete",
+      "repoPath": "Create-Delete all type of Assets/TC-103-Agent-Create-Delete.spec.ts",
+      "parentAssetId": 2315
+    },
+    {
+      "assetId": 9076,
+      "assetKind": "test-case",
+      "displayId": "TC-163",
+      "name": "File-Create-Delete",
+      "repoPath": "Create-Delete all type of Assets/TC-163-File-Create-Delete.spec.ts",
+      "parentAssetId": 2315
+    },
+    {
+      "assetId": 9081,
+      "assetKind": "test-case",
+      "displayId": "TC-164",
+      "name": "Create Duplicate",
+      "repoPath": "Create-Delete all type of Assets/TC-164-Create-Duplicate.spec.ts",
+      "parentAssetId": 2315
+    },
+    {
+      "assetId": 2967,
+      "assetKind": "test-case",
+      "displayId": "TC-97",
+      "name": "Typescript-Create-Delete",
+      "repoPath": "Create-Delete all type of Assets/TC-97-Typescript-Create-Delete.spec.ts",
+      "parentAssetId": 2315
+    },
+    {
+      "assetId": 2968,
+      "assetKind": "test-case",
+      "displayId": "TC-98",
+      "name": "Test case-Create-Delete",
+      "repoPath": "Create-Delete all type of Assets/TC-98-Test-case-Create-Delete.spec.ts",
+      "parentAssetId": 2315
+    },
+    {
+      "assetId": 2969,
+      "assetKind": "test-case",
+      "displayId": "TC-99",
+      "name": "Team-Create-Delete",
+      "repoPath": "Create-Delete all type of Assets/TC-99-Team-Create-Delete.spec.ts",
+      "parentAssetId": 2315
+    },
+    {
+      "assetId": 2992,
+      "assetKind": "test-case",
+      "displayId": "TC-109",
+      "name": "Credit Transfer",
+      "repoPath": "Credit Management/TC-109-Credit-Transfer.spec.ts",
+      "parentAssetId": 2991
+    },
+    {
+      "assetId": 30303,
+      "assetKind": "test-case",
+      "displayId": "TC-309",
+      "name": "Xpath execution",
+      "repoPath": "Execution/TC-309-Xpath-execution.spec.ts",
+      "parentAssetId": 30302
+    },
+    {
+      "assetId": 30433,
+      "assetKind": "test-case",
+      "displayId": "TC-310",
+      "name": "New test case",
+      "repoPath": "Execution/TC-310-New-test-case.spec.ts",
+      "parentAssetId": 30302
+    },
+    {
+      "assetId": 22875,
+      "assetKind": "test-case",
+      "displayId": "TC-251",
+      "name": "External Adapter Filter Hook",
+      "repoPath": "External Adapter/TC-251-External-Adapter-Filter-Hook.spec.ts",
+      "parentAssetId": 22874
+    },
+    {
+      "assetId": 30969,
+      "assetKind": "test-case",
+      "displayId": "TC-312",
+      "name": "Enable Llm Over Native Using External Adapter",
+      "repoPath": "External Adapter/TC-312-Enable-Llm-Over-Native-Using-External-Adapter.spec.ts",
+      "parentAssetId": 22874
+    },
+    {
+      "assetId": 25815,
+      "assetKind": "test-case",
+      "displayId": "TC-291",
+      "name": "github connector",
+      "repoPath": "Git/TC-291-github-connector.spec.ts",
+      "parentAssetId": 25814
+    },
+    {
+      "assetId": 3163,
+      "assetKind": "test-case",
+      "displayId": "TC-137",
+      "name": "import-export tests",
+      "repoPath": "Import-export/TC-137-import-export-tests.spec.ts",
+      "parentAssetId": 2841
+    },
+    {
+      "assetId": 9617,
+      "assetKind": "test-case",
+      "displayId": "TC-165",
+      "name": "import playwright",
+      "repoPath": "Import-export/TC-165-import-playwright.spec.ts",
+      "parentAssetId": 2841
+    },
+    {
+      "assetId": 26030,
+      "assetKind": "test-case",
+      "displayId": "TC-304",
+      "name": "Import playwright from file",
+      "repoPath": "Import-export/TC-304-Import-playwright-from-file.spec.ts",
+      "parentAssetId": 2841
+    },
+    {
+      "assetId": 26036,
+      "assetKind": "test-case",
+      "displayId": "TC-305",
+      "name": "Import test case using file",
+      "repoPath": "Import-export/TC-305-Import-test-case-using-file.spec.ts",
+      "parentAssetId": 2841
+    },
+    {
+      "assetId": 3085,
+      "assetKind": "test-case",
+      "displayId": "TC-132",
+      "name": "Invite to new user from top banner without adding to workspace",
+      "repoPath": "Invitation/TC-132-Invite-to-new-user-from-top-banner-without-adding-to-workspace.spec.ts",
+      "parentAssetId": 2376
+    },
+    {
+      "assetId": 18914,
+      "assetKind": "test-case",
+      "displayId": "TC-217",
+      "name": "Invitation to already existing user",
+      "repoPath": "Invitation/TC-217-Invitation-to-already-existing-user.spec.ts",
+      "parentAssetId": 2376
+    },
+    {
+      "assetId": 18998,
+      "assetKind": "test-case",
+      "displayId": "TC-218",
+      "name": "Invite to a new user from team settings",
+      "repoPath": "Invitation/TC-218-Invite-to-a-new-user-from-team-settings.spec.ts",
+      "parentAssetId": 2376
+    },
+    {
+      "assetId": 3195,
+      "assetKind": "test-case",
+      "displayId": "TC-138",
+      "name": "KB to BP creation validation",
+      "repoPath": "KnowledgeBase/TC-138-KB-to-BP-creation-validation.spec.ts",
+      "parentAssetId": 2840
+    },
+    {
+      "assetId": 19040,
+      "assetKind": "test-case",
+      "displayId": "TC-219",
+      "name": "KB with git",
+      "repoPath": "KnowledgeBase/TC-219-KB-with-git.spec.ts",
+      "parentAssetId": 2840
+    },
+    {
+      "assetId": 13670,
+      "assetKind": "test-case",
+      "displayId": "TC-192",
+      "name": "LLM Chat Working",
+      "repoPath": "LLM Chat/TC-192-LLM-Chat-Working.spec.ts",
+      "parentAssetId": 13755
+    },
+    {
+      "assetId": 13702,
+      "assetKind": "test-case",
+      "displayId": "TC-193",
+      "name": "URL Navigation Via Chat",
+      "repoPath": "LLM Chat/TC-193-URL-Navigation-Via-Chat.spec.ts",
+      "parentAssetId": 13755
+    },
+    {
+      "assetId": 26041,
+      "assetKind": "test-case",
+      "displayId": "TC-306",
+      "name": "Edit playwright step using chat",
+      "repoPath": "LLM Chat/TC-306-Edit-playwright-step-using-chat.spec.ts",
+      "parentAssetId": 13755
+    },
+    {
+      "assetId": 20097,
+      "assetKind": "test-case",
+      "displayId": "TC-235",
+      "name": "Logout Validation",
+      "repoPath": "Logout/TC-235-Logout-Validation.spec.ts",
+      "parentAssetId": 20096
+    },
+    {
+      "assetId": 20197,
+      "assetKind": "test-case",
+      "displayId": "TC-240",
+      "name": "Navigate to Play landing page",
+      "repoPath": "Navigation/TC-240-Navigate-to-Play-landing-page.spec.ts",
+      "parentAssetId": 20196
+    },
+    {
+      "assetId": 3967,
+      "assetKind": "test-case",
+      "displayId": "TC-151",
+      "name": "Delayed PoPup",
+      "repoPath": "Non-leapwork-Play flows in considration/TC-151-Delayed-PoPup.spec.ts",
+      "parentAssetId": 2503
+    },
+    {
+      "assetId": 4118,
+      "assetKind": "test-case",
+      "displayId": "TC-152",
+      "name": "AmazonDelayTest",
+      "repoPath": "Non-leapwork-Play flows in considration/TC-152-AmazonDelayTest.spec.ts",
+      "parentAssetId": 2503
+    },
+    {
+      "assetId": 2607,
+      "assetKind": "test-case",
+      "displayId": "TC-76",
+      "name": "PopUp test",
+      "repoPath": "Non-leapwork-Play flows in considration/TC-76-PopUp-test.spec.ts",
+      "parentAssetId": 2503
+    },
+    {
+      "assetId": 2938,
+      "assetKind": "test-case",
+      "displayId": "TC-85",
+      "name": "New test case",
+      "repoPath": "Non-leapwork-Play flows in considration/TC-85-New-test-case.spec.ts",
+      "parentAssetId": 2503
+    },
+    {
+      "assetId": 25749,
+      "assetKind": "test-case",
+      "displayId": "TC-256",
+      "name": "Playwright-Modify-ExecuteTC",
+      "repoPath": "Playwright/TC-256-Playwright-Modify-ExecuteTC.spec.ts",
+      "parentAssetId": 25745
+    },
+    {
+      "assetId": 10066,
+      "assetKind": "test-case",
+      "displayId": "TC-178",
+      "name": "Record TC-RL-Add tag-Run RL- Validate RL Run",
+      "repoPath": "Runlist/TC-178-Record-TC-RL-Add-tag-Run-RL-Validate-RL-Run.spec.ts",
+      "parentAssetId": 10065
+    },
+    {
+      "assetId": 20307,
+      "assetKind": "test-case",
+      "displayId": "TC-243",
+      "name": "Schedule RL",
+      "repoPath": "Runlist/TC-243-Schedule-RL.spec.ts",
+      "parentAssetId": 10065
+    },
+    {
+      "assetId": 25870,
+      "assetKind": "test-case",
+      "displayId": "TC-292",
+      "name": "Runlist Execution and Screenshot Validation",
+      "repoPath": "Runlist/TC-292-Runlist-Execution-and-Screenshot-Validation.spec.ts",
+      "parentAssetId": 10065
+    },
+    {
+      "assetId": 25874,
+      "assetKind": "test-case",
+      "displayId": "TC-293",
+      "name": "Basic Flow",
+      "repoPath": "Runlist/Utility/TC-293-Basic-Flow.spec.ts",
+      "parentAssetId": 25873
+    },
+    {
+      "assetId": 25878,
+      "assetKind": "test-case",
+      "displayId": "TC-295",
+      "name": "Runlist- Default Execution Mode",
+      "repoPath": "Runlist/Utility/TC-295-Runlist-Default-Execution-Mode.spec.ts",
+      "parentAssetId": 25873
+    },
+    {
+      "assetId": 9856,
+      "assetKind": "test-case",
+      "displayId": "TC-174",
+      "name": "Seach Assest",
+      "repoPath": "Search Assets/TC-174-Seach-Assest.spec.ts",
+      "parentAssetId": 9806
+    },
+    {
+      "assetId": 3087,
+      "assetKind": "test-case",
+      "displayId": "TC-133",
+      "name": "Tag",
+      "repoPath": "Team configuration/TC-133-Tag.spec.ts",
+      "parentAssetId": 2371
+    },
+    {
+      "assetId": 3089,
+      "assetKind": "test-case",
+      "displayId": "TC-135",
+      "name": "Environment",
+      "repoPath": "Team configuration/TC-135-Environment.spec.ts",
+      "parentAssetId": 2371
+    },
+    {
+      "assetId": 3090,
+      "assetKind": "test-case",
+      "displayId": "TC-136",
+      "name": "Category",
+      "repoPath": "Team configuration/TC-136-Category.spec.ts",
+      "parentAssetId": 2371
+    },
+    {
+      "assetId": 9883,
+      "assetKind": "test-case",
+      "displayId": "TC-175",
+      "name": "Source control",
+      "repoPath": "Team configuration/TC-175-Source-control.spec.ts",
+      "parentAssetId": 2371
+    },
+    {
+      "assetId": 9884,
+      "assetKind": "test-case",
+      "displayId": "TC-176",
+      "name": "Adapter",
+      "repoPath": "Team configuration/TC-176-Adapter.spec.ts",
+      "parentAssetId": 2371
+    },
+    {
+      "assetId": 9885,
+      "assetKind": "test-case",
+      "displayId": "TC-177",
+      "name": "Secret",
+      "repoPath": "Team configuration/TC-177-Secret.spec.ts",
+      "parentAssetId": 2371
+    },
+    {
+      "assetId": 25795,
+      "assetKind": "test-case",
+      "displayId": "TC-287",
+      "name": "Add settings in team",
+      "repoPath": "Team configuration/TC-287-Add-settings-in-team.spec.ts",
+      "parentAssetId": 2371
+    },
+    {
+      "assetId": 25813,
+      "assetKind": "test-case",
+      "displayId": "TC-290",
+      "name": "Crud TC Status",
+      "repoPath": "Team configuration/TC-290-Crud-TC-Status.spec.ts",
+      "parentAssetId": 2371
+    },
+    {
+      "assetId": 25908,
+      "assetKind": "test-case",
+      "displayId": "TC-297",
+      "name": "Update \"Delete\" Action to \"Remove from Team\" for Team Members",
+      "repoPath": "Team configuration/TC-297-Update-Delete-Action-to-Remove-from-Team-for-Team-Members.spec.ts",
+      "parentAssetId": 2371
+    },
+    {
+      "assetId": 19707,
+      "assetKind": "test-case",
+      "displayId": "TC-226",
+      "name": "Add Tag",
+      "repoPath": "Team configuration/Utilities/TC-226-Add-Tag.spec.ts",
+      "parentAssetId": 19706
+    },
+    {
+      "assetId": 20184,
+      "assetKind": "test-case",
+      "displayId": "TC-239",
+      "name": "Add Category",
+      "repoPath": "Team configuration/Utilities/TC-239-Add-Category.spec.ts",
+      "parentAssetId": 19706
+    },
+    {
+      "assetId": 19725,
+      "assetKind": "test-case",
+      "displayId": "TC-229",
+      "name": "Record a test Case",
+      "repoPath": "Test Case/TC-229-Record-a-test-Case.spec.ts",
+      "parentAssetId": 19724
+    },
+    {
+      "assetId": 20098,
+      "assetKind": "test-case",
+      "displayId": "TC-236",
+      "name": "Add tag to a test case",
+      "repoPath": "Test Case/TC-236-Add-tag-to-a-test-case.spec.ts",
+      "parentAssetId": 19724
+    },
+    {
+      "assetId": 20167,
+      "assetKind": "test-case",
+      "displayId": "TC-238",
+      "name": "Add Category to a test case",
+      "repoPath": "Test Case/TC-238-Add-Category-to-a-test-case.spec.ts",
+      "parentAssetId": 19724
+    },
+    {
+      "assetId": 25897,
+      "assetKind": "test-case",
+      "displayId": "TC-296",
+      "name": "Display User Name as Owner and Fallback to Email When User Name Is Unavailable",
+      "repoPath": "Test Case/TC-296-Display-User-Name-as-Owner-and-Fallback-to-Email-When-User-Name-Is-Unavailable.spec.ts",
+      "parentAssetId": 19724
+    },
+    {
+      "assetId": 19728,
+      "assetKind": "test-case",
+      "displayId": "TC-230",
+      "name": "Add Env to a test case",
+      "repoPath": "Test Case/Utilities/TC-230-Add-Env-to-a-test-case.spec.ts",
+      "parentAssetId": 19727
+    },
+    {
+      "assetId": 19730,
+      "assetKind": "test-case",
+      "displayId": "TC-231",
+      "name": "Record",
+      "repoPath": "Test Case/Utilities/TC-231-Record.spec.ts",
+      "parentAssetId": 19727
+    },
+    {
+      "assetId": 20100,
+      "assetKind": "test-case",
+      "displayId": "TC-237",
+      "name": "Add Tag",
+      "repoPath": "Test Case/Utilities/TC-237-Add-Tag.spec.ts",
+      "parentAssetId": 19727
+    },
+    {
+      "assetId": 20207,
+      "assetKind": "test-case",
+      "displayId": "TC-241",
+      "name": "Add Category",
+      "repoPath": "Test Case/Utilities/TC-241-Add-Category.spec.ts",
+      "parentAssetId": 19727
+    },
+    {
+      "assetId": 3230,
+      "assetKind": "test-case",
+      "displayId": "TC-141",
+      "name": "Restore & delete permanently",
+      "repoPath": "Trash Can/TC-141-Restore-&-delete-permanently.spec.ts",
+      "parentAssetId": 2382
+    },
+    {
+      "assetId": 3231,
+      "assetKind": "test-case",
+      "displayId": "TC-142",
+      "name": "Empty trash can",
+      "repoPath": "Trash Can/TC-142-Empty-trash-can.spec.ts",
+      "parentAssetId": 2382
+    },
+    {
+      "assetId": 3233,
+      "assetKind": "test-case",
+      "displayId": "TC-144",
+      "name": "Delete multiple",
+      "repoPath": "Trash Can/TC-144-Delete-multiple.spec.ts",
+      "parentAssetId": 2382
+    },
+    {
+      "assetId": 20421,
+      "assetKind": "test-case",
+      "displayId": "TC-245",
+      "name": "Expand collapse",
+      "repoPath": "Trash Can/Utilities/TC-245-Expand-collapse.spec.ts",
+      "parentAssetId": 20420
+    },
+    {
+      "assetId": 20623,
+      "assetKind": "test-case",
+      "displayId": "TC-249",
+      "name": "delete multiple assets",
+      "repoPath": "Trash Can/Utilities/TC-249-delete-multiple-assets.spec.ts",
+      "parentAssetId": 20420
+    },
+    {
+      "assetId": 2997,
+      "assetKind": "test-case",
+      "displayId": "TC-113",
+      "name": "AI Studio Monitor",
+      "repoPath": "User Profile/TC-113-AI-Studio-Monitor.spec.ts",
+      "parentAssetId": 2993
+    },
+    {
+      "assetId": 13222,
+      "assetKind": "test-case",
+      "displayId": "TC-185",
+      "name": "Account & Settings - Audit Log",
+      "repoPath": "User Profile/TC-185-Account-&-Settings-Audit-Log.spec.ts",
+      "parentAssetId": 2993
+    },
+    {
+      "assetId": 13229,
+      "assetKind": "test-case",
+      "displayId": "TC-189",
+      "name": "Documentation - Build a Knowledge Base",
+      "repoPath": "User Profile/TC-189-Documentation-Build-a-Knowledge-Base.spec.ts",
+      "parentAssetId": 2993
+    },
+    {
+      "assetId": 14201,
+      "assetKind": "test-case",
+      "displayId": "TC-199",
+      "name": "Admin Section - Validation",
+      "repoPath": "User Profile/TC-199-Admin-Section-Validation.spec.ts",
+      "parentAssetId": 2993
+    },
+    {
+      "assetId": 14242,
+      "assetKind": "test-case",
+      "displayId": "TC-200",
+      "name": "Documentation - Search document",
+      "repoPath": "User Profile/TC-200-Documentation-Search-document.spec.ts",
+      "parentAssetId": 2993
+    },
+    {
+      "assetId": 14243,
+      "assetKind": "test-case",
+      "displayId": "TC-201",
+      "name": "Account & Settings - Credit",
+      "repoPath": "User Profile/TC-201-Account-&-Settings-Credit.spec.ts",
+      "parentAssetId": 2993
+    },
+    {
+      "assetId": 25948,
+      "assetKind": "test-case",
+      "displayId": "TC-298",
+      "name": "Admin Section - Whats new",
+      "repoPath": "User Profile/TC-298-Admin-Section-Whats-new.spec.ts",
+      "parentAssetId": 2993
+    },
+    {
+      "assetId": 18416,
+      "assetKind": "test-case",
+      "displayId": "TC-205",
+      "name": "Microsoft Login",
+      "repoPath": "Utilities/TC-205-Microsoft-Login.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 18427,
+      "assetKind": "test-case",
+      "displayId": "TC-206",
+      "name": "Delete-Create-Rename Team",
+      "repoPath": "Utilities/TC-206-Delete-Create-Rename-Team.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 18430,
+      "assetKind": "test-case",
+      "displayId": "TC-207",
+      "name": "Create New Asset",
+      "repoPath": "Utilities/TC-207-Create-New-Asset.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 18474,
+      "assetKind": "test-case",
+      "displayId": "TC-208",
+      "name": "Delete Team",
+      "repoPath": "Utilities/TC-208-Delete-Team.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 18493,
+      "assetKind": "test-case",
+      "displayId": "TC-209",
+      "name": "Rename Asset",
+      "repoPath": "Utilities/TC-209-Rename-Asset.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 18502,
+      "assetKind": "test-case",
+      "displayId": "TC-210",
+      "name": "Delete Asset",
+      "repoPath": "Utilities/TC-210-Delete-Asset.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 18640,
+      "assetKind": "test-case",
+      "displayId": "TC-213",
+      "name": "Delete All Teams",
+      "repoPath": "Utilities/TC-213-Delete-All-Teams.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 18643,
+      "assetKind": "test-case",
+      "displayId": "TC-214",
+      "name": "Create New Team",
+      "repoPath": "Utilities/TC-214-Create-New-Team.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 18644,
+      "assetKind": "test-case",
+      "displayId": "TC-215",
+      "name": "Rename Team",
+      "repoPath": "Utilities/TC-215-Rename-Team.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 18713,
+      "assetKind": "test-case",
+      "displayId": "TC-216",
+      "name": "Recover Asset",
+      "repoPath": "Utilities/TC-216-Recover-Asset.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 22490,
+      "assetKind": "test-case",
+      "displayId": "TC-250",
+      "name": "SkipOnboardingTour",
+      "repoPath": "Utilities/TC-250-SkipOnboardingTour.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 25760,
+      "assetKind": "test-case",
+      "displayId": "TC-262",
+      "name": "Add Status",
+      "repoPath": "Utilities/TC-262-Add-Status.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 25786,
+      "assetKind": "test-case",
+      "displayId": "TC-282",
+      "name": "Add Env to a test case",
+      "repoPath": "Utilities/TC-282-Add-Env-to-a-test-case.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 25787,
+      "assetKind": "test-case",
+      "displayId": "TC-283",
+      "name": "Record",
+      "repoPath": "Utilities/TC-283-Record.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 25788,
+      "assetKind": "test-case",
+      "displayId": "TC-284",
+      "name": "Run to here",
+      "repoPath": "Utilities/TC-284-Run-to-here.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 25789,
+      "assetKind": "test-case",
+      "displayId": "TC-285",
+      "name": "Record after this step",
+      "repoPath": "Utilities/TC-285-Record-after-this-step.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 26027,
+      "assetKind": "test-case",
+      "displayId": "TC-303",
+      "name": "Import Tests or Playwright",
+      "repoPath": "Utilities/TC-303-Import-Tests-or-Playwright.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 33225,
+      "assetKind": "test-case",
+      "displayId": "TC-316",
+      "name": "Add company",
+      "repoPath": "Utilities/TC-316-Add-company.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 6835,
+      "assetKind": "typescript",
+      "displayId": "TS-10",
+      "name": "random-team",
+      "repoPath": "Utilities/TS-10-random-team.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 18847,
+      "assetKind": "typescript",
+      "displayId": "TS-12",
+      "name": "ConstantORExtensions",
+      "repoPath": "Utilities/TS-12-ConstantORExtensions.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 9817,
+      "assetKind": "test-case",
+      "displayId": "TC-170",
+      "name": "Workspace Change Validation",
+      "repoPath": "Workspaces/TC-170-Workspace-Change-Validation.spec.ts",
+      "parentAssetId": 9774
+    },
+    {
+      "assetId": 19566,
+      "assetKind": "test-case",
+      "displayId": "TC-223",
+      "name": "Workspace Settings page",
+      "repoPath": "Workspaces/TC-223-Workspace-Settings-page.spec.ts",
+      "parentAssetId": 9774
+    },
+    {
+      "assetId": 19272,
+      "assetKind": "test-case",
+      "displayId": "TC-222",
+      "name": "Enter Workspace",
+      "repoPath": "Workspaces/Utilities/TC-222-Enter-Workspace.spec.ts",
+      "parentAssetId": 19270
+    }
+  ]
+}
