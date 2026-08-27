@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T10:53:40.582Z",
+  "generatedAt": "2026-08-27T11:18:04.424Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -325,6 +325,13 @@
           "repoPath": "Team configuration/TC-52-Category.spec.ts"
         },
         {
+          "assetId": 15676,
+          "displayId": "TC-125",
+          "name": "Crud TC Status",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-125-Crud-TC-Status.spec.ts"
+        },
+        {
           "assetId": 8494,
           "displayId": "TC-53",
           "name": "Environment",
@@ -467,6 +474,13 @@
           "name": "Add company",
           "kind": "test-case",
           "repoPath": "Utilities/TC-106-Add-company.spec.ts"
+        },
+        {
+          "assetId": 15678,
+          "displayId": "TC-126",
+          "name": "Add Status",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-126-Add-Status.spec.ts"
         },
         {
           "assetId": 8209,
@@ -831,6 +845,14 @@
       "parentAssetId": 17
     },
     {
+      "assetId": 15676,
+      "assetKind": "test-case",
+      "displayId": "TC-125",
+      "name": "Crud TC Status",
+      "repoPath": "Team configuration/TC-125-Crud-TC-Status.spec.ts",
+      "parentAssetId": 8313
+    },
+    {
       "assetId": 8488,
       "assetKind": "test-case",
       "displayId": "TC-51",
@@ -1012,6 +1034,14 @@
       "displayId": "TC-12",
       "name": "Recover Asset",
       "repoPath": "Utilities/TC-12-Recover-Asset.spec.ts",
+      "parentAssetId": 8195
+    },
+    {
+      "assetId": 15678,
+      "assetKind": "test-case",
+      "displayId": "TC-126",
+      "name": "Add Status",
+      "repoPath": "Utilities/TC-126-Add-Status.spec.ts",
       "parentAssetId": 8195
     },
     {
