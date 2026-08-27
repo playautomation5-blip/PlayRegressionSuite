@@ -5,7 +5,6 @@ import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { AddTag } from "@assets/Team configuration/Utilities/Add Tag";
-import { AddTag2 } from "@assets/Test Case/Utilities/Add Tag";
 import { Record } from "@assets/Test Case/Utilities/Record";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 
@@ -150,12 +149,6 @@ await leapwork.step("Validate that the run status shows 'Pending' on the Leapwor
     // Assert span contains "Pending"
     await expect(page.getByText('Pending')).toContainText("Pending");
 }, { action: "validate" });
-
-// await leapwork.step("Click the Explorer button", async () => {
-//     // Click button "Explorer"
-//     await page.getByRole('button', { name: 'Explorer' }).click();
-// }, { action: "click" });
-
 
 // ai-studio-step-id: 6e08fa60
 await leapwork.step("Use test case: Delete Team", async () => {

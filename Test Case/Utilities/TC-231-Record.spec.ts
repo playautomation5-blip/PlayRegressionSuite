@@ -61,11 +61,15 @@ await leapwork.step("Click the Stop recording button in the test case editor", a
     await page.getByRole('button', { name: 'Stop recording' }).click();
 }, { action: "click" });
 
-// await leapwork.step("Validate that the Record button shows 'Record' on the Leapwork Play page", async () => {
-//     // Assert button "Record" contains "Record"
-//     await page.waitForTimeout(10000);
-//     await expect(page.getByRole('button', { name: 'Record'})).toContainText("Record");
-// }, { action: "validate" });
+// ai-studio-step-id: pwsrb9r100
+await leapwork.step("Validate that the Record button shows 'Record' on the Leapwork Play page", async () => {
+    // Assert button "Record" contains "Record"
+    const recordButton = page.getByRole('button', {
+        name: 'Record',
+        exact: true,
+    });
+    await expect(recordButton).toBeVisible({ timeout: 10_000 });
+}, { action: "validate" });
 
 // ai-studio-step-id: pwacr7us00
 await leapwork.step("Click the Disconnect button in the cloud browser panel", async () => {
