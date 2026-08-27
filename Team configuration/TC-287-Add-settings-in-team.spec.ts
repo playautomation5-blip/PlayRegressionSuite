@@ -37,10 +37,6 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
     return await DeleteCreateRenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// await leapwork.step(`Double-click "${teamName}"`, async () => {
-//     // Double-click "team 99509"
-//     await page.getByText(teamName).dblclick();
-// }, { action: "click", });
 
 // ai-studio-step-id: pw10ox4w00
 await leapwork.step("Double-click the team 74800 item in the explorer pane", async () => {
