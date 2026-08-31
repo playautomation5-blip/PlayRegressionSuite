@@ -3,19 +3,22 @@ import { leapwork } from "./leapwork";
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 
 leapwork.configuration({
-  enableSelfHeal: false,
-  timeoutMs: 5000
+  timeoutMs: Number(
+    leapwork.team.settings.get("timeoutMs")
+    ?? leapwork.workspace.settings.get("timeoutMs")
+  ) || 5000,
+  enableSelfHeal:
+    (leapwork.team.settings.get("enableSelfHeal")
+      ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
 leapwork.variables.set("userId", "aistudio_user_2");
 leapwork.variables.set("passwordId", "aistudio_user_2");
 
-
 // ai-studio-step-id: 57ff770f
 await leapwork.step("Use test case: Microsoft Login", async () => {
     return await MicrosoftLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
 
 // ai-studio-step-id: pw1roex190
 await leapwork.step("Click the Automation Account (Personal) account menu button", async () => {
@@ -82,4 +85,3 @@ await leapwork.step("Validate that the \"Issue mix\" heading appears on the Leap
     // Assert heading "Issue mix" contains "Issue mix"
     await expect(page.getByRole('heading', { name: 'Issue mix' })).toContainText("Issue mix");
 }, { action: "validate" });
-

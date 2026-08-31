@@ -1,14 +1,19 @@
 import { leapwork } from "./leapwork";
 
 import { RandomTeam, teamName, password } from "@assets/Utilities/random-team";
+import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { AddCategory } from "@assets/Team configuration/Utilities/Add Category";
-import { DeleteTeam } from "@assets/Utilities/Delete Team";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 
 leapwork.configuration({
-  enableSelfHeal: false,
-  timeoutMs: 5000
+  timeoutMs: Number(
+    leapwork.team.settings.get("timeoutMs")
+    ?? leapwork.workspace.settings.get("timeoutMs")
+  ) || 5000,
+  enableSelfHeal:
+    (leapwork.team.settings.get("enableSelfHeal")
+      ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
 leapwork.variables.set("userId", "user_19");
@@ -35,3 +40,4 @@ await leapwork.step("Use test case: Add Category", async () => {
 await leapwork.step("Use test case: Delete Team", async () => {
     return await DeleteTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
+

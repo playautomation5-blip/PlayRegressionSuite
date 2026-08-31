@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T14:06:40.180Z",
+  "generatedAt": "2026-08-31T04:40:01.756Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -301,6 +301,13 @@
           "name": "LLM Command Test",
           "kind": "test-case",
           "repoPath": "LLM Chat/TC-47-LLM-Command-Test.spec.ts"
+        },
+        {
+          "assetId": 15639,
+          "displayId": "TC-122",
+          "name": "URL Navigation Via Chat",
+          "kind": "test-case",
+          "repoPath": "LLM Chat/TC-122-URL-Navigation-Via-Chat.spec.ts"
         }
       ]
     },
@@ -989,6 +996,14 @@
       "name": "KB with git",
       "repoPath": "KnowledgeBase/TC-45-KB-with-git.spec.ts",
       "parentAssetId": 8310
+    },
+    {
+      "assetId": 15639,
+      "assetKind": "test-case",
+      "displayId": "TC-122",
+      "name": "URL Navigation Via Chat",
+      "repoPath": "LLM Chat/TC-122-URL-Navigation-Via-Chat.spec.ts",
+      "parentAssetId": 8311
     },
     {
       "assetId": 8447,

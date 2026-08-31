@@ -3,8 +3,13 @@ import { leapwork } from "./leapwork";
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 
 leapwork.configuration({
-  enableSelfHeal: false,
-  timeoutMs: 5000
+  timeoutMs: Number(
+    leapwork.team.settings.get("timeoutMs")
+    ?? leapwork.workspace.settings.get("timeoutMs")
+  ) || 5000,
+  enableSelfHeal:
+    (leapwork.team.settings.get("enableSelfHeal")
+      ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
 leapwork.variables.set("userId", "aistudio_user_2");
@@ -14,7 +19,6 @@ leapwork.variables.set("passwordId", "aistudio_user_2");
 await leapwork.step("Use test case: Microsoft Login", async () => {
     return await MicrosoftLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
 
 // ai-studio-step-id: pw9k6gc100
 await leapwork.step("Click the Automation Account (Personal) button", async () => {
@@ -46,4 +50,3 @@ await leapwork.step("Click the Close documentation button", async () => {
     const closeDocButton = page.getByRole('button', { name: 'Close documentation', exact: true });
     await closeDocButton.click({ force: true });
 });
-
