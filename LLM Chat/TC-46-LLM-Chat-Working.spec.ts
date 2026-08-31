@@ -57,6 +57,12 @@ await leapwork.step("Click the Explorer button", async () => {
     await page.getByRole('button', { name: 'Explorer' }).click();
 }, { action: "click" });
 
+// ai-studio-step-id: pw19mgpt20
+await leapwork.step("Click the Expand chat button in the chat panel", async () => {
+    // Click button "Expand chat"
+    await page.getByRole('button', { name: 'Expand chat' }).click();
+}, { action: "click", relativeXpath: ".//div/div/div[2]/div/div/button[@aria-label=\"Expand chat\"]", continueOnFailure: true });
+
 // ai-studio-step-id: pwt8mcl200
 await leapwork.step("Click the New chat button in Leapwork AI Studio", async () => {
     // Click button "New chat"

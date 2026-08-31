@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T04:40:01.756Z",
+  "generatedAt": "2026-08-31T07:43:40.661Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -291,9 +291,9 @@
         {
           "assetId": 8447,
           "displayId": "TC-46",
-          "name": "LLM Chat Improved",
+          "name": "LLM Chat Working",
           "kind": "test-case",
-          "repoPath": "LLM Chat/TC-46-LLM-Chat-Improved.spec.ts"
+          "repoPath": "LLM Chat/TC-46-LLM-Chat-Working.spec.ts"
         },
         {
           "assetId": 8453,
@@ -779,13 +779,6 @@
           "repoPath": "Workspaces/TC-66-Workspace-Settings-page.spec.ts"
         }
       ]
-    },
-    {
-      "assetId": 11536,
-      "displayId": "TC-105",
-      "name": "New test case",
-      "kind": "test-case",
-      "repoPath": "TC-105-New-test-case.spec.ts"
     }
   ],
   "files": [
@@ -1009,8 +1002,8 @@
       "assetId": 8447,
       "assetKind": "test-case",
       "displayId": "TC-46",
-      "name": "LLM Chat Improved",
-      "repoPath": "LLM Chat/TC-46-LLM-Chat-Improved.spec.ts",
+      "name": "LLM Chat Working",
+      "repoPath": "LLM Chat/TC-46-LLM-Chat-Working.spec.ts",
       "parentAssetId": 8311
     },
     {
@@ -1060,14 +1053,6 @@
       "name": "Seach Assest",
       "repoPath": "Search Assets/TC-48-Seach-Assest.spec.ts",
       "parentAssetId": 8312
-    },
-    {
-      "assetId": 11536,
-      "assetKind": "test-case",
-      "displayId": "TC-105",
-      "name": "New test case",
-      "repoPath": "TC-105-New-test-case.spec.ts",
-      "parentAssetId": 17
     },
     {
       "assetId": 15668,
