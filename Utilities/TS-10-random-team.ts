@@ -4,6 +4,10 @@ export const adminPassowrd = `4HQwARpqZ4:i7aB`;
 
 export const password = `test-play-`;
 
+export async function checkLog(){
+   leapwork.log.info("shivani");
+}
+
 export const microsoftUsers = {
     //TC-113 AI Studio Monitor
     //TC-200 Documentation - Search document
@@ -62,6 +66,7 @@ export const microsoftUsers = {
     "user_56": "test-play-56@outlook.com", //TC-256 Auto create pwd secret
     "user_57": "test-play-57@outlook.com", //TC-291 Git connecter
     "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
+    "user_60": "test-play-60@outlook.com", //TC-205 Salesforce connector
     "reg_1": "regression-user-1@outlook.com", // TC-289 Context menu of a step
     "reg_3": "regression_kd_1@outlook.com",  // TC-290 CRUD TC Status
     "reg_10": "regression-user-10@outlook.com", //TC-296 Display User Name as Owner and Fallback to Email When User Name Is Unavailable

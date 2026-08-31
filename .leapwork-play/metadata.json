@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T07:27:54.717Z",
+  "generatedAt": "2026-08-31T15:05:57.015Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -534,6 +534,13 @@
           "name": "Environment",
           "kind": "test-case",
           "repoPath": "Team configuration/TC-135-Environment.spec.ts"
+        },
+        {
+          "assetId": 34510,
+          "displayId": "TC-318",
+          "name": "Salesforce connector and passkey",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-318-Salesforce-connector-and-passkey.spec.ts"
         },
         {
           "assetId": 9885,
@@ -1354,6 +1361,14 @@
       "displayId": "TC-297",
       "name": "Update \"Delete\" Action to \"Remove from Team\" for Team Members",
       "repoPath": "Team configuration/TC-297-Update-Delete-Action-to-Remove-from-Team-for-Team-Members.spec.ts",
+      "parentAssetId": 2371
+    },
+    {
+      "assetId": 34510,
+      "assetKind": "test-case",
+      "displayId": "TC-318",
+      "name": "Salesforce connector and passkey",
+      "repoPath": "Team configuration/TC-318-Salesforce-connector-and-passkey.spec.ts",
       "parentAssetId": 2371
     },
     {
