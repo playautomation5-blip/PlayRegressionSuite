@@ -5,7 +5,7 @@ import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { RenameTeam } from "@assets/Utilities/Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
-import { RandomTeam2, RandomTeam, teamName } from "@assets/Utilities/random-team";
+import { RandomTeam, RandomTeam2, teamName } from "@assets/Utilities/random-team";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -58,11 +58,19 @@ await leapwork.step("Click the Explorer button", async () => {
     await page.getByRole('button', { name: 'Explorer' }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: akwDiJmt
-await leapwork.step("Click the New chat button in Leapwork AI Studio", async () => {
-    // Click button "New chat"
+// ai-studio-step-id: pw7k6c0y00
+await leapwork.step("Click the Expand chat button in the Leapwork Play interface", async () => {
+    // Click button "Expand chat"
     await page.getByRole('button', { name: 'Expand chat' }).click();
-}, { action: "click" });
+}, { action: "click", relativeXpath: ".//div/div/div[2]/div/div/button[@aria-label=\"Expand chat\"]", continueOnFailure: true });
+
+// ai-studio-step-id: pwtubqod00
+await leapwork.step("Click the New chat button in the chat toolbar", async () => {
+    // Click button "New chat"
+    await page.getByRole('button', { name: 'New chat' }).click();
+}, { action: "click", relativeXpath: ".//div/div[2]/div/div[2]/div[1]/button[1]" });
+
+
 
 // ai-studio-step-id: X6YoYOte
 await leapwork.step("Click the Ask anything text box", async () => {
