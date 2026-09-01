@@ -10,10 +10,12 @@ leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("myGithubConnector", "github connector", leapwork.storage.LOCAL);
 const lw__myGithubConnector = leapwork.variables.get("myGithubConnector", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("ownerOrganizationWorkspace", "shha-lw", leapwork.storage.LOCAL);
+leapwork.variables.set("ownerOrganizationWorkspace", "playautomation5-blip", leapwork.storage.LOCAL);
 const lw__ownerOrganizationWorkspace = leapwork.variables.get("ownerOrganizationWorkspace", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("personalAccessToken", "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", leapwork.storage.LOCAL);
+const personalAccessToken = leapwork.variables.getSecret("personalAccessToken");
+
+leapwork.variables.set("personalAccessToken", personalAccessToken, leapwork.storage.LOCAL);
 const lw__personalAccessToken = leapwork.variables.get("personalAccessToken", leapwork.storage.LOCAL) as string;
 
 leapwork.configuration({
