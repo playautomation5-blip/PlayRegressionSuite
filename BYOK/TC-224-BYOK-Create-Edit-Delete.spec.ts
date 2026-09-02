@@ -16,9 +16,6 @@ leapwork.configuration({
 leapwork.variables.set("name", "BYOK", leapwork.storage.LOCAL);
 const lw__name = leapwork.variables.get("name", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("key", "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", leapwork.storage.LOCAL);
-const lw__key = leapwork.variables.get("key", leapwork.storage.LOCAL) as string;
-
 leapwork.variables.set("key2", "AIzaSyC_4OuQRWD_3QcUIT1I_mUZzpfGrr_WSKY", leapwork.storage.LOCAL);
 const lw__key2 = leapwork.variables.get("key2", leapwork.storage.LOCAL) as string;
 
@@ -64,7 +61,7 @@ await leapwork.step("Click the Key field in the Configure LLM Key dialog", async
 
 // ai-studio-step-id: 5mWn6laY
 await leapwork.step("Fill the Key field in the Configure LLM Key dialog", async () => {
-    await page.getByRole('textbox', { name: 'Key' }).fill(String(lw__key));
+    await page.getByRole('textbox', { name: 'Key' }).fill(leapwork.variables.getSecret('BYOK_OPEN_AI_API_KEY'));
 }, { action: "input" });
 
 // ai-studio-step-id: 8siujzvI
