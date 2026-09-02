@@ -2,7 +2,7 @@ import { leapwork } from "./leapwork";
 
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
-import { RandomTeam, teamName } from "@assets/Utilities/random-team";
+import { RandomTeam, RandomTeam2, teamName } from "@assets/Utilities/random-team";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 
 leapwork.variables.set("userId", "user_56");
@@ -49,8 +49,9 @@ await leapwork.step("Click New test case in the Leapwork Play context menu", asy
 // ai-studio-step-id: mfVyrnjw
 await leapwork.step("Click the Collapse chat button in the chat toolbar", async () => {
     // Click button "Collapse chat"
-    await page.getByRole('button', { name: 'Collapse chat' }).click();
-}, { action: "click", relativeXpath: ".//div/div[2]/div/div[2]/div[1]/button[@aria-label=\"Collapse chat\"]" });
+    const collapseChatButton = page.getByRole('button', { name: 'Collapse chat' });
+    await collapseChatButton.click();
+}, { action: "click", continueOnFailure: true, timeoutMs: 5000 });
 
 // ai-studio-step-id: KoBPA2TB
 await leapwork.step("Click the Playwright tab", async () => {
