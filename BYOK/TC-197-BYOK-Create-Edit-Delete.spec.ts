@@ -16,7 +16,7 @@ leapwork.configuration({
 leapwork.variables.set("name", "BYOK", leapwork.storage.LOCAL);
 const lw__name = leapwork.variables.get("name", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("key", "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", leapwork.storage.LOCAL);
+leapwork.variables.set("key", "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", leapwork.storage.LOCAL);
 const lw__key = leapwork.variables.get("key", leapwork.storage.LOCAL) as string;
 
 leapwork.variables.set("key2", "AIzaSyC_4OuQRWD_3QcUIT1I_mUZzpfGrr_WSKY", leapwork.storage.LOCAL);
@@ -24,16 +24,6 @@ const lw__key2 = leapwork.variables.get("key2", leapwork.storage.LOCAL) as strin
 
 leapwork.variables.set("userId", "aistudio_user_4" );
 leapwork.variables.set("passwordId", "aistudio_user_4");
-
-
-
-
-
-
-
-
-
-
 
 
 // ai-studio-step-id: pw1vs03ju0
