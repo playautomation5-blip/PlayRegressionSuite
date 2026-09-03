@@ -16,7 +16,7 @@ const lw__clientIdConsumerKey = leapwork.variables.get("clientIdConsumerKey", le
 leapwork.variables.set("connectionName", "SF regression conn", leapwork.storage.LOCAL);
 const lw__connectionName = leapwork.variables.get("connectionName", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("username", "udch@leapwork.com", leapwork.storage.LOCAL);
+leapwork.variables.set("username", "prpa@leapwork.com", leapwork.storage.LOCAL);
 const lw__username = leapwork.variables.get("username", leapwork.storage.LOCAL) as string;
 
 leapwork.variables.set("descriptionOutline", "Navigate to passKey page", leapwork.storage.LOCAL);
