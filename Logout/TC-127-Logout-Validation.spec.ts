@@ -20,8 +20,9 @@ await leapwork.step("Use test case: Microsoft Login", async () => {
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 9IaAUHdN
-await leapwork.step("Click the Test-28 Play (Personal) account button", async () => {
-    await page.getByRole('button', { name: 'Test-28 Play (Personal) Trial' }).click();
+await leapwork.step(`Click the account button`, async () => {
+    // Click span
+    await page.locator('.brandbar-account-summary').click();
 }, { action: "click" });
 
 // ai-studio-step-id: Bq3DoksX
@@ -30,6 +31,7 @@ await leapwork.step("Click the Log out link", async () => {
 }, { action: "click" });
 
 // ai-studio-step-id: FA8qjA9c
-await leapwork.step("Validate that the Login button shows 'Login' on Leapwork Play", async () => {
-    await expect(page.getByRole('button', { name: 'Login' })).toContainText("Login");
-}, { action: "validate" });
+await leapwork.step("Validate the Leapwork Play page shows the heading \"Login to continue\"", async () => {
+    // Assert heading "Login to continue" contains "Login to continue"
+    await expect(page.getByRole('heading', { name: 'Login to continue' })).toContainText("Login to continue");
+}, { action: "validate", relativeXpath: ".//div/section/div/div/header/h1" });
