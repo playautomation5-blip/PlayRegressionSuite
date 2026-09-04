@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T07:43:40.661Z",
+  "generatedAt": "2026-09-04T04:33:22.436Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -39,28 +39,6 @@
           "name": "BYOK-Create-Edit-Delete",
           "kind": "test-case",
           "repoPath": "BYOK/TC-16-BYOK-Create-Edit-Delete.spec.ts"
-        }
-      ]
-    },
-    {
-      "assetId": 10102,
-      "displayId": "FD-26",
-      "name": "check",
-      "kind": "folder",
-      "children": [
-        {
-          "assetId": 10103,
-          "displayId": "TC-102",
-          "name": "1-login",
-          "kind": "test-case",
-          "repoPath": "check/TC-102-1-login.spec.ts"
-        },
-        {
-          "assetId": 10104,
-          "displayId": "TC-103",
-          "name": "import login",
-          "kind": "test-case",
-          "repoPath": "check/TC-103-import-login.spec.ts"
         }
       ]
     },
@@ -296,13 +274,6 @@
           "repoPath": "LLM Chat/TC-46-LLM-Chat-Working.spec.ts"
         },
         {
-          "assetId": 8453,
-          "displayId": "TC-47",
-          "name": "LLM Command Test",
-          "kind": "test-case",
-          "repoPath": "LLM Chat/TC-47-LLM-Command-Test.spec.ts"
-        },
-        {
           "assetId": 15639,
           "displayId": "TC-122",
           "name": "URL Navigation Via Chat",
@@ -500,11 +471,11 @@
           ]
         },
         {
-          "assetId": 15712,
-          "displayId": "TC-129",
+          "assetId": 16961,
+          "displayId": "TC-155",
           "name": "Add Category to a test case",
           "kind": "test-case",
-          "repoPath": "Test Case/TC-129-Add-Category-to-a-test-case.spec.ts"
+          "repoPath": "Test Case/TC-155-Add-Category-to-a-test-case.spec.ts"
         },
         {
           "assetId": 15889,
@@ -551,13 +522,6 @@
           "repoPath": "Trash Can/TC-97-Delete-multiple.spec.ts"
         },
         {
-          "assetId": 9722,
-          "displayId": "TC-98",
-          "name": "Empty trash can- old",
-          "kind": "test-case",
-          "repoPath": "Trash Can/TC-98-Empty-trash-can-old.spec.ts"
-        },
-        {
           "assetId": 9723,
           "displayId": "TC-99",
           "name": "Restore & delete permanently",
@@ -585,13 +549,6 @@
           "name": "Account & Settings - Credit",
           "kind": "test-case",
           "repoPath": "User Profile/TC-58-Account-&-Settings-Credit.spec.ts"
-        },
-        {
-          "assetId": 8522,
-          "displayId": "TC-60",
-          "name": "Admin Section - Validation",
-          "kind": "test-case",
-          "repoPath": "User Profile/TC-60-Admin-Section-Validation.spec.ts"
         },
         {
           "assetId": 15728,
@@ -799,22 +756,6 @@
       "parentAssetId": 8235
     },
     {
-      "assetId": 10103,
-      "assetKind": "test-case",
-      "displayId": "TC-102",
-      "name": "1-login",
-      "repoPath": "check/TC-102-1-login.spec.ts",
-      "parentAssetId": 10102
-    },
-    {
-      "assetId": 10104,
-      "assetKind": "test-case",
-      "displayId": "TC-103",
-      "name": "import login",
-      "repoPath": "check/TC-103-import-login.spec.ts",
-      "parentAssetId": 10102
-    },
-    {
       "assetId": 15723,
       "assetKind": "test-case",
       "displayId": "TC-132",
@@ -1007,14 +948,6 @@
       "parentAssetId": 8311
     },
     {
-      "assetId": 8453,
-      "assetKind": "test-case",
-      "displayId": "TC-47",
-      "name": "LLM Command Test",
-      "repoPath": "LLM Chat/TC-47-LLM-Command-Test.spec.ts",
-      "parentAssetId": 8311
-    },
-    {
       "assetId": 11439,
       "assetKind": "test-case",
       "displayId": "TC-104",
@@ -1135,19 +1068,19 @@
       "parentAssetId": 8485
     },
     {
-      "assetId": 15712,
-      "assetKind": "test-case",
-      "displayId": "TC-129",
-      "name": "Add Category to a test case",
-      "repoPath": "Test Case/TC-129-Add-Category-to-a-test-case.spec.ts",
-      "parentAssetId": 15413
-    },
-    {
       "assetId": 15889,
       "assetKind": "test-case",
       "displayId": "TC-150",
       "name": "Record a test case",
       "repoPath": "Test Case/TC-150-Record-a-test-case.spec.ts",
+      "parentAssetId": 15413
+    },
+    {
+      "assetId": 16961,
+      "assetKind": "test-case",
+      "displayId": "TC-155",
+      "name": "Add Category to a test case",
+      "repoPath": "Test Case/TC-155-Add-Category-to-a-test-case.spec.ts",
       "parentAssetId": 15413
     },
     {
@@ -1180,14 +1113,6 @@
       "displayId": "TC-97",
       "name": "Delete multiple",
       "repoPath": "Trash Can/TC-97-Delete-multiple.spec.ts",
-      "parentAssetId": 9683
-    },
-    {
-      "assetId": 9722,
-      "assetKind": "test-case",
-      "displayId": "TC-98",
-      "name": "Empty trash can- old",
-      "repoPath": "Trash Can/TC-98-Empty-trash-can-old.spec.ts",
       "parentAssetId": 9683
     },
     {
@@ -1236,14 +1161,6 @@
       "displayId": "TC-58",
       "name": "Account & Settings - Credit",
       "repoPath": "User Profile/TC-58-Account-&-Settings-Credit.spec.ts",
-      "parentAssetId": 8314
-    },
-    {
-      "assetId": 8522,
-      "assetKind": "test-case",
-      "displayId": "TC-60",
-      "name": "Admin Section - Validation",
-      "repoPath": "User Profile/TC-60-Admin-Section-Validation.spec.ts",
       "parentAssetId": 8314
     },
     {
