@@ -23,7 +23,7 @@ await leapwork.step("Use test case: Microsoft Login", async () => {
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 leapwork.variables.set("newWorkSpace", 'AiStudio Automation\'s');
-leapwork.variables.set("targetWorkspace", "AiStudio 03 Automation (Personal)Trial")
+leapwork.variables.set("targetWorkspace", "AiStudio 03 Automation (Personal)AI Builder")
 
 // ai-studio-step-id: baf831f0
 await leapwork.step("Use test case: Enter Workspace", async () => {
@@ -35,8 +35,8 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
     return await DeleteCreateRenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-leapwork.variables.set("newWorkSpace", "Shivani Wadhwa's Workspace (Trial)");
-leapwork.variables.set("targetWorkspace", "AiStudio 03 Automation (Shivani Wadhwa's Workspace)Trial")
+leapwork.variables.set("newWorkSpace", "Shivani Wadhwa's Workspace (Cloud-Native (Scale Up))");
+leapwork.variables.set("targetWorkspace", "AiStudio 03 Automation (Shivani Wadhwa's Workspace)Cloud-Native (Scale Up)")
 
 // ai-studio-step-id: fa05b34f
 await leapwork.step("Use test case: Enter Workspace", async () => {
@@ -50,7 +50,7 @@ await leapwork.step("Click the Collapse folder button for My Team", async () => 
 }, { action: "click" });
 
 leapwork.variables.set("newWorkSpace", 'AiStudio Automation\'s');
-leapwork.variables.set("targetWorkspace", "AiStudio 03 Automation (Personal)Trial")
+leapwork.variables.set("targetWorkspace", "AiStudio 03 Automation (Personal)AI Builder")
 
 // ai-studio-step-id: 16fba203
 await leapwork.step("Use test case: Enter Workspace", async () => {
