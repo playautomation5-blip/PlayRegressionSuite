@@ -67,18 +67,6 @@ await leapwork.step("Fill the Name field with \"${lw__myGithubConnector}\" in th
         await page.getByRole('textbox', { name: 'Name' }).fill(String(lw__myGithubConnector));
 }, { action: "input" });
 
-// ai-studio-step-id: pw19e3xk60
-await leapwork.step("Click the Org field in the New connector dialog", async () => {
-    // Click textbox "Org Field help"
-    await page.getByRole('textbox', { name: 'Org Field help' }).click();
-}, { action: "click" });
-
-// ai-studio-step-id: pw1yu0dki0
-await leapwork.step("Fill the Org field with \"${lw__ownerOrganizationWorkspace}\"", async () => {
-    // Fill textbox "Org Field help"
-        await page.getByRole('textbox', { name: 'Org Field help' }).fill(String(lw__ownerOrganizationWorkspace));
-}, { action: "input" });
-
 // ai-studio-step-id: pwyphjif00
 await leapwork.step("Click the Token field in the New connector dialog", async () => {
     // Click textbox "Token Field help"
