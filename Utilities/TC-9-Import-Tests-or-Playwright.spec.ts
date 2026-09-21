@@ -3,6 +3,7 @@ import { leapwork } from "./leapwork";
 // Import files here as well for reference, otherwise you will get file not found error
 leapwork.files.path('FL-1');
 leapwork.files.path('FL-2');
+leapwork.files.path('FL-5');
 
 leapwork.configuration({
   timeoutMs: Number(

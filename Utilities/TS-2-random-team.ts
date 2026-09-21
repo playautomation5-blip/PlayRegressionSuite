@@ -74,6 +74,7 @@ export const microsoftUsers = {
     "user_60": "test-play-60@outlook.com", //TC-205 Salesforce connector
     "user_47": "test-play-47@outlook.com", // TC-206 Workspace users tab
     "user_65": "test-play-65@outlook.com", // TC-226 Timeout
+    "user_36": "test-play-36@outlook.com",//TC-233 Xpath execution
 }
 
 export const passwords = {
