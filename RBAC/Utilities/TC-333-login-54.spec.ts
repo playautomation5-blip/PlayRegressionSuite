@@ -32,7 +32,7 @@ await leapwork.step("Click the Microsoft sign-in button", async () => {
 await leapwork.step("Click “Sign in with a different Microsoft account”", async () => {
     // Click button "Sign in with a different Microsoft account"
     await page.getByRole('button', { name: 'Sign in with a different' }).click();
-}, { action: "click", continueOnFailure: true });
+}, { action: "click", continueOnFailure: true, timeoutMs: 2000 });
 
 // ai-studio-step-id: pwj9om3u00
 await leapwork.step("Fill the Email or phone number field with ${lw__emailOrPhoneNumber}", async () => {
@@ -58,7 +58,7 @@ await leapwork.step("Click the Other ways to sign in button on the Verify your e
 await leapwork.step("Click the Use your password button on the Verify your email page", async () => {
     // Click button "Use your password"
     await page.getByRole('button', { name: 'Use your password' }).click();
-}, { action: "click", continueOnFailure: true });
+}, { action: "click", continueOnFailure: true, timeoutMs: 2000 });
 
 // ai-studio-step-id: pw112kqfw0
 await leapwork.step("Fill the Password field with ${password}", async () => {
@@ -83,9 +83,9 @@ await leapwork.step("Click the Yes button on the Microsoft sign-in prompt", asyn
 // ai-studio-step-id: pw1j9yy230
 await leapwork.step("Use test case: Add company", async () => {
     return await AddCompany();
-}, { action: "asset_reference", linkedAssetType: "test-case" , continueOnFailure:true});
+}, { action: "asset_reference", linkedAssetType: "test-case", continueOnFailure:true, timeoutMs: 5000 });
 
 // ai-studio-step-id: pw1odg4wn0
 await leapwork.step("Use test case: SkipOnboardingTour", async () => {
     return await SkipOnboardingTour();
-}, { action: "asset_reference", linkedAssetType: "test-case" , continueOnFailure:true});
+}, { action: "asset_reference", linkedAssetType: "test-case", continueOnFailure:true, timeoutMs: 5000 });

@@ -82,7 +82,7 @@ await leapwork.step("Click the Log out link in the menu", async () => {
 await leapwork.step("Click the Login button", async () => {
     // Click button "Login"
     await page.getByRole('button', { name: 'Login' }).click();
-}, { action: "click", continueOnFailure: true });
+}, { action: "click", continueOnFailure: true, timeoutMs: 3000 });
 
 // ai-studio-step-id: pw1cqwua20
 await leapwork.step("Use test case: login-59", async () => {
@@ -153,7 +153,7 @@ await leapwork.step("Click the Log out link", async () => {
 await leapwork.step("Click the Login button", async () => {
     // Click button "Login"
     await page.getByRole('button', { name: 'Login' }).click();
-}, { action: "click", continueOnFailure: true });
+}, { action: "click", continueOnFailure: true, timeoutMs: 3000 });
 
 // ai-studio-step-id: pw13xl7730
 await leapwork.step("Use test case: login-54", async () => {
@@ -197,7 +197,7 @@ await leapwork.step("Click the Log out link", async () => {
 await leapwork.step("Click the Login button", async () => {
     // Click button "Login"
     await page.getByRole('button', { name: 'Login' }).click();
-}, { action: "click", continueOnFailure: true });
+}, { action: "click", continueOnFailure: true, timeoutMs: 3000 });
 
 // ai-studio-step-id: pwgtsccq00
 await leapwork.step("Use test case: login-59", async () => {
