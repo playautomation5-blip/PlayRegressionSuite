@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T07:09:44.500Z",
+  "generatedAt": "2026-09-21T10:48:27.697Z",
   "repo": {
     "connectorId": 76,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -617,6 +617,13 @@
           "name": "Salesforce connector and passkey",
           "kind": "test-case",
           "repoPath": "Team configuration/TC-205-Salesforce-connector-and-passkey.spec.ts"
+        },
+        {
+          "assetId": 12610,
+          "displayId": "TC-231",
+          "name": "Secret Name",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-231-Secret-Name.spec.ts"
         },
         {
           "assetId": 8330,
@@ -1507,6 +1514,14 @@
       "displayId": "TC-205",
       "name": "Salesforce connector and passkey",
       "repoPath": "Team configuration/TC-205-Salesforce-connector-and-passkey.spec.ts",
+      "parentAssetId": 7983
+    },
+    {
+      "assetId": 12610,
+      "assetKind": "test-case",
+      "displayId": "TC-231",
+      "name": "Secret Name",
+      "repoPath": "Team configuration/TC-231-Secret-Name.spec.ts",
       "parentAssetId": 7983
     },
     {
