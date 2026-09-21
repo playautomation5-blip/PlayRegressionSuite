@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T11:02:16.157Z",
+  "generatedAt": "2026-09-21T11:03:43.871Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -153,6 +153,13 @@
           "name": "Copy Paste",
           "kind": "test-case",
           "repoPath": "Context menu/TC-132-Copy-Paste.spec.ts"
+        },
+        {
+          "assetId": 15580,
+          "displayId": "TC-117",
+          "name": "OLD - Context menu of a step",
+          "kind": "test-case",
+          "repoPath": "Context menu/TC-117-OLD-Context-menu-of-a-step.spec.ts"
         }
       ]
     },
@@ -926,6 +933,14 @@
       "name": "Delete existing models",
       "repoPath": "BYOK/Utilities/TC-15-Delete-existing-models.spec.ts",
       "parentAssetId": 8235
+    },
+    {
+      "assetId": 15580,
+      "assetKind": "test-case",
+      "displayId": "TC-117",
+      "name": "OLD - Context menu of a step",
+      "repoPath": "Context menu/TC-117-OLD-Context-menu-of-a-step.spec.ts",
+      "parentAssetId": 15322
     },
     {
       "assetId": 15723,
