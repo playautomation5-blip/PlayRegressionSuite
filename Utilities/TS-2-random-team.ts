@@ -55,14 +55,21 @@ export const microsoftUsers = {
     "user_49": "test-play-49@outlook.com", //TC-218 Invite to a new user from team settings
     "user_50": "test-play-50@outlook.com", //TC-219 KB with git
     "user_51": "test-play-51@outlook.com", //TC-240 Navigate to Play landing page,
+    "user_52": "test-play-52@outlook.com", //TC-251 External Adapter      Note: Don't use it for other test case
     "user_53": "test-play-53@outlook.com", //TC-287 Add settings in team
     "user_55": "test-play-55@outlook.com", //TC-252 Copy paste            Note: Don't use it for other test case
     "user_56": "test-play-56@outlook.com", //TC-123 Playwright)modify-ExecuteTC
+    "user_57": "test-play-57@outlook.com", //TC-291 Git connecter
     "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
     "reg_1": "regression-user-1@outlook.com", //TC-117 Context menu of a step
     "reg_3": "regression_kd_1@outlook.com",  // TC-290 CRUD TC Status
+    "reg_10": "regression-user-10@outlook.com", //TC-296 Display User Name as Owner and Fallback to Email When User Name Is Unavailable
     "reg_12": "regression-user-jp-5@outlook.com", // TC-305 Import test case using file
+    "reg_13": "regression-user-jp-6@outlook.com", //TC-306 Edit playwright step using chat
     "reg_11": "regression-user-jp-4@outlook.com", // TC-139 Import playwright from file
+    "user_61":"test-play-61@outlook.com", //TC-148 Empty trash can
+    "user_36":"test-play-36@outlook.com", //TC-257 Xpath Execution
+    
 }
 
 export const passwords = {

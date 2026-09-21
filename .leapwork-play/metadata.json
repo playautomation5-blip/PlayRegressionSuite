@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-04T04:33:22.436Z",
+  "generatedAt": "2026-09-21T07:30:25.571Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -140,6 +140,21 @@
           "name": "Credit Transfer",
           "kind": "test-case",
           "repoPath": "Credit Management/TC-37-Credit-Transfer.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 20432,
+      "displayId": "FD-37",
+      "name": "Execution",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 20433,
+          "displayId": "TC-157",
+          "name": "Xpath execution",
+          "kind": "test-case",
+          "repoPath": "Execution/TC-157-Xpath-execution.spec.ts"
         }
       ]
     },
@@ -842,6 +857,14 @@
       "name": "Credit Transfer",
       "repoPath": "Credit Management/TC-37-Credit-Transfer.spec.ts",
       "parentAssetId": 8307
+    },
+    {
+      "assetId": 20433,
+      "assetKind": "test-case",
+      "displayId": "TC-157",
+      "name": "Xpath execution",
+      "repoPath": "Execution/TC-157-Xpath-execution.spec.ts",
+      "parentAssetId": 20432
     },
     {
       "assetId": 15856,
