@@ -69,7 +69,10 @@ export const microsoftUsers = {
     "reg_11": "regression-user-jp-4@outlook.com", // TC-139 Import playwright from file
     "user_61":"test-play-61@outlook.com", //TC-148 Empty trash can
     "user_36":"test-play-36@outlook.com", //TC-257 Xpath Execution
-    
+    "user_68": "test-play-68@outlook.com", // TC-158 Secret Name
+    "user_54": "test-play-54@outlook.com", // TC-175 Team                 Note: Don't use it for other test case
+    "user_59": "test-play-59@outlook.com", // TC-175 Team                 Note: Don't use it for other test case
+    "user_47": "test-play-47@outlook.com", // TC-172 Workspace users tab   Note: Don't use it for other test case
 }
 
 export const passwords = {

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T07:30:25.571Z",
+  "generatedAt": "2026-09-21T10:56:50.387Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -426,6 +426,13 @@
           "name": "Environment",
           "kind": "test-case",
           "repoPath": "Team configuration/TC-53-Environment.spec.ts"
+        },
+        {
+          "assetId": 20501,
+          "displayId": "TC-158",
+          "name": "Secret Name",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-158-Secret-Name.spec.ts"
         },
         {
           "assetId": 8496,
@@ -1024,6 +1031,14 @@
       "displayId": "TC-125",
       "name": "Crud TC Status",
       "repoPath": "Team configuration/TC-125-Crud-TC-Status.spec.ts",
+      "parentAssetId": 8313
+    },
+    {
+      "assetId": 20501,
+      "assetKind": "test-case",
+      "displayId": "TC-158",
+      "name": "Secret Name",
+      "repoPath": "Team configuration/TC-158-Secret-Name.spec.ts",
       "parentAssetId": 8313
     },
     {
