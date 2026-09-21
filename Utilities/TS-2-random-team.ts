@@ -63,6 +63,8 @@ export const microsoftUsers = {
     "user_57": "test-play-57@outlook.com", //TC-291 Git connecter
     "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
     "user_59": "test-play-59@outlook.com", // TC-219 Team                 Note: Don't use it for other test case
+    "user_62": "test-play-62@outlook.com", //Nitik: TC-161 
+    "user_64": "test-play-64@outlook.com", //Nitik: TC-162
     "reg_1": "regression-user-1@outlook.com", // TC-289 Context menu of a step
     "reg_3": "regression_kd_1@outlook.com",  // TC-290 CRUD TC Status
     "reg_10": "regression-user-10@outlook.com", //TC-296 Display User Name as Owner and Fallback to Email When User Name Is Unavailable
@@ -71,6 +73,7 @@ export const microsoftUsers = {
     "reg_13": "regression-user-jp-6@outlook.com", //TC-306 Edit playwright step using chat
     "user_60": "test-play-60@outlook.com", //TC-205 Salesforce connector
     "user_47": "test-play-47@outlook.com", // TC-206 Workspace users tab
+    "user_65": "test-play-65@outlook.com", // TC-226 Timeout
 }
 
 export const passwords = {

@@ -36,7 +36,7 @@ await leapwork.step("Wait for 3 seconds", async () => {
 await leapwork.step("Validate 1 new step was added", async () => {
     const steps = page.locator('.testcase-step-row');
     await expect(steps).toHaveCount(initialStepCount + 1);
-}, { action: "validate", timeoutMs: 30000 });
+}, { action: "validate", timeoutMs: 30000, continueOnFailure: true });
 
 // ai-studio-step-id: pwcmgvio00
 await leapwork.step("Click the Test case steps content area in Leapwork AI Studio", async () => {

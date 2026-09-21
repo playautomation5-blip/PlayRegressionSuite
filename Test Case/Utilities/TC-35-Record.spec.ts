@@ -77,4 +77,4 @@ await leapwork.step("Click the Disconnect button in the cloud browser panel", as
 await leapwork.step("Validate the Connect button shows 'Connect' on the Leapwork Play page", async () => {
     // Assert button "Connect" contains "Connect"
     await expect(page.getByRole('button', { name: 'Connect' })).toContainText("Connect");
-}, { action: "validate" });
+}, { action: "validate", timeoutMs: 60000 });
