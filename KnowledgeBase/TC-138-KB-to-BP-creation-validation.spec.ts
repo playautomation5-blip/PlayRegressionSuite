@@ -44,11 +44,11 @@ await leapwork.step("Click the Upload document button (20 MB max)", async () => 
      await page.getByText('Upload document', { exact: true }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: pwawjtun00
-await leapwork.step("Click the Create blueprint generator button", async () => {
-    const createBlueprintGeneratorButton = page.getByRole('button', { name: 'Create blueprint generator', exact: true });
-    await createBlueprintGeneratorButton.click({ force: true });
-});
+// ai-studio-step-id: pw1gwrwt00
+await leapwork.step("Click Blueprint", async () => {
+    // Click span
+    await page.getByRole('button', { name: 'Blueprint' }).click();
+}, { action: "click" });
 
 // ai-studio-step-id: pw1p87pmu0
 await leapwork.step("Click the Generate test case blueprints button", async () => {
@@ -56,17 +56,11 @@ await leapwork.step("Click the Generate test case blueprints button", async () =
     await generateBlueprintsButton.click({ force: true });
 });
 
-// ai-studio-step-id: 09wpGzbz
-await leapwork.step("Validate that the selected blueprint name shows 'New blueprint generator' on Leapwork Play", async () => {
-    // Assert "New blueprint generator" contains "New blueprint generator"
-    await expect(page.getByText('New blueprint generator').first()).toContainText("New blueprint generator");
-}, { action: "validate", relativeXpath: ".//div[2]/div[1]/div[2]/div[2]/div/span[4]" });
-
 // ai-studio-step-id: OGVId4Au
 await leapwork.step("Click the Clear plan button", async () => {
     // Click span
     await page.getByRole('button', { name: 'Clear plan' }).click();
-}, { action: "click", relativeXpath: ".//div/div[1]/div/div[1]/button/span" });
+}, { action: "click" });
 
 // ai-studio-step-id: d4b7d031
 await leapwork.step("Use test case: Delete Team", async () => {
