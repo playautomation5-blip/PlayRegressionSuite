@@ -76,6 +76,7 @@ export const microsoftUsers = {
     "reg_13": "regression-user-jp-6@outlook.com", //TC-306 Edit playwright step using chat
     "user_47": "test-play-47@outlook.com", // TC-332 Workspace users tab
     "user_36":"test-play-36@outlook.com", //TC-309 Xpath Execution
+    "user_65": "test-play-65@outlook.com", // TC-337 Timeout
 }
 
 export const passwords = {

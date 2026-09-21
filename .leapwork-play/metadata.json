@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T15:05:57.015Z",
+  "generatedAt": "2026-09-21T07:43:09.235Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -49,11 +49,110 @@
       "kind": "folder",
       "children": [
         {
+          "assetId": 40731,
+          "displayId": "FD-69",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 40739,
+              "displayId": "TC-326",
+              "name": "Add comment",
+              "kind": "test-case",
+              "repoPath": "Context menu/Utilities/TC-326-Add-comment.spec.ts"
+            },
+            {
+              "assetId": 40740,
+              "displayId": "TC-327",
+              "name": "Add property - self-heal",
+              "kind": "test-case",
+              "repoPath": "Context menu/Utilities/TC-327-Add-property-self-heal.spec.ts"
+            },
+            {
+              "assetId": 40741,
+              "displayId": "TC-328",
+              "name": "Add property - timeout",
+              "kind": "test-case",
+              "repoPath": "Context menu/Utilities/TC-328-Add-property-timeout.spec.ts"
+            },
+            {
+              "assetId": 40738,
+              "displayId": "TC-325",
+              "name": "Continue if fails",
+              "kind": "test-case",
+              "repoPath": "Context menu/Utilities/TC-325-Continue-if-fails.spec.ts"
+            },
+            {
+              "assetId": 40743,
+              "displayId": "TC-330",
+              "name": "Delete step",
+              "kind": "test-case",
+              "repoPath": "Context menu/Utilities/TC-330-Delete-step.spec.ts"
+            },
+            {
+              "assetId": 40742,
+              "displayId": "TC-329",
+              "name": "Edit step",
+              "kind": "test-case",
+              "repoPath": "Context menu/Utilities/TC-329-Edit-step.spec.ts"
+            },
+            {
+              "assetId": 40736,
+              "displayId": "TC-323",
+              "name": "Insert above the step",
+              "kind": "test-case",
+              "repoPath": "Context menu/Utilities/TC-323-Insert-above-the-step.spec.ts"
+            },
+            {
+              "assetId": 40737,
+              "displayId": "TC-324",
+              "name": "Insert below this step",
+              "kind": "test-case",
+              "repoPath": "Context menu/Utilities/TC-324-Insert-below-this-step.spec.ts"
+            },
+            {
+              "assetId": 40733,
+              "displayId": "TC-320",
+              "name": "Record after this step",
+              "kind": "test-case",
+              "repoPath": "Context menu/Utilities/TC-320-Record-after-this-step.spec.ts"
+            },
+            {
+              "assetId": 40735,
+              "displayId": "TC-322",
+              "name": "Run from here",
+              "kind": "test-case",
+              "repoPath": "Context menu/Utilities/TC-322-Run-from-here.spec.ts"
+            },
+            {
+              "assetId": 40734,
+              "displayId": "TC-321",
+              "name": "Run this step",
+              "kind": "test-case",
+              "repoPath": "Context menu/Utilities/TC-321-Run-this-step.spec.ts"
+            },
+            {
+              "assetId": 40732,
+              "displayId": "TC-319",
+              "name": "Run to here",
+              "kind": "test-case",
+              "repoPath": "Context menu/Utilities/TC-319-Run-to-here.spec.ts"
+            }
+          ]
+        },
+        {
           "assetId": 25804,
           "displayId": "TC-289",
+          "name": "(OLD)Context menu of a step",
+          "kind": "test-case",
+          "repoPath": "Context menu/TC-289-(OLD)Context-menu-of-a-step.spec.ts"
+        },
+        {
+          "assetId": 40744,
+          "displayId": "TC-331",
           "name": "Context menu of a step",
           "kind": "test-case",
-          "repoPath": "Context menu/TC-289-Context-menu-of-a-step.spec.ts"
+          "repoPath": "Context menu/TC-331-Context-menu-of-a-step.spec.ts"
         },
         {
           "assetId": 24280,
@@ -156,13 +255,6 @@
       "name": "Execution",
       "kind": "folder",
       "children": [
-        {
-          "assetId": 30433,
-          "displayId": "TC-310",
-          "name": "New test case",
-          "kind": "test-case",
-          "repoPath": "Execution/TC-310-New-test-case.spec.ts"
-        },
         {
           "assetId": 30303,
           "displayId": "TC-309",
@@ -407,6 +499,50 @@
       ]
     },
     {
+      "assetId": 40745,
+      "displayId": "FD-70",
+      "name": "RBAC",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 40747,
+          "displayId": "FD-71",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 40748,
+              "displayId": "TC-333",
+              "name": "login-54",
+              "kind": "test-case",
+              "repoPath": "RBAC/Utilities/TC-333-login-54.spec.ts"
+            },
+            {
+              "assetId": 40749,
+              "displayId": "TC-334",
+              "name": "login-59",
+              "kind": "test-case",
+              "repoPath": "RBAC/Utilities/TC-334-login-59.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 40750,
+          "displayId": "TC-335",
+          "name": "Team - RBAC",
+          "kind": "test-case",
+          "repoPath": "RBAC/TC-335-Team-RBAC.spec.ts"
+        },
+        {
+          "assetId": 40746,
+          "displayId": "TC-332",
+          "name": "Workspace users tab",
+          "kind": "test-case",
+          "repoPath": "RBAC/TC-332-Workspace-users-tab.spec.ts"
+        }
+      ]
+    },
+    {
       "assetId": 10065,
       "displayId": "FD-34",
       "name": "Runlist",
@@ -641,6 +777,21 @@
           "name": "Record a test Case",
           "kind": "test-case",
           "repoPath": "Test Case/TC-229-Record-a-test-Case.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 41075,
+      "displayId": "FD-72",
+      "name": "Timeout",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 41076,
+          "displayId": "TC-337",
+          "name": "Timeout",
+          "kind": "test-case",
+          "repoPath": "Timeout/TC-337-Timeout.spec.ts"
         }
       ]
     },
@@ -967,9 +1118,113 @@
       "assetId": 25804,
       "assetKind": "test-case",
       "displayId": "TC-289",
-      "name": "Context menu of a step",
-      "repoPath": "Context menu/TC-289-Context-menu-of-a-step.spec.ts",
+      "name": "(OLD)Context menu of a step",
+      "repoPath": "Context menu/TC-289-(OLD)Context-menu-of-a-step.spec.ts",
       "parentAssetId": 25768
+    },
+    {
+      "assetId": 40744,
+      "assetKind": "test-case",
+      "displayId": "TC-331",
+      "name": "Context menu of a step",
+      "repoPath": "Context menu/TC-331-Context-menu-of-a-step.spec.ts",
+      "parentAssetId": 25768
+    },
+    {
+      "assetId": 40732,
+      "assetKind": "test-case",
+      "displayId": "TC-319",
+      "name": "Run to here",
+      "repoPath": "Context menu/Utilities/TC-319-Run-to-here.spec.ts",
+      "parentAssetId": 40731
+    },
+    {
+      "assetId": 40733,
+      "assetKind": "test-case",
+      "displayId": "TC-320",
+      "name": "Record after this step",
+      "repoPath": "Context menu/Utilities/TC-320-Record-after-this-step.spec.ts",
+      "parentAssetId": 40731
+    },
+    {
+      "assetId": 40734,
+      "assetKind": "test-case",
+      "displayId": "TC-321",
+      "name": "Run this step",
+      "repoPath": "Context menu/Utilities/TC-321-Run-this-step.spec.ts",
+      "parentAssetId": 40731
+    },
+    {
+      "assetId": 40735,
+      "assetKind": "test-case",
+      "displayId": "TC-322",
+      "name": "Run from here",
+      "repoPath": "Context menu/Utilities/TC-322-Run-from-here.spec.ts",
+      "parentAssetId": 40731
+    },
+    {
+      "assetId": 40736,
+      "assetKind": "test-case",
+      "displayId": "TC-323",
+      "name": "Insert above the step",
+      "repoPath": "Context menu/Utilities/TC-323-Insert-above-the-step.spec.ts",
+      "parentAssetId": 40731
+    },
+    {
+      "assetId": 40737,
+      "assetKind": "test-case",
+      "displayId": "TC-324",
+      "name": "Insert below this step",
+      "repoPath": "Context menu/Utilities/TC-324-Insert-below-this-step.spec.ts",
+      "parentAssetId": 40731
+    },
+    {
+      "assetId": 40738,
+      "assetKind": "test-case",
+      "displayId": "TC-325",
+      "name": "Continue if fails",
+      "repoPath": "Context menu/Utilities/TC-325-Continue-if-fails.spec.ts",
+      "parentAssetId": 40731
+    },
+    {
+      "assetId": 40739,
+      "assetKind": "test-case",
+      "displayId": "TC-326",
+      "name": "Add comment",
+      "repoPath": "Context menu/Utilities/TC-326-Add-comment.spec.ts",
+      "parentAssetId": 40731
+    },
+    {
+      "assetId": 40740,
+      "assetKind": "test-case",
+      "displayId": "TC-327",
+      "name": "Add property - self-heal",
+      "repoPath": "Context menu/Utilities/TC-327-Add-property-self-heal.spec.ts",
+      "parentAssetId": 40731
+    },
+    {
+      "assetId": 40741,
+      "assetKind": "test-case",
+      "displayId": "TC-328",
+      "name": "Add property - timeout",
+      "repoPath": "Context menu/Utilities/TC-328-Add-property-timeout.spec.ts",
+      "parentAssetId": 40731
+    },
+    {
+      "assetId": 40742,
+      "assetKind": "test-case",
+      "displayId": "TC-329",
+      "name": "Edit step",
+      "repoPath": "Context menu/Utilities/TC-329-Edit-step.spec.ts",
+      "parentAssetId": 40731
+    },
+    {
+      "assetId": 40743,
+      "assetKind": "test-case",
+      "displayId": "TC-330",
+      "name": "Delete step",
+      "repoPath": "Context menu/Utilities/TC-330-Delete-step.spec.ts",
+      "parentAssetId": 40731
     },
     {
       "assetId": 2970,
@@ -1057,14 +1312,6 @@
       "displayId": "TC-309",
       "name": "Xpath execution",
       "repoPath": "Execution/TC-309-Xpath-execution.spec.ts",
-      "parentAssetId": 30302
-    },
-    {
-      "assetId": 30433,
-      "assetKind": "test-case",
-      "displayId": "TC-310",
-      "name": "New test case",
-      "repoPath": "Execution/TC-310-New-test-case.spec.ts",
       "parentAssetId": 30302
     },
     {
@@ -1242,6 +1489,38 @@
       "name": "Playwright-Modify-ExecuteTC",
       "repoPath": "Playwright/TC-256-Playwright-Modify-ExecuteTC.spec.ts",
       "parentAssetId": 25745
+    },
+    {
+      "assetId": 40746,
+      "assetKind": "test-case",
+      "displayId": "TC-332",
+      "name": "Workspace users tab",
+      "repoPath": "RBAC/TC-332-Workspace-users-tab.spec.ts",
+      "parentAssetId": 40745
+    },
+    {
+      "assetId": 40750,
+      "assetKind": "test-case",
+      "displayId": "TC-335",
+      "name": "Team - RBAC",
+      "repoPath": "RBAC/TC-335-Team-RBAC.spec.ts",
+      "parentAssetId": 40745
+    },
+    {
+      "assetId": 40748,
+      "assetKind": "test-case",
+      "displayId": "TC-333",
+      "name": "login-54",
+      "repoPath": "RBAC/Utilities/TC-333-login-54.spec.ts",
+      "parentAssetId": 40747
+    },
+    {
+      "assetId": 40749,
+      "assetKind": "test-case",
+      "displayId": "TC-334",
+      "name": "login-59",
+      "repoPath": "RBAC/Utilities/TC-334-login-59.spec.ts",
+      "parentAssetId": 40747
     },
     {
       "assetId": 10066,
@@ -1450,6 +1729,14 @@
       "name": "Add Category",
       "repoPath": "Test Case/Utilities/TC-241-Add-Category.spec.ts",
       "parentAssetId": 19727
+    },
+    {
+      "assetId": 41076,
+      "assetKind": "test-case",
+      "displayId": "TC-337",
+      "name": "Timeout",
+      "repoPath": "Timeout/TC-337-Timeout.spec.ts",
+      "parentAssetId": 41075
     },
     {
       "assetId": 3230,
