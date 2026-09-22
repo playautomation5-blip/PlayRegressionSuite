@@ -77,6 +77,7 @@ export const microsoftUsers = {
     "user_47": "test-play-47@outlook.com", // TC-332 Workspace users tab
     "user_36":"test-play-36@outlook.com", //TC-309 Xpath Execution
     "user_65": "test-play-65@outlook.com", // TC-337 Timeout
+    "user_68": "test-play-68@outlook.com", // TC-338 Secret Name
 }
 
 export const passwords = {
