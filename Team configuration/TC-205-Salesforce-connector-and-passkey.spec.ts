@@ -16,7 +16,7 @@ const lw__clientIdConsumerKey = leapwork.variables.get("clientIdConsumerKey", le
 leapwork.variables.set("connectionName", "SF regression conn", leapwork.storage.LOCAL);
 const lw__connectionName = leapwork.variables.get("connectionName", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("username", "prpa@leapwork.com", leapwork.storage.LOCAL);
+leapwork.variables.set("username", "udch@leapwork.com", leapwork.storage.LOCAL);
 const lw__username = leapwork.variables.get("username", leapwork.storage.LOCAL) as string;
 
 leapwork.variables.set("descriptionOutline", "Navigate to passKey page", leapwork.storage.LOCAL);
@@ -155,7 +155,7 @@ await leapwork.step("Click the Log In to sandbox button on the Salesforce login 
 }, { action: "click"});
 
 // ai-studio-step-id: pwj9qsy000
-await leapwork.step("Fill the Verification Code field with 103237", async () => {
+await leapwork.step("Fill the Verification Code field", async () => {
     const textbox = page.getByRole('textbox', { name: 'Verification Code', exact: true });
     await expect(textbox).toHaveCount(1);
     await textbox.fill(leapwork.generateTOTP(leapwork.variables.getSecret("mfaSecret_bt9Lruh8")));
