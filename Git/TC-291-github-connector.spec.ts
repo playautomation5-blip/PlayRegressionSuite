@@ -2,7 +2,7 @@ import { leapwork } from "./leapwork";
 
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
-import {teamName} from "@assets/Utilities/random-team";
+import { RandomTeam as teamName } from "@assets/Utilities/random-team";
 
 leapwork.variables.set("userId", "user_57");
 leapwork.variables.set("teamName", teamName);
@@ -68,18 +68,6 @@ await leapwork.step("Click the Host (optional) field in the New connector form",
     await page.getByRole('textbox', { name: 'Host (optional) Field help' }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: zTq1jDUz
-await leapwork.step("Click the Org field in the New connector form", async () => {
-    // Click textbox "Org Field help"
-    await page.getByRole('textbox', { name: 'Org Field help' }).click();
-}, { action: "click" });
-
-// ai-studio-step-id: pT0Etyxp
-await leapwork.step(`Fill the Org field with "${lw__ownerOrganizationWorkspace}" in the new GitHub connector form`, async () => {
-    // Fill textbox "Org Field help"
-    await page.getByRole('textbox', { name: 'Org Field help' }).fill(String(lw__ownerOrganizationWorkspace));
-}, { action: "input" });
-
 // ai-studio-step-id: 9l8rWHyL
 await leapwork.step("Click the Token field in the New connector form", async () => {
     // Click textbox "Token Field help"
@@ -91,6 +79,10 @@ await leapwork.step("Fill the Token field in the New connector dialog", async ()
     // Fill textbox "Token Field help"
     await page.getByRole('textbox', { name: 'Token Field help' }).fill(String(lw__personalAccessToken));
 }, { action: "input" });
+
+
+
+
 
 // ai-studio-step-id: brxZar4r
 await leapwork.step("Click the Test connection button in the New connector form", async () => {
@@ -122,3 +114,5 @@ await leapwork.step("Click Delete to confirm deleting the \"github connector\" c
     // Click button "Delete"
     await page.getByRole('button', { name: 'Delete' }).click();
 }, { action: "click" });
+
+
