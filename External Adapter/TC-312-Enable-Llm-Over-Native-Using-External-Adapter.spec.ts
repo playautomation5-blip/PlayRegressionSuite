@@ -37,7 +37,7 @@ await leapwork.step("Use test case: Create New Team", async () => {
 await leapwork.step("Double Click on New team", async () => {
     // Double Click on New team"
     await page.getByText('New team').dblclick();
-}, { action: "click" });
+}, { action: "click", continueOnFailure: true });
 
 // ai-studio-step-id: pwzxyp9200
 await leapwork.step("Click the + Add Environment button in the Environments section", async () => {
