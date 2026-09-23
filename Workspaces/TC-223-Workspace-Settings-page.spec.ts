@@ -43,20 +43,20 @@ await leapwork.step("Validate the Leapwork Play settings page shows “Workspace
     await expect(page.getByRole('button', { name: 'Workspace settings' })).toContainText("Workspace settings");
 }, { action: "validate", relativeXpath: ".//div[2]/div[2]/div/div/nav/button[1]" });
 
-// ai-studio-step-id: pwkjay2a00
-await leapwork.step("Validate the Settings tab on the Leapwork Play settings page shows \"Settings\"", async () => {
+// ai-studio-step-id: pw1ewo74r0
+await leapwork.step("Validate the Settings tab on the Leapwork Play settings page shows \"Workspace settings\"", async () => {
     // Assert button "Settings" contains "Settings"
-    await expect(page.getByRole('button', { name: 'Settings', exact: true })).toContainText("Settings");
+    await expect(page.getByRole('button', { name: 'Workspace settings', exact: true })).toContainText("Workspace settings");
 }, { action: "validate", relativeXpath: ".//div/div/div/div/div[@aria-label=\"Workspace settings tabs\"]/button[1]" });
 
-// ai-studio-step-id: pw144j04v0
-await leapwork.step("Validate the Leapwork Play settings page shows the “Workspace settings” heading", async () => {
+// ai-studio-step-id: pw19tbjeq0
+await leapwork.step("Validate that the Leapwork Play page displays the “Workspace settings” heading", async () => {
     // Assert heading "Workspace settings" contains "Workspace settings"
-    await expect(page.getByRole('heading', { name: 'Workspace settings' })).toContainText("Workspace settings");
-}, { action: "validate", relativeXpath: ".//div/div/div/div/div[2]/h2" });
-
+    await expect(page.getByRole('heading', { name: 'Workspace settings', exact: true })).toContainText("Workspace settings");
+}, { action: "validate", relativeXpath: ".//div/div/div/div[1]/div/h2" });
 // ai-studio-step-id: pwbx55k600
 await leapwork.step("Validate the Leapwork Play settings page shows the \"+ Add setting\" button", async () => {
     // Assert span contains "+ Add setting"
     await expect(page.getByRole('button', { name: '+ Add setting' })).toContainText("+ Add setting");
 }, { action: "validate", relativeXpath: ".//div/div/div[2]/div[2]/button/span" });
+
