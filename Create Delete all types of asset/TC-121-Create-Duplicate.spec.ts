@@ -49,6 +49,12 @@ await leapwork.step("Click the Create Duplicate option in the test case context 
 }, { action: "click" });
 
 // ai-studio-step-id: 690c9c93
+await leapwork.step("Validate that the Owner shows 'Test-7 Play' on the Leapwork Play page", async () => {
+    // Assert span contains "Test-7 Play"
+    await expect(page.locator('.metadata-field', { hasText: 'Owner' }).locator('.metadata-value-text')).toHaveText('Test-7 Play');
+}, { action: "validate" });
+
+// ai-studio-step-id: pww4odu600
 await leapwork.step("Use test case: Delete Team", async () => {
     return await DeleteTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
