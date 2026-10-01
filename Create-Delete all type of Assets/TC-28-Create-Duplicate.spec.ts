@@ -48,6 +48,12 @@ await leapwork.step("Click the Create Duplicate option in the test case context 
     await page.getByText('Create Duplicate').click();
 }, { action: "click" });
 
+// ai-studio-step-id: pwmh3f1h00
+await leapwork.step("Validate that the Owner shows 'Test-7 Play' on the Leapwork Play page", async () => {
+    // Assert span contains "Test-7 Play"
+    await expect(page.locator('.metadata-field', { hasText: 'Owner' }).locator('.metadata-value-text')).toHaveText('Test-7 Play');
+}, { action: "validate" });
+
 // ai-studio-step-id: 7ff6ee6e
 await leapwork.step("Use test case: Delete Team", async () => {
     return await DeleteTeam();
