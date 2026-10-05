@@ -89,16 +89,7 @@ await leapwork.step("Fill the Token field with the GitHub personal access token"
     await page.getByRole('textbox', { name: 'Token Token help' }).fill(leapwork.variables.getSecret("git_token"));
 }, { action: "input" });
 
-// ai-studio-step-id: pw7ecokw00
-await leapwork.step("Select 'Leap-Play-testing' from the Org dropdown", async () => {
-    // Click div
-    await page.getByRole('combobox', { name: 'Org' }).click();
-}, { action: "click" });
 
-// ai-studio-step-id: pwqwtrht00
-await leapwork.step("Click the \"Leap-Play-testing\" option in the Org dropdown on the New connector dialog", async () => {
-    await page.getByRole('option', { name: 'Leap-Play-testing' }).click();
-}, { action: "click" });
 
 // ai-studio-step-id: pw82wu6q00
 await leapwork.step("Click the Connect button in the New connector dialog", async () => {
