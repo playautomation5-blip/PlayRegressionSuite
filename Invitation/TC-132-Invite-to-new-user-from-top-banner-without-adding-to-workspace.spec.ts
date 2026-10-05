@@ -64,7 +64,7 @@ await leapwork.step("Click the name@company.com email field in the Invite a frie
     await emailInput.click({ force: true });
 });
 
-// ai-studio-step-id: pwmyb74500
+// ai-studio-step-id: pw1ptueb60
 await leapwork.step(`Fill the name@company.com email field with ${invitationEmail}`, async () => {
     const email = page.locator('#invite-user-email');
     await email.fill(invitationEmail);
@@ -98,10 +98,10 @@ await leapwork.step("Validate the invitation sent message on Leapwork Play modal
     await expect(page.getByText('Invitation email sent. They')).toContainText("Invitation email sent. They can join Leapwork Play without being added to a team.");
 }, { action: "validate" });
 
-// ai-studio-step-id: sPJjbfga
+// ai-studio-step-id: pw1mxrlwn0
 await leapwork.step("Click the Ok button on the invitation sent popup", async () => {
     // Click button "Ok"
-    await page.getByRole('button', { name: 'Ok' }).click();
+    await page.getByRole('button', { name: 'Ok', exact:true  }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: 3aefdc51

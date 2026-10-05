@@ -32,11 +32,13 @@ await leapwork.step("Click the Account and settings option", async () => {
     await page.getByText('Account and settings').click();
 }, { action: "click" });
 
-// ai-studio-step-id: pw1hg1f900
-await leapwork.step("Click the Credits button in the settings navigation", async () => {
+
+
+// ai-studio-step-id: pw1a6a8iz0
+await leapwork.step("Click Credits in the Subscription and usage settings navigation", async () => {
     // Click button "Credits"
-    await page.getByRole('button', { name: 'Credits' }).click();
-}, { action: "click" });
+    await page.getByRole('button', { name: 'Credits', exact: true }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[1]/div/nav/button[5]" });
 
 // ai-studio-step-id: 6pLeNFuT
 await leapwork.step("Validate that 'Your unassigned credits' is shown on the Leapwork AI Studio page", async () => {

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T10:54:01.202Z",
+  "generatedAt": "2026-10-05T08:05:24.336Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -141,13 +141,6 @@
           ]
         },
         {
-          "assetId": 25804,
-          "displayId": "TC-289",
-          "name": "(OLD)Context menu of a step",
-          "kind": "test-case",
-          "repoPath": "Context menu/TC-289-(OLD)Context-menu-of-a-step.spec.ts"
-        },
-        {
           "assetId": 40744,
           "displayId": "TC-331",
           "name": "Context menu of a step",
@@ -255,6 +248,20 @@
       "name": "Execution",
       "kind": "folder",
       "children": [
+        {
+          "assetId": 41278,
+          "displayId": "TC-340",
+          "name": "Run execution cleanup after recorder starts",
+          "kind": "test-case",
+          "repoPath": "Execution/TC-340-Run-execution-cleanup-after-recorder-starts.spec.ts"
+        },
+        {
+          "assetId": 41277,
+          "displayId": "TC-339",
+          "name": "Xpath execution with variables",
+          "kind": "test-case",
+          "repoPath": "Execution/TC-339-Xpath-execution-with-variables.spec.ts"
+        },
         {
           "assetId": 30303,
           "displayId": "TC-309",
@@ -628,6 +635,13 @@
               "repoPath": "Team configuration/Utilities/TC-239-Add-Category.spec.ts"
             },
             {
+              "assetId": 41305,
+              "displayId": "TC-341",
+              "name": "Add Setting",
+              "kind": "test-case",
+              "repoPath": "Team configuration/Utilities/TC-341-Add-Setting.spec.ts"
+            },
+            {
               "assetId": 19707,
               "displayId": "TC-226",
               "name": "Add Tag",
@@ -707,11 +721,25 @@
           "repoPath": "Team configuration/TC-133-Tag.spec.ts"
         },
         {
+          "assetId": 41306,
+          "displayId": "TC-342",
+          "name": "Team Self heal settings",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-342-Team-Self-heal-settings.spec.ts"
+        },
+        {
           "assetId": 25908,
           "displayId": "TC-297",
           "name": "Update \"Delete\" Action to \"Remove from Team\" for Team Members",
           "kind": "test-case",
           "repoPath": "Team configuration/TC-297-Update-Delete-Action-to-Remove-from-Team-for-Team-Members.spec.ts"
+        },
+        {
+          "assetId": 41307,
+          "displayId": "TC-343",
+          "name": "Workspace self heal setting",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-343-Workspace-self-heal-setting.spec.ts"
         }
       ]
     },
@@ -893,13 +921,6 @@
           "name": "AI Studio Monitor",
           "kind": "test-case",
           "repoPath": "User Profile/TC-113-AI-Studio-Monitor.spec.ts"
-        },
-        {
-          "assetId": 13229,
-          "displayId": "TC-189",
-          "name": "Documentation - Build a Knowledge Base",
-          "kind": "test-case",
-          "repoPath": "User Profile/TC-189-Documentation-Build-a-Knowledge-Base.spec.ts"
         },
         {
           "assetId": 14242,
@@ -1122,14 +1143,6 @@
       "parentAssetId": 25768
     },
     {
-      "assetId": 25804,
-      "assetKind": "test-case",
-      "displayId": "TC-289",
-      "name": "(OLD)Context menu of a step",
-      "repoPath": "Context menu/TC-289-(OLD)Context-menu-of-a-step.spec.ts",
-      "parentAssetId": 25768
-    },
-    {
       "assetId": 40744,
       "assetKind": "test-case",
       "displayId": "TC-331",
@@ -1319,6 +1332,22 @@
       "displayId": "TC-309",
       "name": "Xpath execution",
       "repoPath": "Execution/TC-309-Xpath-execution.spec.ts",
+      "parentAssetId": 30302
+    },
+    {
+      "assetId": 41277,
+      "assetKind": "test-case",
+      "displayId": "TC-339",
+      "name": "Xpath execution with variables",
+      "repoPath": "Execution/TC-339-Xpath-execution-with-variables.spec.ts",
+      "parentAssetId": 30302
+    },
+    {
+      "assetId": 41278,
+      "assetKind": "test-case",
+      "displayId": "TC-340",
+      "name": "Run execution cleanup after recorder starts",
+      "repoPath": "Execution/TC-340-Run-execution-cleanup-after-recorder-starts.spec.ts",
       "parentAssetId": 30302
     },
     {
@@ -1666,6 +1695,22 @@
       "parentAssetId": 2371
     },
     {
+      "assetId": 41306,
+      "assetKind": "test-case",
+      "displayId": "TC-342",
+      "name": "Team Self heal settings",
+      "repoPath": "Team configuration/TC-342-Team-Self-heal-settings.spec.ts",
+      "parentAssetId": 2371
+    },
+    {
+      "assetId": 41307,
+      "assetKind": "test-case",
+      "displayId": "TC-343",
+      "name": "Workspace self heal setting",
+      "repoPath": "Team configuration/TC-343-Workspace-self-heal-setting.spec.ts",
+      "parentAssetId": 2371
+    },
+    {
       "assetId": 19707,
       "assetKind": "test-case",
       "displayId": "TC-226",
@@ -1679,6 +1724,14 @@
       "displayId": "TC-239",
       "name": "Add Category",
       "repoPath": "Team configuration/Utilities/TC-239-Add-Category.spec.ts",
+      "parentAssetId": 19706
+    },
+    {
+      "assetId": 41305,
+      "assetKind": "test-case",
+      "displayId": "TC-341",
+      "name": "Add Setting",
+      "repoPath": "Team configuration/Utilities/TC-341-Add-Setting.spec.ts",
       "parentAssetId": 19706
     },
     {
@@ -1807,14 +1860,6 @@
       "displayId": "TC-185",
       "name": "Account & Settings - Audit Log",
       "repoPath": "User Profile/TC-185-Account-&-Settings-Audit-Log.spec.ts",
-      "parentAssetId": 2993
-    },
-    {
-      "assetId": 13229,
-      "assetKind": "test-case",
-      "displayId": "TC-189",
-      "name": "Documentation - Build a Knowledge Base",
-      "repoPath": "User Profile/TC-189-Documentation-Build-a-Knowledge-Base.spec.ts",
       "parentAssetId": 2993
     },
     {

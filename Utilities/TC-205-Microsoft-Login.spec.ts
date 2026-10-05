@@ -38,7 +38,7 @@ await leapwork.step("Click the Next button on the Microsoft Sign in page", async
 
 // ai-studio-step-id: pw112jp8f0
 await leapwork.step("Click the Other ways to sign in button on the Verify your email page", async () => {
-    if(userId.startsWith("aistudio_user_")){
+    if(userId.startsWith("aistudio_user_") || userId.startsWith("reg_2")){
         const otherWaysToSignIn = page.getByRole('button', { name: 'Other ways to sign in', exact: true });
         await otherWaysToSignIn.click({ force: true });   
     }

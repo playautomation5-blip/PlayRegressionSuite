@@ -31,11 +31,13 @@ await leapwork.step("Click the Account and settings option to open the Account a
     await target.click({ force: true });
 });
 
-// ai-studio-step-id: pw8ybfxz00
-await leapwork.step("Click the Credits button in the settings navigation", async () => {
+// ai-studio-step-id: pw1dffo6v0
+await leapwork.step("Click the Credits button in Settings navigation", async () => {
     // Click button "Credits"
-    await page.getByRole('button', { name: 'Credits' }).click();
-}, { action: "click" });
+    await page.getByRole('button', { name: 'Credits', exact: true }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[1]/div/nav/button[5]" });
+
+
 
 // ai-studio-step-id: U0p1YwmS
 await leapwork.step("Validate that the Credits heading shows 'Credits' on the Leapwork Play page", async () => {
