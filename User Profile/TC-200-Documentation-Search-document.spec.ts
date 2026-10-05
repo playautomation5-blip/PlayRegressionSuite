@@ -39,13 +39,13 @@ await leapwork.step("Validate that the Welcome to Play button shows 'Welcome to 
     await expect(page.getByRole('button', { name: 'Welcome to Play' })).toContainText("Welcome to Play");
 }, { action: "validate" });
 
-// ai-studio-step-id: Iu66OMDz
+// ai-studio-step-id: pwm7no7200
 await leapwork.step("Validate the \"Run Your First Automation\" button text on the Leapwork Play page", async () => {
     // Assert button "Run Your First Automation" contains "Run Your First Automation"
     await expect(page.getByRole('button', { name: 'Run Your First Automation' })).toContainText("Run Your First Automation");
 }, { action: "validate" });
 
-// ai-studio-step-id: aKOZoL7E
+// ai-studio-step-id: pw1o1sjdt0
 await leapwork.step("Validate the Leapwork Play page shows 'Record-Edit-Run Playwright With Self-Healing AIA'", async () => {
     // Assert span contains "Record-Edit-Run Playwright With Self-Healing AIA"
     await expect(page.getByRole('button', { name: 'Record-Edit-Run Playwright' })).toContainText("Record-Edit-Run Playwright With Self-Healing AIA");

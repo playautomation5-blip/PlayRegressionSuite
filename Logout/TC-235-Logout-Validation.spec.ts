@@ -19,7 +19,7 @@ await leapwork.step("Use test case: Microsoft Login", async () => {
     return await MicrosoftLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: 9IaAUHdN
+// ai-studio-step-id: pw1m119r30
 await leapwork.step("Click the Test-28 Play (Personal) account button", async () => {
     await page.getByRole('button', { name: 'Test-28 Play (Personal) Trial' }).click();
 }, { action: "click" });
@@ -29,7 +29,7 @@ await leapwork.step("Click the Log out link", async () => {
     await page.getByText('Log out').click();
 }, { action: "click" });
 
-// ai-studio-step-id: FA8qjA9c
+// ai-studio-step-id: pwhdkdvz00
 await leapwork.step("Validate that the Login button shows 'Login' on Leapwork Play", async () => {
     await expect(page.getByRole('button', { name: 'Login' })).toContainText("Login");
 }, { action: "validate" });

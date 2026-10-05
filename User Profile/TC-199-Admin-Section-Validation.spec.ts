@@ -294,7 +294,7 @@ await leapwork.step("Validate the Product Control requests heading is shown on t
     await expect(page.getByRole('heading', { name: 'Product Control requests' })).toContainText("Product Control requests");
 }, { action: "validate" });
 
-// ai-studio-step-id: M2m9K9tH
+// ai-studio-step-id: pw1c6w7ny0
 await leapwork.step("Validate the Timestamp column header shows 'Timestamp' on the Leapwork AI Studio admin page", async () => {
     // Assert columnheader "Timestamp" contains "Timestamp"
     await expect(page.getByRole('columnheader', { name: 'Timestamp' })).toContainText("Timestamp");
