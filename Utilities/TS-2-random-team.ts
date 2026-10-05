@@ -47,7 +47,7 @@ export const microsoftUsers = {
     "user_34": "test-play-34@outlook.com", //TC-223 Workspace Settings page
     "user_35": "test-k-play-35@outlook.com", //TC-176 Adapter
     "user_38": "test-play-38@outlook.com", //TC-163 File-Create-Delete
-    "user_39": "test-play-39@outlook.com", //TC-40 import playwright
+    "user_43": "test-play-43@outlook.com", //TC-40 import playwright
     "user_40": "test-play-40@outlook.com", //TC-170 Workspace Change Validation
     "user_41": "test-play-41@outlook.com", //TC-57 Account & Settings - Audit Log
     "user_44": "test-play-44@outlook.com", //TC-192 LLM Chat Improved
@@ -62,6 +62,7 @@ export const microsoftUsers = {
     "user_57": "test-play-57@outlook.com", //TC-291 Git connecter
     "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
     "reg_1": "regression-user-1@outlook.com", //TC-117 Context menu of a step
+    "reg_2":"regression_user@outlook.com", //TC-234 Run execution cleanup after recorder starts
     "reg_3": "regression_kd_1@outlook.com",  // TC-290 CRUD TC Status
     "reg_10": "regression-user-10@outlook.com", //TC-296 Display User Name as Owner and Fallback to Email When User Name Is Unavailable
     "reg_12": "regression-user-jp-5@outlook.com", // TC-305 Import test case using file
@@ -73,6 +74,9 @@ export const microsoftUsers = {
     "user_54": "test-play-54@outlook.com", // TC-175 Team                 Note: Don't use it for other test case
     "user_59": "test-play-59@outlook.com", // TC-175 Team                 Note: Don't use it for other test case
     "user_47": "test-play-47@outlook.com", // TC-172 Workspace users tab   Note: Don't use it for other test case
+    "user-37": "test-play-37@outlook.com", //TC=235 Xpath Execuion with variables
+    "user-42": "test-play-42@outlook.com", //TC-236: Team self heal settings
+    "user_65": "test-play-65@outlook.com", // TC-337 Timeout
 }
 
 export const passwords = {

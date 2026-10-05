@@ -16,7 +16,7 @@ leapwork.configuration({
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
-leapwork.variables.set("userId", "user_39");
+leapwork.variables.set("userId", "user_43");
 leapwork.variables.set("teamName", teamName);
 
 await logInfo(leapwork.generateTOTP("wcmdl7bkddwddktm"))
