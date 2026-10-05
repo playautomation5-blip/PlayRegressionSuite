@@ -212,10 +212,7 @@ await leapwork.step("Click the Explorer button in Leapwork Play", async () => {
     await page.getByRole('button', { name: 'Explorer' }).click();
 }, { action: "click", continueOnFailure: true });
 
-// ai-studio-step-id: pw61ezhx00
-await leapwork.step("Use test case: Delete Asset", async () => {
-    return await DeleteAsset();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
+
 
 // ai-studio-step-id: pwcw1mlk00
 await leapwork.step("Use test case: Delete Team", async () => {

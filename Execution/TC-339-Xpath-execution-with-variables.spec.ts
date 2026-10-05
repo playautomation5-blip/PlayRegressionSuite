@@ -19,7 +19,7 @@ leapwork.configuration({
 });
 
 
-leapwork.variables.set("userId", "user-69");
+leapwork.variables.set("userId", "user-37");
 leapwork.variables.set("teamName", teamName);
 // leapwork.variables.set("assetType", "New test case");
 // leapwork.variables.set("assetName", "Tc");

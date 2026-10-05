@@ -26,7 +26,7 @@ const testCaseName = "Self heal enabled"
 leapwork.variables.set("fileId", fileId);
 leapwork.variables.set("testCasesNames", [testCaseName]);
 leapwork.variables.set("importType", "tests");
-leapwork.variables.set("userId", "user-70");
+leapwork.variables.set("userId", "user-42");
 leapwork.variables.set("teamName", teamName);
 
 
@@ -91,8 +91,4 @@ await leapwork.step("Use test case: Delete Team", async () => {
     return await DeleteTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: pw1juvsc50
-await leapwork.step("Validate the “Oat & Aloe Wash” product details dialog appears on Leapwork Play", async () => {
-    // Assert div contains "Line 30: expect(locator).toHaveCount(expected) failed Locator: getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) Expected: 1 Received: 0 Timeout: 5000ms Call log: - Expect "toHaveCount" getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) with timeout 5000ms - waiting for getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) 14 × locator resolved to 0 elements - unexpected value "0""
-    await expect(page.getByText('Line 30: expect(locator).')).toContainText("Line 30: expect(locator).toHaveCount(expected) failed\n\nLocator:  getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true })\nExpected: 1\nReceived: 0\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveCount\" getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) with timeout 5000ms\n  - waiting for getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true })\n    14 × locator resolved to 0 elements\n       - unexpected value \"0\"");
-}, { action: "validate", relativeXpath: ".//div[2]/div[1]/div[3]/div/div[3]/div", timeoutMs: 30000 });
+

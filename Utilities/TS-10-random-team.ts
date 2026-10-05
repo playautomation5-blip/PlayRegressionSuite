@@ -78,6 +78,8 @@ export const microsoftUsers = {
     "user_36":"test-play-36@outlook.com", //TC-309 Xpath Execution
     "user_65": "test-play-65@outlook.com", // TC-337 Timeout
     "user_68": "test-play-68@outlook.com", // TC-338 Secret Name
+    "user-37": "test-play-37@outlook.com", //TC=235 Xpath Execuion with variables
+    "user-42": "test-play-42@outlook.com" //TC-236: Team self heal settings
 }
 
 export const passwords = {
