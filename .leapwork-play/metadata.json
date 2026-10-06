@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-05T08:05:24.336Z",
+  "generatedAt": "2026-10-06T11:48:39.099Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -254,6 +254,13 @@
           "name": "Run execution cleanup after recorder starts",
           "kind": "test-case",
           "repoPath": "Execution/TC-340-Run-execution-cleanup-after-recorder-starts.spec.ts"
+        },
+        {
+          "assetId": 46013,
+          "displayId": "TC-346",
+          "name": "Self-Heal variables",
+          "kind": "test-case",
+          "repoPath": "Execution/TC-346-Self-Heal-variables.spec.ts"
         },
         {
           "assetId": 41277,
@@ -1348,6 +1355,14 @@
       "displayId": "TC-340",
       "name": "Run execution cleanup after recorder starts",
       "repoPath": "Execution/TC-340-Run-execution-cleanup-after-recorder-starts.spec.ts",
+      "parentAssetId": 30302
+    },
+    {
+      "assetId": 46013,
+      "assetKind": "test-case",
+      "displayId": "TC-346",
+      "name": "Self-Heal variables",
+      "repoPath": "Execution/TC-346-Self-Heal-variables.spec.ts",
       "parentAssetId": 30302
     },
     {

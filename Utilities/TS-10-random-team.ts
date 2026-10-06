@@ -50,11 +50,12 @@ export const microsoftUsers = {
     "user_33": "test-play-33@outlook.com", //TC-229 Record a test case
     "user_34": "test-play-34@outlook.com", //TC-223 Workspace Settings page
     "user_35": "test-k-play-35@outlook.com", //TC-176 Adapter
+    "user-37": "test-play-37@outlook.com", //TC=235 Xpath Execuion with variables
     "user_38": "test-play-38@outlook.com", //TC-163 File-Create-Delete
     "user_39": "test-play-39@outlook.com", //TC-165 import playwright
     "user_40": "test-play-40@outlook.com", //TC-170 Workspace Change Validation
     "user_41": "test-play-41@outlook.com", //TC-185 Account & Settings - Audit Log
-    "user_44": "test-play-44@outlook.com", //TC-192 LLM Chat Improved
+    "user-42": "test-play-42@outlook.com", //TC-236: Team self heal settings
     "user_45": "test-play-45@outlook.com", //TC-193 LLM Command Test
     "user_49": "test-play-49@outlook.com", //TC-218 Invite to a new user from team settings
     "user_50": "test-play-50@outlook.com", //TC-219 KB with git
@@ -78,8 +79,9 @@ export const microsoftUsers = {
     "user_36":"test-play-36@outlook.com", //TC-309 Xpath Execution
     "user_65": "test-play-65@outlook.com", // TC-337 Timeout
     "user_68": "test-play-68@outlook.com", // TC-338 Secret Name
-    "user-37": "test-play-37@outlook.com", //TC=235 Xpath Execuion with variables
-    "user-42": "test-play-42@outlook.com" //TC-236: Team self heal settings
+    "user_69": "test-play-69@outlook.com", // TC-346 Self-Heal Variables
+    "user_70": "test-play-70@outlook.com" // TC-192 LLM Chat working
+
 }
 
 export const passwords = {

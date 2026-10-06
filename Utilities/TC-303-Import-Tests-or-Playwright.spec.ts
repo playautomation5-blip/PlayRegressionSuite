@@ -7,6 +7,8 @@ leapwork.files.path('FL-6');
 leapwork.files.path('FL-7');
 leapwork.files.path('FL-8');
 leapwork.files.path('FL-9');
+leapwork.files.path('FL-10');
+
 
 
 

@@ -17,7 +17,7 @@ leapwork.configuration({
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
-leapwork.variables.set("userId", "user_44");
+leapwork.variables.set("userId", "user_70");
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetName", "LLM testing");
 leapwork.variables.set("assetType", "New test case");
