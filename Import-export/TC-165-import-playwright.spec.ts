@@ -5,7 +5,7 @@ import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { RenameTeam } from "@assets/Utilities/Rename Team";
 
-leapwork.variables.set("email", "test-play-43@outlook.com", leapwork.storage.LOCAL);
+leapwork.variables.set("email", "test-play-39@outlook.com", leapwork.storage.LOCAL);
 const lw__email = leapwork.variables.get("email", leapwork.storage.LOCAL) as string;
 
 leapwork.configuration({
