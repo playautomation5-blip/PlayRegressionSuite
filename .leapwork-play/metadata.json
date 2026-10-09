@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T11:48:39.099Z",
+  "generatedAt": "2026-10-09T07:25:32.634Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -256,13 +256,6 @@
           "repoPath": "Execution/TC-340-Run-execution-cleanup-after-recorder-starts.spec.ts"
         },
         {
-          "assetId": 46013,
-          "displayId": "TC-346",
-          "name": "Self-Heal variables",
-          "kind": "test-case",
-          "repoPath": "Execution/TC-346-Self-Heal-variables.spec.ts"
-        },
-        {
           "assetId": 41277,
           "displayId": "TC-339",
           "name": "Xpath execution with variables",
@@ -494,6 +487,64 @@
           "name": "PopUp test",
           "kind": "test-case",
           "repoPath": "Non-leapwork-Play flows in considration/TC-76-PopUp-test.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 46023,
+      "displayId": "FD-73",
+      "name": "Plan management",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 46025,
+          "displayId": "FD-74",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 46030,
+              "displayId": "TC-351",
+              "name": "Assign New Plan",
+              "kind": "test-case",
+              "repoPath": "Plan management/Utilities/TC-351-Assign-New-Plan.spec.ts"
+            },
+            {
+              "assetId": 46029,
+              "displayId": "TC-350",
+              "name": "Cancel Current Plan",
+              "kind": "test-case",
+              "repoPath": "Plan management/Utilities/TC-350-Cancel-Current-Plan.spec.ts"
+            },
+            {
+              "assetId": 46028,
+              "displayId": "TC-349",
+              "name": "Open Plan Assignment Popup",
+              "kind": "test-case",
+              "repoPath": "Plan management/Utilities/TC-349-Open-Plan-Assignment-Popup.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 46031,
+          "displayId": "TC-352",
+          "name": "Assign a Plan to company",
+          "kind": "test-case",
+          "repoPath": "Plan management/TC-352-Assign-a-Plan-to-company.spec.ts"
+        },
+        {
+          "assetId": 46032,
+          "displayId": "TC-353",
+          "name": "Cancel a company plan",
+          "kind": "test-case",
+          "repoPath": "Plan management/TC-353-Cancel-a-company-plan.spec.ts"
+        },
+        {
+          "assetId": 46033,
+          "displayId": "TC-354",
+          "name": "Purchase an Addon",
+          "kind": "test-case",
+          "repoPath": "Plan management/TC-354-Purchase-an-Addon.spec.ts"
         }
       ]
     },
@@ -1015,6 +1066,13 @@
           "repoPath": "Utilities/TC-206-Delete-Create-Rename-Team.spec.ts"
         },
         {
+          "assetId": 46024,
+          "displayId": "TC-347",
+          "name": "Email Password Login",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-347-Email-Password-Login.spec.ts"
+        },
+        {
           "assetId": 26027,
           "displayId": "TC-303",
           "name": "Import Tests or Playwright",
@@ -1358,14 +1416,6 @@
       "parentAssetId": 30302
     },
     {
-      "assetId": 46013,
-      "assetKind": "test-case",
-      "displayId": "TC-346",
-      "name": "Self-Heal variables",
-      "repoPath": "Execution/TC-346-Self-Heal-variables.spec.ts",
-      "parentAssetId": 30302
-    },
-    {
       "assetId": 22875,
       "assetKind": "test-case",
       "displayId": "TC-251",
@@ -1532,6 +1582,54 @@
       "name": "New test case",
       "repoPath": "Non-leapwork-Play flows in considration/TC-85-New-test-case.spec.ts",
       "parentAssetId": 2503
+    },
+    {
+      "assetId": 46031,
+      "assetKind": "test-case",
+      "displayId": "TC-352",
+      "name": "Assign a Plan to company",
+      "repoPath": "Plan management/TC-352-Assign-a-Plan-to-company.spec.ts",
+      "parentAssetId": 46023
+    },
+    {
+      "assetId": 46032,
+      "assetKind": "test-case",
+      "displayId": "TC-353",
+      "name": "Cancel a company plan",
+      "repoPath": "Plan management/TC-353-Cancel-a-company-plan.spec.ts",
+      "parentAssetId": 46023
+    },
+    {
+      "assetId": 46033,
+      "assetKind": "test-case",
+      "displayId": "TC-354",
+      "name": "Purchase an Addon",
+      "repoPath": "Plan management/TC-354-Purchase-an-Addon.spec.ts",
+      "parentAssetId": 46023
+    },
+    {
+      "assetId": 46028,
+      "assetKind": "test-case",
+      "displayId": "TC-349",
+      "name": "Open Plan Assignment Popup",
+      "repoPath": "Plan management/Utilities/TC-349-Open-Plan-Assignment-Popup.spec.ts",
+      "parentAssetId": 46025
+    },
+    {
+      "assetId": 46029,
+      "assetKind": "test-case",
+      "displayId": "TC-350",
+      "name": "Cancel Current Plan",
+      "repoPath": "Plan management/Utilities/TC-350-Cancel-Current-Plan.spec.ts",
+      "parentAssetId": 46025
+    },
+    {
+      "assetId": 46030,
+      "assetKind": "test-case",
+      "displayId": "TC-351",
+      "name": "Assign New Plan",
+      "repoPath": "Plan management/Utilities/TC-351-Assign-New-Plan.spec.ts",
+      "parentAssetId": 46025
     },
     {
       "assetId": 25749,
@@ -2051,6 +2149,14 @@
       "displayId": "TC-316",
       "name": "Add company",
       "repoPath": "Utilities/TC-316-Add-company.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 46024,
+      "assetKind": "test-case",
+      "displayId": "TC-347",
+      "name": "Email Password Login",
+      "repoPath": "Utilities/TC-347-Email-Password-Login.spec.ts",
       "parentAssetId": 18385
     },
     {
