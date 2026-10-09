@@ -31,7 +31,7 @@ await leapwork.step("Click the Log out link", async () => {
 }, { action: "click" });
 
 // ai-studio-step-id: FA8qjA9c
-await leapwork.step("Validate the Leapwork Play page shows the heading \"Login to continue\"", async () => {
-    // Assert heading "Login to continue" contains "Login to continue"
-    await expect(page.getByRole('heading', { name: 'Login to continue' })).toContainText("Login to continue");
-}, { action: "validate", relativeXpath: ".//div/section/div/div/header/h1" });
+await leapwork.step("Validate the Leapwork Play login page shows “Log in to continue” and login options", async () => {
+    // Assert div contains "Log in to continueRemember meLog in with emailOrContinue with GithubContinue with GoogleContinue with MicrosoftContinue with AppleNeed an account?Create accountTerms and ConditionsPrivacy policy"
+    await expect(page.locator('div').nth(3)).toContainText("Log in to continueRemember meLog in with emailOrContinue with GithubContinue with GoogleContinue with MicrosoftContinue with AppleNeed an account?Create accountTerms and ConditionsPrivacy policy");
+}, { action: "validate", relativeXpath: "//*[@id=\"root\"]/div/div/div" });

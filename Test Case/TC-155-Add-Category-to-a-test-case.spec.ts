@@ -1,12 +1,14 @@
 import { leapwork } from "./leapwork";
 
-import { RandomTeam2, RandomTeam, teamName } from "@assets/Utilities/random-team";
+import { RandomTeam, RandomTeam2, teamName } from "@assets/Utilities/random-team";
 import { AddCategory } from "@assets/Team configuration/Utilities/Add Category";
-import { AddCategory2 } from "@assets/Test Case/Utilities/Add Category";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { AddCategory as AddCategory2 } from "@assets/Test Case/Utilities/Add Category";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { DeleteTeam } from "@assets/Test Case/Delete Team";
+
+leapwork.variables.set("email", "test-play-29@outlook.com", leapwork.storage.LOCAL);
+const lw__email = leapwork.variables.get("email", leapwork.storage.LOCAL) as string;
 
 leapwork.variables.set("userId", "user_29");
 leapwork.variables.set("teamName", teamName);
@@ -25,10 +27,36 @@ leapwork.configuration({
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
-// ai-studio-step-id: 415ce741
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
+
+// ai-studio-step-id: pwz489ck00
+await leapwork.step("Click the email field on the Leapwork Play login page", async () => {
+    // Click textbox "email"
+    await page.getByRole('textbox', { name: 'email' }).click();
+}, { action: "click", relativeXpath: "//*[@id=\"workos-email\"]" });
+
+// ai-studio-step-id: pw1664id10
+await leapwork.step(`Fill the email field with "${lw__email}"`, async () => {
+    // Fill textbox "email"
+    await page.getByRole('textbox', { name: 'email' }).fill(String(lw__email));
+}, { action: "input", relativeXpath: "//*[@id=\"workos-email\"]" });
+
+// ai-studio-step-id: pw17cnxf70
+await leapwork.step("Click the “Log in with email” button on the Leapwork Play login form", async () => {
+    // Click button "Log in with email"
+    await page.getByRole('button', { name: 'Log in with email' }).click();
+}, { action: "click", relativeXpath: ".//section/div/div/div/form/button" });
+
+// ai-studio-step-id: pw22zvhe00
+await leapwork.step("Fill the Password field with `test-play-29`", async () => {
+    // Fill textbox "Password*"
+    await page.getByRole('textbox', { name: 'Password*' }).fill(leapwork.variables.getSecret("pwd_czqVJ3e6"));
+}, { action: "input", relativeXpath: "//*[@id=\"workos-password\"]" });
+
+// ai-studio-step-id: pws13hcl00
+await leapwork.step("Click “Sign in with password” on the Leapwork Play login form", async () => {
+    // Click button "Sign in with password"
+    await page.getByRole('button', { name: 'Sign in with password' }).click();
+}, { action: "click", relativeXpath: ".//section/div/div/div/form/button" });
 
 // ai-studio-step-id: eddb8773
 await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
