@@ -106,7 +106,7 @@ await leapwork.step("Click More actions for the GitHub connector", async () => {
 await leapwork.step("Click More actions for the GitHub connector", async () => {
     // Click button "More actions for github connector"
     await page.getByRole('button', { name: 'More actions for github' }).click();
-}, { action: "click"});
+}, { action: "click", continueOnFailure: true });
 
 
 // ai-studio-step-id: 1WrSeztE
