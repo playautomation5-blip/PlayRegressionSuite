@@ -18,10 +18,21 @@ leapwork.configuration({
   timeoutMs: Number(
     leapwork.team.settings.get("timeoutMs")
     ?? leapwork.workspace.settings.get("timeoutMs")
-  ) || 10000,
+  ) || 5000,
   enableSelfHeal:
     (leapwork.team.settings.get("enableSelfHeal")
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
+  chromiumArgs:
+        ["--deny-permission-prompts",
+          "--disable-notifications"
+        ],
+  chromiumPrefs: { "credentials_enable_service": false,
+          "profile":
+          {
+            "password_manager_enabled": false,
+            "password_manager_leak_detection": false
+          }
+        },
 });
 
 leapwork.variables.set("userId", "user_21");
@@ -74,12 +85,6 @@ await leapwork.step("Fill the Token field with the personal access token", async
         await page.getByRole('textbox', { name: 'Token Field help' }).fill(String(lw__personalAccessToken));
 }, { action: "input" });
 
-// ai-studio-step-id: pwh33vqg00
-await leapwork.step("Select \"playautomation5-blip/PlayRegressionSuite\" from Repository", async () => {
-    // Click combobox "Repository"
-    await page.getByLabel('Repository').selectOption({ label: "playautomation5-blip/PlayRegressionSuite" });
-}, { action: "click", relativeXpath: "//*[@id=\"source-control-repo\"]" });
-
 // ai-studio-step-id: pw18sywif0
 await leapwork.step("Click the Test connection button in the New connector form", async () => {
     // Click span
@@ -98,17 +103,12 @@ await leapwork.step("Click the Save button in the New connector section", async 
     await page.getByRole('button', { name: 'Save' }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: pwivc0mh00
-await leapwork.step("Click Collapse chat in Leapwork Play.", async () => {
-    // Click button "Collapse chat"
-    await page.getByRole('button', { name: 'Collapse chat' }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[2]/div/div[2]/div[1]/button[@aria-label=\"Collapse chat\"]" });
-
-// ai-studio-step-id: pw1nksw1k0
+// ai-studio-step-id: pw1fxfea70
 await leapwork.step("Click the More actions button for the connector", async () => {
     // Click button "More actions for connector"
-    await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'More actions for connector' }).click();
+    const showMoreActionsButton = page.getByRole('button', { name: 'More actions for connector' });
+    await showMoreActionsButton.scrollIntoViewIfNeeded();
+    await showMoreActionsButton.click();
 }, { action: "click", relativeXpath: ".//div/div[1]/div[2]/span[8]/div/button[@aria-label=\"More actions for connector\"]" });
 
 // ai-studio-step-id: pw1kzar6l0
