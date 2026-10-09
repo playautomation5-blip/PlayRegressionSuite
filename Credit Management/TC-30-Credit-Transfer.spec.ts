@@ -18,15 +18,14 @@ leapwork.configuration({
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
-leapwork.variables.set("teamName", "Credit Team");
-leapwork.variables.set("assetName", "Credit Team");
+const teamName = "Credit Team"
+leapwork.variables.set("teamName", teamName);
+leapwork.variables.set("assetName", teamName);
 leapwork.variables.set("userId", "aistudio_user_2");
 leapwork.variables.set("passwordId", "aistudio_user_2");
 
 leapwork.variables.set("searchByEmail2", "aistudio02", leapwork.storage.LOCAL);
 const lw__searchByEmail2 = leapwork.variables.get("searchByEmail2", leapwork.storage.LOCAL) as string;
-
-
 
 // ai-studio-step-id: b6b70ca2
 await leapwork.step("Use test case: Microsoft Login", async () => {
@@ -37,14 +36,6 @@ await leapwork.step("Use test case: Microsoft Login", async () => {
 await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
     return await DeleteCreateRenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
-// await leapwork.step("Use test case: Delete All Teams", async () => {
-//     return await DeleteAllTeams();
-// }, { action: "asset_reference", linkedAssetType: "test-case" });
-
-// await leapwork.step("Use test case: Create New Team", async () => {
-//     return await CreateNewTeam();
-// }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pw1or960u0
 await leapwork.step("Right-click the Trash item in Leapwork AI Studio", async () => {
@@ -63,38 +54,6 @@ await leapwork.step("Click the Empty trashcan button in the Trash panel", async 
     const emptyTrashcan = page.getByRole('button', { name: 'Empty trashcan', exact: true });
     await emptyTrashcan.click({ force: true });
 });
-
-// await leapwork.step("Use test case: Delete Team", async () => {
-//     return await DeleteTeam();
-// }, { action: "asset_reference", linkedAssetType: "test-case" });
-
-// await leapwork.step("Use test case: Create New Team", async () => {
-//     return await CreateNewTeam();
-// }, { action: "asset_reference", linkedAssetType: "test-case" });
-
-// await leapwork.step("Right-click the New team option", async () => {
-//     const target = page.locator('.explorer-list').getByText('New team', { exact: true });
-//         await target.click({ button: 'right', force: true });
-// }, { action: "click" });
-
-// await leapwork.step("Click Rename in the item context menu", async () => {
-// await page.getByText('Rename', {exact:true}).click()
-// }, { action: "click" });
-
-// await leapwork.step("Fill the New team name field with \"Credit Team\"", async () => {
-//     const teamNameInput = page.locator('input.explorer-item-name-input');
-//     await teamNameInput.fill('Credit Team');
-// }, { action: "input" });
-
-// await leapwork.step("Press Enter", async () => {
-//     await page.keyboard.press('Enter');
-// });
-
-
-// ai-studio-step-id: pw1xqd8yf0
-await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
-    return await DeleteCreateRenameTeam();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 3e73aae6
 await leapwork.step("Click the main editor area in Leapwork AI Studio", async () => {
@@ -135,8 +94,9 @@ await leapwork.step("Fill the Search by email field with \"${lw__searchByEmail2}
 // ai-studio-step-id: 1dc83306
 await leapwork.step("Click the Add button for aistudio02@outlook.com in the Users and credits table", async () => {
     // Click button "Add"
+    await page.waitForTimeout(2000)
     await page.getByRole('button', { name: 'Add' }).click();
-}, { action: "click" });
+}, { action: "click", timeoutMs: 7000 });
 
 // ai-studio-step-id: 7e38a9a1
 await leapwork.step("Click the 100 quick-add credits button in Credit adjustment", async () => {
@@ -181,25 +141,29 @@ await leapwork.step("Click the Transfer button in the Transfer Credits to Team d
     await transferButton.click({ force: true });
 }, { action: "click" });
 
-// ai-studio-step-id: pw1fwqgxh0
+// ai-studio-step-id: pwfgr2vg00
+await leapwork.step("Verify Credit Team credits balance", async () => {
+    const creditBlock = page.locator('.credit-block').filter({ hasText: `${teamName} credits` });;
+    
+    await expect(creditBlock).toHaveCount(1);
+    await expect(creditBlock).toBeVisible();
+    await expect(creditBlock).toContainText('100 / 100');
+}, { action: "validate" });
+
+// ai-studio-step-id: pw2u570c00
 await leapwork.step("Right-click the Credit Team option", async () => {
-    const target = page.locator('.explorer-list').getByText('Credit Team', { exact: true });
-            await target.click({ button: 'right', force: true });
+    const target = page.locator('.explorer-list').getByText(teamName, { exact: true });
+    await target.click({ button: 'right', force: true });
 }, { action: "click" });
 
-// ai-studio-step-id: gtyHR8vT
+// ai-studio-step-id: pw7wi8ov00
 await leapwork.step("Click Delete in the team context menu", async () => {
     // Click div
     await page.getByText('Delete').click();
 }, { action: "click"});
 
-// ai-studio-step-id: pwrnmfi800
+// ai-studio-step-id: pwyot4iy00
 await leapwork.step("Click Delete to confirm deleting the Credit Team team", async () => {
     // Click button "Delete"
-    await page.getByRole('button', { name: 'Delete', exact: true }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[3]/div/div/button[2]" });
-
-// await leapwork.step("Click the Transfer and delete team button", async () => {
-//     // Click button "Transfer and delete team"
-//     await page.getByRole('button', { name: 'Transfer and delete team' }).click();
-// }, { action: "click"});
+    await page.getByRole('button', { name: 'Transfer and delete team', exact: true }).click();
+}, { action: "click" });
