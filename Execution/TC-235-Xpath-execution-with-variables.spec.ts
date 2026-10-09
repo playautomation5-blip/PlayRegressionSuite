@@ -8,6 +8,9 @@ import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { ImportTestsOrPlaywright } from "@assets/Utilities/Import Tests or Playwright";
 
+leapwork.variables.set("email", "wofob63757@comzx.com", leapwork.storage.LOCAL);
+const lw__email = leapwork.variables.get("email", leapwork.storage.LOCAL) as string;
+
 leapwork.configuration({
   timeoutMs: Number(
     leapwork.team.settings.get("timeoutMs")
@@ -35,10 +38,41 @@ leapwork.variables.set("importType", "tests");
 
 
 
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
+// ai-studio-step-id: pwgoz4yr00
+await leapwork.step("Click the email field on the Leapwork Play login page", async () => {
+    // Click textbox "email"
+    await page.getByRole('textbox', { name: 'email' }).click();
+}, { action: "click", relativeXpath: "//*[@id=\"workos-email\"]" });
+
+// ai-studio-step-id: pwpey5ow00
+await leapwork.step(`Fill the email field with "${lw__email}"`, async () => {
+    // Fill textbox "email"
+    await page.getByRole('textbox', { name: 'email' }).fill(String(lw__email));
+}, { action: "input", relativeXpath: "//*[@id=\"workos-email\"]" });
+
+// ai-studio-step-id: pwn5a8yt00
+await leapwork.step("Set \"Remember me\" checkbox", async () => {
+    // Check checkbox "Remember me"
+    await page.getByRole('checkbox', { name: 'Remember me' }).check();
+}, { action: "click", relativeXpath: "//*[@id=\"checkbox-_r_3_\"]" });
+
+// ai-studio-step-id: pw13hayd40
+await leapwork.step("Click the “Log in with email” button on the Leapwork Play login form", async () => {
+    // Click button "Log in with email"
+    await page.getByRole('button', { name: 'Log in with email' }).click();
+}, { action: "click", relativeXpath: ".//section/div/div/div/form/button" });
+
+// ai-studio-step-id: pwudwrxb00
+await leapwork.step("Fill the Password field with the password.", async () => {
+    // Fill textbox "Password*"
+    await page.getByRole('textbox', { name: 'Password*' }).fill(leapwork.variables.getSecret("pwd_Am9RS1xu"));
+}, { action: "input", relativeXpath: "//*[@id=\"workos-password\"]" });
+
+// ai-studio-step-id: pw1tkye160
+await leapwork.step("Click Sign in with password on the Leapwork Play login form", async () => {
+    // Click button "Sign in with password"
+    await page.getByRole('button', { name: 'Sign in with password' }).click();
+}, { action: "click", relativeXpath: ".//section/div/div/div/form/button" });
 
 // ai-studio-step-id: pwyrpbaz00
 await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
