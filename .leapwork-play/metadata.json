@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T07:25:32.634Z",
+  "generatedAt": "2026-10-09T07:37:44.986Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -379,6 +379,20 @@
       "name": "KnowledgeBase",
       "kind": "folder",
       "children": [
+        {
+          "assetId": 47012,
+          "displayId": "TC-362",
+          "name": "Atlassian Connector",
+          "kind": "test-case",
+          "repoPath": "KnowledgeBase/TC-362-Atlassian-Connector.spec.ts"
+        },
+        {
+          "assetId": 46975,
+          "displayId": "TC-360",
+          "name": "Git Connector",
+          "kind": "test-case",
+          "repoPath": "KnowledgeBase/TC-360-Git-Connector.spec.ts"
+        },
         {
           "assetId": 3195,
           "displayId": "TC-138",
@@ -1509,6 +1523,22 @@
       "displayId": "TC-219",
       "name": "KB with git",
       "repoPath": "KnowledgeBase/TC-219-KB-with-git.spec.ts",
+      "parentAssetId": 2840
+    },
+    {
+      "assetId": 46975,
+      "assetKind": "test-case",
+      "displayId": "TC-360",
+      "name": "Git Connector",
+      "repoPath": "KnowledgeBase/TC-360-Git-Connector.spec.ts",
+      "parentAssetId": 2840
+    },
+    {
+      "assetId": 47012,
+      "assetKind": "test-case",
+      "displayId": "TC-362",
+      "name": "Atlassian Connector",
+      "repoPath": "KnowledgeBase/TC-362-Atlassian-Connector.spec.ts",
       "parentAssetId": 2840
     },
     {

@@ -69,6 +69,8 @@ export const microsoftUsers = {
     "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
     "user_59": "test-play-59@outlook.com", // TC-335 Team                 Note: Don't use it for other test case
     "user_60": "test-play-60@outlook.com", //TC-205 Salesforce connector
+    "user_62": "test-play-62@outlook.com", //TC-360 Git Connector
+    "user_64": "test-play-64@outlook.com", //TC-362 Atlassian Connector
     "reg_1": "regression-user-1@outlook.com", // TC-289 Context menu of a step
     "reg_2":"regression_user@outlook.com", //TC-234 Run execution cleanup after recorder starts
     "reg_3": "regression_kd_1@outlook.com",  // TC-290 CRUD TC Status
