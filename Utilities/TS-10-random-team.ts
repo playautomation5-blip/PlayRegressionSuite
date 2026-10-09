@@ -70,6 +70,7 @@ export const microsoftUsers = {
     "user_59": "test-play-59@outlook.com", // TC-335 Team                 Note: Don't use it for other test case
     "user_60": "test-play-60@outlook.com", //TC-205 Salesforce connector
     "reg_1": "regression-user-1@outlook.com", // TC-289 Context menu of a step
+    "reg_2":"regression_user@outlook.com", //TC-234 Run execution cleanup after recorder starts
     "reg_3": "regression_kd_1@outlook.com",  // TC-290 CRUD TC Status
     "reg_10": "regression-user-10@outlook.com", //TC-296 Display User Name as Owner and Fallback to Email When User Name Is Unavailable
     "reg_11": "regression-user-jp-4@outlook.com", // TC-304 Import playwright from file
@@ -79,7 +80,7 @@ export const microsoftUsers = {
     "user_36":"test-play-36@outlook.com", //TC-309 Xpath Execution
     "user_65": "test-play-65@outlook.com", // TC-337 Timeout
     "user_68": "test-play-68@outlook.com", // TC-338 Secret Name
-    "user_69": "test-play-69@outlook.com", // TC-346 Self-Heal Variables
+    "user_69": "test-play-69@outlook.com", // TC-357 - self heal variables
     "user_70": "test-play-70@outlook.com" // TC-192 LLM Chat working
 
 }
