@@ -2,7 +2,7 @@ import { leapwork } from "./leapwork";
 
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
-import {teamName} from "@assets/Utilities/random-team";
+import { RandomTeam as teamName } from "@assets/Utilities/random-team";
 
 leapwork.variables.set("userId", "user_57");
 leapwork.variables.set("teamName", teamName);
@@ -10,10 +10,12 @@ leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("myGithubConnector", "github connector", leapwork.storage.LOCAL);
 const lw__myGithubConnector = leapwork.variables.get("myGithubConnector", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("ownerOrganizationWorkspace", "shha-lw", leapwork.storage.LOCAL);
+leapwork.variables.set("ownerOrganizationWorkspace", "playautomation5-blip", leapwork.storage.LOCAL);
 const lw__ownerOrganizationWorkspace = leapwork.variables.get("ownerOrganizationWorkspace", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("personalAccessToken", "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", leapwork.storage.LOCAL);
+const personalAccessToken = leapwork.variables.getSecret("personalAccessToken");
+
+leapwork.variables.set("personalAccessToken", personalAccessToken, leapwork.storage.LOCAL);
 const lw__personalAccessToken = leapwork.variables.get("personalAccessToken", leapwork.storage.LOCAL) as string;
 
 leapwork.configuration({
@@ -66,29 +68,21 @@ await leapwork.step("Click the Host (optional) field in the New connector form",
     await page.getByRole('textbox', { name: 'Host (optional) Field help' }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: zTq1jDUz
-await leapwork.step("Click the Org field in the New connector form", async () => {
-    // Click textbox "Org Field help"
-    await page.getByRole('textbox', { name: 'Org Field help' }).click();
-}, { action: "click" });
-
-// ai-studio-step-id: pT0Etyxp
-await leapwork.step(`Fill the Org field with "${lw__ownerOrganizationWorkspace}" in the new GitHub connector form`, async () => {
-    // Fill textbox "Org Field help"
-    await page.getByRole('textbox', { name: 'Org Field help' }).fill(String(lw__ownerOrganizationWorkspace));
-}, { action: "input" });
-
-// ai-studio-step-id: 9l8rWHyL
+// ai-studio-step-id: pwqg0qzx00
 await leapwork.step("Click the Token field in the New connector form", async () => {
     // Click textbox "Token Field help"
     await page.getByRole('textbox', { name: 'Token Field help' }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: qZQ6rgfz
+// ai-studio-step-id: pw2kiilq00
 await leapwork.step("Fill the Token field in the New connector dialog", async () => {
     // Fill textbox "Token Field help"
     await page.getByRole('textbox', { name: 'Token Field help' }).fill(String(lw__personalAccessToken));
 }, { action: "input" });
+
+
+
+
 
 // ai-studio-step-id: brxZar4r
 await leapwork.step("Click the Test connection button in the New connector form", async () => {
@@ -108,6 +102,12 @@ await leapwork.step("Click More actions for the GitHub connector", async () => {
     await page.getByRole('button', { name: 'More actions for github' }).click();
 }, { action: "click"});
 
+// ai-studio-step-id: pwmtnacf00
+await leapwork.step("Click More actions for the GitHub connector", async () => {
+    // Click button "More actions for github connector"
+    await page.getByRole('button', { name: 'More actions for github' }).click();
+}, { action: "click"});
+
 
 // ai-studio-step-id: 1WrSeztE
 await leapwork.step("Click Delete in the Delete Connector dialog for the github connector", async () => {
@@ -120,3 +120,5 @@ await leapwork.step("Click Delete to confirm deleting the \"github connector\" c
     // Click button "Delete"
     await page.getByRole('button', { name: 'Delete' }).click();
 }, { action: "click" });
+
+
