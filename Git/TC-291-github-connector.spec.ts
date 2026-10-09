@@ -96,20 +96,26 @@ await leapwork.step("Click Save for the new GitHub connector setup", async () =>
     await page.getByRole('button', { name: 'Save' }).click();
 }, { action: "click"});
 
-// ai-studio-step-id: y5AxBmKQ
+// ai-studio-step-id: pw18werpa0
+await leapwork.step("Click More actions for the GitHub connector", async () => {
+    // Click button "More actions for github connector"
+    await page.getByRole('button', { name: 'More actions for github' }).click();
+}, { action: "click"});
+
+// ai-studio-step-id: pwmtnacf00
 await leapwork.step("Click More actions for the GitHub connector", async () => {
     // Click button "More actions for github connector"
     await page.getByRole('button', { name: 'More actions for github' }).click();
 }, { action: "click"});
 
 
-// ai-studio-step-id: 1WrSeztE
+// ai-studio-step-id: pw1ofy2h50
 await leapwork.step("Click Delete in the Delete Connector dialog for the github connector", async () => {
     // Click menuitem "Delete"
     await page.getByRole('menuitem', { name: 'Delete' }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: U817WddX
+// ai-studio-step-id: pw1mrj87u0
 await leapwork.step("Click Delete to confirm deleting the \"github connector\" connector", async () => {
     // Click button "Delete"
     await page.getByRole('button', { name: 'Delete' }).click();
