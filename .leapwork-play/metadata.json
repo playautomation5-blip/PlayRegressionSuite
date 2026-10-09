@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T11:47:09.312Z",
+  "generatedAt": "2026-10-09T06:52:39.959Z",
   "repo": {
     "connectorId": 76,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -470,6 +470,64 @@
           "name": "Logout Validation",
           "kind": "test-case",
           "repoPath": "Logout/TC-159-Logout-Validation.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 17689,
+      "displayId": "FD-41",
+      "name": "Plan management",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 17690,
+          "displayId": "FD-42",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 17694,
+              "displayId": "TC-248",
+              "name": "Assign New Plan",
+              "kind": "test-case",
+              "repoPath": "Plan management/Utilities/TC-248-Assign-New-Plan.spec.ts"
+            },
+            {
+              "assetId": 17693,
+              "displayId": "TC-247",
+              "name": "Cancel Current Plan",
+              "kind": "test-case",
+              "repoPath": "Plan management/Utilities/TC-247-Cancel-Current-Plan.spec.ts"
+            },
+            {
+              "assetId": 17692,
+              "displayId": "TC-246",
+              "name": "Open Plan Assignment Popup",
+              "kind": "test-case",
+              "repoPath": "Plan management/Utilities/TC-246-Open-Plan-Assignment-Popup.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 17695,
+          "displayId": "TC-249",
+          "name": "Assign a Plan to company",
+          "kind": "test-case",
+          "repoPath": "Plan management/TC-249-Assign-a-Plan-to-company.spec.ts"
+        },
+        {
+          "assetId": 17696,
+          "displayId": "TC-250",
+          "name": "Cancel a company plan",
+          "kind": "test-case",
+          "repoPath": "Plan management/TC-250-Cancel-a-company-plan.spec.ts"
+        },
+        {
+          "assetId": 17697,
+          "displayId": "TC-251",
+          "name": "Purchase an Addon",
+          "kind": "test-case",
+          "repoPath": "Plan management/TC-251-Purchase-an-Addon.spec.ts"
         }
       ]
     },
@@ -1068,6 +1126,13 @@
           "repoPath": "Utilities/TC-8-Delete-Create-Rename-Team.spec.ts"
         },
         {
+          "assetId": 17688,
+          "displayId": "TC-244",
+          "name": "Email Password Login",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-244-Email-Password-Login.spec.ts"
+        },
+        {
           "assetId": 8465,
           "displayId": "TC-191",
           "name": "Expand collapse",
@@ -1592,6 +1657,54 @@
       "name": "Logout Validation",
       "repoPath": "Logout/TC-159-Logout-Validation.spec.ts",
       "parentAssetId": 8137
+    },
+    {
+      "assetId": 17695,
+      "assetKind": "test-case",
+      "displayId": "TC-249",
+      "name": "Assign a Plan to company",
+      "repoPath": "Plan management/TC-249-Assign-a-Plan-to-company.spec.ts",
+      "parentAssetId": 17689
+    },
+    {
+      "assetId": 17696,
+      "assetKind": "test-case",
+      "displayId": "TC-250",
+      "name": "Cancel a company plan",
+      "repoPath": "Plan management/TC-250-Cancel-a-company-plan.spec.ts",
+      "parentAssetId": 17689
+    },
+    {
+      "assetId": 17697,
+      "assetKind": "test-case",
+      "displayId": "TC-251",
+      "name": "Purchase an Addon",
+      "repoPath": "Plan management/TC-251-Purchase-an-Addon.spec.ts",
+      "parentAssetId": 17689
+    },
+    {
+      "assetId": 17692,
+      "assetKind": "test-case",
+      "displayId": "TC-246",
+      "name": "Open Plan Assignment Popup",
+      "repoPath": "Plan management/Utilities/TC-246-Open-Plan-Assignment-Popup.spec.ts",
+      "parentAssetId": 17690
+    },
+    {
+      "assetId": 17693,
+      "assetKind": "test-case",
+      "displayId": "TC-247",
+      "name": "Cancel Current Plan",
+      "repoPath": "Plan management/Utilities/TC-247-Cancel-Current-Plan.spec.ts",
+      "parentAssetId": 17690
+    },
+    {
+      "assetId": 17694,
+      "assetKind": "test-case",
+      "displayId": "TC-248",
+      "name": "Assign New Plan",
+      "repoPath": "Plan management/Utilities/TC-248-Assign-New-Plan.spec.ts",
+      "parentAssetId": 17690
     },
     {
       "assetId": 8067,
@@ -2135,6 +2248,14 @@
       "displayId": "TC-204",
       "name": "Add company",
       "repoPath": "Utilities/TC-204-Add-company.spec.ts",
+      "parentAssetId": 7839
+    },
+    {
+      "assetId": 17688,
+      "assetKind": "test-case",
+      "displayId": "TC-244",
+      "name": "Email Password Login",
+      "repoPath": "Utilities/TC-244-Email-Password-Login.spec.ts",
       "parentAssetId": 7839
     },
     {
