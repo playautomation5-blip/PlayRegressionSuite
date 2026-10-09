@@ -75,7 +75,7 @@ await leapwork.step("Click the New chat button", async () => {
 await leapwork.step("Click Auto-apply edits in the chat toolbar", async () => {
     // Click button "Auto-apply edits"
     await page.getByRole('button', { name: 'Auto-apply edits' }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[2]/div/div[2]/div[1]/button[3]" });
+}, { action: "click" });
 
 // ai-studio-step-id: pwh5l37i00
 await leapwork.step("Click the Ask anything text box", async () => {
