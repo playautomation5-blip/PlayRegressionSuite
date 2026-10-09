@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-05T11:23:47.286Z",
+  "generatedAt": "2026-10-09T12:13:50.000Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -387,6 +387,13 @@
       "name": "LLM Chat",
       "kind": "folder",
       "children": [
+        {
+          "assetId": 15871,
+          "displayId": "TC-149",
+          "name": "Edit playwright step using chat",
+          "kind": "test-case",
+          "repoPath": "LLM Chat/TC-149-Edit-playwright-step-using-chat.spec.ts"
+        },
         {
           "assetId": 8447,
           "displayId": "TC-46",
@@ -1251,6 +1258,14 @@
       "displayId": "TC-122",
       "name": "URL Navigation Via Chat",
       "repoPath": "LLM Chat/TC-122-URL-Navigation-Via-Chat.spec.ts",
+      "parentAssetId": 8311
+    },
+    {
+      "assetId": 15871,
+      "assetKind": "test-case",
+      "displayId": "TC-149",
+      "name": "Edit playwright step using chat",
+      "repoPath": "LLM Chat/TC-149-Edit-playwright-step-using-chat.spec.ts",
       "parentAssetId": 8311
     },
     {
