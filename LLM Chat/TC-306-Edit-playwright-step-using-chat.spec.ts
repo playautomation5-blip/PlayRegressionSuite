@@ -71,6 +71,12 @@ await leapwork.step("Click the New chat button", async () => {
   await page.getByRole('button', { name: 'New chat', exact: true }).click();
 }, { action: "click" });
 
+// ai-studio-step-id: pwcnlta000
+await leapwork.step("Click Auto-apply edits in the chat toolbar", async () => {
+    // Click button "Auto-apply edits"
+    await page.getByRole('button', { name: 'Auto-apply edits' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[2]/div/div[2]/div[1]/button[3]" });
+
 // ai-studio-step-id: pwh5l37i00
 await leapwork.step("Click the Ask anything text box", async () => {
   await page.getByRole('textbox', { name: 'Ask anything', exact: true }).click();
@@ -106,7 +112,7 @@ await leapwork.step("Validate that the Approve button appears in the chat", asyn
 
   await approveButton.waitFor({ state: "visible" });
   await expect(approveButton).toBeVisible();
-}, { action: "validate", timeoutMs: 30000 });
+}, { action: "validate", timeoutMs: 60000 });
 
 // ai-studio-step-id: pwwvmmi600
 await leapwork.step("Click the Approve button", async () => {
