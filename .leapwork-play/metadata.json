@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T07:37:44.986Z",
+  "generatedAt": "2026-10-09T07:45:32.012Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -290,6 +290,28 @@
           "name": "External Adapter Filter Hook",
           "kind": "test-case",
           "repoPath": "External Adapter/TC-251-External-Adapter-Filter-Hook.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 46271,
+      "displayId": "FD-76",
+      "name": "Functional",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 46224,
+          "displayId": "TC-355",
+          "name": "Loop test case",
+          "kind": "test-case",
+          "repoPath": "Functional/TC-355-Loop-test-case.spec.ts"
+        },
+        {
+          "assetId": 46227,
+          "displayId": "TC-356",
+          "name": "ParentCallingChildInLoop",
+          "kind": "test-case",
+          "repoPath": "Functional/TC-356-ParentCallingChildInLoop.spec.ts"
         }
       ]
     },
@@ -1444,6 +1466,22 @@
       "name": "Enable Llm Over Native Using External Adapter",
       "repoPath": "External Adapter/TC-312-Enable-Llm-Over-Native-Using-External-Adapter.spec.ts",
       "parentAssetId": 22874
+    },
+    {
+      "assetId": 46224,
+      "assetKind": "test-case",
+      "displayId": "TC-355",
+      "name": "Loop test case",
+      "repoPath": "Functional/TC-355-Loop-test-case.spec.ts",
+      "parentAssetId": 46271
+    },
+    {
+      "assetId": 46227,
+      "assetKind": "test-case",
+      "displayId": "TC-356",
+      "name": "ParentCallingChildInLoop",
+      "repoPath": "Functional/TC-356-ParentCallingChildInLoop.spec.ts",
+      "parentAssetId": 46271
     },
     {
       "assetId": 25815,
