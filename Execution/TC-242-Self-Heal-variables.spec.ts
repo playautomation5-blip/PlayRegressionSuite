@@ -77,12 +77,60 @@ await leapwork.step("Click the Playwright tab.", async () => {
 
 // ai-studio-step-id: pw1whza2l0
 await leapwork.step("Validate the code editor shows the Add to cart, Checkout, and Recipient name steps", async () => {
-    // Assert div contains "await page.getByRole('button', { name: 'Add to cart' }).click();}, { action: "click", relativeXpath: "//*[@id=\"productDialogContent\"]/div/div[2]/button" });await leapwork.step("Click the Checkout button in the cart footer.", async () => { // Click button "Checkout" await page.getByRole('button', { name: 'Checkout' }).click();}, { action: "click", relativeXpath: "//*[@id=\"checkoutButton\"]" });await leapwork.step(`Fill the Recipient name field with "${lw__recipientName}" in the Checkout form`, async () => { // [Leapwork Play self-heal preserved previous code] // // // // Fill textbox "Recipient name" // await page.getByRole('textbox', { name: 'Recasdaaasipient name' }).fill(String(lw__recipientName)); // [/Leapwork Play self-heal preserved previous code] const recipientName = page.getByRole('textbox', { name: 'Recipient name', exact: true }); await expect(recipientName).toHaveCount(1); await recipientName.fill(String(lw__recipientName));}, { action: "input", relativeXpath: "//*[@id=\"customerName\"]" });"
+// 1. Perform the conditional scroll inside page.evaluate() to bring the target line into view
+await page.evaluate(async () => {
+  const scrollable = document.querySelector('.monaco-scrollable-element');
+  const target = 'await recipientName.fill(String(lw__recipientName));';
+
+  let scrollCount = 0;
+  while (scrollCount < 10) {
+    const linesContent = document.querySelector('.lines-content');
+    if (linesContent && linesContent.textContent.includes(target)) {
+      break;
+    }
+
+    const lines = Array.from(document.querySelectorAll('.view-line'));
+    const fullText = lines.map(line => line.textContent).join('');
+    if (fullText.includes(target)) {
+      break;
+    }
+
+    if (scrollable) {
+      scrollable.scrollTop += 300;
+      scrollable.dispatchEvent(new Event('scroll'));
+    }
+    
+    scrollCount++;
+    await new Promise(resolve => setTimeout(resolve, 150));
+  }
+});
+
+// 2. Allow a brief moment for the DOM to stabilize, then test using the locator
+await page.waitForTimeout(300);
+
 const editorContent = page.locator('.monaco-editor .view-lines');
 await expect(editorContent).toContainText('await recipientName.fill(String(lw__recipientName));');
-}, { action: "validate", relativeXpath: ".//div/div[1]/div[1]/div[3]/div[1]/div[4]" });
+}, { action: "input", relativeXpath: ".//div/div[1]/div[1]/div[3]/div[1]/div[4]" });
 
-// ai-studio-step-id: pw94glp100
+// ai-studio-step-id: pw1jjeqq40
+await leapwork.step("Click the Browser button", async () => {
+    // Click span
+    await page.getByRole('button', { name: 'Browser' }).click();
+}, { action: "click", relativeXpath: ".//div[1]/div/div/div[1]/span/span" });
+
+// ai-studio-step-id: pw1y4l2vz0
+await leapwork.step("Click Run to execute the test case", async () => {
+    // Click button "Run"
+    await page.getByRole('button', { name: 'Run' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]" });
+
+// ai-studio-step-id: pw1uginli0
+await leapwork.step("Validate the Leapwork Play page shows Last run as “Passed”", async () => {
+    // Assert "Passed" contains "Passed"
+    await expect(page.getByText('Passed')).toContainText("Passed");
+}, { action: "validate", relativeXpath: ".//div/div/div[6]/div/div[2]/span", timeoutMs: 30000 });
+
+// ai-studio-step-id: pwyy68og00
 await leapwork.step("Use test case: Delete Team", async () => {
     return await DeleteTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
