@@ -39,17 +39,17 @@ await leapwork.step("Validate that the Welcome to Play button shows 'Welcome to 
     await expect(page.getByRole('button', { name: 'Welcome to Play' })).toContainText("Welcome to Play");
 }, { action: "validate" });
 
-// ai-studio-step-id: pwm7no7200
-await leapwork.step("Validate the \"Run Your First Automation\" button text on the Leapwork Play page", async () => {
-    // Assert button "Run Your First Automation" contains "Run Your First Automation"
-    await expect(page.getByRole('button', { name: 'Run Your First Automation' })).toContainText("Run Your First Automation");
-}, { action: "validate" });
+// ai-studio-step-id: pw1agzn800
+await leapwork.step("Click the Runlists button in the Feature guides menu", async () => {
+    // Click span
+    await page.getByRole('button', { name: 'Runlists' }).click();
+}, { action: "click", relativeXpath: ".//div[1]/div[2]/div[2]/div/button[1]/span" });
 
-// ai-studio-step-id: pw1o1sjdt0
-await leapwork.step("Validate the Leapwork Play page shows 'Record-Edit-Run Playwright With Self-Healing AIA'", async () => {
-    // Assert span contains "Record-Edit-Run Playwright With Self-Healing AIA"
-    await expect(page.getByRole('button', { name: 'Record-Edit-Run Playwright' })).toContainText("Record-Edit-Run Playwright With Self-Healing AIA");
-}, { action: "validate" });
+// ai-studio-step-id: pwuws0e900
+await leapwork.step("Validate the Leapwork Play page shows the “Trigger API Endpoints” heading", async () => {
+    // Assert span contains "Trigger API Endpoints"
+    await expect(page.getByText('Trigger API Endpoints')).toContainText("Trigger API Endpoints");
+}, { action: "validate", relativeXpath: ".//div/div[2]/div/h2/span/span" });
 
 // ai-studio-step-id: UekzbbjB
 await leapwork.step("Validate the Search documentation search box on the Leapwork Play docs page", async () => {
