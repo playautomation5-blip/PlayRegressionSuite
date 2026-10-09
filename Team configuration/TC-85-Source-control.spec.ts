@@ -8,9 +8,6 @@ import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename T
 leapwork.variables.set("myGithubConnector", "connector", leapwork.storage.LOCAL);
 const lw__myGithubConnector = leapwork.variables.get("myGithubConnector", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("ownerOrganizationWorkspace", "leapwork", leapwork.storage.LOCAL);
-const lw__ownerOrganizationWorkspace = leapwork.variables.get("ownerOrganizationWorkspace", leapwork.storage.LOCAL) as string;
-
 const lw__personalAccessToken = leapwork.variables.getSecret("SourceControlPAT", leapwork.storage.LOCAL) as string;
 
 leapwork.variables.set("myGithubConnector2", "connector-edited", leapwork.storage.LOCAL);
@@ -24,6 +21,17 @@ leapwork.configuration({
   enableSelfHeal:
     (leapwork.team.settings.get("enableSelfHeal")
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
+  chromiumArgs: ["--deny-permission-prompts",
+          "--disable-notifications"
+        ],
+  chromiumPrefs:
+        { "credentials_enable_service": false,
+          "profile":
+          {
+            "password_manager_enabled": false,
+            "password_manager_leak_detection": false
+          }
+        },
 });
 
 leapwork.variables.set("userId", "user_21");
@@ -100,8 +108,10 @@ await leapwork.step("Click the Save button in the New connector section", async 
 // ai-studio-step-id: 3DWYa13K
 await leapwork.step("Click the More actions button for the connector", async () => {
     // Click button "More actions for connector"
-    await page.getByRole('button', { name: 'More actions for connector' }).click();
-}, { action: "click", relativeXpath: ".//div/div[1]/div[2]/span[8]/div/button[@aria-label=\"More actions for connector\"]" });
+    const showMoreActionsButton = page.getByRole('button', { name: 'More actions for connector' });
+    await showMoreActionsButton.scrollIntoViewIfNeeded();
+    await showMoreActionsButton.click();
+}, { action: "click" });
 
 // ai-studio-step-id: pcLhikzc
 await leapwork.step("Click Edit for the connector in Source Control settings", async () => {
@@ -130,9 +140,6 @@ await leapwork.step("Click the Save button in the Edit connector section", async
 }, { action: "click" });
 
 
-
-
-
 // ai-studio-step-id: GJDeqN1s
 await leapwork.step("Click More actions for the connector-edited item", async () => {
     // Click button "More actions for connector-edited"
@@ -156,4 +163,3 @@ await leapwork.step("Click Delete to confirm deleting the “connector-edited”
 await leapwork.step("Use test case: Delete Team", async () => {
     return await DeleteTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
