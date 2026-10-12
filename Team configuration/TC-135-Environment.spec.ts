@@ -49,6 +49,11 @@ await leapwork.step("Click the + Add Environment button", async () => {
     await addEnvironmentButton.click({ force: true });
 });
 
+// ai-studio-step-id: pw19ehj9m0
+await leapwork.step("Wait for 2 second", async () => {
+    await page.waitForTimeout(2000);
+}, { action: "wait" });
+
 // ai-studio-step-id: pwzdz0ho00
 await leapwork.step("Fill the Environment name field with \"env name\"", async () => {
     const envName = page.getByPlaceholder('Environment name', { exact: true });

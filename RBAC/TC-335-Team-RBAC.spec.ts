@@ -48,6 +48,11 @@ await leapwork.step("Click the Role dropdown and select Write in the Invite Team
     await page.getByRole('combobox', { name: 'Role' }).click();
 }, { action: "click" });
 
+// ai-studio-step-id: pwdk4int00
+await leapwork.step("Wait for 1 second", async () => {
+    await page.waitForTimeout(1000);
+}, { action: "wait" });
+
 // ai-studio-step-id: pwoq3lmb00
 await leapwork.step("Click the Administrator role option in the Invite Team Member form", async () => {
     // Click option "Administrator"

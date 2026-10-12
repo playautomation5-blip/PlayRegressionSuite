@@ -8,7 +8,6 @@ import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename T
 import { Record } from "@assets/Utilities/Record";
 import { RunToHere } from "@assets/Context menu/Utilities/Run to here";
 import { RecordAfterThisStep } from "@assets/Context menu/Utilities/Record after this step";
-import { DeleteAsset } from "@assets/Utilities/Delete Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { RunThisStep } from "@assets/Context menu/Utilities/Run this step";
 import { RunFromHere } from "@assets/Context menu/Utilities/Run from here";

@@ -4,6 +4,7 @@ import { teamName } from "@assets/Utilities/random-team";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { RenameTeam } from "@assets/Utilities/Rename Team";
+import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 
 leapwork.variables.set("email", "test-play-39@outlook.com", leapwork.storage.LOCAL);
 const lw__email = leapwork.variables.get("email", leapwork.storage.LOCAL) as string;
@@ -59,15 +60,18 @@ await leapwork.step("Click Sign in with password on the Leapwork Play login form
     await page.getByRole('button', { name: 'Sign in with password' }).click();
 }, { action: "click", relativeXpath: ".//section/div/div/div/form/button" });
 
-// ai-studio-step-id: aa4d8ad9
-await leapwork.step("Use test case: Create New Team", async () => {
-    return await CreateNewTeam();
+// ai-studio-step-id: pwlw1d9600
+await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
+    return await DeleteCreateRenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: 0a1b43b4
-await leapwork.step("Use test case: Rename Team", async () => {
-    return await RenameTeam();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
+// await leapwork.step("Use test case: Create New Team", async () => {
+//     return await CreateNewTeam();
+// }, { action: "asset_reference", linkedAssetType: "test-case" });
+
+// await leapwork.step("Use test case: Rename Team", async () => {
+//     return await RenameTeam();
+// }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwsh5kr600
 await leapwork.step("Right-click the \"${teamName}\" folder on the Leapwork AI Studio page", async () => {
