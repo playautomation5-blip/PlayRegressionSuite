@@ -9,7 +9,6 @@ import { Record } from "@assets/Utilities/Record";
 import { RunToHere } from "@assets/Context menu/Utilities/Run to here";
 import { RecordAfterThisStep } from "@assets/Context menu/Utilities/Record after this step";
 import { DeleteAsset } from "@assets/Utilities/Delete Asset";
-import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { RunThisStep } from "@assets/Context menu/Utilities/Run this step";
 import { RunFromHere } from "@assets/Context menu/Utilities/Run from here";
 import { InsertAboveTheStep } from "@assets/Context menu/Utilities/Insert above the step";
@@ -217,7 +216,3 @@ await leapwork.step("Use test case: Delete Asset", async () => {
     return await DeleteAsset();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: pwcw1mlk00
-await leapwork.step("Use test case: Delete Team", async () => {
-    return await DeleteTeam();
-}, { action: "asset_reference", linkedAssetType: "test-case" });

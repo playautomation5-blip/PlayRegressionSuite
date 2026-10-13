@@ -12,7 +12,8 @@ leapwork.configuration({
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
-leapwork.variables.set("userId", "user_41");
+leapwork.variables.set("userId", "aistudio_user_2");
+leapwork.variables.set("passwordId", "aistudio_user_2");
 
 // ai-studio-step-id: 7a16283c
 await leapwork.step("Use test case: Microsoft Login", async () => {
@@ -20,9 +21,9 @@ await leapwork.step("Use test case: Microsoft Login", async () => {
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwxspsol00
-await leapwork.step("Click the Test-41 Play (Personal) button", async () => {
+await leapwork.step("Click the Automation Account (Personal) button", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Test-41 Play (Personal' }).click();
+    await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pwe199eq00
@@ -31,10 +32,10 @@ await leapwork.step("Click the Account and settings option to open the Account a
     await target.click({ force: true });
 });
 
-// ai-studio-step-id: pw8ybfxz00
-await leapwork.step("Click the Credits button in the settings navigation", async () => {
+// ai-studio-step-id: pw1a6a8iz0
+await leapwork.step("Click the Credits button in Settings navigation", async () => {
     // Click button "Credits"
-    await page.getByRole('button', { name: 'Credits' }).click();
+    await page.getByRole('button', { name: 'Credits', exact: true }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pwdnapzp00
@@ -43,19 +44,19 @@ await leapwork.step("Validate that the Credits heading shows 'Credits' on the Le
     await expect(page.getByRole('heading', { name: 'Credits' })).toContainText("Credits");
 }, { action: "validate" });
 
-// ai-studio-step-id: pw1eb45qm0
+// ai-studio-step-id: pwote9o900
 await leapwork.step("Click the Month dropdown and select 2026-05", async () => {
     const monthSelect = page.locator('#credits-overview-month-select');
     await monthSelect.selectOption('2026-05');
 });
 
-// ai-studio-step-id: pw1vdi4qx0
+// ai-studio-step-id: pwacgkys00
 await leapwork.step("Click the Audit logs button", async () => {
     const auditLogsButton = page.getByRole('button', { name: 'Audit logs', exact: true });
     await auditLogsButton.click({ force: true });
 });
 
-// ai-studio-step-id: pwf5ier200
+// ai-studio-step-id: pw1bbkmn90
 await leapwork.step(
   "Validate loading appears",
   async () => {
@@ -71,22 +72,20 @@ await leapwork.step(
   { action: "validate", relativeXpath: "", timeoutMs: 10000 }
 );
 
-// ai-studio-step-id: pwxowxwr00
+// ai-studio-step-id: pwi4mb0y00
 await leapwork.step("Validate that the Audit logs button shows 'Audit logs' on Leapwork Play", async () => {
     // Assert span contains "Audit logs"
     await expect(page.getByRole('button', { name: 'Audit logs' })).toContainText("Audit logs");
 }, { action: "validate"});
 
-// ai-studio-step-id: pw1wekowj0
+// ai-studio-step-id: pw80gaal00
 await leapwork.step("Click the page background in Leapwork AI Studio", async () => {
     const body = page.locator('body');
     await body.click({ force: true });
 });
 
-
-
-// ai-studio-step-id: pw1vf24p70
+// ai-studio-step-id: pwjrj3it00
 await leapwork.step("Click the Account & Settings tab in Leapwork Play", async () => {
     // Click button "Account & Settings close"
     await page.getByRole('button', { name: 'Account & Settings close' }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[1]/div/div/div[1]" });
+}, { action: "click" });

@@ -32,19 +32,21 @@ await leapwork.step("Click the Account and settings option", async () => {
     await page.getByText('Account and settings').click();
 }, { action: "click" });
 
-// ai-studio-step-id: pwajhem600
-await leapwork.step("Click the Credits button in the settings navigation", async () => {
+
+
+// ai-studio-step-id: pw1lvx3o70
+await leapwork.step("Click Credits in the Subscription and usage settings navigation", async () => {
     // Click button "Credits"
-    await page.getByRole('button', { name: 'Credits' }).click();
+    await page.getByRole('button', { name: 'Credits', exact: true }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: pw19etmq30
+// ai-studio-step-id: pwck7k0200
 await leapwork.step("Validate that 'Your unassigned credits' is shown on the Leapwork AI Studio page", async () => {
     // Assert div contains "Your unassigned credits"
     await expect(page.getByText('Your unassigned credits')).toContainText("Your unassigned credits");
 }, { action: "validate"});
 
-// ai-studio-step-id: pw1shotlo0
+// ai-studio-step-id: pwx2o2ar00
 await leapwork.step("Validate that 'Your top-up credits' is shown on Leapwork AI Studio", async () => {
     // Assert div contains "Your top-up credits"
     await expect(page.getByText('Your top-up credits')).toContainText("Your top-up credits");
@@ -138,17 +140,3 @@ await leapwork.step("Click the Audit logs button", async () => {
     // Click span
     await page.getByRole('button', { name: 'Audit logs' }).click();
 }, { action: "click" });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
