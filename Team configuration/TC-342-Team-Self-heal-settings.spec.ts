@@ -8,7 +8,7 @@ import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename T
 import { ImportTestsOrPlaywright } from "@assets/Utilities/Import Tests or Playwright";
 
 leapwork.variables.set("settingKey", "enableSelfHeal", leapwork.storage.LOCAL);
-leapwork.variables.set("settingValue", "false", leapwork.storage.LOCAL);
+leapwork.variables.set("settingValue", "False", leapwork.storage.LOCAL);
 
 leapwork.configuration({
   timeoutMs: Number(
