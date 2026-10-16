@@ -98,8 +98,11 @@ await leapwork.step("Click the Save button in the New connector section", async 
 // ai-studio-step-id: pw7odch400
 await leapwork.step("Click the More actions button for the connector", async () => {
     // Click button "More actions for connector"
-    await page.getByRole('button', { name: 'More actions for connector' }).click();
+    const showMoreActionsButton = page.getByRole('button', { name: 'More actions for connector' });
+    await showMoreActionsButton.scrollIntoViewIfNeeded();
+    await showMoreActionsButton.click();
 }, { action: "click", relativeXpath: ".//div/div[1]/div[2]/span[8]/div/button[@aria-label=\"More actions for connector\"]" });
+
 
 // ai-studio-step-id: pwjlo9t300
 await leapwork.step("Click Edit for the connector in Source Control settings", async () => {
