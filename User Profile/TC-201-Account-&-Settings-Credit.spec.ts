@@ -38,7 +38,7 @@ await leapwork.step("Click the Account and settings option", async () => {
 await leapwork.step("Click Credits in the Subscription and usage settings navigation", async () => {
     // Click button "Credits"
     await page.getByRole('button', { name: 'Credits', exact: true }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[1]/div/nav/button[5]" });
+}, { action: "click" });
 
 // ai-studio-step-id: 6pLeNFuT
 await leapwork.step("Validate that 'Your unassigned credits' is shown on the Leapwork AI Studio page", async () => {
@@ -140,17 +140,3 @@ await leapwork.step("Click the Audit logs button", async () => {
     // Click span
     await page.getByRole('button', { name: 'Audit logs' }).click();
 }, { action: "click" });
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -35,9 +35,7 @@ await leapwork.step("Click the Account and settings option to open the Account a
 await leapwork.step("Click the Credits button in Settings navigation", async () => {
     // Click button "Credits"
     await page.getByRole('button', { name: 'Credits', exact: true }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[1]/div/nav/button[5]" });
-
-
+}, { action: "click" });
 
 // ai-studio-step-id: U0p1YwmS
 await leapwork.step("Validate that the Credits heading shows 'Credits' on the Leapwork Play page", async () => {
@@ -91,4 +89,4 @@ await leapwork.step("Click the page background in Leapwork AI Studio", async () 
 await leapwork.step("Click the Account & Settings tab in Leapwork Play", async () => {
     // Click button "Account & Settings close"
     await page.getByRole('button', { name: 'Account & Settings close' }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[1]/div/div/div[1]" });
+}, { action: "click" });

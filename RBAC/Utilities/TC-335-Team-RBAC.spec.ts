@@ -123,18 +123,6 @@ await leapwork.step("Click the Write option in the permissions menu", async () =
     await page.getByText('Write').click();
 }, { action: "click" });
 
-// ai-studio-step-id: pwwrxqdm00
-await leapwork.step("Double click the team item in the Leapwork Play explorer", async () => {
-    // Click "team"
-    await page.getByText(teamName).dblclick();
-}, { action: "double click" });
-
-// ai-studio-step-id: pw1xbnhb00
-await leapwork.step("Click the team item in the Leapwork Play", async () => {
-    // Click "team"
-    await page.getByText("TM-1").click();
-}, { action: "click" });
-
 // ai-studio-step-id: pw12uvl000
 await leapwork.step("Validate that the \"Invite team member\" button is disbaled", async () => {
     // Assert span contains "Invite your colleague"

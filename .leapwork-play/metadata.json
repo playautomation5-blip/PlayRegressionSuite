@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T07:45:32.012Z",
+  "generatedAt": "2026-10-19T06:52:31.432Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -624,15 +624,15 @@
               "name": "login-59",
               "kind": "test-case",
               "repoPath": "RBAC/Utilities/TC-334-login-59.spec.ts"
+            },
+            {
+              "assetId": 40750,
+              "displayId": "TC-335",
+              "name": "Team - RBAC",
+              "kind": "test-case",
+              "repoPath": "RBAC/Utilities/TC-335-Team-RBAC.spec.ts"
             }
           ]
-        },
-        {
-          "assetId": 40750,
-          "displayId": "TC-335",
-          "name": "Team - RBAC",
-          "kind": "test-case",
-          "repoPath": "RBAC/TC-335-Team-RBAC.spec.ts"
         },
         {
           "assetId": 40746,
@@ -1716,14 +1716,6 @@
       "parentAssetId": 40745
     },
     {
-      "assetId": 40750,
-      "assetKind": "test-case",
-      "displayId": "TC-335",
-      "name": "Team - RBAC",
-      "repoPath": "RBAC/TC-335-Team-RBAC.spec.ts",
-      "parentAssetId": 40745
-    },
-    {
       "assetId": 40748,
       "assetKind": "test-case",
       "displayId": "TC-333",
@@ -1737,6 +1729,14 @@
       "displayId": "TC-334",
       "name": "login-59",
       "repoPath": "RBAC/Utilities/TC-334-login-59.spec.ts",
+      "parentAssetId": 40747
+    },
+    {
+      "assetId": 40750,
+      "assetKind": "test-case",
+      "displayId": "TC-335",
+      "name": "Team - RBAC",
+      "repoPath": "RBAC/Utilities/TC-335-Team-RBAC.spec.ts",
       "parentAssetId": 40747
     },
     {

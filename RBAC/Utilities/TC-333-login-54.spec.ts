@@ -1,8 +1,6 @@
 import { leapwork } from "./leapwork";
 
 import { RandomTeam, passwords, microsoftUsers, password } from "@assets/Utilities/random-team";
-import { SkipOnboardingTour } from "@assets/Utilities/SkipOnboardingTour";
-import { AddCompany } from "@assets/Utilities/Add company";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -77,15 +75,3 @@ await leapwork.step("Click the Yes button on the Microsoft sign-in prompt", asyn
     // Click button "Yes"
     await page.getByTestId('primaryButton').click();
 }, { action: "click", continueOnFailure:true });
-
-//conditional step for new user
-
-// ai-studio-step-id: pw1j9yy230
-await leapwork.step("Use test case: Add company", async () => {
-    return await AddCompany();
-}, { action: "asset_reference", linkedAssetType: "test-case", continueOnFailure:true, timeoutMs: 5000 });
-
-// ai-studio-step-id: pw1odg4wn0
-await leapwork.step("Use test case: SkipOnboardingTour", async () => {
-    return await SkipOnboardingTour();
-}, { action: "asset_reference", linkedAssetType: "test-case", continueOnFailure:true, timeoutMs: 5000 });
