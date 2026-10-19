@@ -48,6 +48,11 @@ await leapwork.step("Click the Role dropdown and select Write in the Invite Team
     await page.getByRole('combobox', { name: 'Role' }).click();
 }, { action: "click" });
 
+// ai-studio-step-id: pwdk4int00
+await leapwork.step("Wait for 1 second", async () => {
+    await page.waitForTimeout(1000);
+}, { action: "wait" });
+
 // ai-studio-step-id: pwoq3lmb00
 await leapwork.step("Click the Administrator role option in the Invite Team Member form", async () => {
     // Click option "Administrator"
@@ -82,7 +87,7 @@ await leapwork.step("Click the Log out link in the menu", async () => {
 await leapwork.step("Click the Login button", async () => {
     // Click button "Login"
     await page.getByRole('button', { name: 'Login' }).click();
-}, { action: "click", continueOnFailure: true });
+}, { action: "click", continueOnFailure: true, timeoutMs: 3000 });
 
 // ai-studio-step-id: pw1cqwua20
 await leapwork.step("Use test case: login-59", async () => {
@@ -118,18 +123,6 @@ await leapwork.step("Click the Write option in the permissions menu", async () =
     await page.getByText('Write').click();
 }, { action: "click" });
 
-// ai-studio-step-id: pwwrxqdm00
-await leapwork.step("Double click the team item in the Leapwork Play explorer", async () => {
-    // Click "team"
-    await page.getByText(teamName).dblclick();
-}, { action: "double click" });
-
-// ai-studio-step-id: pw1xbnhb00
-await leapwork.step("Click the team item in the Leapwork Play", async () => {
-    // Click "team"
-    await page.getByText("TM-1").click();
-}, { action: "click" });
-
 // ai-studio-step-id: pw12uvl000
 await leapwork.step("Validate that the \"Invite team member\" button is disbaled", async () => {
     // Assert span contains "Invite your colleague"
@@ -140,7 +133,7 @@ await leapwork.step("Validate that the \"Invite team member\" button is disbaled
 // ai-studio-step-id: pwxpsnex00
 await leapwork.step("Click the Test-59 Play workspace menu button in Leapwork Play", async () => {
     // Click span
-    await page.getByRole('button', { name: 'user59 test (Test-54 Play\'s' }).click();
+    await page.getByRole('button', { name: 'Test-59 Play (Test-54 Play\'s' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pwzlkmyo00
@@ -153,7 +146,7 @@ await leapwork.step("Click the Log out link", async () => {
 await leapwork.step("Click the Login button", async () => {
     // Click button "Login"
     await page.getByRole('button', { name: 'Login' }).click();
-}, { action: "click", continueOnFailure: true });
+}, { action: "click", continueOnFailure: true, timeoutMs: 3000 });
 
 // ai-studio-step-id: pw13xl7730
 await leapwork.step("Use test case: login-54", async () => {
@@ -197,7 +190,7 @@ await leapwork.step("Click the Log out link", async () => {
 await leapwork.step("Click the Login button", async () => {
     // Click button "Login"
     await page.getByRole('button', { name: 'Login' }).click();
-}, { action: "click", continueOnFailure: true });
+}, { action: "click", continueOnFailure: true, timeoutMs: 3000 });
 
 // ai-studio-step-id: pwgtsccq00
 await leapwork.step("Use test case: login-59", async () => {
@@ -212,7 +205,7 @@ await leapwork.step("Validate the Create new button is disbaled", async () => {
 // ai-studio-step-id: pw6s9f3r00
 await leapwork.step("Click the Test-59 Play workspace menu button in Leapwork Play", async () => {
     // Click span
-    await page.getByRole('button', { name: 'user59 test (Test-54 Play\'s' }).click();
+    await page.getByRole('button', { name: 'Test-59 Play (Test-54 Play\'s' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw1fg4rlq0
