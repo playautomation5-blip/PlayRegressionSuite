@@ -133,7 +133,7 @@ await leapwork.step("Validate that the \"Invite team member\" button is disbaled
 // ai-studio-step-id: pwxpsnex00
 await leapwork.step("Click the Test-59 Play workspace menu button in Leapwork Play", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Test-59 Play (Test-54 Play\'s' }).click();
+    await page.getByRole('button', { name: 'user59 test (Test-54 Play\'s' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pwzlkmyo00
@@ -205,7 +205,7 @@ await leapwork.step("Validate the Create new button is disbaled", async () => {
 // ai-studio-step-id: pw6s9f3r00
 await leapwork.step("Click the Test-59 Play workspace menu button in Leapwork Play", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Test-59 Play (Test-54 Play\'s' }).click();
+    await page.getByRole('button', { name: 'user59 test (Test-54 Play\'s' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw1fg4rlq0
