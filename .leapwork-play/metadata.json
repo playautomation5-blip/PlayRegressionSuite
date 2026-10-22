@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T10:54:57.848Z",
+  "generatedAt": "2026-10-22T10:59:27.664Z",
   "repo": {
     "connectorId": 76,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -455,6 +455,42 @@
           "name": "URL Navigation Via Chat",
           "kind": "test-case",
           "repoPath": "LLM Chat/TC-33-URL-Navigation-Via-Chat.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 19166,
+      "displayId": "FD-45",
+      "name": "Login",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 19306,
+          "displayId": "TC-258",
+          "name": "Apple Login",
+          "kind": "test-case",
+          "repoPath": "Login/TC-258-Apple-Login.spec.ts"
+        },
+        {
+          "assetId": 19305,
+          "displayId": "TC-257",
+          "name": "Github Login",
+          "kind": "test-case",
+          "repoPath": "Login/TC-257-Github-Login.spec.ts"
+        },
+        {
+          "assetId": 19300,
+          "displayId": "TC-256",
+          "name": "Google Login",
+          "kind": "test-case",
+          "repoPath": "Login/TC-256-Google-Login.spec.ts"
+        },
+        {
+          "assetId": 19167,
+          "displayId": "TC-255",
+          "name": "Password Login",
+          "kind": "test-case",
+          "repoPath": "Login/TC-255-Password-Login.spec.ts"
         }
       ]
     },
@@ -1649,6 +1685,38 @@
       "name": "URL Navigation Via Chat",
       "repoPath": "LLM Chat/TC-33-URL-Navigation-Via-Chat.spec.ts",
       "parentAssetId": 7966
+    },
+    {
+      "assetId": 19167,
+      "assetKind": "test-case",
+      "displayId": "TC-255",
+      "name": "Password Login",
+      "repoPath": "Login/TC-255-Password-Login.spec.ts",
+      "parentAssetId": 19166
+    },
+    {
+      "assetId": 19300,
+      "assetKind": "test-case",
+      "displayId": "TC-256",
+      "name": "Google Login",
+      "repoPath": "Login/TC-256-Google-Login.spec.ts",
+      "parentAssetId": 19166
+    },
+    {
+      "assetId": 19305,
+      "assetKind": "test-case",
+      "displayId": "TC-257",
+      "name": "Github Login",
+      "repoPath": "Login/TC-257-Github-Login.spec.ts",
+      "parentAssetId": 19166
+    },
+    {
+      "assetId": 19306,
+      "assetKind": "test-case",
+      "displayId": "TC-258",
+      "name": "Apple Login",
+      "repoPath": "Login/TC-258-Apple-Login.spec.ts",
+      "parentAssetId": 19166
     },
     {
       "assetId": 8354,
