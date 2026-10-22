@@ -206,16 +206,15 @@ await leapwork.step("Wait for Connect to be visible", async () => {
     await page.getByRole('button', { name: 'Connect' }).waitFor({state: 'visible'});
 }, { action: "click" });
 
-// ai-studio-step-id: pwfvixus00
+// ai-studio-step-id: pw1uelv5x0
 await leapwork.step("Click the Explorer button in Leapwork Play", async () => {
     // Click button "Explorer"
     await page.getByRole('button', { name: 'Explorer' }).click();
 }, { action: "click", continueOnFailure: true });
 
-// ai-studio-step-id: pw61ezhx00
-await leapwork.step("Use test case: Delete Asset", async () => {
-    return await DeleteAsset();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
+// await leapwork.step("Use test case: Delete Asset", async () => {
+//     return await DeleteAsset();
+// }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwcw1mlk00
 await leapwork.step("Use test case: Delete Team", async () => {
