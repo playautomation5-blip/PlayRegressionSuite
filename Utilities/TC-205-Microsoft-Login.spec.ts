@@ -68,7 +68,13 @@ await leapwork.step("Click the Yes button on the Microsoft sign-in prompt", asyn
     await page.getByTestId('primaryButton').click();
 }, { action: "click", continueOnFailure:true });
 
-// //conditional step for new user
+// ai-studio-step-id: pwkwlfbm00
+await leapwork.step("Click the Accept button on the Microsoft account consent page", async () => {
+    // Click button "Accept"
+    await page.getByTestId('appConsentPrimaryButton').click();
+}, { action: "click", relativeXpath: "//*[@data-testid=\"appConsentPrimaryButton\"]", continueOnFailure: true });
+
+
 // ai-studio-step-id: pw1l00zx40
 await leapwork.step("Use test case: Add company", async () => {
     return await AddCompany();
