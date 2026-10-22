@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T12:13:50.000Z",
+  "generatedAt": "2026-10-22T11:02:46.475Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -416,6 +416,27 @@
       "name": "Login",
       "kind": "folder",
       "children": [
+        {
+          "assetId": 27571,
+          "displayId": "TC-195",
+          "name": "Apple Login",
+          "kind": "test-case",
+          "repoPath": "Login/TC-195-Apple-Login.spec.ts"
+        },
+        {
+          "assetId": 27570,
+          "displayId": "TC-194",
+          "name": "Github Login",
+          "kind": "test-case",
+          "repoPath": "Login/TC-194-Github-Login.spec.ts"
+        },
+        {
+          "assetId": 27569,
+          "displayId": "TC-193",
+          "name": "Google Login",
+          "kind": "test-case",
+          "repoPath": "Login/TC-193-Google-Login.spec.ts"
+        },
         {
           "assetId": 11439,
           "displayId": "TC-104",
@@ -1282,6 +1303,30 @@
       "displayId": "TC-104",
       "name": "SSO Login",
       "repoPath": "Login/TC-104-SSO-Login.spec.ts",
+      "parentAssetId": 11438
+    },
+    {
+      "assetId": 27569,
+      "assetKind": "test-case",
+      "displayId": "TC-193",
+      "name": "Google Login",
+      "repoPath": "Login/TC-193-Google-Login.spec.ts",
+      "parentAssetId": 11438
+    },
+    {
+      "assetId": 27570,
+      "assetKind": "test-case",
+      "displayId": "TC-194",
+      "name": "Github Login",
+      "repoPath": "Login/TC-194-Github-Login.spec.ts",
+      "parentAssetId": 11438
+    },
+    {
+      "assetId": 27571,
+      "assetKind": "test-case",
+      "displayId": "TC-195",
+      "name": "Apple Login",
+      "repoPath": "Login/TC-195-Apple-Login.spec.ts",
       "parentAssetId": 11438
     },
     {
