@@ -42,38 +42,38 @@ await leapwork.step("Double-click the team 74800 item in the explorer pane", asy
 await leapwork.step("Click More actions for the timeoutMs setting showing 5000", async () => {
     // Click button "More actions for timeoutMs"
     await page.getByRole('button', { name: 'More actions for timeoutMs' }).click();
-}, { action: "click", relativeXpath: ".//div[5]/div/div[2]/div[5]/span[3]/button[@aria-label=\"More actions for timeoutMs\"]" });
+}, { action: "click", });
 
 // ai-studio-step-id: pw1xmwtjq0
 await leapwork.step("Click the Delete setting option for the timeoutMs team setting", async () => {
     // Click span
     await page.getByText('Delete setting').click();
-}, { action: "click", relativeXpath: ".//div[5]/div/div[@aria-label=\"Context menu\"]/div[2]/span/span" });
+}, { action: "click"});
 
 // ai-studio-step-id: pw1e8gwn30
 await leapwork.step("Click Delete to remove the setting", async () => {
     // Click button "Delete"
     await page.getByRole('button', { name: 'Delete' }).click();
-}, { action: "click", relativeXpath: ".//div[5]/div/div[4]/div/div/button[2]" });
+}, { action: "click"});
 
 // ai-studio-step-id: pw11tie5l0
 await leapwork.step("Click the \"+ Add setting\" button in the Settings section", async () => {
     // Click span
     await page.getByRole('button', { name: '+ Add setting' }).click();
-}, { action: "click", });
+}, { action: "click" });
 
 
 // ai-studio-step-id: pwgrmsyg00
 await leapwork.step(`Fill the timeoutMs Value field with ${lw__value4}`, async () => {
     // Fill spinbutton "Value"
     await page.getByRole('spinbutton', { name: 'Value' }).fill(String(lw__value4));
-}, { action: "input", relativeXpath: ".//div[5]/div/div[2]/div[5]/span[2]/input[@aria-label=\"Value\"]" });
+}, { action: "input" });
 
 // ai-studio-step-id: pw2gp9ql00
 await leapwork.step("Click Save for the timeoutMs setting (100000) in Team Settings", async () => {
     // Click button "Save"
     await page.getByRole('button', { name: 'Save' }).click();
-}, { action: "click", relativeXpath: ".//div[5]/div/div[2]/div[5]/span[3]/button" });
+}, { action: "click"});
 
 
 // ai-studio-step-id: pw1fo5qsz0
