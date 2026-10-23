@@ -4,6 +4,7 @@ import { RandomTeam, RandomTeam2, teamName, password } from "@assets/Utilities/r
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.variables.set("myGithubConnector", "connector", leapwork.storage.LOCAL);
 const lw__myGithubConnector = leapwork.variables.get("myGithubConnector", leapwork.storage.LOCAL) as string;
@@ -35,12 +36,13 @@ leapwork.configuration({
         },
 });
 
-leapwork.variables.set("userId", "user_21");
+leapwork.variables.set("userId", "user_67");
 leapwork.variables.set("teamName", teamName);
+leapwork.variables.set("passwordId", "user_67");
 
-// ai-studio-step-id: fa95126e
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00

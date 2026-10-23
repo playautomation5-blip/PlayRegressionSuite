@@ -83,12 +83,14 @@ export const microsoftUsers = {
     "user_65": "test-play-65@outlook.com", // TC-337 Timeout
     "user_68": "test-play-68@outlook.com", // TC-338 Secret Name
     "user_69": "test-play-69@outlook.com", // TC-357 - self heal variables
-    "user_70": "test-play-70@outlook.com" // TC-192 LLM Chat working
-
+    "user_70": "test-play-70@outlook.com", // TC-192 LLM Chat working
+    "user_66": "test-play-66@outlook.com", // TC-370 Excel file upload,
+    "user_67": "jikaces312@moblha.com" //temp user for TC-175 Source control
 }
 
 export const passwords = {
     "aistudio_user_2": "4HQwARpqZ4:i7aB",
     "aistudio_user_3": "Hello@789",
-    "aistudio_user_4": "5@Dummyy"
+    "aistudio_user_4": "5@Dummyy",
+    "user_67":"Test@12345"
 }
