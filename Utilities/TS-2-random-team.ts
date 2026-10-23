@@ -50,7 +50,6 @@ export const microsoftUsers = {
     "user_39": "test-play-39@outlook.com", //TC-165 import playwright
     "user_40": "test-play-40@outlook.com", //TC-170 Workspace Change Validation
     "user_41": "test-play-41@outlook.com", //TC-185 Account & Settings - Audit Log
-    "user_44": "test-play-44@outlook.com", //TC-192 LLM Chat Improved
     "user_45": "test-play-45@outlook.com", //TC-193 LLM Command Test
     "user_49": "test-play-49@outlook.com", //TC-218 Invite to a new user from team settings
     "user_50": "test-play-50@outlook.com", //TC-219 KB with git
@@ -74,6 +73,9 @@ export const microsoftUsers = {
     "user_60": "test-play-60@outlook.com", //TC-205 Salesforce connector
     "user_47": "test-play-47@outlook.com", // TC-206 Workspace users tab
     "user_65": "test-play-65@outlook.com", // TC-226 Timeout
+    "user_69": "test-play-69@outlook.com", // TC-226 Timeout
+    "user_70": "test-play-70@outlook.com", // TC-29 LLM chat working
+    "user_66": "test-play-66@outlook.com", // TC-259 Excel file upload
     "user_36": "test-play-36@outlook.com",//TC-233 Xpath execution
 }
 
