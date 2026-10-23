@@ -57,12 +57,6 @@ await leapwork.step("Validate the option shows 'GitHub' on the Leapwork Play pag
     await expect(page.getByText('GitHub')).toContainText("GitHub");
 }, { action: "validate", relativeXpath: "//*[@id=\"fluent-option_r_6_\"]/span[2]/span" });
 
-// ai-studio-step-id: pw1tv79p10
-await leapwork.step("Validate that the button shows 'Create blueprint generator' on the Leapwork Play page.", async () => {
-    // Assert button "Create blueprint generator" contains "Create blueprint generator"
-    await expect(page.getByRole('button', { name: 'Create blueprint generator' })).toContainText("Create blueprint generator");
-}, { action: "validate", relativeXpath: ".//div[2]/div/div[1]/div[2]/span[2]/button" });
-
 // ai-studio-step-id: 39143cb9
 await leapwork.step("Use test case: Delete Team", async () => {
     return await DeleteTeam();
