@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-22T11:02:46.475Z",
+  "generatedAt": "2026-10-28T06:01:32.939Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -276,6 +276,36 @@
           "name": "External Adapter Filter Hook",
           "kind": "test-case",
           "repoPath": "External Adapter/TC-147-External-Adapter-Filter-Hook.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 28022,
+      "displayId": "FD-44",
+      "name": "Functional",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 28023,
+          "displayId": "FD-45",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 28024,
+              "displayId": "TC-196",
+              "name": "Import excel",
+              "kind": "test-case",
+              "repoPath": "Functional/Utilities/TC-196-Import-excel.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 28025,
+          "displayId": "TC-197",
+          "name": "Excel file upload",
+          "kind": "test-case",
+          "repoPath": "Functional/TC-197-Excel-file-upload.spec.ts"
         }
       ]
     },
@@ -1192,6 +1222,22 @@
       "name": "Enable Llm Over Native Using External Adapter",
       "repoPath": "External Adapter/TC-152-Enable-Llm-Over-Native-Using-External-Adapter.spec.ts",
       "parentAssetId": 15855
+    },
+    {
+      "assetId": 28025,
+      "assetKind": "test-case",
+      "displayId": "TC-197",
+      "name": "Excel file upload",
+      "repoPath": "Functional/TC-197-Excel-file-upload.spec.ts",
+      "parentAssetId": 28022
+    },
+    {
+      "assetId": 28024,
+      "assetKind": "test-case",
+      "displayId": "TC-196",
+      "name": "Import excel",
+      "repoPath": "Functional/Utilities/TC-196-Import-excel.spec.ts",
+      "parentAssetId": 28023
     },
     {
       "assetId": 15823,
