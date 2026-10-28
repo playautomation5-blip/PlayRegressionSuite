@@ -2,6 +2,8 @@ import { leapwork } from "./leapwork";
 
 leapwork.variables.set("emailOrPhone", "playautomation5@gmail.com");
 leapwork.variables.set("password", "7iNToBzXWA3Q0MKg");
+// leapwork.variables.set("emailOrPhone", "svc.playautomation@leapwork.com");
+// leapwork.variables.set("password", "k)w5H4^^(^dw^F+jsN\N;r]Q6M/9x0*");
 const lw__emailOrPhone = leapwork.variables.get("emailOrPhone", leapwork.storage.LOCAL) as string;
 const lw__password = leapwork.variables.get("password", leapwork.storage.LOCAL) as string;
 

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-23T07:03:41.020Z",
+  "generatedAt": "2026-10-28T06:02:14.966Z",
   "repo": {
     "connectorId": 76,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -305,6 +305,21 @@
       "name": "Functional",
       "kind": "folder",
       "children": [
+        {
+          "assetId": 19417,
+          "displayId": "FD-47",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 19418,
+              "displayId": "TC-260",
+              "name": "Import excel",
+              "kind": "test-case",
+              "repoPath": "Functional/Utilities/TC-260-Import-excel.spec.ts"
+            }
+          ]
+        },
         {
           "assetId": 19402,
           "displayId": "TC-259",
@@ -1572,6 +1587,14 @@
       "name": "Excel file upload",
       "repoPath": "Functional/TC-259-Excel-file-upload.spec.ts",
       "parentAssetId": 19401
+    },
+    {
+      "assetId": 19418,
+      "assetKind": "test-case",
+      "displayId": "TC-260",
+      "name": "Import excel",
+      "repoPath": "Functional/Utilities/TC-260-Import-excel.spec.ts",
+      "parentAssetId": 19417
     },
     {
       "assetId": 8195,
