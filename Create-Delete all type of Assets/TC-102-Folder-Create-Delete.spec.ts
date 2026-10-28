@@ -7,6 +7,7 @@ import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { RenameAsset } from "@assets/Utilities/Rename Asset";
 import { DeleteAsset } from "@assets/Utilities/Delete Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -18,15 +19,16 @@ leapwork.configuration({
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
-leapwork.variables.set("userId", "user_9");
+leapwork.variables.set("userId", "user_71");
+leapwork.variables.set("passwordId", "user_71");
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetType", "New folder");
 leapwork.variables.set("assetName", "created");
 leapwork.variables.set("renamedAssetName", "renamed");
 
 // ai-studio-step-id: c99e3043
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 15f29080

@@ -85,12 +85,14 @@ export const microsoftUsers = {
     "user_69": "test-play-69@outlook.com", // TC-357 - self heal variables
     "user_70": "test-play-70@outlook.com", // TC-192 LLM Chat working
     "user_66": "test-play-66@outlook.com", // TC-370 Excel file upload,
-    "user_67": "jikaces312@moblha.com" //temp user for TC-175 Source control
+    "user_67": "jikaces312@moblha.com", //temp user for TC-175 Source control
+    "user_71": "taxici4212@hopefunder.com" // temp user for TC-102 Folder-Create-Delete
 }
 
 export const passwords = {
     "aistudio_user_2": "4HQwARpqZ4:i7aB",
     "aistudio_user_3": "Hello@789",
     "aistudio_user_4": "5@Dummyy",
-    "user_67":"Test@12345"
+    "user_67": "Test@12345", 
+    "user_71": "Test@123456"
 }
