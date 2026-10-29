@@ -86,7 +86,8 @@ export const microsoftUsers = {
     "user_70": "test-play-70@outlook.com", // TC-192 LLM Chat working
     "user_66": "test-play-66@outlook.com", // TC-370 Excel file upload,
     "user_67": "jikaces312@moblha.com", //temp user for TC-175 Source control
-    "user_71": "taxici4212@hopefunder.com" // temp user for TC-102 Folder-Create-Delete
+    "user_71": "taxici4212@hopefunder.com", // temp user for TC-102 Folder-Create-Delete
+    "user_72": "pepito4562@playfine.com", //TC-203 Enable LLM Over Native Recorder
 }
 
 export const passwords = {
@@ -96,5 +97,6 @@ export const passwords = {
     "user_67": "Test@12345", 
     "reg_11": "Test@12345",
     "user_71": "Test@123456",
-    "pwd_user_08": "test-play-08"
+    "pwd_user_08": "test-play-08",
+    "user_72": "Leapwork@2026"
 }
