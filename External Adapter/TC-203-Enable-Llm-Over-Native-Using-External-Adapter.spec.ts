@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 
@@ -10,16 +10,27 @@ const lw__environmentName = leapwork.variables.get("environmentName", leapwork.s
 leapwork.variables.set("url", "https://www.qa-practice.com/elements/select/single_select", leapwork.storage.LOCAL);
 const lw__url = leapwork.variables.get("url", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("userId", "user_52");
+leapwork.variables.set("userId", "user_72");
+leapwork.variables.set("passwordId", "user_72");
 
 leapwork.configuration({
   enableSelfHeal: false,
-  timeoutMs: 30000
+  timeoutMs: 30000,
+  chromiumArgs: ["--deny-permission-prompts",
+          "--disable-notifications"
+        ],
+  chromiumPrefs: { "credentials_enable_service": false,
+          "profile":
+          {
+            "password_manager_enabled": false,
+            "password_manager_leak_detection": false
+          }
+        },
 });
 
 // ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 
@@ -33,11 +44,23 @@ await leapwork.step("Use test case: Create New Team", async () => {
     return await CreateNewTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
+// ai-studio-step-id: pw1ocot0p0
+await leapwork.step("Click “Dismiss for now” on the email verification banner", async () => {
+    // Click button "Dismiss for now"
+    await page.getByRole('button', { name: 'Dismiss for now' }).click();
+}, { action: "click", continueOnFailure: true });
+
 // ai-studio-step-id: pwt9ijzp00
 await leapwork.step("Double Click on New team", async () => {
     // Double Click on New team"
     await page.locator('div.explorer-item[title="New team"]').dblclick();
 }, { action: "click", continueOnFailure: true });
+
+// ai-studio-step-id: pw1ge9i7l0
+await leapwork.step("Double-click the \"New team\" item in the Leapwork Play explorer.", async () => {
+    // Double-click "New team"
+    await page.getByText('New team').first().dblclick();
+}, { action: "dblclick", relativeXpath: ".//div[2]/div[2]/div[2]/div[1]/div/span[3]" });
 
 // ai-studio-step-id: pwzxyp9200
 await leapwork.step("Click the + Add Environment button in the Environments section", async () => {
