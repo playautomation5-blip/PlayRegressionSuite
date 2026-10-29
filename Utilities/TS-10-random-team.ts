@@ -94,5 +94,6 @@ export const passwords = {
     "aistudio_user_3": "Hello@789",
     "aistudio_user_4": "5@Dummyy",
     "user_67": "Test@12345", 
+    "reg_11": "Test@12345",
     "user_71": "Test@123456"
 }

@@ -1,10 +1,10 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { ImportTestsOrPlaywright } from "@assets/Utilities/Import Tests or Playwright";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -32,14 +32,15 @@ const fileId = "FL-3"
 const testCaseName = ["Multiple_tests", "Multiple_tests - shared helpers", "Add products to cart", "Checkout flow"]
 
 leapwork.variables.set("userId", userId);
+leapwork.variables.set("passwordId", "reg_11");
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("fileId", fileId);
 leapwork.variables.set("testCasesNames", testCaseName);
 leapwork.variables.set("importType", "playwright");
 
-// ai-studio-step-id: 1cb70220
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1qh7j2z0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: cc309120
