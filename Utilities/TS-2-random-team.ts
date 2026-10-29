@@ -79,11 +79,13 @@ export const microsoftUsers = {
     "user_69": "test-play-69@outlook.com", // TC-184 Self heal variables
     "user_70": "test-play-70@outlook.com", // TC-46 LLM chat working
     "user_66": "test-play-66@outlook.com", // TC-197 Excel file upload
+    "user_72": "pepito4562@playfine.com", //TC-203 Enable LLM Over Native Recorder
 }
 
 export const passwords = {
     "aistudio_user_2": "4HQwARpqZ4:i7aB",
     "aistudio_user_3": "Hello@789",
     "aistudio_user_4": "5@Dummyy",
-    "pwd_user_08": "test-play-08"
+    "pwd_user_08": "test-play-08",
+    "user_72": "Leapwork@2026",
 }
