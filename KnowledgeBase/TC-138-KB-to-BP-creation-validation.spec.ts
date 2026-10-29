@@ -7,6 +7,7 @@ import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -19,15 +20,15 @@ leapwork.configuration({
 });
 
 leapwork.variables.set("userId", "user_8");
+leapwork.variables.set("passwordId", "pwd_user_08");
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetType", "New knowledge base");
 leapwork.variables.set("assetName", "created");
 
-// ai-studio-step-id: 07ba9fab
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
 
 // ai-studio-step-id: 3ac9da99
 await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
