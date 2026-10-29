@@ -79,6 +79,7 @@ export const microsoftUsers = {
     "user_36": "test-play-36@outlook.com",//TC-233 Xpath execution
     "user_37": "taxici4212@hopefunder.com", //TC-43 Folder-Create-Delete
     "user_42": "cabeyaf691@moblha.com", //TC-85 Source Control
+    "user_72": "pepito4562@playfine.com", //TC-203 Enable LLM Over Native Recorder
 }
 
 export const passwords = {
@@ -86,6 +87,6 @@ export const passwords = {
     "aistudio_user_3": "Hello@789",
     "aistudio_user_4": "5@Dummyy",
     "user_37" : "Test@12345", // Same for user_42
-    "pwd_user_08": "test-play-08"
-
+    "pwd_user_08": "test-play-08",
+    "user_72": "Leapwork@2026"
 }
