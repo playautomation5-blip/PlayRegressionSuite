@@ -77,10 +77,15 @@ export const microsoftUsers = {
     "user_70": "test-play-70@outlook.com", // TC-29 LLM chat working
     "user_66": "test-play-66@outlook.com", // TC-259 Excel file upload
     "user_36": "test-play-36@outlook.com",//TC-233 Xpath execution
+    "user_37": "taxici4212@hopefunder.com", //TC-43 Folder-Create-Delete
+    "user_42": "cabeyaf691@moblha.com", //TC-85 Source Control
 }
 
 export const passwords = {
     "aistudio_user_2": "4HQwARpqZ4:i7aB",
     "aistudio_user_3": "Hello@789",
-    "aistudio_user_4": "5@Dummyy"
+    "aistudio_user_4": "5@Dummyy",
+    "user_37" : "Test@12345", // Same for user_42
+    "pwd_user_08": "test-play-08"
+
 }
