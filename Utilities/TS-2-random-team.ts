@@ -50,7 +50,6 @@ export const microsoftUsers = {
     "user_43": "test-play-43@outlook.com", //TC-40 import playwright
     "user_40": "test-play-40@outlook.com", //TC-170 Workspace Change Validation
     "user_41": "test-play-41@outlook.com", //TC-57 Account & Settings - Audit Log
-    "user_44": "test-play-44@outlook.com", //TC-192 LLM Chat Improved
     "user_45": "test-play-45@outlook.com", //TC-193 LLM Command Test
     "user_49": "test-play-49@outlook.com", //TC-218 Invite to a new user from team settings
     "user_50": "test-play-50@outlook.com", //TC-219 KB with git
@@ -77,10 +76,14 @@ export const microsoftUsers = {
     "user-37": "test-play-37@outlook.com", //TC=235 Xpath Execuion with variables
     "user-42": "test-play-42@outlook.com", //TC-236: Team self heal settings
     "user_65": "test-play-65@outlook.com", // TC-337 Timeout
+    "user_69": "test-play-69@outlook.com", // TC-184 Self heal variables
+    "user_70": "test-play-70@outlook.com", // TC-46 LLM chat working
+    "user_66": "test-play-66@outlook.com", // TC-197 Excel file upload
 }
 
 export const passwords = {
     "aistudio_user_2": "4HQwARpqZ4:i7aB",
     "aistudio_user_3": "Hello@789",
-    "aistudio_user_4": "5@Dummyy"
+    "aistudio_user_4": "5@Dummyy",
+    "pwd_user_08": "test-play-08"
 }
