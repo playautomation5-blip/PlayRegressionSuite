@@ -1,34 +1,24 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { RandomTeam, password, teamName } from "@assets/Utilities/random-team";
 import { ExpandCollapse } from "@assets/Utilities/Expand collapse";
 
-leapwork.variables.set("enterYourCompany", "Leapwork", leapwork.storage.LOCAL);
-const lw__enterYourCompany = leapwork.variables.get("enterYourCompany", leapwork.storage.LOCAL) as string;
-
-leapwork.configuration({
-  timeoutMs: Number(
-    leapwork.team.settings.get("timeoutMs")
-    ?? leapwork.workspace.settings.get("timeoutMs")
-  ) || 5000,
-  enableSelfHeal:
-    (leapwork.team.settings.get("enableSelfHeal")
-      ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
-});
-
-leapwork.variables.set("userId", "user_27");
 leapwork.variables.set("teamName", teamName);
+leapwork.variables.set("userId", "user_73");
+leapwork.variables.set("passwordId", "user_73");
+
+leapwork.configuration({ enableSelfHeal: false, timeoutMs: 30000, chromiumArgs: ["--deny-permission-prompts", "--disable-notifications"], chromiumPrefs: { "credentials_enable_service": false, "profile": {"password_manager_enabled":false,"password_manager_leak_detection":false} } });
 
 // ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: pwyrpbaz00
-await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
+// ai-studio-step-id: pw11q5gzw0
+await leapwork.step("Use test case: Create New Team", async () => {
     return await DeleteCreateRenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
@@ -72,3 +62,9 @@ await leapwork.step("Right-click the \"${teamName}\" team", async () => {
 await leapwork.step("Click Delete permanently in the Trash context menu", async () => {
     await page.getByText('Delete permanently').click();
 }, { action: "click" });
+
+// ai-studio-step-id: pwnq6nx300
+await leapwork.step("Click Delete permanently to confirm asset deletion", async () => {
+    // Click button "Delete permanently"
+    await page.getByRole('button', { name: 'Delete permanently' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[3]/div/div/button[1]" });
