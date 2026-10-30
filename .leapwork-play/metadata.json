@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-28T06:02:14.966Z",
+  "generatedAt": "2026-10-30T11:44:37.336Z",
   "repo": {
     "connectorId": 76,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -1262,6 +1262,13 @@
           "repoPath": "Utilities/TC-181-Runlist-Default-Execution-Mode.spec.ts"
         },
         {
+          "assetId": 20674,
+          "displayId": "TC-263",
+          "name": "Set password for login",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-263-Set-password-for-login.spec.ts"
+        },
+        {
           "assetId": 7912,
           "displayId": "TC-26",
           "name": "SkipOnboardingTour",
@@ -2378,6 +2385,14 @@
       "displayId": "TC-26",
       "name": "SkipOnboardingTour",
       "repoPath": "Utilities/TC-26-SkipOnboardingTour.spec.ts",
+      "parentAssetId": 7839
+    },
+    {
+      "assetId": 20674,
+      "assetKind": "test-case",
+      "displayId": "TC-263",
+      "name": "Set password for login",
+      "repoPath": "Utilities/TC-263-Set-password-for-login.spec.ts",
       "parentAssetId": 7839
     },
     {
