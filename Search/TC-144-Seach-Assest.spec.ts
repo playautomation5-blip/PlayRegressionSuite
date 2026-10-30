@@ -1,11 +1,11 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { RenameTeam } from "@assets/Utilities/Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.variables.set("search", "shivani", leapwork.storage.LOCAL);
 const lw__search = leapwork.variables.get("search", leapwork.storage.LOCAL) as string;
@@ -38,15 +38,14 @@ const assetDictionary: Record<string, string> = {
   "New runlist":"Combined runlist"
 };
 
-
 leapwork.variables.set("userId", "user_18");
 leapwork.variables.set("teamName",teamName);
 leapwork.variables.set("assetType", "New test case");
 
 
-// ai-studio-step-id: 9a6509e2
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 5986fd60

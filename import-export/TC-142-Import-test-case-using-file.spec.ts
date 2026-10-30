@@ -1,10 +1,11 @@
 import { leapwork } from "./leapwork";
 
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { ImportTestsOrPlaywright } from "@assets/Utilities/Import Tests or Playwright";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
+
 const tc11EditStep2 = leapwork.files.path('FL-2');
 const multipleTests1 = leapwork.files.path('FL-1');
 leapwork.configuration({
@@ -27,9 +28,9 @@ leapwork.variables.set("fileId", fileId);
 leapwork.variables.set("testCasesNames", [testCaseName]);
 leapwork.variables.set("importType", "tests");
 
-// ai-studio-step-id: 0dfca187
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 93e6889c

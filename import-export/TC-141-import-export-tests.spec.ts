@@ -1,12 +1,12 @@
 import { leapwork } from "./leapwork";
 
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { RenameTeam } from "@assets/Utilities/Rename Team";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -23,9 +23,9 @@ leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetType", "New test case");
 leapwork.variables.set("assetName", "new TC created");
 
-// ai-studio-step-id: b5ae1627
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 7b14b3e5
