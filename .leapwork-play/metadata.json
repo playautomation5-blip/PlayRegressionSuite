@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-30T11:44:37.336Z",
+  "generatedAt": "2026-10-30T11:48:33.978Z",
   "repo": {
     "connectorId": 76,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -1141,6 +1141,13 @@
           "name": "ConstantORExtensions",
           "kind": "typescript",
           "repoPath": "Utilities/TS-1-ConstantORExtensions.ts"
+        },
+        {
+          "assetId": 20671,
+          "displayId": "TC-262",
+          "name": "Create Account with Email",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-262-Create-Account-with-Email.spec.ts"
         },
         {
           "assetId": 7843,
@@ -2385,6 +2392,14 @@
       "displayId": "TC-26",
       "name": "SkipOnboardingTour",
       "repoPath": "Utilities/TC-26-SkipOnboardingTour.spec.ts",
+      "parentAssetId": 7839
+    },
+    {
+      "assetId": 20671,
+      "assetKind": "test-case",
+      "displayId": "TC-262",
+      "name": "Create Account with Email",
+      "repoPath": "Utilities/TC-262-Create-Account-with-Email.spec.ts",
       "parentAssetId": 7839
     },
     {
