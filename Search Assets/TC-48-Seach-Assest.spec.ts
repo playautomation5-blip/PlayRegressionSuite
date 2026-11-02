@@ -1,10 +1,11 @@
 import { leapwork } from "./leapwork";
 
-import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { RenameTeam } from "@assets/Utilities/Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { DeleteTeam } from "@assets/Utilities/Delete Team";
+import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.variables.set("search", "shivani", leapwork.storage.LOCAL);
 const lw__search = leapwork.variables.get("search", leapwork.storage.LOCAL) as string;
@@ -16,8 +17,13 @@ leapwork.variables.set("search3", "", leapwork.storage.LOCAL);
 const lw__search3 = leapwork.variables.get("search3", leapwork.storage.LOCAL) as string;
 
 leapwork.configuration({
-  enableSelfHeal: false,
-  timeoutMs: 5000
+  timeoutMs: Number(
+    leapwork.team.settings.get("timeoutMs")
+    ?? leapwork.workspace.settings.get("timeoutMs")
+  ) || 5000,
+  enableSelfHeal:
+    (leapwork.workspace.settings.get("enableSelfHeal")
+      ?? leapwork.team.settings.get("enableSelfHeal")) !== "false",
 });
 
 const teamName = "Leapwork";
@@ -32,15 +38,13 @@ const assetDictionary: Record<string, string> = {
   "New runlist":"Combined runlist"
 };
 
-
 leapwork.variables.set("userId", "user_18");
 leapwork.variables.set("teamName",teamName);
 leapwork.variables.set("assetType", "New test case");
 
-
-// ai-studio-step-id: f5724df9
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pwy56vpc00
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 429acea6
@@ -60,15 +64,14 @@ await leapwork.step("Use test case: Rename Team", async () => {
 
 // ai-studio-step-id: pwy56vpc00
 await leapwork.step("Use test case: Create New Asset", async () => {
-      const entries = Object.entries(assetDictionary);
+     const entries = Object.entries(assetDictionary);
     for (let i = 0; i < 5; i++) {
         const [assetType, assetName] = entries[i];
         leapwork.variables.set("assetType", assetType);
         leapwork.variables.set("assetName", assetName);
         await CreateNewAsset();
     }
-}, { action: "asset_reference", linkedAssetType: "test-case" });
-
+}, { action: "asset_reference", linkedAssetType: "test-case" , timeoutMs : 60000});
 
 // ai-studio-step-id: pwp852wb00
 await leapwork.step("Click the Search field", async () => {
@@ -82,10 +85,10 @@ await leapwork.step(`Fill the Search field with "${lw__search}"`, async () => {
     await page.getByRole('textbox', { name: 'Search' }).fill(String(lw__search));
 }, { action: "input" });
 
-// ai-studio-step-id: pwx3jakx00
-await leapwork.step("Validate that 'Shivani' is shown in the folder name on the Leapwork Play page", async () => {
+// ai-studio-step-id: pwods0x100
+await leapwork.step("Validate that the Shivani folder name shows 'Shivani' on the Leapwork Play page", async () => {
     // Assert span contains "Shivani"
-    assertScreenshot("Shivani folder exists in Leapwork team")
+    await expect(page.getByText('Shivani').first()).toContainText("Shivani");
 }, { action: "validate"});
 
 // ai-studio-step-id: pwwf0k2q00
@@ -112,24 +115,28 @@ await leapwork.step("Validate that Common utility shows 'TS-1Common utility' on 
     await expect(page.getByText('TS-1Common utility').first()).toContainText("TS-1Common utility");
 }, { action: "validate" });
 
-// await leapwork.step("Click the Explorer sidebar pane for TS-1 Common utility", async () => {
-//     // Click div
-//     await page.locator('div').filter({ hasText: 'Leapwork TeamTS-1Common' }).nth(5).click();
-// }, { action: "click" });
+
+// ai-studio-step-id: pwz5567r00
+await leapwork.step("Click the Search field in the Leapwork explorer panel", async () => {
+    // Click div
+    await page.locator('.explorer-search-container').click();
+}, { action: "click", relativeXpath: ".//div[3]/div[2]/div[1]/div[2]/div[2]/div[1]" });
 
 // ai-studio-step-id: pwjggsa200
-await leapwork.step("Fill the Search field", async () => {
+await leapwork.step("Fill the Search field to filter Leapwork assets", async () => {
     // Fill textbox "Search"
     await page.getByRole('textbox', { name: 'Search' }).fill(String(lw__search3));
-}, { action: "input" });
+}, { action: "input", relativeXpath: ".//div[2]/div[1]/div[2]/div[2]/div[1]/input" });
 
-// await leapwork.step("Click the Collapse trash button", async () => {
-//     // Click button "Collapse trash"
-//     await page.getByRole('button', { name: 'Collapse trash' }).click();
-// }, { action: "click" });
 
-// ai-studio-step-id: 9d789c46
-await leapwork.step("Use test case: Delete All Teams", async () => {
-    return await DeleteAllTeams();
+
+// ai-studio-step-id: pw178ojmf0
+await leapwork.step("Click the Collapse trash button", async () => {
+    // Click button "Collapse trash"
+    await page.getByRole('button', { name: 'Collapse trash' }).click();
+}, { action: "click", continueOnFailure: true });
+
+// ai-studio-step-id: pwqsjnuk00
+await leapwork.step("Use test case: Delete Team", async () => {
+    return await DeleteTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-

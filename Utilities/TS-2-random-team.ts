@@ -26,14 +26,14 @@ export const microsoftUsers = {
     "user_13": "tomayev224@playfine.com", //TC-98 Test case-Create-Delete
     "user_14": "test-play-14@outlook.com", //TC-97 Typescript-Create-Delete
     "user_15": "test-play-15@outlook.com", //TC-132 Invite to new user from top banner without adding to workspace
-    "user_16": "test-play-16@outlook.com", //TC-137 Import-export tests
+    "user_16": "Lema.Sailors@FusionInbox.com", //TC-137 Import-export tests
     "user_17": "test-play-17@outlook.com", //TC-217 Invitation to already existing user
-    "user_18": "test-play-18@outlook.com", //TC-174 Seach Assest
+    "user_18": "Elius.Mauricio@FusionInbox.com", //TC-174 Seach Assest
     "user_19": "test-play-19@outlook.com", //TC-136 Category
     "user_20": "test-play-20@outlook.com", //TC-53 Environment
     "user_21": "test-play-21@outlook.com", //TC-175 Source control
     "user_22": "test-play-22@outlook.com", //TC-247 Create Custom adapter
-    "user_23": "test-play-23@outlook.com", //TC-177 Secret
+    "user_23": "Adyanna.Vargus@FusionInbox.com", //TC-177 Secret
     "user_24": "test-play-24@outlook.com", //TC-133 Tag
     "user_25": "test-play-25@outlook.com", //TC-142 Empty trash can
     "user_26": "test-play-26@outlook.com", //TC-144 Delete multiple
@@ -46,7 +46,7 @@ export const microsoftUsers = {
     "user_33": "test-play-33@outlook.com", //TC-229 Record a test case
     "user_34": "test-play-34@outlook.com", //TC-223 Workspace Settings page
     "user_35": "test-k-play-35@outlook.com", //TC-176 Adapter
-    "user_38": "test-play-38@outlook.com", //TC-163 File-Create-Delete
+    "user_38": "binilov241@hopefunder.com", //TC-163 File-Create-Delete
     "user_43": "test-play-43@outlook.com", //TC-40 import playwright
     "user_40": "test-play-40@outlook.com", //TC-170 Workspace Change Validation
     "user_41": "test-play-41@outlook.com", //TC-57 Account & Settings - Audit Log
@@ -64,12 +64,12 @@ export const microsoftUsers = {
     "reg_2":"regression_user@outlook.com", //TC-234 Run execution cleanup after recorder starts
     "reg_3": "regression_kd_1@outlook.com",  // TC-290 CRUD TC Status
     "reg_10": "regression-user-10@outlook.com", //TC-296 Display User Name as Owner and Fallback to Email When User Name Is Unavailable
-    "reg_12": "regression-user-jp-5@outlook.com", // TC-305 Import test case using file
+    "reg_12": "costanza.bury@fusioninbox.com", // TC-305 Import test case using file
     "reg_13": "regression-user-jp-6@outlook.com", //TC-306 Edit playwright step using chat
     "reg_11": "regression-user-jp-4@outlook.com", // TC-139 Import playwright from file
     "user_61":"test-play-61@outlook.com", //TC-148 Empty trash can
     "user_36":"test-play-36@outlook.com", //TC-257 Xpath Execution
-    "user_68": "test-play-68@outlook.com", // TC-158 Secret Name
+    "user_68": "Tyerra.Corona@FusionInbox.com", // TC-158 Secret Name
     "user_54": "test-play-54@outlook.com", // TC-175 Team                 Note: Don't use it for other test case
     "user_59": "test-play-59@outlook.com", // TC-175 Team                 Note: Don't use it for other test case
     "user_47": "test-play-47@outlook.com", // TC-172 Workspace users tab   Note: Don't use it for other test case
