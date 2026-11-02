@@ -61,7 +61,7 @@ export const microsoftUsers = {
     "user_50": "test-play-50@outlook.com", //TC-219 KB with git
     "user_51": "test-play-51@outlook.com", //TC-240 Navigate to Play landing page
     "user_52": "test-play-52@outlook.com", //TC-251 External Adapter      Note: Don't use it for other test case
-    "user_53": "test-play-53@outlook.com", //TC-287 Add settings in team
+    "user_53": "jopece1708@drtall.com", //TC-287 Add settings in team
     "user_54": "test-play-54@outlook.com", // TC-335 Team                 Note: Don't use it for other test case
     "user_55": "hoyeka8846@playfine.com", //TC-252 Copy paste            Note: Don't use it for other test case
     "user_56": "test-play-56@outlook.com", //TC-256 Auto create pwd secret
@@ -69,15 +69,15 @@ export const microsoftUsers = {
     "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
     "user_59": "test-play-59@outlook.com", // TC-335 Team                 Note: Don't use it for other test case
     "user_60": "talejes367@playfine.com", //TC-205 Salesforce connector
-    "user_62": "test-play-62@outlook.com", //TC-360 Git Connector
-    "user_64": "test-play-64@outlook.com", //TC-362 Atlassian Connector
+    "user_62": "noholih746@boffweb.com", //TC-360 Git Connector
+    "user_64": "jolod52834@emailkeep.com", //TC-362 Atlassian Connector
     "reg_1": "regression-user-1@outlook.com", // TC-289 Context menu of a step
     "reg_2":"diheca5706@playfine.com", //TC-234 Run execution cleanup after recorder starts
     "reg_3": "regression_kd_1@outlook.com",  // TC-290 CRUD TC Status
     "reg_10": "regression-user-10@outlook.com", //TC-296 Display User Name as Owner and Fallback to Email When User Name Is Unavailable
     "reg_11": "regression-user-jp-4@outlook.com", // TC-304 Import playwright from file
     "reg_12": "costanza.bury@fusioninbox.com", // TC-305 Import test case using file
-    "reg_13": "regression-user-jp-6@outlook.com", //TC-306 Edit playwright step using chat
+    "reg_13": "regression-user-jp-6@mailinator.com", //TC-306 Edit playwright step using chat
     "user_47": "powem35312@goldvester.com", // TC-332 Workspace users tab
     "user_36":"test-play-36@outlook.com", //TC-309 Xpath Execution
     "user_65": "test-play-65@outlook.com", // TC-337 Timeout
