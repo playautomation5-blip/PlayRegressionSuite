@@ -1,7 +1,7 @@
 import { leapwork } from "./leapwork";
 
 import { DeleteExistingModels } from "@assets/BYOK/Utilities/Delete existing models";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   enableSelfHeal: false,
@@ -21,9 +21,9 @@ leapwork.variables.set("userId", "aistudio_user_4");
 leapwork.variables.set("passwordId", "aistudio_user_4");
 
 
-// ai-studio-step-id: 606f2db5
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: ce0c8564

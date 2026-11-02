@@ -2,7 +2,7 @@ export const teamName = `team ${Math.floor(Math.random() * 100000)}`;
 
 export const adminPassowrd = `4HQwARpqZ4:i7aB`;
 
-export const password = `test-play-`;
+export const password = `test-play-1`;
 
 export const microsoftUsers = {
     //TC-113 AI Studio Monitor
@@ -15,7 +15,7 @@ export const microsoftUsers = {
     //TC-170 Workspace Change Validation
     "aistudio_user_2": "aistudio02@outlook.com", // admin account used in above TCs
     "aistudio_user_3": "aistudio03@outlook.com", // workspace change validation
-    "aistudio_user_4": "jindgar-dummy@outlook.com", //TC-224 BYOK-Create-Edit-Delete
+    "aistudio_user_4": "cojiki4586@ofags.com", //TC-224 BYOK-Create-Edit-Delete
     "user_6": "test-play-6@outlook.com", //TC-103 Agent-Create-Delete
     "user_7": "test-play-7@outlook.com", //TC-28 Create Duplicate
     "user_8": "test-play-8@outlook.com", //TC-138 KB to BP creation validation
@@ -23,7 +23,7 @@ export const microsoftUsers = {
     "user_10": "test-play-10@outlook.com", //TC-101 KnowledgeBase-Create-Delete
     "user_11": "test-play-11@outlook.com", //TC-100 Runlist-Create-Delete
     "user_12": "test-play-12@outlook.com", //TC-99 Team-Create-Delete
-    "user_13": "test-play-13@outlook.com", //TC-98 Test case-Create-Delete
+    "user_13": "tomayev224@playfine.com", //TC-98 Test case-Create-Delete
     "user_14": "test-play-14@outlook.com", //TC-97 Typescript-Create-Delete
     "user_15": "test-play-15@outlook.com", //TC-132 Invite to new user from top banner without adding to workspace
     "user_16": "test-play-16@outlook.com", //TC-137 Import-export tests
@@ -37,7 +37,7 @@ export const microsoftUsers = {
     "user_24": "test-play-24@outlook.com", //TC-133 Tag
     "user_25": "test-play-25@outlook.com", //TC-142 Empty trash can
     "user_26": "test-play-26@outlook.com", //TC-144 Delete multiple
-    "user_27": "test-play-27@outlook.com", //TC-141 Restore & delete permanently
+    "user_27": "sayawa9816@playfine.com", //TC-141 Restore & delete permanently
     "user_28": "test-play-28@outlook.com", //TC-235 Logout Validation
     "user_29": "test-play-29@outlook.com", //TC-238 Add Category to a test case
     "user_30": "test-play-30@outlook.com", //TC-178 Record TC-RL-Add tag-Run RL- Validate RL Run
@@ -56,7 +56,7 @@ export const microsoftUsers = {
     "user_51": "test-play-51@outlook.com", //TC-240 Navigate to Play landing page,
     "user_52": "test-play-52@outlook.com", //TC-251 External Adapter      Note: Don't use it for other test case
     "user_53": "test-play-53@outlook.com", //TC-287 Add settings in team
-    "user_55": "test-play-55@outlook.com", //TC-252 Copy paste            Note: Don't use it for other test case
+    "user_55": "hoyeka8846@playfine.com", //TC-252 Copy paste            Note: Don't use it for other test case
     "user_56": "test-play-56@outlook.com", //TC-123 Playwright)modify-ExecuteTC
     "user_57": "test-play-57@outlook.com", //TC-291 Git connecter
     "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
