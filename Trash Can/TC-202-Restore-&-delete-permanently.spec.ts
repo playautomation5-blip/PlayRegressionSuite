@@ -7,8 +7,7 @@ import { RandomTeam, password, teamName } from "@assets/Utilities/random-team";
 import { ExpandCollapse } from "@assets/Utilities/Expand collapse";
 
 leapwork.variables.set("teamName", teamName);
-leapwork.variables.set("userId", "user_73");
-leapwork.variables.set("passwordId", "user_73");
+leapwork.variables.set("userId", "user_27");
 
 leapwork.configuration({ enableSelfHeal: false, timeoutMs: 30000, chromiumArgs: ["--deny-permission-prompts", "--disable-notifications"], chromiumPrefs: { "credentials_enable_service": false, "profile": {"password_manager_enabled":false,"password_manager_leak_detection":false} } });
 

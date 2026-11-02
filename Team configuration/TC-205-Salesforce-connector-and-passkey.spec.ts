@@ -4,6 +4,7 @@ import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 await leapwork.ImportPassKey(leapwork.variables.getSecret("passKeyCred_9LDQSTMu"));
 
@@ -16,7 +17,7 @@ const lw__clientIdConsumerKey = leapwork.variables.get("clientIdConsumerKey", le
 leapwork.variables.set("connectionName", "SF regression conn", leapwork.storage.LOCAL);
 const lw__connectionName = leapwork.variables.get("connectionName", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("username", "udch@leapwork.com", leapwork.storage.LOCAL);
+leapwork.variables.set("username", "aja@leapwork.com", leapwork.storage.LOCAL);
 const lw__username = leapwork.variables.get("username", leapwork.storage.LOCAL) as string;
 
 leapwork.variables.set("descriptionOutline", "Navigate to passKey page", leapwork.storage.LOCAL);
@@ -40,9 +41,13 @@ leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetType", "New test case");
 leapwork.variables.set("assetName", "Test Case");
 
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// await leapwork.step("Use test case: Microsoft Login", async () => {
+//     return await MicrosoftLogin();
+// }, { action: "asset_reference", linkedAssetType: "test-case" });
+
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00
@@ -308,12 +313,12 @@ await leapwork.step("Click Insert step in the test case steps panel", async () =
     await page.getByRole('button', { name: 'Insert step', exact: true }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: pw1yiv4490
-await leapwork.step("Click the Run button in the Leapwork Play test case.", async () => {
+// ai-studio-step-id: pw16flhq80
+await leapwork.step("Click the Run button for the TC-1 test case", async () => {
     // Click button "Run"
-    await page.getByRole('button', { name: 'Run' }).click();
+    await page.getByRole('button', { name: 'Run', exact: true }).click();
     await page.waitForTimeout(45000);
-}, { action: "click" });
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]" });
 
 // ai-studio-step-id: pw1c6r3o70
 await leapwork.step("Validate that all steps are executed", async () => {

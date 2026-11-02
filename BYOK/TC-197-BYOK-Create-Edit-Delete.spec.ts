@@ -2,6 +2,7 @@ import { leapwork } from "./leapwork";
 
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteExistingModels } from "@assets/Utilities/Delete existing models";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -23,9 +24,13 @@ leapwork.variables.set("userId", "aistudio_user_4" );
 leapwork.variables.set("passwordId", "aistudio_user_4");
 
 
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// await leapwork.step("Use test case: Microsoft Login", async () => {
+//     return await MicrosoftLogin();
+// }, { action: "asset_reference", linkedAssetType: "test-case" });
+
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pw143c14r0

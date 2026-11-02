@@ -24,6 +24,12 @@ await leapwork.step("Use test case: Email Password Login", async () => {
     return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
+// ai-studio-step-id: pwdze6x900
+await leapwork.step("Click the Expand folder button for the Demo Assets folder", async () => {
+    // Click button "Expand folder"
+    await page.getByRole('button', { name: 'Expand folder' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[2]/div/div/button[@aria-label=\"Expand folder\"]" });
+
 // ai-studio-step-id: pw1jwbvmj0
 await leapwork.step("Click the Getting started test case item", async () => {
     // Click "Getting started test case"
@@ -36,16 +42,16 @@ await leapwork.step("Double-click the TC-1 test case item", async () => {
     await page.getByText('TC-').dblclick();
 }, { action: "dblclick" });
 
-// ai-studio-step-id: pw1rkwvil0
-await leapwork.step("Click the Products link in the primary navigation", async () => {
+// ai-studio-step-id: pw9iz81c00
+await leapwork.step("Click the “Search Amazon.in” search box", async () => {
     // Click span
-    await page.locator('div[title="Click the Products link in the primary navigation menu"]').click();
-}, { action: "click" });
+    await page.getByText('Click the Search Amazon.in search box', { exact: true }).click();
+}, { action: "click", relativeXpath: ".//div[1]/div/div/div[3]/div[@aria-label=\"Click the Search Amazon.in search box\"]/span" });
 
 // ai-studio-step-id: pw13749pu0
-await leapwork.step("Right-click the \"Click the Products link in the primary navigation\" step", async () => {
+await leapwork.step("Right-click the \"Click the Search Amazon.in search box\" step", async () => {
     // Right-click span
-    await page.locator('div[title="Click the Products link in the primary navigation menu"]').click({ button: 'right' });
+    await page.locator('div[title="Click the Search Amazon.in search box"]').click({ button: 'right' });
 }, { action: "click" });
 
 // ai-studio-step-id: pw18tuq7l0
@@ -54,17 +60,17 @@ await leapwork.step("Click Copy in the step context menu", async () => {
     await page.getByText('Copy', { exact: true }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: pw1imsmps0
-await leapwork.step("Click the View details button for Window Perch Cat Tree in the product list", async () => {
+// ai-studio-step-id: pwf7jt1900
+await leapwork.step("Click the step to fill the Search Amazon.in field with \"${lw__search2}\"", async () => {
     // Click span
-    await page.locator('div[title="Click View details for the Tough Loop Rope Toy product priced at $14.00"]').click();
-}, { action: "click" });
+    await page.getByText('Fill the Search Amazon.in field with "${lw__search2}"', { exact: true }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div/div/div[3]/div[@aria-label='Fill the Search Amazon.in field with \"${lw__search2}\"']/span" });
 
-// ai-studio-step-id: pwefqp6x00
-await leapwork.step("Right-click the step \"Click the View details button for Window Perch Cat Tree in the product list\"", async () => {
-    // Right-click span
-    await page.locator('div[title="Click View details for the Tough Loop Rope Toy product priced at $14.00"]').click({ button: 'right' });
-}, { action: "click" });
+// ai-studio-step-id: pw1wbyf600
+await leapwork.step("Click More actions for step 2 next to the search field step", async () => {
+    // Click button "More actions for step 2"
+    await page.getByRole('button', { name: 'More actions for step' }).click();
+}, { action: "click", relativeXpath: ".//div[1]/div[2]/div/div/div[4]/button[@aria-label=\"More actions for step 2\"]" });
 
 // ai-studio-step-id: pw4lwpha00
 await leapwork.step("Click the Paste option in the context menu", async () => {
@@ -72,17 +78,24 @@ await leapwork.step("Click the Paste option in the context menu", async () => {
     await page.getByText('Paste', { exact: true }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: pw12rchft0
-await leapwork.step("Validate that \"Click the Products link in the primary navigation\" appears on Leapwork Play", async () => {
-    // Assert span contains "Click the Products link in the primary navigation"
-    await expect(page.getByText('Click the Products link in').nth(3)).toContainText("Click the Products link in the primary navigation");
-}, { action: "validate" });
+// ai-studio-step-id: pw1rdnhid0
+await leapwork.step("Validate that the Leapwork Play page shows “Click the Search Amazon.in search box”", async () => {
+    // Assert span contains "Click the Search Amazon.in search box"
+    await expect(page.getByText('Click the Search Amazon.in').nth(3)).toContainText("Click the Search Amazon.in search box");
+}, { action: "validate", relativeXpath: ".//div[3]/div/div/div[3]/div[@aria-label=\"Click the Search Amazon.in search box\"]/span", enableXpath: false });
 
-// ai-studio-step-id: pwo3fezn00
-await leapwork.step("Right-click the \"Click the Products link in the primary navigation\" step", async () => {
+// Warning: Do not delete this step. It is linked to the validate step above.
+// await leapwork.step("Get value from Click the Search Amazon.in search box", async () => {
+//     // Get value from span
+//     const lw_value = (await page.getByText('Click the Search Amazon.in').nth(3).textContent())?.trim() ?? '';
+//     leapwork.variables.set("lw_clickTheSearchAmazonInSearchBox", lw_value, leapwork.storage.LOCAL);
+// }, { action: "get_value", enableXpath: false, relativeXpath: ".//div[3]/div/div/div[3]/div[@aria-label=\"Click the Search Amazon.in search box\"]/span" });
+
+// ai-studio-step-id: pwm8xcse00
+await leapwork.step("Right-click the “Search Amazon.in” search box step.", async () => {
     // Right-click span
-    await page.getByText('Click the Products link in').nth(3).click({ button: 'right' });
-}, { action: "click" });
+    await page.getByText('Click the Search Amazon.in').nth(3).click({ button: 'right' });
+}, { action: "click", relativeXpath: ".//div[3]/div/div/div[3]/div[@aria-label=\"Click the Search Amazon.in search box\"]/span" });
 
 // ai-studio-step-id: pw1c3swz80
 await leapwork.step("Click Delete in the step context menu", async () => {
