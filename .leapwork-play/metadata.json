@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-28T06:01:32.939Z",
+  "generatedAt": "2026-11-02T10:11:12.899Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -846,6 +846,13 @@
           "repoPath": "Utilities/TS-1-ConstantORExtensions.ts"
         },
         {
+          "assetId": 30313,
+          "displayId": "TC-201",
+          "name": "Create Account with Email",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-201-Create-Account-with-Email.spec.ts"
+        },
+        {
           "assetId": 8232,
           "displayId": "TC-13",
           "name": "Create New Asset",
@@ -886,6 +893,13 @@
           "name": "Delete-Create-Rename Team",
           "kind": "test-case",
           "repoPath": "Utilities/TC-6-Delete-Create-Rename-Team.spec.ts"
+        },
+        {
+          "assetId": 25312,
+          "displayId": "TC-185",
+          "name": "Email Password Login",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-185-Email-Password-Login.spec.ts"
         },
         {
           "assetId": 15394,
@@ -942,6 +956,13 @@
           "name": "Run to here",
           "kind": "test-case",
           "repoPath": "Utilities/TC-119-Run-to-here.spec.ts"
+        },
+        {
+          "assetId": 30312,
+          "displayId": "TC-200",
+          "name": "Set password for login",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-200-Set-password-for-login.spec.ts"
         },
         {
           "assetId": 8280,
@@ -1717,6 +1738,30 @@
       "displayId": "TC-14",
       "name": "Rename Asset",
       "repoPath": "Utilities/TC-14-Rename-Asset.spec.ts",
+      "parentAssetId": 8195
+    },
+    {
+      "assetId": 25312,
+      "assetKind": "test-case",
+      "displayId": "TC-185",
+      "name": "Email Password Login",
+      "repoPath": "Utilities/TC-185-Email-Password-Login.spec.ts",
+      "parentAssetId": 8195
+    },
+    {
+      "assetId": 30312,
+      "assetKind": "test-case",
+      "displayId": "TC-200",
+      "name": "Set password for login",
+      "repoPath": "Utilities/TC-200-Set-password-for-login.spec.ts",
+      "parentAssetId": 8195
+    },
+    {
+      "assetId": 30313,
+      "assetKind": "test-case",
+      "displayId": "TC-201",
+      "name": "Create Account with Email",
+      "repoPath": "Utilities/TC-201-Create-Account-with-Email.spec.ts",
       "parentAssetId": 8195
     },
     {
