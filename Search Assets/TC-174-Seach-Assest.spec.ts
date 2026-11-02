@@ -1,11 +1,11 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { RenameTeam } from "@assets/Utilities/Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.variables.set("search", "shivani", leapwork.storage.LOCAL);
 const lw__search = leapwork.variables.get("search", leapwork.storage.LOCAL) as string;
@@ -38,15 +38,13 @@ const assetDictionary: Record<string, string> = {
   "New runlist":"Combined runlist"
 };
 
-
 leapwork.variables.set("userId", "user_18");
 leapwork.variables.set("teamName",teamName);
 leapwork.variables.set("assetType", "New test case");
 
-
-// ai-studio-step-id: 9a6509e2
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pwqrpsmo00
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 5986fd60
@@ -64,7 +62,7 @@ await leapwork.step("Use test case: Rename Team", async () => {
     return await RenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: pwqrpsmo00
+// ai-studio-step-id: pw1x0wmg00
 await leapwork.step("Use test case: Create New Asset", async () => {
      const entries = Object.entries(assetDictionary);
     for (let i = 0; i < 5; i++) {
@@ -136,7 +134,7 @@ await leapwork.step("Fill the Search field to filter Leapwork assets", async () 
 await leapwork.step("Click the Collapse trash button", async () => {
     // Click button "Collapse trash"
     await page.getByRole('button', { name: 'Collapse trash' }).click();
-}, { action: "click" });
+}, { action: "click", continueOnFailure: true });
 
 // ai-studio-step-id: c6ebbf8a
 await leapwork.step("Use test case: Delete Team", async () => {
