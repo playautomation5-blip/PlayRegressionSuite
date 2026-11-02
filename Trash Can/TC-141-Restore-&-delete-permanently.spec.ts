@@ -1,9 +1,11 @@
 import { leapwork } from "./leapwork";
+
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { ExpandCollapse } from "@assets/Trash Can/Utilities/Expand collapse";
 import { RandomTeam, password, teamName } from "@assets/Utilities/random-team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -18,9 +20,13 @@ leapwork.configuration({
 leapwork.variables.set("userId", "user_27");
 leapwork.variables.set("teamName", teamName);
 
-// ai-studio-step-id: d08ad41c
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// await leapwork.step("Use test case: Microsoft Login", async () => {
+//     return await MicrosoftLogin();
+// }, { action: "asset_reference", linkedAssetType: "test-case" });
+
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: afb2c6dd
@@ -68,3 +74,9 @@ await leapwork.step("Right-click the \"${teamName}\" team", async () => {
 await leapwork.step("Click Delete permanently in the Trash context menu", async () => {
     await page.getByText('Delete permanently').click();
 }, { action: "click" });
+
+// ai-studio-step-id: pwwxlr2b00
+await leapwork.step("Click Delete permanently in the asset deletion confirmation dialog", async () => {
+    // Click button "Delete permanently"
+    await page.getByRole('button', { name: 'Delete permanently' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[3]/div/div/button[1]" });

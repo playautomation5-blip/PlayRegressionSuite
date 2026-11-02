@@ -4,6 +4,7 @@ import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 await leapwork.ImportPassKey(leapwork.variables.getSecret("passKeyCred_fXOEKywT"));
 
@@ -40,9 +41,13 @@ leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetType", "New test case");
 leapwork.variables.set("assetName", "Test Case");
 
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// await leapwork.step("Use test case: Microsoft Login", async () => {
+//     return await MicrosoftLogin();
+// }, { action: "asset_reference", linkedAssetType: "test-case" });
+
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00
@@ -154,7 +159,7 @@ await leapwork.step("Click the Log In to sandbox button on the Salesforce login 
     await page.getByRole('button', { name: 'Log In to sandbox' }).click();
 }, { action: "click"});
 
-// ai-studio-step-id: pwj9qsy000
+// ai-studio-step-id: pw1et9mfa0
 await leapwork.step("Fill the Verification Code field with 103237", async () => {
     const textbox = page.getByRole('textbox', { name: 'Verification Code', exact: true });
     await expect(textbox).toHaveCount(1);

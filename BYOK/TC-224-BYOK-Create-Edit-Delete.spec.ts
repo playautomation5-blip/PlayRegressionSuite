@@ -1,7 +1,7 @@
 import { leapwork } from "./leapwork";
 
 import { DeleteExistingModels } from "@assets/BYOK/utilities/Delete existing models";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -23,21 +23,19 @@ leapwork.variables.set("userId", "aistudio_user_4" );
 leapwork.variables.set("passwordId", "aistudio_user_4");
 
 
-// ai-studio-step-id: 3311c476
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// await leapwork.step("Use test case: Microsoft Login", async () => {
+//     return await MicrosoftLogin();
+// }, { action: "asset_reference", linkedAssetType: "test-case" });
+
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 53d2aee0
 await leapwork.step("Use test case: Delete existing models", async () => {
     return await DeleteExistingModels();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
-
-
-
-
-
 
 // ai-studio-step-id: fDvFKKmp
 await leapwork.step("Click the Own Key option", async () => {
@@ -141,7 +139,12 @@ await leapwork.step("Click the Delete Key option in the BYOK actions menu", asyn
     await page.getByText('Delete Key').click();
 }, { action: "click" });
 
-// ai-studio-step-id: 4qcTpwYI
-await leapwork.step("Click the Delete button to confirm deleting the BYOK LLM key", async () => {
-    await page.getByRole('button', { name: 'Delete' }).click();
-}, { action: "click" });
+// await leapwork.step("Click the Delete button to confirm deleting the BYOK LLM key", async () => {
+//     await page.getByRole('button', { name: 'Delete' }).click();
+// }, { action: "click" });
+
+// ai-studio-step-id: pw1qhefus0
+await leapwork.step("Click Delete to confirm deleting the BYOK LLM Key", async () => {
+    // Click button "Delete"
+    await page.getByRole('button', { name: 'Delete', exact: true }).click();
+}, { action: "click", relativeXpath: ".//div[1]/div[3]/div[3]/div/div/button[2]" });
