@@ -20,9 +20,9 @@ await leapwork.step("Use test case: Email Password Login", async () => {
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: gimDSDYb
-await leapwork.step("Click the kipafip210@goldvester.com (Personal) button in Leapwork Play.", async () => {
+await leapwork.step("Click the gamev24783@playfine.com (Personal) button in Leapwork Play.", async () => {
     // Click span
-    await page.getByRole('button', { name: 'kipafip210@goldvester.com (Personal)' }).click();
+    await page.getByRole('button', { name: 'gamev24783@playfine.com (Personal)' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: KSpWrjjk
