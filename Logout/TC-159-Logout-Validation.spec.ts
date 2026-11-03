@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -15,8 +15,8 @@ leapwork.configuration({
 leapwork.variables.set("userId", "user_28");
 
 // ai-studio-step-id: b309fc92
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 9IaAUHdN
@@ -30,8 +30,8 @@ await leapwork.step("Click the Log out link", async () => {
     await page.getByText('Log out').click();
 }, { action: "click" });
 
-// ai-studio-step-id: pwfjtchb00
-await leapwork.step("Validate the Leapwork Play page shows the heading \"Login to continue\"", async () => {
-    // Assert heading "Login to continue" contains "Login to continue"
-    await expect(page.getByRole('heading', { name: 'Login to continue' })).toContainText("Login to continue");
+// ai-studio-step-id: pw1cd9amb0
+await leapwork.step("Validate that the Leapwork Play page shows \"Log in to continue\"", async () => {
+    // Assert heading "Log in to continue" contains "Log in to continue"
+    await expect(page.getByRole('heading', { name: 'Log in to continue' })).toContainText("Log in to continue");
 }, { action: "validate", relativeXpath: ".//div/section/div/div/header/h1" });

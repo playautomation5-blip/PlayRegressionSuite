@@ -1,5 +1,5 @@
 import { leapwork } from "./leapwork";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -17,15 +17,15 @@ leapwork.variables.set("searchDocumentation", "welc", leapwork.storage.LOCAL);
 const lw__searchDocumentation = leapwork.variables.get("searchDocumentation", leapwork.storage.LOCAL) as string;
 
 // ai-studio-step-id: pwv7siky00
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: md35sLm9
-await leapwork.step("Click the Automation Account (Personal) account menu button", async () => {
+await leapwork.step("Click the gamev24783@playfine.com (Personal) account menu.", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
-}, { action: "click" });
+    await page.getByRole('button', { name: 'gamev24783@playfine.com (' }).click();
+}, { action: "click", relativeXpath: ".//div[3]/div[1]/div[2]/button[4]/span/span[1]" });
 
 // ai-studio-step-id: 3aHBPm1R
 await leapwork.step("Click the Documentation button in the docs dialog", async () => {
@@ -39,17 +39,17 @@ await leapwork.step("Validate that the Welcome to Play button shows 'Welcome to 
     await expect(page.getByRole('button', { name: 'Welcome to Play' })).toContainText("Welcome to Play");
 }, { action: "validate" });
 
-// ai-studio-step-id: Iu66OMDz
-await leapwork.step("Validate the \"Run Your First Automation\" button text on the Leapwork Play page", async () => {
-    // Assert button "Run Your First Automation" contains "Run Your First Automation"
-    await expect(page.getByRole('button', { name: 'Run Your First Automation' })).toContainText("Run Your First Automation");
-}, { action: "validate" });
+// ai-studio-step-id: pw1agzn800
+await leapwork.step("Click the Runlists button in the Feature guides menu", async () => {
+    // Click span
+    await page.getByRole('button', { name: 'Runlists' }).click();
+}, { action: "click", relativeXpath: ".//div[1]/div[2]/div[2]/div/button[1]/span" });
 
-// ai-studio-step-id: aKOZoL7E
-await leapwork.step("Validate the Leapwork Play page shows 'Record-Edit-Run Playwright With Self-Healing AIA'", async () => {
-    // Assert span contains "Record-Edit-Run Playwright With Self-Healing AIA"
-    await expect(page.getByRole('button', { name: 'Record-Edit-Run Playwright' })).toContainText("Record-Edit-Run Playwright With Self-Healing AIA");
-}, { action: "validate" });
+// ai-studio-step-id: pwuws0e900
+await leapwork.step("Validate the Leapwork Play page shows the “Trigger API Endpoints” heading", async () => {
+    // Assert span contains "Trigger API Endpoints"
+    await expect(page.getByText('Trigger API Endpoints')).toContainText("Trigger API Endpoints");
+}, { action: "validate", relativeXpath: ".//div/div[2]/div/h2/span/span" });
 
 // ai-studio-step-id: UekzbbjB
 await leapwork.step("Validate the Search documentation search box on the Leapwork Play docs page", async () => {
