@@ -72,8 +72,8 @@ export const microsoftUsers = {
     "user_61":"test-play-61@outlook.com", //TC-148 Empty trash can
     "user_36":"test-play-36@testShivani.com", //TC-309 Xpath Execution
     "user_68": "Tyerra.Corona@FusionInbox.com", // TC-158 Secret Name
-    "user_54": "test-play-54@outlook.com", // TC-175 Team                 Note: Don't use it for other test case
-    "user_59": "test-play-59@outlook.com", // TC-175 Team                 Note: Don't use it for other test case
+    "user_54": "monanig245@drtall.com", // TC-175 Team                 Note: Don't use it for other test case
+    "user_59": "kekomo9682@drtall.com", // TC-175 Team                 Note: Don't use it for other test case
     "user_47": `hekiwa4699@hiringview.com`, // TC-172 Workspace users tab   Note: Don't use it for other test case
     "user-37": "test-play-37@outlook.com", //TC=235 Xpath Execuion with variables
     "user-42": "test-play-42@outlook.com", //TC-236: Team self heal settings
