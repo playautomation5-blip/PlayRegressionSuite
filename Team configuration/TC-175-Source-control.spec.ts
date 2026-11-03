@@ -75,17 +75,17 @@ await leapwork.step("Fill the Name field with \"${lw__myGithubConnector}\" in th
         await page.getByRole('textbox', { name: 'Name' }).fill(String(lw__myGithubConnector));
 }, { action: "input" });
 
-// ai-studio-step-id: pw1c61qy60
-await leapwork.step("Click the Token field in the New connector dialog", async () => {
-    // Click textbox "Token Field help"
-    await page.getByRole('textbox', { name: 'Token Field help' }).click();
-}, { action: "click" });
+// ai-studio-step-id: pw3j86du00
+await leapwork.step("Click the Token field in the New connector form", async () => {
+    // Click textbox "Token Token requirements"
+    await page.getByRole('textbox', { name: 'Token Token requirements' }).click();
+}, { action: "click"});
 
 // ai-studio-step-id: pwifhmgd00
-await leapwork.step("Fill the Token field with the personal access token", async () => {
-    // Fill textbox "Token Field help"
-        await page.getByRole('textbox', { name: 'Token Field help' }).fill(String(lw__personalAccessToken));
-}, { action: "input" });
+await leapwork.step("Fill the Personal access token field in the New connector dialog", async () => {
+    // Fill textbox "Token Token requirements"
+    await page.getByRole('textbox', { name: 'Token Token requirements' }).fill(leapwork.variables.getSecret("lw__personalAccessToken"));
+}, { action: "input"});
 
 // ai-studio-step-id: pw18sywif0
 await leapwork.step("Click the Test connection button in the New connector form", async () => {

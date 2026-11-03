@@ -1,8 +1,9 @@
 import { leapwork } from "./leapwork";
 
-import { RandomTeam2, RandomTeam, teamName, password } from "@assets/Utilities/random-team";
+import { RandomTeam, RandomTeam2, teamName, password } from "@assets/Utilities/random-team";
 import { ConstantORExtensions, invitationEmail } from "@assets/Utilities/ConstantORExtensions";
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 //Invitation to user who already exists in the system
 
@@ -17,17 +18,16 @@ leapwork.configuration({
 });
 
 leapwork.variables.set("userId", "user_17");
+leapwork.variables.set("passwordId", "user_67");
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetType", "New agent");
 leapwork.variables.set("assetName", "created");
 leapwork.variables.set("renamedAssetName", "renamed");
 
 // ai-studio-step-id: 9e178527
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
-
 
 // ai-studio-step-id: pwu0nltn00
 await leapwork.step("Validate that the \"Invite your colleague\" button shows \"Invite your colleague\" on Leapwork Play", async () => {
