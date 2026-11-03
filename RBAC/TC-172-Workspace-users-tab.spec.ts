@@ -26,9 +26,9 @@ await leapwork.step("Use test case: Email Password Login", async () => {
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwfyiikl00
-await leapwork.step("Click the Test-47 Play (Personal) account menu button", async () => {
+await leapwork.step("Click the hekiwa4699@hiringview.com account menu button", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Test-47 Play (Personal) AI' }).click();
+    await page.getByRole('button', { name: 'hekiwa4699@hiringview.com' }).click();
 }, { action: "click", relativeXpath: ".//div[3]/div[1]/div[2]/button[4]/span/span[1]" });
 
 // ai-studio-step-id: pw1y21xiw0
