@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.variables.set("userId", "user_34");
 
@@ -14,9 +14,9 @@ leapwork.configuration({
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
-// ai-studio-step-id: 2c34f551
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pw878z3900
@@ -43,20 +43,26 @@ await leapwork.step("Validate the Leapwork Play settings page shows “Workspace
     await expect(page.getByRole('button', { name: 'Workspace settings' })).toContainText("Workspace settings");
 }, { action: "validate", relativeXpath: ".//div[2]/div[2]/div/div/nav/button[1]" });
 
-// ai-studio-step-id: pwvgd5sf00
-await leapwork.step("Validate the Settings tab on the Leapwork Play settings page shows \"Settings\"", async () => {
+// ai-studio-step-id: pw1ewo74r0
+await leapwork.step("Validate the Settings tab on the Leapwork Play settings page shows \"Workspace settings\"", async () => {
     // Assert button "Settings" contains "Settings"
-    await expect(page.getByRole('button', { name: 'Settings', exact: true })).toContainText("Settings");
+    await expect(page.getByRole('button', { name: 'Workspace settings', exact: true })).toContainText("Workspace settings");
 }, { action: "validate", relativeXpath: ".//div/div/div/div/div[@aria-label=\"Workspace settings tabs\"]/button[1]" });
 
-// ai-studio-step-id: pwmp2i2s00
-await leapwork.step("Validate the Leapwork Play settings page shows the “Workspace settings” heading", async () => {
+// ai-studio-step-id: pw19tbjeq0
+await leapwork.step("Validate that the Leapwork Play page displays the “Workspace settings” heading", async () => {
     // Assert heading "Workspace settings" contains "Workspace settings"
-    await expect(page.getByRole('heading', { name: 'Workspace settings' })).toContainText("Workspace settings");
-}, { action: "validate", relativeXpath: ".//div/div/div/div/div[2]/h2" });
+    await expect(page.getByRole('heading', { name: 'Workspace settings', exact: true })).toContainText("Workspace settings");
+}, { action: "validate", relativeXpath: ".//div/div/div/div[1]/div/h2" });
+// ai-studio-step-id: pw17lf6jj0
+await leapwork.step("Validate the Leapwork Play Workspace settings page shows the \"+ Add Settings\" button", async () => {
+    // Assert button "+ Add Settings" contains "+ Add Settings"
+    await expect(page.getByRole('button', { name: '+ Add Settings' })).toContainText("+ Add Settings");
+}, { action: "validate", relativeXpath: ".//div/div/div/div/div[3]/button", enableXpath: false });
 
-// ai-studio-step-id: pw1njqz2b0
-await leapwork.step("Validate the Leapwork Play settings page shows the \"+ Add setting\" button", async () => {
-    // Assert span contains "+ Add setting"
-    await expect(page.getByRole('button', { name: '+ Add setting' })).toContainText("+ Add setting");
-}, { action: "validate", relativeXpath: ".//div/div/div[2]/div[2]/button/span" });
+// Warning: Do not delete this step. It is linked to the validate step above.
+// await leapwork.step("Get value from + Add Settings", async () => {
+//     // Get value from button "+ Add Settings"
+//     const lw_value = (await page.getByRole('button', { name: '+ Add Settings' }).textContent())?.trim() ?? '';
+//     leapwork.variables.set("lw_addSettings", lw_value, leapwork.storage.LOCAL);
+// }, { action: "get_value", enableXpath: false, relativeXpath: ".//div/div/div/div/div[3]/button" });
