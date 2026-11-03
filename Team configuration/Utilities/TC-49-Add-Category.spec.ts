@@ -4,10 +4,14 @@ const teamName = leapwork.variables.get("teamName") as string;
 const lw__categoryName = leapwork.variables.get("categoryName") as string;
 const lw__categoryDescription = leapwork.variables.get("categoryDescription") as string;
 
+// await leapwork.step("Double click the \"${teamName}\" folder in Leapwork AI Studio", async () => {
+//     await page.getByText(teamName, { exact: true }).dblclick();
+// });
+
 // ai-studio-step-id: pw8350d600
-await leapwork.step("Double click the \"${teamName}\" folder in Leapwork AI Studio", async () => {
-    await page.getByText(teamName, { exact: true }).dblclick();
-});
+await leapwork.step("Double-click \"${teamName}\" in the Leapwork Play explorer", async () => {
+    await page.getByText('team').first().dblclick();
+}, { action: "dblclick" });
 
 // ai-studio-step-id: pw17c5z190
 await leapwork.step("Click the + Add Category button", async () => {
