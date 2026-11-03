@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.variables.set("userId", "user_34");
 
@@ -15,8 +15,8 @@ leapwork.configuration({
 });
 
 // ai-studio-step-id: 14c937e4
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: yG1Gu32t
@@ -54,9 +54,15 @@ await leapwork.step("Validate that the Leapwork Play page displays the “Worksp
     // Assert heading "Workspace settings" contains "Workspace settings"
     await expect(page.getByRole('heading', { name: 'Workspace settings', exact: true })).toContainText("Workspace settings");
 }, { action: "validate", relativeXpath: ".//div/div/div/div[1]/div/h2" });
-// ai-studio-step-id: pwbx55k600
-await leapwork.step("Validate the Leapwork Play settings page shows the \"+ Add setting\" button", async () => {
-    // Assert span contains "+ Add setting"
-    await expect(page.getByRole('button', { name: '+ Add setting' })).toContainText("+ Add setting");
-}, { action: "validate", relativeXpath: ".//div/div/div[2]/div[2]/button/span" });
+// ai-studio-step-id: pw1jbrwuq0
+await leapwork.step("Validate the Leapwork Play Workspace settings page shows the \"+ Add Settings\" button", async () => {
+    // Assert button "+ Add Settings" contains "+ Add Settings"
+    await expect(page.getByRole('button', { name: '+ Add Settings' })).toContainText("+ Add Settings");
+}, { action: "validate", relativeXpath: ".//div/div/div/div/div[3]/button", enableXpath: false });
 
+// Warning: Do not delete this step. It is linked to the validate step above.
+// await leapwork.step("Get value from + Add Settings", async () => {
+//     // Get value from button "+ Add Settings"
+//     const lw_value = (await page.getByRole('button', { name: '+ Add Settings' }).textContent())?.trim() ?? '';
+//     leapwork.variables.set("lw_addSettings", lw_value, leapwork.storage.LOCAL);
+// }, { action: "get_value", enableXpath: false, relativeXpath: ".//div/div/div/div/div[3]/button" });

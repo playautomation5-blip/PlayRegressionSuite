@@ -3,6 +3,7 @@ export const teamName = `team ${Math.floor(Math.random() * 100000)}`;
 export const adminPassowrd = `4HQwARpqZ4:i7aB`;
 
 export const password = `test-play-1`;
+const uniqueEmailDomain = `play-isolated-${Math.random().toString(36).slice(2, 12)}.invalid`;
 
 export async function checkLog(){
    leapwork.log.info("shivani");
@@ -17,11 +18,11 @@ export const microsoftUsers = {
     //TC-201 Account & Settings - Credit
     //TC-109 Credit Transfer
     //TC-170 Workspace Change Validation
-   "aistudio_user_2": "gamev24783@playfine.com", // admin account used in above TCs
+   "aistudio_user_2": `aistudio-user-2@${uniqueEmailDomain}`, // TC-201 Account & Settings - Credit
     "aistudio_user_3": "cekas29568@ofags.com", // workspace change validation
     "aistudio_user_4": "cojiki4586@ofags.com", //TC-224 BYOK-Create-Edit-Delete
-    "user_6": "test-play-6@outlook.com", //TC-103 Agent-Create-Delete
-    "user_7": "test-play-7@outlook.com", //TC-164 Create Duplicate
+    "user_6": "test-play-6@play-isolated-7f3c9a.invalid", //TC-103 Agent-Create-Delete
+    "user_7": `test-play-7@${uniqueEmailDomain}`, //TC-164 Create Duplicate
     "user_8": "test-play-8@outlook.com", //TC-138 KB to BP creation validation
     "user_9": "test-play-9@outlook.com", //TC-102 Folder-Create-Delete
     "user_10": "jetafix544@ofags.com", //TC-101 KnowledgeBase-Create-Delete
@@ -31,10 +32,10 @@ export const microsoftUsers = {
     "user_14": "test-play-14@mailinator.com", //TC-97 Typescript-Create-Delete
     "user_15": "bivix59180@macsnipe.com", //TC-132 Invite to new user from top banner without adding to workspace
     "user_16": "Lema.Sailors@FusionInbox.com", //TC-137 Import-export tests
-    "user_17": "test-play-17@outlook.com", //TC-217 Invitation to already existing user
+    "user_17": "yolop42634@emailkeep.com", //TC-217 Invitation to already existing user
     "user_18": "Elius.Mauricio@FusionInbox.com", //TC-174 Seach Assest
     "user_19": "test-play-19@mailinator.com", //TC-136 Category
-    "user_20": "test-play-20@outlook.com", //TC-135 Environment
+    "user_20": `test-play-20@${uniqueEmailDomain}`, //TC-135 Environment
     "user_21": "test-play-21@outlook.com", //TC-175 Source control
     "user_22": "test-play-22@outlook.com", //TC-247 Create Custom adapter
     "user_23": "Adyanna.Vargus@FusionInbox.com", //TC-177 Secret
@@ -44,49 +45,49 @@ export const microsoftUsers = {
     "user_27": "jawil87601@playfine.com", //TC-141 Restore & delete permanently
     "user_28": "test-play-28@outlook.com", //TC-235 Logout Validation
     "user_29": "test-play-29@outlook.com", //TC-238 Add Category to a test case
-    "user_30": "test-play-30@outlook.com", //TC-178 Record TC-RL-Add tag-Run RL- Validate RL Run
-    "user_31": "test-play-31@outlook.com", //TC-243 Schedule RL
+    "user_30": "test-play-30@play-isolated-7f3c9a.invalid", //TC-178 Record TC-RL-Add tag-Run RL- Validate RL Run
+    "user_31": `test-play-31@${uniqueEmailDomain}`, //TC-243 Schedule RL
     "user_32": "test-play-32@outlook.com", //TC-236 Add tag to a test case
     "user_33": "geheke5781@playfine.com", //TC-229 Record a test case
-    "user_34": "test-play-34@outlook.com", //TC-223 Workspace Settings page
+    "user_34": "test-play-34@play-isolated-7f3c9a.invalid", //TC-223 Workspace Settings page
     "user_35": "test-k-play-35@outlook.com", //TC-176 Adapter
     "user-37": "tixal31775@ofags.com", //TC=235 Xpath Execuion with variables
     "user_38": "binilov241@hopefunder.com", //TC-163 File-Create-Delete
-    "user_39": "test-play-39@outlook.com", //TC-165 import playwright
+    "user_39": `test-play-39@${uniqueEmailDomain}`, //TC-165 import playwright
     "user_40": "test-play-40@outlook.com", //TC-170 Workspace Change Validation
-    "user_41": "test-play-41@outlook.com", //TC-185 Account & Settings - Audit Log
+    "user_41": `test-play-41@${uniqueEmailDomain}`, //TC-185 Account & Settings - Audit Log
     "user-42": "wihipay451@playfine.com", //TC-236: Team self heal settings
     "user_45": "test-play-45@mailinator.com", //TC-193 LLM Command Test
-    "user_49": "test-play-49@outlook.com", //TC-218 Invite to a new user from team settings
+    "user_49": "bipit91310@emailkeep.com", //TC-218 Invite to a new user from team settings
     "user_50": "test-play-50@outlook.com", //TC-219 KB with git
     "user_51": "test-play-51@outlook.com", //TC-240 Navigate to Play landing page
-    "user_52": "test-play-52@outlook.com", //TC-251 External Adapter      Note: Don't use it for other test case
+    "user_52": "test-play-52@play-isolated-7f3c9a.invalid", //TC-251 External Adapter      Note: Don't use it for other test case
     "user_53": "jopece1708@drtall.com", //TC-287 Add settings in team
     "user_54": "test-play-54@outlook.com", // TC-335 Team                 Note: Don't use it for other test case
     "user_55": "hoyeka8846@playfine.com", //TC-252 Copy paste            Note: Don't use it for other test case
-    "user_56": "test-play-56@outlook.com", //TC-256 Auto create pwd secret
-    "user_57": "test-play-57@outlook.com", //TC-291 Git connecter
+    "user_56": "xorohi9937@emailkeep.com", //TC-256 Auto create pwd secret
+    "user_57": "test-play-57@play-isolated-7f3c9a.invalid", //TC-291 Git connecter
     "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
     "user_59": "test-play-59@outlook.com", // TC-335 Team                 Note: Don't use it for other test case
     "user_60": "talejes367@playfine.com", //TC-205 Salesforce connector
     "user_62": "noholih746@boffweb.com", //TC-360 Git Connector
     "user_64": "jolod52834@emailkeep.com", //TC-362 Atlassian Connector
-    "reg_1": "regression-user-1@outlook.com", // TC-289 Context menu of a step
+    "reg_1": `regression-user-1@${uniqueEmailDomain}`, // TC-331 Context menu of a step
     "reg_2":"diheca5706@playfine.com", //TC-234 Run execution cleanup after recorder starts
-    "reg_3": "regression_kd_1@outlook.com",  // TC-290 CRUD TC Status
+    "reg_3": "regression_kd_1@play-isolated-7f3c9a.invalid",  // TC-290 CRUD TC Status
     "reg_10": "regression-user-10@outlook.com", //TC-296 Display User Name as Owner and Fallback to Email When User Name Is Unavailable
-    "reg_11": "regression-user-jp-4@outlook.com", // TC-304 Import playwright from file
-    "reg_12": "costanza.bury@fusioninbox.com", // TC-305 Import test case using file
+    "reg_11": `regression-user-jp-4@${uniqueEmailDomain}`, // TC-304 Import playwright from file
+    "reg_12": `regression-user-12@${uniqueEmailDomain}`, // TC-372 Excel file upload
     "reg_13": "regression-user-jp-6@mailinator.com", //TC-306 Edit playwright step using chat
-    "user_47": "powem35312@goldvester.com", // TC-332 Workspace users tab
+    "user_47": `test-play-47@${uniqueEmailDomain}`, // TC-332 Workspace users tab
     "user_36":"test-play-36@outlook.com", //TC-309 Xpath Execution
     "user_65": "test-play-65@outlook.com", // TC-337 Timeout
     "user_68": "Tyerra.Corona@FusionInbox.com", // TC-338 Secret Name
     "user_69": "xipew76815@ofags.com", // TC-357 - self heal variables
     "user_70": "kacokop502@playfine.com", // TC-192 LLM Chat working
-    "user_66": "test-play-66@outlook.com", // TC-370 Excel file upload,
-    "user_67": "jikaces312@moblha.com", //temp user for TC-175 Source control
-    "user_71": "taxici4212@hopefunder.com", // temp user for TC-102 Folder-Create-Delete
+    "user_66": `test-play-66@${uniqueEmailDomain}`, // TC-372 Excel file upload,
+    "user_67": "jikaces312@moblha.com", //TC-175 Source control
+    "user_71": "taxici4212@hopefunder.com", // TC-102 Folder-Create-Delete
     "user_72": "pepito4562@playfine.com", //TC-203 Enable LLM Over Native Recorder
 }
 
@@ -94,7 +95,7 @@ export const passwords = {
     "aistudio_user_2": "4HQwARpqZ4:i7aB",
     "aistudio_user_3": "Hello@789",
     "aistudio_user_4": "5@Dummyy",
-    "user_67": "Test@12345", 
+    "user_67": "Test@12345", // user_49, 56, 17
     "reg_11": "Test@12345",
     "user_71": "Test@123456",
     "pwd_user_08": "test-play-08",
