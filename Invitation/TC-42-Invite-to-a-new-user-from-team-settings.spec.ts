@@ -6,6 +6,7 @@ import { RandomTeam, teamName } from "@assets/Utilities/random-team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 //Invitation to a user from team settings section
 
@@ -21,13 +22,14 @@ leapwork.configuration({
 
 const invitationEmail = generateRandomEmail();
 leapwork.variables.set("userId", "user_49");
+leapwork.variables.set("passwordId", "user_17");
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("renamedAssetName", "renamed");
 
 
-// ai-studio-step-id: e11324dd
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 72100b01

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-02T10:11:12.899Z",
+  "generatedAt": "2026-11-03T06:23:14.873Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -488,6 +488,21 @@
           "name": "Logout Validation",
           "kind": "test-case",
           "repoPath": "Logout/TC-127-Logout-Validation.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 15665,
+      "displayId": "FD-31",
+      "name": "Playwright",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 15666,
+          "displayId": "TC-123",
+          "name": "Playwright-Modify-ExecuteTC",
+          "kind": "test-case",
+          "repoPath": "Playwright/TC-123-Playwright-Modify-ExecuteTC.spec.ts"
         }
       ]
     },
@@ -1403,6 +1418,14 @@
       "name": "Logout Validation",
       "repoPath": "Logout/TC-127-Logout-Validation.spec.ts",
       "parentAssetId": 15705
+    },
+    {
+      "assetId": 15666,
+      "assetKind": "test-case",
+      "displayId": "TC-123",
+      "name": "Playwright-Modify-ExecuteTC",
+      "repoPath": "Playwright/TC-123-Playwright-Modify-ExecuteTC.spec.ts",
+      "parentAssetId": 15665
     },
     {
       "assetId": 20557,
