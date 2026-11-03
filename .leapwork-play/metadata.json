@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-03T10:34:54.999Z",
+  "generatedAt": "2026-11-03T12:05:11.601Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -466,6 +466,13 @@
           "name": "Google Login",
           "kind": "test-case",
           "repoPath": "Login/TC-193-Google-Login.spec.ts"
+        },
+        {
+          "assetId": 19088,
+          "displayId": "TC-156",
+          "name": "Password Login",
+          "kind": "test-case",
+          "repoPath": "Login/TC-156-Password-Login.spec.ts"
         },
         {
           "assetId": 11439,
@@ -1443,6 +1450,14 @@
       "displayId": "TC-104",
       "name": "SSO Login",
       "repoPath": "Login/TC-104-SSO-Login.spec.ts",
+      "parentAssetId": 11438
+    },
+    {
+      "assetId": 19088,
+      "assetKind": "test-case",
+      "displayId": "TC-156",
+      "name": "Password Login",
+      "repoPath": "Login/TC-156-Password-Login.spec.ts",
       "parentAssetId": 11438
     },
     {
