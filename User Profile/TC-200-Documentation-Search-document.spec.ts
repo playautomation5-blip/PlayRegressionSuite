@@ -1,5 +1,5 @@
 import { leapwork } from "./leapwork";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -17,15 +17,15 @@ leapwork.variables.set("searchDocumentation", "welc", leapwork.storage.LOCAL);
 const lw__searchDocumentation = leapwork.variables.get("searchDocumentation", leapwork.storage.LOCAL) as string;
 
 // ai-studio-step-id: 80955b0e
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: md35sLm9
-await leapwork.step("Click the Automation Account (Personal) account menu button", async () => {
+await leapwork.step("Click the gamev24783@playfine.com (Personal) account menu.", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
-}, { action: "click" });
+    await page.getByRole('button', { name: 'gamev24783@playfine.com (' }).click();
+}, { action: "click", relativeXpath: ".//div[3]/div[1]/div[2]/button[4]/span/span[1]" });
 
 // ai-studio-step-id: 3aHBPm1R
 await leapwork.step("Click the Documentation button in the docs dialog", async () => {
