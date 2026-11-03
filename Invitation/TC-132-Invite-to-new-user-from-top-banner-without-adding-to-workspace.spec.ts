@@ -1,13 +1,12 @@
 import { leapwork } from "./leapwork";
 
-import { RandomTeam, teamName, password } from "@assets/Utilities/random-team";
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
-import { generateRandomEmail } from "@assets/Utilities/ConstantORExtensions";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
-
-
+import { ConstantORExtensions, generateRandomEmail } from "@assets/Utilities/ConstantORExtensions";
+import { RandomTeam, teamName, password } from "@assets/Utilities/random-team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 //Invitation to a new user from top banner, without adding him/her to any workspace/team. 
 
@@ -28,18 +27,18 @@ leapwork.variables.set("assetType", "New agent");
 leapwork.variables.set("assetName", "created");
 leapwork.variables.set("renamedAssetName", "renamed");
 
-// ai-studio-step-id: db6bbeaf
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
 
+
+
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
+}, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 11da693b
 await leapwork.step("Use test case: Delete All Teams", async () => {
     return await DeleteAllTeams();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
-
 
 // ai-studio-step-id: e8fbd84b
 await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
@@ -101,7 +100,8 @@ await leapwork.step("Validate the invitation sent message on Leapwork Play modal
 // ai-studio-step-id: pw1mxrlwn0
 await leapwork.step("Click the Ok button on the invitation sent popup", async () => {
     // Click button "Ok"
-    await page.getByRole('button', { name: 'Ok', exact:true  }).click();
+   //  await page.getByRole('button', { name: 'Ok' }).click();
+    await page.locator('button.invite-user-popup-button').click();
 }, { action: "click" });
 
 // ai-studio-step-id: 3aefdc51

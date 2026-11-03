@@ -6,15 +6,16 @@ import { AddSetting } from "@assets/Team configuration/Utilities/Add Setting";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { ImportTestsOrPlaywright } from "@assets/Utilities/Import Tests or Playwright";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.variables.set("settingKey", "enableSelfHeal", leapwork.storage.LOCAL);
 const lw__settingKey = leapwork.variables.get("settingKey", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("value", "false", leapwork.storage.LOCAL);
+leapwork.variables.set("value", "False", leapwork.storage.LOCAL);
 const lw__value = leapwork.variables.get("value", leapwork.storage.LOCAL) as string;
 
 leapwork.variables.set("settingKey", "enableSelfHeal", leapwork.storage.LOCAL);
-leapwork.variables.set("settingValue", "true", leapwork.storage.LOCAL);
+leapwork.variables.set("settingValue", "True", leapwork.storage.LOCAL);
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -37,9 +38,9 @@ leapwork.variables.set("passwordId", "aistudio_user_2");
 leapwork.variables.set("teamName", teamName);
 
 
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1qh7j2z0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00
@@ -48,9 +49,9 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwogmnx200
-await leapwork.step("Click the Automation Account (Personal) account menu", async () => {
+await leapwork.step("Click the gamev24783@playfine.com (Personal) account menu、】【", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
+    await page.getByRole('button', { name: 'gamev24783@playfine.com (' }).click();
 }, { action: "click", relativeXpath: ".//div[3]/div[1]/div[2]/button[4]/span/span[1]" });
 
 // ai-studio-step-id: pw9e74gb00
@@ -85,29 +86,21 @@ await leapwork.step("Click the + Add setting button.", async () => {
     await page.getByRole('button', { name: '+ Add setting' }).click();
 }, { action: "click", relativeXpath: ".//div/div/div/div[3]/button/span" });
 
-// ai-studio-step-id: pw1upo4ij0
-await leapwork.step("Click the “Setting key” field on the Leapwork Play settings page", async () => {
-    // Click textbox "Setting key"
-    await page.getByRole('textbox', { name: 'Setting key' }).click();
-}, { action: "click", relativeXpath: ".//div/div/div[2]/div[2]/span[1]/input" });
-
-// ai-studio-step-id: pw1w9u3iy0
+// ai-studio-step-id: pw2ssh2900
 await leapwork.step(`Fill the Setting key field with "${lw__settingKey}"`, async () => {
     // Fill textbox "Setting key"
-    await page.getByRole('textbox', { name: 'Setting key' }).fill(String(lw__settingKey));
-}, { action: "input", relativeXpath: ".//div/div/div[2]/div[2]/span[1]/input" });
+     await page.locator('.kv-settings-dropdown .text').click();
+  await page.locator(`.options.portal .option:text-is("${lw__settingKey}")`).click();
+    //await page.getByRole('textbox', { name: 'Setting key' }).fill(String(lw__SettingName));
+}, { action: "input", relativeXpath: ".//div[5]/div/div[2]/div[2]/span[1]/input" });
 
-// ai-studio-step-id: pw1q4btev0
-await leapwork.step("Press Tab on the Leapwork Play settings page", async () => {
-    // Press Tab on element
-    await page.keyboard.press("Tab");
-}, { action: "keydown" });
-
-// ai-studio-step-id: pw1jk7n080
+// ai-studio-step-id: pw1rfyaqm0
 await leapwork.step(`Fill the Value field for enableSelfHeal with "${lw__value}"`, async () => {
     // Fill textbox "Value"
-    await page.getByRole('textbox', { name: 'Value' }).fill(String(lw__value));
-}, { action: "input", relativeXpath: ".//div/div/div[2]/div[2]/span[2]/input" });
+      await page.locator('div[aria-label="Value"]').click();
+  await page.locator(`.options.portal .option:text-is("${lw__value}")`).click();
+    //await page.getByRole('textbox', { name: 'Value' }).fill(String(lw__SettingValue));
+}, { action: "input", relativeXpath: ".//div[5]/div/div[2]/div[2]/span[2]/input" });
 
 // ai-studio-step-id: pwoz7th100
 await leapwork.step("Click Save for the enableSelfHeal workspace setting", async () => {

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-03T10:33:53.898Z",
+  "generatedAt": "2026-11-03T12:03:36.579Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -254,6 +254,13 @@
           "name": "Run execution cleanup after recorder starts",
           "kind": "test-case",
           "repoPath": "Execution/TC-340-Run-execution-cleanup-after-recorder-starts.spec.ts"
+        },
+        {
+          "assetId": 46228,
+          "displayId": "TC-357",
+          "name": "Self-Heal variables",
+          "kind": "test-case",
+          "repoPath": "Execution/TC-357-Self-Heal-variables.spec.ts"
         },
         {
           "assetId": 41277,
@@ -1253,6 +1260,21 @@
       ]
     },
     {
+      "assetId": 50378,
+      "displayId": "FD-82",
+      "name": "Variables",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 49845,
+          "displayId": "TC-373",
+          "name": "Global variable creation, updation and deletion",
+          "kind": "test-case",
+          "repoPath": "Variables/TC-373-Global-variable-creation,-updation-and-deletion.spec.ts"
+        }
+      ]
+    },
+    {
       "assetId": 9774,
       "displayId": "FD-32",
       "name": "Workspaces",
@@ -1521,6 +1543,14 @@
       "displayId": "TC-340",
       "name": "Run execution cleanup after recorder starts",
       "repoPath": "Execution/TC-340-Run-execution-cleanup-after-recorder-starts.spec.ts",
+      "parentAssetId": 30302
+    },
+    {
+      "assetId": 46228,
+      "assetKind": "test-case",
+      "displayId": "TC-357",
+      "name": "Self-Heal variables",
+      "repoPath": "Execution/TC-357-Self-Heal-variables.spec.ts",
       "parentAssetId": 30302
     },
     {
@@ -2378,6 +2408,14 @@
       "name": "Upload file helper",
       "repoPath": "Utilities/TS-20-Upload-file-helper.ts",
       "parentAssetId": 18385
+    },
+    {
+      "assetId": 49845,
+      "assetKind": "test-case",
+      "displayId": "TC-373",
+      "name": "Global variable creation, updation and deletion",
+      "repoPath": "Variables/TC-373-Global-variable-creation,-updation-and-deletion.spec.ts",
+      "parentAssetId": 50378
     },
     {
       "assetId": 9817,
