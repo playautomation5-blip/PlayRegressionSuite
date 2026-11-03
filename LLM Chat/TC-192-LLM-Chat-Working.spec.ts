@@ -6,6 +6,7 @@ import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { RenameTeam } from "@assets/Utilities/Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { RandomTeam, RandomTeam2, teamName } from "@assets/Utilities/random-team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -27,10 +28,12 @@ const lw__text = leapwork.variables.get("text", leapwork.storage.LOCAL) as strin
 leapwork.variables.set("askAnything", "Hi", leapwork.storage.LOCAL);
 const lw__askAnything = leapwork.variables.get("askAnything", leapwork.storage.LOCAL) as string;
 
-// ai-studio-step-id: d3994b13
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
+
+
 
 // ai-studio-step-id: 527eeeb0
 await leapwork.step("Use test case: Delete All Teams", async () => {
@@ -107,7 +110,6 @@ await leapwork.step("Validate that the chat message shows 'Hi! How can I help?' 
     .locator('.chat-message-assistant .chat-message-content span')
     .last()
     .innerText();
-
     expect(spanText).toMatch(/hi/i);
 }, { action: "validate" });
 
@@ -121,3 +123,16 @@ await leapwork.step("Click the Explorer button", async () => {
 await leapwork.step("Use test case: Delete All Teams", async () => {
     return await DeleteAllTeams();
 }, { action: "asset_reference", linkedAssetType: "test-case" , timeoutMs:10000});
+
+// ai-studio-step-id: pw1mrrp8c0
+await leapwork.step("Validate the chat message shows “Hi! How can I help?” on the Leapwork Play page", async () => {
+    // Assert span contains "Hi! How can I help?"
+    await expect(page.getByText('Hi! How can I help?')).toContainText("Hi! How can I help?");
+}, { action: "validate", relativeXpath: ".//div[2]/div[2]/div/div[3]/div/span", enableXpath: false });
+
+// Warning: Do not delete this step. It is linked to the validate step above.
+// await leapwork.step("Get value from Hi! How can I help?", async () => {
+//     // Get value from span
+//     const lw_value = (await page.getByText('Hi! How can I help?').textContent())?.trim() ?? '';
+//     leapwork.variables.set("lw_hiHowCanIHelp", lw_value, leapwork.storage.LOCAL);
+// }, { action: "get_value", enableXpath: false, relativeXpath: ".//div[2]/div[2]/div/div[3]/div/span" });

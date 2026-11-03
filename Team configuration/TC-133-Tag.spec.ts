@@ -5,6 +5,7 @@ import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { AddTag } from "@assets/Team configuration/Utilities/Add Tag";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -21,9 +22,11 @@ leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("tagName", "Tag 1");
 leapwork.variables.set("tagDescription", "This is a tag");
 
-// ai-studio-step-id: 4f9b5e43
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+
+
+// ai-studio-step-id: pw1qh7j2z0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 45766f8f
