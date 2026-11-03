@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-28T06:00:01.080Z",
+  "generatedAt": "2026-11-03T10:33:53.898Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -682,15 +682,15 @@
               "name": "login-59",
               "kind": "test-case",
               "repoPath": "RBAC/Utilities/TC-334-login-59.spec.ts"
-            },
-            {
-              "assetId": 40750,
-              "displayId": "TC-335",
-              "name": "Team - RBAC",
-              "kind": "test-case",
-              "repoPath": "RBAC/Utilities/TC-335-Team-RBAC.spec.ts"
             }
           ]
+        },
+        {
+          "assetId": 40750,
+          "displayId": "TC-335",
+          "name": "Team - RBAC",
+          "kind": "test-case",
+          "repoPath": "RBAC/TC-335-Team-RBAC.spec.ts"
         },
         {
           "assetId": 40746,
@@ -1167,6 +1167,13 @@
           "repoPath": "Utilities/TC-347-Email-Password-Login.spec.ts"
         },
         {
+          "assetId": 45855,
+          "displayId": "TC-345",
+          "name": "Google Login",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-345-Google-Login.spec.ts"
+        },
+        {
           "assetId": 26027,
           "displayId": "TC-303",
           "name": "Import Tests or Playwright",
@@ -1235,6 +1242,13 @@
           "name": "SkipOnboardingTour",
           "kind": "test-case",
           "repoPath": "Utilities/TC-250-SkipOnboardingTour.spec.ts"
+        },
+        {
+          "assetId": 49865,
+          "displayId": "TS-20",
+          "name": "Upload file helper",
+          "kind": "typescript",
+          "repoPath": "Utilities/TS-20-Upload-file-helper.ts"
         }
       ]
     },
@@ -1822,6 +1836,14 @@
       "parentAssetId": 40745
     },
     {
+      "assetId": 40750,
+      "assetKind": "test-case",
+      "displayId": "TC-335",
+      "name": "Team - RBAC",
+      "repoPath": "RBAC/TC-335-Team-RBAC.spec.ts",
+      "parentAssetId": 40745
+    },
+    {
       "assetId": 40748,
       "assetKind": "test-case",
       "displayId": "TC-333",
@@ -1835,14 +1857,6 @@
       "displayId": "TC-334",
       "name": "login-59",
       "repoPath": "RBAC/Utilities/TC-334-login-59.spec.ts",
-      "parentAssetId": 40747
-    },
-    {
-      "assetId": 40750,
-      "assetKind": "test-case",
-      "displayId": "TC-335",
-      "name": "Team - RBAC",
-      "repoPath": "RBAC/Utilities/TC-335-Team-RBAC.spec.ts",
       "parentAssetId": 40747
     },
     {
@@ -2326,6 +2340,14 @@
       "parentAssetId": 18385
     },
     {
+      "assetId": 45855,
+      "assetKind": "test-case",
+      "displayId": "TC-345",
+      "name": "Google Login",
+      "repoPath": "Utilities/TC-345-Google-Login.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
       "assetId": 46024,
       "assetKind": "test-case",
       "displayId": "TC-347",
@@ -2347,6 +2369,14 @@
       "displayId": "TS-12",
       "name": "ConstantORExtensions",
       "repoPath": "Utilities/TS-12-ConstantORExtensions.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 49865,
+      "assetKind": "typescript",
+      "displayId": "TS-20",
+      "name": "Upload file helper",
+      "repoPath": "Utilities/TS-20-Upload-file-helper.ts",
       "parentAssetId": 18385
     },
     {

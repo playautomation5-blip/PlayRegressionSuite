@@ -5,7 +5,7 @@ import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename T
 import { Login54 } from "@assets/RBAC/Utilities/login-54";
 import { Login59 } from "@assets/RBAC/Utilities/login-59";
 
-leapwork.variables.set("nameCompanyCom", "test-play-59@outlook.com", leapwork.storage.LOCAL);
+leapwork.variables.set("nameCompanyCom", "tagovih657@drtall.com", leapwork.storage.LOCAL);
 const lw__nameCompanyCom = leapwork.variables.get("nameCompanyCom", leapwork.storage.LOCAL) as string;
 
 leapwork.configuration({
@@ -48,11 +48,6 @@ await leapwork.step("Click the Role dropdown and select Write in the Invite Team
     await page.getByRole('combobox', { name: 'Role' }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: pwdk4int00
-await leapwork.step("Wait for 1 second", async () => {
-    await page.waitForTimeout(1000);
-}, { action: "wait" });
-
 // ai-studio-step-id: pwoq3lmb00
 await leapwork.step("Click the Administrator role option in the Invite Team Member form", async () => {
     // Click option "Administrator"
@@ -71,10 +66,10 @@ await leapwork.step("Click Done to close the invitation confirmation popup", asy
     await page.getByRole('button', { name: 'Done' }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: pw1cmr6be0
-await leapwork.step("Click the Test-54 Play (Personal) account menu button", async () => {
+// ai-studio-step-id: pw16slk920
+await leapwork.step("Click the monanig245@drtall.com (Personal) account menu button", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Test-54 Play (Personal)' }).click();
+    await page.getByRole('button', { name: 'monanig245@drtall.com (Personal)' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw19wth2z0
@@ -87,7 +82,7 @@ await leapwork.step("Click the Log out link in the menu", async () => {
 await leapwork.step("Click the Login button", async () => {
     // Click button "Login"
     await page.getByRole('button', { name: 'Login' }).click();
-}, { action: "click", continueOnFailure: true, timeoutMs: 3000 });
+}, { action: "click", continueOnFailure: true });
 
 // ai-studio-step-id: pw1cqwua20
 await leapwork.step("Use test case: login-59", async () => {
@@ -113,7 +108,7 @@ await leapwork.step("Validate the Leapwork Play page shows the `Create new in ${
 // ai-studio-step-id: pw1n1xl5d0
 await leapwork.step("Click in the dropdown menu", async () => {
     // Click div
-    const dropdown = page.locator('.team-member-row').filter({ hasText: 'test-play-59@outlook.com' }).locator('.team-member-permissions .text');
+    const dropdown = page.locator('.team-member-row').filter({ hasText: 'tagovih657@drtall.com' }).locator('.team-member-permissions .text');
     await dropdown.click();
 }, { action: "click" });
 
@@ -123,6 +118,18 @@ await leapwork.step("Click the Write option in the permissions menu", async () =
     await page.getByText('Write').click();
 }, { action: "click" });
 
+// ai-studio-step-id: pwfuvf2l00
+await leapwork.step("Double click the team item in the Leapwork Play explorer", async () => {
+    // Click "team"
+    await page.getByText(teamName).dblclick();
+}, { action: "double click" });
+
+// ai-studio-step-id: pw15ythdw0
+await leapwork.step("Click the team item in the Leapwork Play", async () => {
+    // Click "team"
+    await page.getByText("TM-1").click();
+}, { action: "click" });
+
 // ai-studio-step-id: pw12uvl000
 await leapwork.step("Validate that the \"Invite team member\" button is disbaled", async () => {
     // Assert span contains "Invite your colleague"
@@ -130,10 +137,10 @@ await leapwork.step("Validate that the \"Invite team member\" button is disbaled
     await expect(inviteButton).toBeDisabled();
 }, { action: "validate" });
 
-// ai-studio-step-id: pwxpsnex00
-await leapwork.step("Click the Test-59 Play workspace menu button in Leapwork Play", async () => {
+// ai-studio-step-id: pw1fbs3g40
+await leapwork.step("Click the tagovih657@drtall.com workspace menu button in Leapwork Play", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Test-59 Play (Test-54 Play\'s' }).click();
+    await page.getByRole('button', { name: 'tagovih657@drtall.com (monanig245@drtall.com\'s' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pwzlkmyo00
@@ -146,7 +153,7 @@ await leapwork.step("Click the Log out link", async () => {
 await leapwork.step("Click the Login button", async () => {
     // Click button "Login"
     await page.getByRole('button', { name: 'Login' }).click();
-}, { action: "click", continueOnFailure: true, timeoutMs: 3000 });
+}, { action: "click", continueOnFailure: true });
 
 // ai-studio-step-id: pw13xl7730
 await leapwork.step("Use test case: login-54", async () => {
@@ -164,7 +171,7 @@ await leapwork.step("Double click the team item in the Leapwork Play explorer", 
 // ai-studio-step-id: pw1y5ejcl0
 await leapwork.step("Click in the dropdown menu", async () => {
     // Click div
-    const dropdown = page.locator('.team-member-row').filter({ hasText: 'test-play-59@outlook.com' }).locator('.team-member-permissions .text');
+    const dropdown = page.locator('.team-member-row').filter({ hasText: 'tagovih657@drtall.com' }).locator('.team-member-permissions .text');
     await dropdown.click();
 }, { action: "click" });
 
@@ -174,10 +181,10 @@ await leapwork.step("Click the Read option in the Administrator menu", async () 
     await page.getByText('Read', { exact: true }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: pw9n2pw900
-await leapwork.step("Click the Test-54 Play (Personal) account menu button", async () => {
+// ai-studio-step-id: pw16n5a6k0
+await leapwork.step("Click the monanig245@drtall.com (Personal) account menu button", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Test-54 Play (Personal)' }).click();
+    await page.getByRole('button', { name: 'monanig245@drtall.com (Personal)' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pwud5wf200
@@ -190,7 +197,7 @@ await leapwork.step("Click the Log out link", async () => {
 await leapwork.step("Click the Login button", async () => {
     // Click button "Login"
     await page.getByRole('button', { name: 'Login' }).click();
-}, { action: "click", continueOnFailure: true, timeoutMs: 3000 });
+}, { action: "click", continueOnFailure: true });
 
 // ai-studio-step-id: pwgtsccq00
 await leapwork.step("Use test case: login-59", async () => {
@@ -202,10 +209,10 @@ await leapwork.step("Validate the Create new button is disbaled", async () => {
     await expect(page.getByRole('button', { name: 'Unavailable in read-only mode' }).first()).toBeDisabled();
 }, { action: "validate" });
 
-// ai-studio-step-id: pw6s9f3r00
-await leapwork.step("Click the Test-59 Play workspace menu button in Leapwork Play", async () => {
+// ai-studio-step-id: pw19337gi0
+await leapwork.step("Click the tagovih657@drtall.com workspace menu button in Leapwork Play", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Test-59 Play (Test-54 Play\'s' }).click();
+    await page.getByRole('button', { name: 'tagovih657@drtall.com (monanig245@drtall.com\'s' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw1fg4rlq0

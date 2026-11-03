@@ -2,6 +2,7 @@ import { leapwork } from "./leapwork";
 
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.variables.set("nameCompanyCom", "dummy@dummy.com", leapwork.storage.LOCAL);
 const lw__nameCompanyCom = leapwork.variables.get("nameCompanyCom", leapwork.storage.LOCAL) as string;
@@ -21,12 +22,10 @@ leapwork.configuration({
 
 leapwork.variables.set("userId", "user_47");
 
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
-
 
 // ai-studio-step-id: pwfyiikl00
 await leapwork.step("Click the Test-47 Play (Personal) account menu button", async () => {

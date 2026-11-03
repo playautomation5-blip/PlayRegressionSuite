@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -15,14 +15,14 @@ leapwork.configuration({
 leapwork.variables.set("userId", "user_41");
 
 // ai-studio-step-id: b2f93ea4
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: Bvvb40QW
-await leapwork.step("Click the Test-41 Play (Personal) button", async () => {
+await leapwork.step("Click the tepabe5924@digeros.com (Personal) button", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Test-41 Play (Personal' }).click();
+    await page.getByRole('button', { name: 'tepabe5924@digeros.com (Personal' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: WiCXx6vu

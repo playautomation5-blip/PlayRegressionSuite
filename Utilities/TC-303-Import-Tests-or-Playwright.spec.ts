@@ -8,6 +8,8 @@ leapwork.files.path('FL-7');
 leapwork.files.path('FL-8');
 leapwork.files.path('FL-9');
 leapwork.files.path('FL-10');
+leapwork.files.path('FL-12');
+leapwork.files.path('FL-13');
 
 
 
@@ -98,7 +100,7 @@ await leapwork.step("Create test cases from the uploaded file", async () => {
 await leapwork.step("Click the Import button in the linked asset popup", async () => {
     // Click button "Import"
     await page.getByRole('button', { name: 'Import' }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[3]/div/div[3]/div/button[2]", continueOnFailure: true, timeoutMs: 20000 });
+}, { action: "click", continueOnFailure: true, timeoutMs: 20000 });
 
 // ai-studio-step-id: pw1r5nc860
 await leapwork.step("Verify that the new test case was created", async () => {
