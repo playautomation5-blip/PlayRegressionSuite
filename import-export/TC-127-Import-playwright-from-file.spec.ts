@@ -5,6 +5,7 @@ import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename T
 import { ImportTestsOrPlaywright } from "@assets/Utilities/Import Tests or Playwright";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -37,9 +38,9 @@ leapwork.variables.set("fileId", fileId);
 leapwork.variables.set("testCasesNames", testCaseName);
 leapwork.variables.set("importType", "playwright");
 
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1qh7j2z0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00

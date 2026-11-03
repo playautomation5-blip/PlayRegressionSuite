@@ -20,6 +20,7 @@ import { AddPropertySelfHeal } from "@assets/Context menu/Utilities/Add property
 import { AddPropertyTimeout } from "@assets/Context menu/Utilities/Add property - timeout";
 import { EditStep } from "@assets/Context menu/Utilities/Edit step";
 import { DeleteStep } from "@assets/Context menu/Utilities/Delete step";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.variables.set("addAComment", "my comment", leapwork.storage.LOCAL);
 leapwork.variables.set("descriptionOutlineAbove", "This is an inserted step - 1", leapwork.storage.LOCAL);
@@ -44,8 +45,8 @@ leapwork.variables.set("envName", "LeapnLeash");
 leapwork.variables.set("envUrl", "https://demoapps.leapwork.ai/retail/");
 
 // ai-studio-step-id: 2b84abf9
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: ab2e5d0a

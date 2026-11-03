@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-03T06:21:52.973Z",
+  "generatedAt": "2026-11-03T10:32:59.136Z",
   "repo": {
     "connectorId": 76,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -260,13 +260,6 @@
           "name": "Xpath execution with variables",
           "kind": "test-case",
           "repoPath": "Execution/TC-235-Xpath-execution-with-variables.spec.ts"
-        },
-        {
-          "assetId": 12677,
-          "displayId": "TC-232",
-          "name": "Xpath execution",
-          "kind": "test-case",
-          "repoPath": "Execution/TC-232-Xpath-execution.spec.ts"
         },
         {
           "assetId": 12678,
@@ -1274,6 +1267,13 @@
           "name": "SkipOnboardingTour",
           "kind": "test-case",
           "repoPath": "Utilities/TC-26-SkipOnboardingTour.spec.ts"
+        },
+        {
+          "assetId": 19752,
+          "displayId": "TS-13",
+          "name": "Upload file helper",
+          "kind": "typescript",
+          "repoPath": "Utilities/TS-13-Upload-file-helper.ts"
         }
       ]
     },
@@ -1530,14 +1530,6 @@
       "name": "Credit Transfer",
       "repoPath": "Credit Management/TC-30-Credit-Transfer.spec.ts",
       "parentAssetId": 7976
-    },
-    {
-      "assetId": 12677,
-      "assetKind": "test-case",
-      "displayId": "TC-232",
-      "name": "Xpath execution",
-      "repoPath": "Execution/TC-232-Xpath-execution.spec.ts",
-      "parentAssetId": 12676
     },
     {
       "assetId": 12678,
@@ -2457,6 +2449,14 @@
       "displayId": "TS-1",
       "name": "ConstantORExtensions",
       "repoPath": "Utilities/TS-1-ConstantORExtensions.ts",
+      "parentAssetId": 7839
+    },
+    {
+      "assetId": 19752,
+      "assetKind": "typescript",
+      "displayId": "TS-13",
+      "name": "Upload file helper",
+      "repoPath": "Utilities/TS-13-Upload-file-helper.ts",
       "parentAssetId": 7839
     },
     {

@@ -4,6 +4,11 @@ import { leapwork } from "./leapwork";
 leapwork.files.path('FL-1');
 leapwork.files.path('FL-2');
 leapwork.files.path('FL-5');
+leapwork.files.path('FL-7')
+leapwork.files.path('FL-10');
+leapwork.files.path('FL-11');
+leapwork.files.path('FL-12');
+
 
 leapwork.configuration({
   timeoutMs: Number(
