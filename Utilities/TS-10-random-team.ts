@@ -43,7 +43,7 @@ export const microsoftUsers = {
     "user_25": "test-play-25@outlook.com", //TC-142 Empty trash can
     "user_26": "test-play-26@outlook.com", //TC-144 Delete multiple
     "user_27": "jawil87601@playfine.com", //TC-141 Restore & delete permanently
-    "user_28": "test-play-28@outlook.com", //TC-235 Logout Validation
+    "user_28": "", //TC-235 Logout Validation
     "user_29": "test-play-29@outlook.com", //TC-238 Add Category to a test case
     "user_30": "test-play-30@play-isolated-7f3c9a.invalid", //TC-178 Record TC-RL-Add tag-Run RL- Validate RL Run
     "user_31": `rifehe6539@goldvester.com`, //TC-243 Schedule RL
@@ -80,8 +80,8 @@ export const microsoftUsers = {
     "reg_12": `costanza.bury@fusioninbox.com`, // TC-372 Excel file upload
     "reg_13": "regression-user-jp-6@mailinator.com", //TC-306 Edit playwright step using chat
     "user_47": `hekiwa4699@hiringview.com`, // TC-332 Workspace users tab
-    "user_36":"test-play-36@outlook.com", //TC-309 Xpath Execution
-    "user_65": "test-play-65@outlook.com", // TC-337 Timeout
+    "user_36":"test-play-36@testShivani.com", //TC-309 Xpath Execution
+    "user_65": "koyicar122@digeros.com", // TC-337 Timeout
     "user_68": "Tyerra.Corona@FusionInbox.com", // TC-338 Secret Name
     "user_69": "xipew76815@ofags.com", // TC-357 - self heal variables
     "user_70": "kacokop502@playfine.com", // TC-192 LLM Chat working
