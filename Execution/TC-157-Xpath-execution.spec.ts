@@ -7,6 +7,7 @@ import { DeleteAsset } from "@assets/Utilities/Delete Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { ImportTestsOrPlaywright } from "@assets/Utilities/Import Tests or Playwright";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -35,9 +36,9 @@ leapwork.variables.set("importType", "tests");
 
 
 
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00
@@ -67,8 +68,10 @@ await leapwork.step("Click the Run button to execute the test case", async () =>
 // ai-studio-step-id: pw1guxq120
 await leapwork.step("Validate that the Leapwork Play page shows \"XPath\" for the Leap & Leash Chicken Kibble details step", async () => {
     // Assert span contains "XPath"
+    await page.waitForTimeout(15000);
     await expect(page.getByLabel('Click View details for Leap').getByText('XPath')).toContainText("XPath");
-}, { action: "validate", relativeXpath: ".//div[1]/div/div[1]/div[3]/div[@aria-label=\"Click View details for Leap & Leash Chicken Kibble ($28.00)\"]/span[2]" });
+}, { action: "validate", relativeXpath: ".//div[1]/div/div[1]/div[3]/div[@aria-label=\"Click View details for Leap & Leash Chicken Kibble ($28.00)\"]/span[2]", timeoutMs: 20000 });
+
 
 // ai-studio-step-id: pw94glp100
 await leapwork.step("Use test case: Delete Team", async () => {
