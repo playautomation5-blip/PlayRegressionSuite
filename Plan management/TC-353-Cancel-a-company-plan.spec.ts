@@ -1,7 +1,6 @@
 import { leapwork } from "./leapwork";
 
 import { microsoftUsers } from "@assets/Utilities/random-team";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { ValidateSubscriptionAndUsagePage } from "@assets/Plan management/Utilities/Validate Subscription and Usage Page";
 import { OpenPlanAssignmentPopup } from "@assets/Plan management/Utilities/Open Plan Assignment Popup";
@@ -25,8 +24,7 @@ const userId = "aistudio_user_2";
 leapwork.variables.set("email", microsoftUsers[userId], leapwork.storage.LOCAL);
 const lw__email = leapwork.variables.get("email", leapwork.storage.LOCAL) as string;
 
-// const userName = `${lw__email} (Personal)`
-const userName = `Automation Account (Personal)`
+const userName = `${lw__email} (Personal)`
 leapwork.variables.set("userId", userId);
 leapwork.variables.set("passwordId", userId);
 
@@ -39,7 +37,7 @@ leapwork.variables.set("remoteBrowserSessionsIncludedCount", "1 included");
 
 // ai-studio-step-id: pw1vs03ju0
 await leapwork.step("Use test case: Email Password Login", async () => {
-    return await MicrosoftLogin();
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwoyzsgr00

@@ -1,5 +1,7 @@
 import { leapwork } from "./leapwork";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
+import { microsoftUsers } from "@assets/Utilities/random-team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 
 leapwork.configuration({
@@ -13,17 +15,18 @@ leapwork.configuration({
 });
 
 const teamName = "Credit Team"
+const userId = "aistudio_user_2"
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetName", teamName);
-leapwork.variables.set("userId", "aistudio_user_2");
-leapwork.variables.set("passwordId", "aistudio_user_2");
+leapwork.variables.set("userId", userId);
+leapwork.variables.set("passwordId", userId);
 
-leapwork.variables.set("searchByEmail2", "aistudio02", leapwork.storage.LOCAL);
+leapwork.variables.set("searchByEmail2", microsoftUsers[userId], leapwork.storage.LOCAL);
 const lw__searchByEmail2 = leapwork.variables.get("searchByEmail2", leapwork.storage.LOCAL) as string;
 
 // ai-studio-step-id: b6b70ca2
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00
@@ -58,7 +61,8 @@ await leapwork.step("Click the main editor area in Leapwork AI Studio", async ()
 // ai-studio-step-id: pwno414900
 await leapwork.step("Click the Automation Account (Personal) account menu button", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
+    leapwork.log.info("search by email", {lw__searchByEmail2})
+    await page.getByRole('button', { name: `${lw__searchByEmail2} (Personal)` }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: ee558df8
@@ -107,7 +111,7 @@ await leapwork.step("Click the Add Credits button in the Credit adjustment panel
 // ai-studio-step-id: 99c8a3e8
 await leapwork.step("Click the Automation Account (Personal) account menu button", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
+    await page.getByRole('button', { name: `${lw__searchByEmail2} (Personal)` }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw1dnc7ag0
@@ -131,7 +135,7 @@ await leapwork.step("Fill the Amount field with 100", async () => {
 
 // ai-studio-step-id: pw1ky029i0
 await leapwork.step("Click the Transfer button in the Transfer Credits to Team dialog", async () => {
-    const transferButton = page.locator('button.credit-transfer-popup-button.credit-transfer-popup-button-primary');
+    const transferButton = page.locator('button.credit-transfer-popup-button.credit-transfer-popup-button-primary', { hasText: 'Transfer' });
     await transferButton.click({ force: true });
 }, { action: "click" });
 

@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { RenameTeam } from "@assets/Utilities/Rename Team";
@@ -28,8 +28,8 @@ leapwork.variables.set("askAnything", "Go to amazon.com", leapwork.storage.LOCAL
 const lw__askAnything = leapwork.variables.get("askAnything", leapwork.storage.LOCAL) as string;
 
 // ai-studio-step-id: b3b8763f
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 456aa693
