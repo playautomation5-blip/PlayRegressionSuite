@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { AddStatus } from "@assets/Utilities/Add Status";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
@@ -27,8 +27,8 @@ leapwork.variables.set("assetType", "New test case");
 leapwork.variables.set("assetName", "Status Check");
 
 // ai-studio-step-id: 0213ee0a
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: e6ba87ff
