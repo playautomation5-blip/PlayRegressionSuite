@@ -26,7 +26,7 @@ export const microsoftUsers = {
     "user_8": "test-play-8@outlook.com", //TC-138 KB to BP creation validation
     "user_9": "test-play-9@outlook.com", //TC-102 Folder-Create-Delete
     "user_10": "jetafix544@ofags.com", //TC-101 KnowledgeBase-Create-Delete
-    "user_11": "test-play-11@outlook.com", //TC-100 Runlist-Create-Delete
+    "user_11": "sobiyag890@en2ch.com", //TC-100 Runlist-Create-Delete
     "user_12": "test-play-12@outlook.com", //TC-99 Team-Create-Delete
     "user_13": "tomayev224@playfine.com", //TC-98 Test case-Create-Delete
     "user_14": "test-play-14@mailinator.com", //TC-97 Typescript-Create-Delete
@@ -43,19 +43,19 @@ export const microsoftUsers = {
     "user_25": "test-play-25@outlook.com", //TC-142 Empty trash can
     "user_26": "test-play-26@outlook.com", //TC-144 Delete multiple
     "user_27": "jawil87601@playfine.com", //TC-141 Restore & delete permanently
-    "user_28": "", //TC-235 Logout Validation
-    "user_29": "test-play-29@outlook.com", //TC-238 Add Category to a test case
+    "user_28": "seheya1228@en2ch.com", //TC-235 Logout Validation
+    "user_29": "jicigo2229@emailkeep.com", //TC-238 Add Category to a test case
     "user_30": "test-play-30@play-isolated-7f3c9a.invalid", //TC-178 Record TC-RL-Add tag-Run RL- Validate RL Run
     "user_31": `rifehe6539@goldvester.com`, //TC-243 Schedule RL
     "user_32": "test-play-32@outlook.com", //TC-236 Add tag to a test case
     "user_33": "geheke5781@playfine.com", //TC-229 Record a test case
     "user_34": "test-play-34@play-isolated-7f3c9a.invalid", //TC-223 Workspace Settings page
-    "user_35": "test-k-play-35@outlook.com", //TC-176 Adapter
+    "user_35": "yotefej222@macsnipe.com", //TC-176 Adapter
     "user-37": "tixal31775@ofags.com", //TC=235 Xpath Execuion with variables
     "user_38": "binilov241@hopefunder.com", //TC-163 File-Create-Delete
-    "user_39": `yexijoh625@hiringview.com`, //TC-165 import playwright
+    "user_39": "ceximej188@drtall.com", //TC-165 import playwright
     "user_40": "test-play-40@outlook.com", //TC-170 Workspace Change Validation
-    "user_41": `test-play-41@outlook.com`, //TC-185 Account & Settings - Audit Log
+    "user_41": `tepabe5924@digeros.com`, //TC-185 Account & Settings - Audit Log
     "user-42": "wihipay451@playfine.com", //TC-236: Team self heal settings
     "user_45": "test-play-45@mailinator.com", //TC-193 LLM Command Test
     "user_49": "bipit91310@emailkeep.com", //TC-218 Invite to a new user from team settings
