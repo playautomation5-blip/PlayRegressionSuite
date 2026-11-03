@@ -1,7 +1,7 @@
 import { leapwork } from "./leapwork";
 
 import { RandomTeam, teamName, password } from "@assets/Utilities/random-team";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { AddCategory } from "@assets/Team configuration/Utilities/Add Category";
@@ -21,9 +21,9 @@ leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("categoryName", "Category 1");
 leapwork.variables.set("categoryDescription", "This is a category");
 
-// ai-studio-step-id: e2c9e370
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw5wr0r400
+await leapwork.step("Use test case: Email password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: c5094da7

@@ -1,11 +1,7 @@
 import { leapwork } from "./leapwork";
 
-import { DeleteTeam } from "@assets/Utilities/Delete Team";
-import { CreateNewTeam } from "@assets/Utilities/Create New Team";
-import { RecoverAsset } from "@assets/Utilities/Recover Asset";
-import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
-import { RenameTeam } from "@assets/Utilities/Rename Team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
+import { microsoftUsers } from "@assets/Utilities/random-team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 
 leapwork.configuration({
@@ -19,17 +15,18 @@ leapwork.configuration({
 });
 
 const teamName = "Credit Team"
+const userId = "aistudio_user_2"
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetName", teamName);
-leapwork.variables.set("userId", "aistudio_user_2");
-leapwork.variables.set("passwordId", "aistudio_user_2");
+leapwork.variables.set("userId", userId);
+leapwork.variables.set("passwordId", userId);
 
-leapwork.variables.set("searchByEmail2", "aistudio02", leapwork.storage.LOCAL);
+leapwork.variables.set("searchByEmail2", microsoftUsers[userId], leapwork.storage.LOCAL);
 const lw__searchByEmail2 = leapwork.variables.get("searchByEmail2", leapwork.storage.LOCAL) as string;
 
-// ai-studio-step-id: b6b70ca2
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw5wr0r400
+await leapwork.step("Use test case: Email password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00
@@ -64,84 +61,85 @@ await leapwork.step("Click the main editor area in Leapwork AI Studio", async ()
 // ai-studio-step-id: pwno414900
 await leapwork.step("Click the Automation Account (Personal) account menu button", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
+    leapwork.log.info("search by email", {lw__searchByEmail2})
+    await page.getByRole('button', { name: `${lw__searchByEmail2} (Personal)` }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: ee558df8
+// ai-studio-step-id: pw19jtklv0
 await leapwork.step("Click the Admin Section item in Leapwork AI Studio", async () => {
     const adminSection = page.getByText('Admin Section', { exact: true });
     await adminSection.click({ force: true });
 });
 
-// ai-studio-step-id: nxucxGxT
+// ai-studio-step-id: pwr2p3va00
 await leapwork.step("Click Admin Settings in the Management section.", async () => {
     // Click button "Admin Settings"
     await page.getByRole('button', { name: 'Admin Settings' }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: eeac8936
+// ai-studio-step-id: pw1ipjap30
 await leapwork.step("Click the Search by email field", async () => {
     // Click textbox "Search by email"
     await page.getByRole('textbox', { name: 'Search by email' }).click();
 }, { action: "click"});
 
-// ai-studio-step-id: dd5f9c9d
+// ai-studio-step-id: pwku0g0v00
 await leapwork.step("Fill the Search by email field with \"${lw__searchByEmail2}\"", async () => {
     // Fill textbox "Search by email"
     await page.getByRole('textbox', { name: 'Search by email' }).fill(String(lw__searchByEmail2));
 }, { action: "input"});
 
-// ai-studio-step-id: 1dc83306
+// ai-studio-step-id: pwv36yi000
 await leapwork.step("Click the Add button for aistudio02@outlook.com in the Users and credits table", async () => {
     // Click button "Add"
     await page.waitForTimeout(2000)
     await page.getByRole('button', { name: 'Add' }).click();
 }, { action: "click", timeoutMs: 7000 });
 
-// ai-studio-step-id: 7e38a9a1
+// ai-studio-step-id: pw1qbsu5z0
 await leapwork.step("Click the 100 quick-add credits button in Credit adjustment", async () => {
     // Click button "100"
     await page.getByRole('button', { name: '100' }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: 7509bdb1
+// ai-studio-step-id: pwjpjnqc00
 await leapwork.step("Click the Add Credits button in the Credit adjustment panel", async () => {
     // Click button "Add Credits"
     await page.getByRole('button', { name: 'Add Credits' }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: 99c8a3e8
+// ai-studio-step-id: pwor5j4z00
 await leapwork.step("Click the Automation Account (Personal) account menu button", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
+    await page.getByRole('button', { name: `${lw__searchByEmail2} (Personal)` }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: pw1dnc7ag0
+// ai-studio-step-id: pw17fsa8k0
 await leapwork.step("Click the unassigned credits balance bar", async () => {
     await page.locator('.credit-block').filter({ hasText: 'Your unassigned credits' }).locator('.credit-balance-bar').click({ force: true });
 }, { action: "click" });
 
-// ai-studio-step-id: pwytds3v00
+// ai-studio-step-id: pwb5ps3000
 await leapwork.step("Click the Amount field in the Transfer Credits to Team dialog", async () => {
     const amountInput = page.getByRole('spinbutton', { name: 'Amount', exact: true });
     await expect(amountInput).toHaveCount(1);
     await amountInput.click({ force: true });
 }, { action: "click" });
 
-// ai-studio-step-id: pwfy050x00
+// ai-studio-step-id: pwkk9a1o00
 await leapwork.step("Fill the Amount field with 100", async () => {
     const amountInput = page.locator('#account-panel-transfer-amount-input');
     await expect(amountInput).toHaveCount(1);
     await amountInput.fill('100');
 }, { action: "input" });
 
-// ai-studio-step-id: pw1ky029i0
+// ai-studio-step-id: pw1e12p8d0
 await leapwork.step("Click the Transfer button in the Transfer Credits to Team dialog", async () => {
     const transferButton = page.locator('button.credit-transfer-popup-button.credit-transfer-popup-button-primary', { hasText: 'Transfer' });
     await transferButton.click({ force: true });
 }, { action: "click" });
 
-// ai-studio-step-id: pwfgr2vg00
+// ai-studio-step-id: pw1euiy500
 await leapwork.step("Verify Credit Team credits balance", async () => {
     const creditBlock = page.locator('.credit-block').filter({ hasText: `${teamName} credits` });;
     
@@ -150,7 +148,7 @@ await leapwork.step("Verify Credit Team credits balance", async () => {
     await expect(creditBlock).toContainText('100 / 100');
 }, { action: "validate" });
 
-// ai-studio-step-id: pw2u570c00
+// ai-studio-step-id: pwtj7czw00
 await leapwork.step("Right-click the Credit Team option", async () => {
     const target = page.locator('.explorer-list').getByText(teamName, { exact: true });
     await target.click({ button: 'right', force: true });

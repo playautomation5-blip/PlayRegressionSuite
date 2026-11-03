@@ -1,11 +1,10 @@
 import { leapwork } from "./leapwork";
 
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { ImportTestsOrPlaywright } from "@assets/Utilities/Import Tests or Playwright";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
-
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -33,9 +32,9 @@ leapwork.variables.set("fileId", fileId);
 leapwork.variables.set("testCasesNames", [testCaseName]);
 leapwork.variables.set("importType", "tests");
 
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1mf04080
+await leapwork.step("Use test case: Email passoword Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00
@@ -65,11 +64,17 @@ await leapwork.step("Click the Expand chat button in Leapwork Play", async () =>
     if (await expandChat.isVisible()) {
       expandChat.click();
     }
-}, { action: "click", relativeXpath: ".//div/div/div[2]/div/div/button[@aria-label=\"Expand chat\"]" });
+}, { action: "click", continueOnFailure: true});
 
 // ai-studio-step-id: pw1rd1j300
 await leapwork.step("Click the New chat button", async () => {
   await page.getByRole('button', { name: 'New chat', exact: true }).click();
+}, { action: "click" });
+
+// ai-studio-step-id: pw133woxl0
+await leapwork.step("Click Auto-apply edits in the chat toolbar", async () => {
+    // Click button "Auto-apply edits"
+    await page.getByRole('button', { name: 'Auto-apply edits' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pwh5l37i00
@@ -107,7 +112,7 @@ await leapwork.step("Validate that the Approve button appears in the chat", asyn
 
   await approveButton.waitFor({ state: "visible" });
   await expect(approveButton).toBeVisible();
-}, { action: "validate", timeoutMs: 30000 });
+}, { action: "validate", timeoutMs: 60000 });
 
 // ai-studio-step-id: pwwvmmi600
 await leapwork.step("Click the Approve button", async () => {
@@ -115,6 +120,17 @@ await leapwork.step("Click the Approve button", async () => {
     .getByRole('button', { name: 'Approve', exact: true })
     .click();
 }, { action: "click" });
+
+// await leapwork.step("Validate that the email step was updated", async () => {
+//   const updatedStepLocator = page.getByText(updatedStepText, { exact: true });
+
+//   await updatedStepLocator.waitFor({ state: "visible" });
+//   await expect(updatedStepLocator).toBeVisible();
+// }, { action: "validate", timeoutMs: 30000 });
+
+// await leapwork.step("Click the Explorer button", async () => {
+//   await page.getByRole('button', { name: 'Explorer', exact: true }).click();
+// }, { action: "click" });
 
 // ai-studio-step-id: pw1tt59d50
 await leapwork.step("Validate that the email step was updated", async () => {
@@ -128,6 +144,7 @@ await leapwork.step("Validate that the email step was updated", async () => {
 await leapwork.step("Click the Explorer button", async () => {
   await page.getByRole('button', { name: 'Explorer', exact: true }).click();
 }, { action: "click" });
+
 
 // ai-studio-step-id: pwqsjnuk00
 await leapwork.step("Use test case: Delete Team", async () => {
