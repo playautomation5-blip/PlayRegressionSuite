@@ -1,7 +1,7 @@
 import { leapwork } from "./leapwork";
 
 import { teamName } from "@assets/Utilities/random-team";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
@@ -22,8 +22,8 @@ leapwork.variables.set("assetType", "New test case");
 leapwork.variables.set("assetName", "New test case");
 
 // ai-studio-step-id: 861791f0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 25385efc
@@ -49,9 +49,9 @@ await leapwork.step("Click the Create Duplicate option in the test case context 
 }, { action: "click" });
 
 // ai-studio-step-id: pwmh3f1h00
-await leapwork.step("Validate that the Owner shows 'Test-7 Play' on the Leapwork Play page", async () => {
+await leapwork.step("Validate that the Owner shows 'kanokim415@goldvester.com' on the Leapwork Play page", async () => {
     // Assert span contains "Test-7 Play"
-    await expect(page.locator('.metadata-field', { hasText: 'Owner' }).locator('.metadata-value-text')).toHaveText('Test-7 Play');
+    await expect(page.locator('.metadata-field', { hasText: 'Owner' }).locator('.metadata-value-text')).toHaveText('kanokim415@goldvester.com');
 }, { action: "validate" });
 
 // ai-studio-step-id: 7ff6ee6e

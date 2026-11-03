@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -12,18 +12,17 @@ leapwork.configuration({
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
-leapwork.variables.set("userId", "aistudio_user_2");
-leapwork.variables.set("passwordId", "aistudio_user_2");
+leapwork.variables.set("userId", "user_41");
 
 // ai-studio-step-id: 7a16283c
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwxspsol00
-await leapwork.step("Click the Automation Account (Personal) button", async () => {
+await leapwork.step("Click the tepabe5924@digeros.com (Personal) button", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
+    await page.getByRole('button', { name: 'tepabe5924@digeros.com (Personal' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pwe199eq00

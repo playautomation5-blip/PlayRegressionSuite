@@ -4,6 +4,13 @@ import { leapwork } from "./leapwork";
 leapwork.files.path('FL-2');
 leapwork.files.path('FL-1');
 leapwork.files.path('FL-3');
+leapwork.files.path('FL-4');
+leapwork.files.path('FL-5');
+leapwork.files.path('FL-6');
+leapwork.files.path('FL-7');
+
+
+
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -85,6 +92,12 @@ await leapwork.step("Create test cases from the uploaded file", async () => {
     .getByRole('button', { name: selectedImport.createButtonLabel, exact: true })
     .click();
 }, { action: "click" });
+
+// ai-studio-step-id: pw1d962lu0
+await leapwork.step("Click the Import button in the linked asset popup", async () => {
+    // Click button "Import"
+    await page.getByRole('button', { name: 'Import' }).click();
+}, { action: "click", continueOnFailure: true });
 
 // ai-studio-step-id: pw1r5nc860
 await leapwork.step("Verify that the new test case was created", async () => {

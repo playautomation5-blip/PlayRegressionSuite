@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -16,14 +16,14 @@ leapwork.variables.set("userId", "aistudio_user_2");
 leapwork.variables.set("passwordId", "aistudio_user_2");
 
 // ai-studio-step-id: b8315654
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pw9k6gc100
-await leapwork.step("Click the Automation Account (Personal) button", async () => {
+await leapwork.step("Click the gamev24783@playfine.com (Personal) button", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
+    await page.getByRole('button', { name: 'gamev24783@playfine.com (Personal' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw137pz140
@@ -134,9 +134,3 @@ await leapwork.step("Validate the Description column header shows 'Description' 
     // Assert columnheader "Description" contains "Description"
     await expect(page.getByRole('columnheader', { name: 'Description', exact: true })).toContainText("Description");
 }, { action: "validate" });
-
-// ai-studio-step-id: pw11t8onc0
-await leapwork.step("Click the Audit logs button", async () => {
-    // Click span
-    await page.getByRole('button', { name: 'Audit logs' }).click();
-}, { action: "click" });

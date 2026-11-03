@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-03T06:42:46.601Z",
+  "generatedAt": "2026-11-03T10:34:54.999Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -1036,6 +1036,13 @@
           "name": "SkipOnboardingTour",
           "kind": "test-case",
           "repoPath": "Utilities/TC-32-SkipOnboardingTour.spec.ts"
+        },
+        {
+          "assetId": 28604,
+          "displayId": "TS-7",
+          "name": "Upload file helper",
+          "kind": "typescript",
+          "repoPath": "Utilities/TS-7-Upload-file-helper.ts"
         }
       ]
     },
@@ -1948,6 +1955,14 @@
       "displayId": "TS-2",
       "name": "random-team",
       "repoPath": "Utilities/TS-2-random-team.ts",
+      "parentAssetId": 8195
+    },
+    {
+      "assetId": 28604,
+      "assetKind": "typescript",
+      "displayId": "TS-7",
+      "name": "Upload file helper",
+      "repoPath": "Utilities/TS-7-Upload-file-helper.ts",
       "parentAssetId": 8195
     },
     {
