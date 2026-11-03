@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { RenameTeam } from "@assets/Utilities/Rename Team";
@@ -19,9 +19,9 @@ leapwork.configuration({
 leapwork.variables.set("teamName", "Adapter");
 leapwork.variables.set("userId", "user_52");
 
-// ai-studio-step-id: 501b86d4
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00
@@ -49,7 +49,7 @@ await leapwork.step("Use test case: Create New Asset", async () => {
 await leapwork.step("Click the Collapse chat button in the Leapwork Play interface", async () => {
     // Click button "Collapse chat"
     await page.getByRole('button', { name: 'Collapse chat' }).click();
-}, { action: "click", relativeXpath: ".//div/div[2]/div/div[2]/div[1]/button[@aria-label=\"Collapse chat\"]", continueOnFailure: true });
+}, { action: "click", continueOnFailure: true, enableSelfHeal: false, timeoutMs: 5000 });
 
 // ai-studio-step-id: pwg3x6mx00
 await leapwork.step("Click the Recording adapter dropdown and select “Use team adapter / built-in default”", async () => {

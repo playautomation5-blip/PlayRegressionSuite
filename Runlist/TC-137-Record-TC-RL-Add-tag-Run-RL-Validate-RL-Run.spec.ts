@@ -1,13 +1,12 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
-import { Record } from "@assets/Runlist/Record";
+import { AddTag } from "@assets/Team configuration/Utilities/Add Tag";
+import { Record } from "@assets/Test Case/Utilities/Record";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
-import { AddTagSecond } from "@assets/Runlist/Add Tag Second";
-import { AddTagFirst } from "@assets/Runlist/Add Tag First";
 
 leapwork.variables.set("userId", "user_30");
 leapwork.variables.set("teamName", teamName);
@@ -32,9 +31,9 @@ const lw__runlistName = leapwork.variables.get("runlistName") as string;
 leapwork.variables.set("testcaseName", "Test Case");
 const lw__testcaseName = "Test Case";
 
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: d92ef0ea
@@ -42,24 +41,17 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
     return await DeleteCreateRenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-
+// ai-studio-step-id: pwem1slo00
+await leapwork.step("Use test case: Add Tag", async () => {
+    return await AddTag();
+}, { action: "asset_reference", linkedAssetType: "test-case" });
 
 leapwork.variables.set("assetType", "New Runlist");
 leapwork.variables.set("assetName", lw__runlistName);
 
-// ai-studio-step-id: pwwrro2w00
-await leapwork.step("Use test case: Add Tag First", async () => {
-    return await AddTagFirst();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
-
 // ai-studio-step-id: 40d4800b
 await leapwork.step("Use test case: Create New Asset", async () => {
     return await CreateNewAsset();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
-
-// ai-studio-step-id: pw1ej5j1e0
-await leapwork.step("Use test case: Add Tag First", async () => {
-    return await AddTagSecond();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 leapwork.variables.set("assetType", "New test case");
@@ -70,17 +62,10 @@ await leapwork.step("Use test case: Create New Asset", async () => {
     return await CreateNewAsset();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-
-
 // ai-studio-step-id: a9323cad
 await leapwork.step("Use test case: Record", async () => {
     return await Record();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
-// await leapwork.step("Click the Explorer button", async () => {
-//     // Click button "Explorer"
-//     await page.getByRole('button', { name: 'Explorer' }).click();
-// }, { action: "click" });
 
 // ai-studio-step-id: pwiz7nek00
 await leapwork.step("Click the Select tags dropdown in the test case metadata panel", async () => {
@@ -112,15 +97,17 @@ await leapwork.step("Click the Filter option in the Selection criteria section",
     await page.getByText('Filter').nth(1).click();
 }, { action: "click" });
 
-// await leapwork.step("Click the Select tags option in the Selection criteria section", async () => {
-//     // Click span
-//     await page.getByText('Select tags').click();
-// }, { action: "click" });
+// ai-studio-step-id: pw1oo8d6i0
+await leapwork.step("Click the Select tags option in the Selection criteria section", async () => {
+    // Click span
+    await page.getByText('Select tags').click();
+}, { action: "click" });
 
-// await leapwork.step("Click the Tag 1 option in the Select tags dropdown", async () => {
-//     // Click div
-//     await page.locator('div').filter({ hasText: /^Tag 1$/ }).nth(1).click();
-// }, { action: "click" });
+// ai-studio-step-id: pw1m3sbdd0
+await leapwork.step("Click the Tag 1 option in the Select tags dropdown", async () => {
+    // Click div
+    await page.locator('div').filter({ hasText: /^Tag 1$/ }).nth(1).click();
+}, { action: "click" });
 
 // ai-studio-step-id: NvDmrSjk
 await leapwork.step("Click the \"Critical (S1) and Major (S2)\" severity filter option", async () => {
@@ -140,11 +127,11 @@ await leapwork.step("Click the Major (S2) severity option in Selection criteria"
     await page.locator('div').filter({ hasText: /^Major \(S2\)$/ }).nth(1).click();
 }, { action: "click" });
 
-
-// await leapwork.step("Validate that \"TC-1 Test Case\" appears in the Selected test cases table on Leapwork Play", async () => {
-//     // Assert span contains "TC-1 Test Case"
-//     await expect(page.getByText('TC-1 Test Case')).toContainText("TC-1 Test Case");
-// }, { action: "validate" });
+// ai-studio-step-id: pw6b088r00
+await leapwork.step("Validate that \"TC-1 Test Case\" appears in the Selected test cases table on Leapwork Play", async () => {
+    // Assert span contains "TC-1 Test Case"
+    await expect(page.getByText('TC-1 Test Case')).toContainText("TC-1 Test Case");
+}, { action: "validate" });
 
 // ai-studio-step-id: V42Ys9Cd
 await leapwork.step("Click the Run now button in the Selection criteria section", async () => {
@@ -152,21 +139,11 @@ await leapwork.step("Click the Run now button in the Selection criteria section"
     await page.getByRole('button', { name: 'Run now' }).click();
 }, { action: "click" });
 
-// await leapwork.step("Validate that the run status shows 'Pending' on the Leapwork Play run list", async () => {
-//     // Assert span contains "Pending"
-//     await expect(page.getByText('Pending')).toContainText("Pending");
-// }, { action: "validate" });
-
-// await leapwork.step("Click the Explorer button", async () => {
-//     // Click button "Explorer"
-//     await page.getByRole('button', { name: 'Explorer' }).click();
-// }, { action: "click" });
-
-// ai-studio-step-id: pw5mnhn400
-await leapwork.step("Click the Collapse chat button in the run log.", async () => {
-    // Click button "Collapse chat"
-    await page.getByRole('button', { name: 'Collapse chat' }).click();
-}, { action: "click", continueOnFailure: true });
+// ai-studio-step-id: pwoklu1j00
+await leapwork.step("Validate that the run status shows 'Pending' on the Leapwork Play run list", async () => {
+    // Assert span contains "Pending"
+    await expect(page.getByText('Pending')).toContainText("Pending");
+}, { action: "validate" });
 
 // ai-studio-step-id: 6e08fa60
 await leapwork.step("Use test case: Delete Team", async () => {

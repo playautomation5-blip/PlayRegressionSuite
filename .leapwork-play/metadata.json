@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-30T11:48:33.978Z",
+  "generatedAt": "2026-11-03T06:21:52.973Z",
   "repo": {
     "connectorId": 76,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -1084,13 +1084,6 @@
           "name": "AI Studio Monitor",
           "kind": "test-case",
           "repoPath": "User Profile/TC-39-AI-Studio-Monitor.spec.ts"
-        },
-        {
-          "assetId": 8032,
-          "displayId": "TC-40",
-          "name": "Documentation - Build a Knowledge Base",
-          "kind": "test-case",
-          "repoPath": "User Profile/TC-40-Documentation-Build-a-Knowledge-Base.spec.ts"
         },
         {
           "assetId": 8076,
@@ -2256,14 +2249,6 @@
       "displayId": "TC-39",
       "name": "AI Studio Monitor",
       "repoPath": "User Profile/TC-39-AI-Studio-Monitor.spec.ts",
-      "parentAssetId": 8026
-    },
-    {
-      "assetId": 8032,
-      "assetKind": "test-case",
-      "displayId": "TC-40",
-      "name": "Documentation - Build a Knowledge Base",
-      "repoPath": "User Profile/TC-40-Documentation-Build-a-Knowledge-Base.spec.ts",
       "parentAssetId": 8026
     },
     {

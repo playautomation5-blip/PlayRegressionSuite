@@ -6,6 +6,7 @@ import { AddSetting } from "@assets/Team configuration/Utilities/Add Setting";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { ImportTestsOrPlaywright } from "@assets/Utilities/Import Tests or Playwright";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.variables.set("settingKey", "enableSelfHeal", leapwork.storage.LOCAL);
 const lw__settingKey = leapwork.variables.get("settingKey", leapwork.storage.LOCAL) as string;
@@ -38,8 +39,8 @@ leapwork.variables.set("teamName", teamName);
 
 
 // ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00
@@ -47,10 +48,10 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
     return await DeleteCreateRenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: pwogmnx200
-await leapwork.step("Click the Automation Account (Personal) account menu", async () => {
+// ai-studio-step-id: pw12vsd3h0
+await leapwork.step("Click the gamev24783@playfine.com (Personal) account menu.", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
+    await page.getByRole('button', { name: 'gamev24783@playfine.com (' }).click();
 }, { action: "click", relativeXpath: ".//div[3]/div[1]/div[2]/button[4]/span/span[1]" });
 
 // ai-studio-step-id: pw9e74gb00

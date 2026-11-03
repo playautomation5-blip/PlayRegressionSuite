@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { RandomTeam as teamName } from "@assets/Utilities/random-team";
 
@@ -28,9 +28,9 @@ leapwork.configuration({
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
-// ai-studio-step-id: e60858c7
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: 28253bbc
@@ -70,19 +70,19 @@ await leapwork.step("Click the Host (optional) field in the New connector form",
 
 // ai-studio-step-id: pwqg0qzx00
 await leapwork.step("Click the Token field in the New connector form", async () => {
-    // Click textbox "Token Field help"
-    await page.getByRole('textbox', { name: 'Token Field help' }).click();
-}, { action: "click" });
+    // Click textbox "Token Token requirements"
+    await page.getByRole('textbox', { name: 'Token Token requirements' }).click();
+}, { action: "click", relativeXpath: "//*[@id=\"source-control-token\"]" });
+
+
+
+
 
 // ai-studio-step-id: pw2kiilq00
 await leapwork.step("Fill the Token field in the New connector dialog", async () => {
     // Fill textbox "Token Field help"
-    await page.getByRole('textbox', { name: 'Token Field help' }).fill(String(lw__personalAccessToken));
+    await page.getByRole('textbox', { name: 'Token Token requirements' }).fill(String(lw__personalAccessToken));
 }, { action: "input" });
-
-
-
-
 
 // ai-studio-step-id: brxZar4r
 await leapwork.step("Click the Test connection button in the New connector form", async () => {
@@ -102,12 +102,12 @@ await leapwork.step("Click More actions for the GitHub connector", async () => {
     await page.getByRole('button', { name: 'More actions for github' }).click();
 }, { action: "click"});
 
+
 // ai-studio-step-id: pwmtnacf00
 await leapwork.step("Click More actions for the GitHub connector", async () => {
     // Click button "More actions for github connector"
     await page.getByRole('button', { name: 'More actions for github' }).click();
 }, { action: "click", continueOnFailure: true });
-
 
 // ai-studio-step-id: 1WrSeztE
 await leapwork.step("Click Delete in the Delete Connector dialog for the github connector", async () => {
@@ -120,5 +120,3 @@ await leapwork.step("Click Delete to confirm deleting the \"github connector\" c
     // Click button "Delete"
     await page.getByRole('button', { name: 'Delete' }).click();
 }, { action: "click" });
-
-

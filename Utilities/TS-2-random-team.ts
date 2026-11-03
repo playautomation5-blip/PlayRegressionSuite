@@ -16,7 +16,7 @@ export const microsoftUsers = {
     "aistudio_user_2": "gamev24783@playfine.com", // admin account used in above TCs
     "aistudio_user_3": "cekas29568@ofags.com", // workspace change validation
     "aistudio_user_4": "cojiki4586@ofags.com", //TC-224 BYOK-Create-Edit-Delete
-    "user_6": "test-play-6@outlook.com", //TC-103 Agent-Create-Delete
+    "user_6": "test-play-6@play-isolated-7f3c9a.invalid", //TC-103 Agent-Create-Delete
     "user_7": "kanokim415@goldvester.com", //TC-164 Create Duplicate
     "user_8": "test-play-8@outlook.com", //TC-138 KB to BP creation validation
     "user_9": "test-play-9@outlook.com", //TC-102 Folder-Create-Delete
@@ -40,11 +40,11 @@ export const microsoftUsers = {
     "user_27": "sayawa9816@playfine.com", //TC-141 Restore & delete permanently
     "user_28": "test-play-28@outlook.com", //TC-235 Logout Validation
     "user_29": "test-play-29@outlook.com", //TC-238 Add Category to a test case
-    "user_30": "test-play-30@outlook.com", //TC-178 Record TC-RL-Add tag-Run RL- Validate RL Run
+    "user_30": "test-play-30@play-isolated-7f3c9a.invalid", //TC-178 Record TC-RL-Add tag-Run RL- Validate RL Run
     "user_31": "rifehe6539@goldvester.com", //TC-243 Schedule RL
     "user_32": "test-play-32@outlook.com", //TC-236 Add tag to a test case
     "user_33": "dafeh20801@playfine.com", //TC-229 Record a test case
-    "user_34": "test-play-34@outlook.com", //TC-223 Workspace Settings page
+    "user_34": "test-play-34@play-isolated-7f3c9a.invalid", //TC-223 Workspace Settings page
     "user_35": "test-k-play-35@outlook.com", //TC-176 Adapter
     "user_36": "peboda1998@javafs.com", //TC-233 Xpath execution
     "user_38": "binilov241@hopefunder.com", //TC-163 File-Create-Delete
@@ -55,28 +55,28 @@ export const microsoftUsers = {
     "user_49": "bacoy15309@hopefunder.com", //TC-45 Invite to a new user from team settings
     "user_50": "test-play-50@outlook.com", //TC-219 KB with git
     "user_51": "test-play-51@outlook.com", //TC-240 Navigate to Play landing page
-    "user_52": "test-play-52@outlook.com", //TC-251 External Adapter      Note: Don't use it for other test case
+    "user_52": "test-play-52@play-isolated-7f3c9a.invalid", //TC-251 External Adapter      Note: Don't use it for other test case
     "user_53": "yojep28567@hopefunder.com", //TC-287 Add settings in team
     "user_54": "test-play-54@outlook.com", // TC-219 Team                 Note: Don't use it for other test case
     "user_55": "hoyeka8846@playfine.com", //TC-252 Copy paste            Note: Don't use it for other test case
     "user_56": "test-play-56@outlook.com", //TC-256 Auto create pwd secret
-    "user_57": "test-play-57@outlook.com", //TC-291 Git connecter
+    "user_57": "test-play-57@play-isolated-7f3c9a.invalid", //TC-291 Git connecter
     "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
     "user_59": "test-play-59@outlook.com", // TC-219 Team                 Note: Don't use it for other test case
     "user_62": "rehinel267@agaexpress.com", //Nitik: TC-161 
     "user_64": "tolafe1571@goldvester.com", //Nitik: TC-162
     "reg_1": "ridel19884@goldvester.com", // TC-289 Context menu of a step
-    "reg_3": "regression_kd_1@outlook.com",  // TC-290 CRUD TC Status
+    "reg_3": "regression_kd_1@play-isolated-7f3c9a.invalid",  // TC-290 CRUD TC Status
     "reg_10": "regression-user-10@outlook.com", //TC-296 Display User Name as Owner and Fallback to Email When User Name Is Unavailable
     "reg_11": "wimaw80020@goldvester.com", // TC-304 Import playwright from file
      "reg_12": "costanza.bury@fusioninbox.com", // TC-305 Import test case using file
-    "reg_13": "regression-user-jp-6@outlook.com", //TC-306 Edit playwright step using chat
+    "reg_13": "regression-user-jp-6@mailinator.com", //TC-306 Edit playwright step using chat
     "user_60": "talejes367@playfine.com", //TC-205 Salesforce connector
     "user_47": "hekiwa4699@hiringview.com", // TC-206 Workspace users tab
     "user_65": "test-play-65@outlook.com", // TC-226 Timeout
+    "user_temp": "koyicar122@digeros.com", 
     "user_69": "dogodof286@javafs.com", // TC-226 Timeout
     "user_70": "gogaka7707@javafs.com", // TC-29 LLM chat working
-    "user_66": "test-play-66@outlook.com", // TC-259 Excel file upload
     "user_37": "taxici4212@hopefunder.com", //TC-43 Folder-Create-Delete
     "user_42": "cabeyaf691@moblha.com", //TC-85 Source Control
     "user_72": "pepito4562@playfine.com", //TC-203 Enable LLM Over Native Recorder
