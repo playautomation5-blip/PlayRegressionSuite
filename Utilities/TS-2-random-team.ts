@@ -21,7 +21,7 @@ export const microsoftUsers = {
     "user_8": "test-play-8@outlook.com", //TC-138 KB to BP creation validation
     "user_9": "test-play-9@outlook.com", //TC-102 Folder-Create-Delete
     "user_10": "xipew76815@ofags.com", //TC-101 KnowledgeBase-Create-Delete
-    "user_11": "test-play-11@outlook.com", //TC-100 Runlist-Create-Delete
+    "user_11": "sobiyag890@en2ch.com", //TC-100 Runlist-Create-Delete
     "user_12": "test-play-12@outlook.com", //TC-99 Team-Create-Delete
     "user_13": "tomayev224@playfine.com", //TC-98 Test case-Create-Delete
     "user_14": "test-play-14@mailinator.com", //TC-97 Typescript-Create-Delete
@@ -38,31 +38,31 @@ export const microsoftUsers = {
     "user_25": "test-play-25@outlook.com", //TC-142 Empty trash can
     "user_26": "test-play-26@outlook.com", //TC-144 Delete multiple
     "user_27": "sayawa9816@playfine.com", //TC-141 Restore & delete permanently
-    "user_28": "test-play-28@outlook.com", //TC-235 Logout Validation
-    "user_29": "test-play-29@outlook.com", //TC-238 Add Category to a test case
+    "user_28": "seheya1228@en2ch.com", //TC-235 Logout Validation
+    "user_29": "jicigo2229@emailkeep.com", //TC-238 Add Category to a test case
     "user_30": "test-play-30@play-isolated-7f3c9a.invalid", //TC-178 Record TC-RL-Add tag-Run RL- Validate RL Run
     "user_31": "rifehe6539@goldvester.com", //TC-243 Schedule RL
     "user_32": "test-play-32@outlook.com", //TC-236 Add tag to a test case
     "user_33": "dafeh20801@playfine.com", //TC-229 Record a test case
     "user_34": "test-play-34@play-isolated-7f3c9a.invalid", //TC-223 Workspace Settings page
-    "user_35": "test-k-play-35@outlook.com", //TC-176 Adapter
+    "user_35": "yotefej222@macsnipe.com", //TC-176 Adapter
     "user_36": "peboda1998@javafs.com", //TC-233 Xpath execution
     "user_38": "binilov241@hopefunder.com", //TC-163 File-Create-Delete
     "user_39": "yexijoh625@hiringview.com", //TC-165 import playwright
     "user_40": "test-play-40@outlook.com", //TC-170 Workspace Change Validation
-    "user_41": "test-play-41@outlook.com", //TC-185 Account & Settings - Audit Log
+    "user_41": "tepabe5924@digeros.com", //TC-185 Account & Settings - Audit Log
     "user_45": "test-play-45@mailinator.com", //TC-193 LLM Command Test
     "user_49": "bacoy15309@hopefunder.com", //TC-45 Invite to a new user from team settings
     "user_50": "test-play-50@outlook.com", //TC-219 KB with git
     "user_51": "test-play-51@outlook.com", //TC-240 Navigate to Play landing page
     "user_52": "test-play-52@play-isolated-7f3c9a.invalid", //TC-251 External Adapter      Note: Don't use it for other test case
     "user_53": "yojep28567@hopefunder.com", //TC-287 Add settings in team
-    "user_54": "test-play-54@outlook.com", // TC-219 Team                 Note: Don't use it for other test case
+    "user_54": "monanig245@drtall.com", // TC-219 Team                 Note: Don't use it for other test case
     "user_55": "hoyeka8846@playfine.com", //TC-252 Copy paste            Note: Don't use it for other test case
     "user_56": "test-play-56@outlook.com", //TC-256 Auto create pwd secret
     "user_57": "test-play-57@play-isolated-7f3c9a.invalid", //TC-291 Git connecter
     "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
-    "user_59": "test-play-59@outlook.com", // TC-219 Team                 Note: Don't use it for other test case
+    "user_59": "tagovih657@drtall.com", // TC-219 Team                 Note: Don't use it for other test case
     "user_62": "rehinel267@agaexpress.com", //Nitik: TC-161 
     "user_64": "tolafe1571@goldvester.com", //Nitik: TC-162
     "reg_1": "ridel19884@goldvester.com", // TC-289 Context menu of a step
@@ -73,8 +73,7 @@ export const microsoftUsers = {
     "reg_13": "regression-user-jp-6@mailinator.com", //TC-306 Edit playwright step using chat
     "user_60": "talejes367@playfine.com", //TC-205 Salesforce connector
     "user_47": "hekiwa4699@hiringview.com", // TC-206 Workspace users tab
-    "user_65": "test-play-65@outlook.com", // TC-226 Timeout
-    "user_temp": "koyicar122@digeros.com", 
+    "user_65": "koyicar122@digeros.com", // TC-226 Timeout
     "user_69": "dogodof286@javafs.com", // TC-226 Timeout
     "user_70": "gogaka7707@javafs.com", // TC-29 LLM chat working
     "user_37": "taxici4212@hopefunder.com", //TC-43 Folder-Create-Delete
