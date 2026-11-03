@@ -63,12 +63,12 @@ export const microsoftUsers = {
     "user_51": "test-play-51@outlook.com", //TC-240 Navigate to Play landing page
     "user_52": "test-play-52@play-isolated-7f3c9a.invalid", //TC-251 External Adapter      Note: Don't use it for other test case
     "user_53": "jopece1708@drtall.com", //TC-287 Add settings in team
-    "user_54": "test-play-54@outlook.com", // TC-335 Team                 Note: Don't use it for other test case
+    "user_54": "monanig245@drtall.com", // TC-335 Team                 Note: Don't use it for other test case
     "user_55": "hoyeka8846@playfine.com", //TC-252 Copy paste            Note: Don't use it for other test case
     "user_56": "xorohi9937@emailkeep.com", //TC-256 Auto create pwd secret
     "user_57": "test-play-57@play-isolated-7f3c9a.invalid", //TC-291 Git connecter
     "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
-    "user_59": "test-play-59@outlook.com", // TC-335 Team                 Note: Don't use it for other test case
+    "user_59": "mofica1084@drtall.com", // TC-335 Team                 Note: Don't use it for other test case
     "user_60": "talejes367@playfine.com", //TC-205 Salesforce connector
     "user_62": "noholih746@boffweb.com", //TC-360 Git Connector
     "user_64": "jolod52834@emailkeep.com", //TC-362 Atlassian Connector
