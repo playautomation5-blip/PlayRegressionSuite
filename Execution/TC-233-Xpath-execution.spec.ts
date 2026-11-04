@@ -7,6 +7,7 @@ import { DeleteAsset } from "@assets/Utilities/Delete Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { ImportTestsOrPlaywright } from "@assets/Utilities/Import Tests or Playwright";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -16,8 +17,25 @@ leapwork.configuration({
   enableSelfHeal:
     (leapwork.team.settings.get("enableSelfHeal")
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
+  enableXpath:
+    (leapwork.team.settings.get("enableXpath")
+      ?? leapwork.workspace.settings.get("enableXpath")) !== "false",
+  chromiumArgs:
+    leapwork.team.settings.get("chromiumArgs")
+      ?? leapwork.workspace.settings.get("chromiumArgs")
+      ?? ["--deny-permission-prompts",
+          "--disable-notifications"
+        ],
+  chromiumPrefs: leapwork.team.settings.get("chromiumPrefs")
+      ?? leapwork.workspace.settings.get("chromiumPrefs")
+      ?? { "credentials_enable_service": false,
+          "profile":
+          {
+            "password_manager_enabled": false,
+            "password_manager_leak_detection": false
+          }
+        },
 });
-
 
 leapwork.variables.set("userId", "user_36");
 leapwork.variables.set("teamName", teamName);
@@ -36,8 +54,8 @@ leapwork.variables.set("importType", "tests");
 
 
 // ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00
@@ -58,11 +76,19 @@ await leapwork.step("Click Connect to launch the Google Chromium browser in Nort
 
 
 
-// ai-studio-step-id: pw1bw2oe10
+// ai-studio-step-id: pwufuf3c00
+await leapwork.step("Click the Collapse chat button in the chat toolbar", async () => {
+    // Click button "Collapse chat"
+    await page.getByRole('button', { name: 'Collapse chat' }).click();
+}, { action: "click", continueOnFailure :true });
+
+
+// ai-studio-step-id: pw1knjpfx0
 await leapwork.step("Click the Run button to execute the test case", async () => {
     // Click button "Run"
-    await page.getByRole('button', { name: 'Run' }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]" });
+    await page.getByRole('button', { name: 'Run', exact: true }).click();
+}, { action: "click" });
+
 
 // ai-studio-step-id: pw1guxq120
 await leapwork.step("Validate that the Leapwork Play page shows \"XPath\" for the Leap & Leash Chicken Kibble details step", async () => {
