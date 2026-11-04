@@ -16,7 +16,7 @@ export const microsoftUsers = {
     "aistudio_user_2": "gamev24783@playfine.com", // admin account used in above TCs
     "aistudio_user_3": "cekas29568@ofags.com", // workspace change validation
     "aistudio_user_4": "cojiki4586@ofags.com", //TC-224 BYOK-Create-Edit-Delete
-    "user_6": "test-play-6@play-isolated-7f3c9a.invalid", //TC-103 Agent-Create-Delete
+    "user_6": "kikiba3679@bankwen.com", //TC-103 Agent-Create-Delete
     "user_7": "kanokim415@goldvester.com", //TC-164 Create Duplicate
     "user_8": "test-play-8@outlook.com", //TC-138 KB to BP creation validation
     "user_9": "test-play-9@outlook.com", //TC-102 Folder-Create-Delete
@@ -35,14 +35,14 @@ export const microsoftUsers = {
     "user_22": "test-play-22@outlook.com", //TC-247 Create Custom adapter
     "user_23": "Adyanna.Vargus@FusionInbox.com", //TC-177 Secret
     "user_24": "nawayo9666@javafs.com", //TC-133 Tag
-    "user_25": "test-play-25@outlook.com", //TC-142 Empty trash can
+    "user_25": "seyaxeg219@bankwen.com", //TC-142 Empty trash can
     "user_26": "test-play-26@outlook.com", //TC-144 Delete multiple
     "user_27": "sayawa9816@playfine.com", //TC-141 Restore & delete permanently
     "user_28": "seheya1228@en2ch.com", //TC-235 Logout Validation
     "user_29": "jicigo2229@emailkeep.com", //TC-238 Add Category to a test case
     "user_30": "test-play-30@play-isolated-7f3c9a.invalid", //TC-178 Record TC-RL-Add tag-Run RL- Validate RL Run
     "user_31": "rifehe6539@goldvester.com", //TC-243 Schedule RL
-    "user_32": "test-play-32@outlook.com", //TC-236 Add tag to a test case
+    "user_32": "lehehex496@bankwen.com", //TC-236 Add tag to a test case
     "user_33": "dafeh20801@playfine.com", //TC-229 Record a test case
     "user_34": "test-play-34@play-isolated-7f3c9a.invalid", //TC-223 Workspace Settings page
     "user_35": "yotefej222@macsnipe.com", //TC-176 Adapter
@@ -61,20 +61,20 @@ export const microsoftUsers = {
     "user_55": "hoyeka8846@playfine.com", //TC-252 Copy paste            Note: Don't use it for other test case
     "user_56": "test-play-56@outlook.com", //TC-256 Auto create pwd secret
     "user_57": "test-play-57@play-isolated-7f3c9a.invalid", //TC-291 Git connecter
-    "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
+    "user_58": "vaxog19256@bankwen.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
     "user_59": "mofica1084@drtall.com", // TC-219 Team                 Note: Don't use it for other test case
     "user_62": "rehinel267@agaexpress.com", //Nitik: TC-161 
     "user_64": "tolafe1571@goldvester.com", //Nitik: TC-162
     "reg_1": "ridel19884@goldvester.com", // TC-289 Context menu of a step
     "reg_3": "regression_kd_1@play-isolated-7f3c9a.invalid",  // TC-290 CRUD TC Status
-    "reg_10": "regression-user-10@outlook.com", //TC-296 Display User Name as Owner and Fallback to Email When User Name Is Unavailable
+    "reg_10": "havaho5188@boffweb.com", //TC-296 Display User Name as Owner and Fallback to Email When User Name Is Unavailable
     "reg_11": "wimaw80020@goldvester.com", // TC-304 Import playwright from file
      "reg_12": "costanza.bury@fusioninbox.com", // TC-305 Import test case using file
     "reg_13": "regression-user-jp-6@mailinator.com", //TC-306 Edit playwright step using chat
     "user_60": "talejes367@playfine.com", //TC-205 Salesforce connector
     "user_47": "hekiwa4699@hiringview.com", // TC-206 Workspace users tab
     "user_65": "koyicar122@digeros.com", // TC-226 Timeout
-    "user_69": "dogodof286@javafs.com", // TC-226 Timeout
+    "user_69": "yeyorek756@bankwen.com", // TC-226 Timeout
     "user_70": "gogaka7707@javafs.com", // TC-29 LLM chat working
     "user_37": "taxici4212@hopefunder.com", //TC-43 Folder-Create-Delete
     "user_42": "cabeyaf691@moblha.com", //TC-85 Source Control
@@ -83,6 +83,7 @@ export const microsoftUsers = {
     "user_74": "dikoxoc500@hopefunder.com", //TC-44 Invitation to alreadt existing user
     "user_75": "neraxiv383@moblha.com", //TC-47 Playwright-Modify-ExecuteTC
     "user_68": "Tyerra.Corona@FusionInbox.com", // TC-231 Secret Name
+    "user_76": "hdh5@usako.net"
 }
 
 export const passwords = {

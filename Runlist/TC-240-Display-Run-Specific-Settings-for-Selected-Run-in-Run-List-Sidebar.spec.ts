@@ -8,6 +8,7 @@ import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
 import { AddEnvToATestCase } from "@assets/Utilities/Add Env to a test case";
 import { BasicFlow } from "@assets/Utilities/Basic Flow";
 import { RunlistDefaultExecutionMode } from "@assets/Utilities/Runlist- Default Execution Mode";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -28,9 +29,11 @@ leapwork.variables.set("renamedAssetName", "renamed");
 leapwork.variables.set("envName", "Leapwork");
 leapwork.variables.set("envUrl", "https://leapwork.com");
 
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+
+
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00

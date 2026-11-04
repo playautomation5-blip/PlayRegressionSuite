@@ -1,9 +1,10 @@
 import { leapwork } from "./leapwork";
 
-import { teamName } from "@assets/Utilities/random-team";
+import { RandomTeam as teamName } from "@assets/Utilities/random-team";
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.variables.set("nameCompanyCom", "sagr@leapwork.com", leapwork.storage.LOCAL);
 const lw__nameCompanyCom = leapwork.variables.get("nameCompanyCom", leapwork.storage.LOCAL) as string;
@@ -24,9 +25,11 @@ leapwork.variables.set("assetType", "New test case");
 leapwork.variables.set("assetName", "created");
 leapwork.variables.set("renamedAssetName", "renamed");
 
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+
+
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00
@@ -47,11 +50,11 @@ await leapwork.step("Right-click the team 64512 item in the Leapwork Play explor
 //     await page.getByText('team').click({ button: 'right' });
 // }, { action: "click" });
 
-// ai-studio-step-id: pw1u6ee690
-await leapwork.step("Click Invite member in the team 57496 actions menu", async () => {
-    // Click div
-    await page.getByText('Invite member...').click();
-}, { action: "click" });
+// ai-studio-step-id: pw6jwzj000
+await leapwork.step("Click the \"+ Invite Team Member\" button in the Team Members section", async () => {
+    // Click span
+    await page.getByRole('button', { name: '+ Invite Team Member' }).click();
+}, { action: "click", relativeXpath: ".//div/div[2]/div[1]/div[2]/button/span" });
 
 // ai-studio-step-id: pw1x8pqqa0
 await leapwork.step("Click the Email field in the Invite Team Member dialog", async () => {
@@ -135,8 +138,3 @@ await leapwork.step("Click “Remove from Team” to remove Saksham Garg from th
     // Click button "Remove from Team"
     await page.getByRole('button', { name: 'Remove from Team' }).click();
 }, { action: "click" });
-
-// ai-studio-step-id: pwqq37j100
-await leapwork.step("Use test case: Delete Team", async () => {
-    return await DeleteTeam();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
