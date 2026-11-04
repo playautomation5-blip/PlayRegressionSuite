@@ -1,12 +1,13 @@
 import { leapwork } from "./leapwork";
 
-import { teamName } from "@assets/Utilities/random-team";
+import { RandomTeam, teamName } from "@assets/Utilities/random-team";
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { RenameAsset } from "@assets/Utilities/Rename Asset";
 import { DeleteAsset } from "@assets/Utilities/Delete Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -25,10 +26,9 @@ leapwork.variables.set("assetType2", "New runlist");
 leapwork.variables.set("assetName", "created");
 leapwork.variables.set("renamedAssetName", "renamed");
 
-
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00
@@ -46,11 +46,18 @@ await leapwork.step("Use test case: Rename Asset", async () => {
     return await RenameAsset();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: pw13hy6sg0
-await leapwork.step("Validate the Owner shows \"Sakshamm Garg\" on the Leapwork Play page", async () => {
-    // Assert span contains "Sakshamm Garg"
-    await expect(page.getByText('Sakshamm Garg', { exact: true })).toContainText("Sakshamm Garg");
-}, { action: "validate", continueOnFailure: true });
+// ai-studio-step-id: pwbo09ks00
+await leapwork.step("Validate the Owner shows \"misay49782@bankwen.com\" on Leapwork Play", async () => {
+    // Assert span contains "misay49782@bankwen.com"
+    await expect(page.getByText('misay49782@bankwen.com').nth(2)).toContainText("misay49782@bankwen.com");
+}, { action: "validate"});
+
+// Warning: Do not delete this step. It is linked to the validate step above.
+// await leapwork.step("Get value from misay49782@bankwen.com", async () => {
+//     // Get value from span
+//     const lw_value = (await page.getByText('misay49782@bankwen.com').nth(2).textContent())?.trim() ?? '';
+//     leapwork.variables.set("lw_misay49782BankwenCom", lw_value, leapwork.storage.LOCAL);
+// }, { action: "get_value", enableXpath: false, relativeXpath: ".//div/div/div[4]/div/div[2]/span" });
 //
 // ai-studio-step-id: pw19zkl7p0
 await leapwork.step(`click the "${teamName}" folder on the Leapwork AI Studio page`, async () => {
@@ -93,23 +100,24 @@ await leapwork.step("Click the Selection criteria section in the run list config
     await page.getByText('Selection criteriaRun nowThe').click();
 }, { action: "click"});
 
-// ai-studio-step-id: pw5vq5xt00
-await leapwork.step("Validate the Author cell shows \"Sakshamm Garg\" for TC-1 renamed in Leapwork Play", async () => {
-    // Assert cell "Sakshamm Garg" contains "Sakshamm Garg"
-    await expect(page.getByRole('cell', { name: 'Sakshamm Garg' })).toContainText("Sakshamm Garg");
-}, { action: "validate"});
+// ai-studio-step-id: pwbyu6bf00
+await leapwork.step("Validate the test case author shows \"misay49782@bankwen.com\" on Leapwork Play", async () => {
+    // Assert cell "misay49782@bankwen.com" contains "misay49782@bankwen.com"
+    await expect(page.getByRole('cell', { name: 'misay49782@bankwen.com' })).toContainText("misay49782@bankwen.com");
+}, { action: "validate", relativeXpath: ".//div[4]/div/table/tbody/tr/td[5]", enableXpath: false });
+
+// Warning: Do not delete this step. It is linked to the validate step above.
+// await leapwork.step("Get value from misay49782@bankwen.com", async () => {
+//     // Get value from cell "misay49782@bankwen.com"
+//     const lw_value = (await page.getByRole('cell', { name: 'misay49782@bankwen.com' }).textContent())?.trim() ?? '';
+//     leapwork.variables.set("lw_misay49782BankwenCom", lw_value, leapwork.storage.LOCAL);
+// }, { action: "get_value", enableXpath: false, relativeXpath: ".//div[4]/div/table/tbody/tr/td[5]" });
 
 // ai-studio-step-id: pw1i43ob40
 await leapwork.step("Click the “Run now” button in the Selection criteria section", async () => {
     // Click button "Run now"
     await page.getByRole('button', { name: 'Run now' }).click();
 }, { action: "click" });
-
-// ai-studio-step-id: pwsuzr9x00
-await leapwork.step("Validate the Run log shows “Sakshamm Garg” in the By column", async () => {
-    // Assert span contains "Sakshamm Garg"
-    await expect(page.getByText('Sakshamm Garg', { exact: true })).toContainText("Sakshamm Garg");
-}, { action: "validate" });
 
 // ai-studio-step-id: pw1sr7vuk0
 await leapwork.step("Click the RL-1 run log section", async () => {

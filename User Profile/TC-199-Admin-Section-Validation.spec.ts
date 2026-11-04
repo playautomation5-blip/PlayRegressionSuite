@@ -1,6 +1,8 @@
 import { leapwork } from "./leapwork";
 
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
+import { RandomTeam } from "@assets/Utilities/random-team";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -15,16 +17,22 @@ leapwork.configuration({
 leapwork.variables.set("userId", "aistudio_user_2");
 leapwork.variables.set("passwordId", "aistudio_user_2");
 
-// ai-studio-step-id: 949359a4
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1qh7j2z0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: QCvx1tiH
-await leapwork.step("Click the Automation Account (Personal) button", async () => {
+
+// await leapwork.step("Click the Automation Account (Personal) button", async () => {
+//     // Click span
+//     await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
+// }, { action: "click" });
+
+// ai-studio-step-id: pw1k25tp00
+await leapwork.step("Click the gamev24783@playfine.com (Personal) account menu", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
-}, { action: "click" });
+    await page.getByRole('button', { name: 'gamev24783@playfine.com (' }).click();
+}, { action: "click", relativeXpath: ".//div[3]/div[1]/div[2]/button[4]/span/span[1]" });
 
 // ai-studio-step-id: 1cZvCN8L
 await leapwork.step("Click the Admin Section link", async () => {
@@ -294,10 +302,22 @@ await leapwork.step("Validate the Product Control requests heading is shown on t
     await expect(page.getByRole('heading', { name: 'Product Control requests' })).toContainText("Product Control requests");
 }, { action: "validate" });
 
-// ai-studio-step-id: pw1c6w7ny0
-await leapwork.step("Validate the Timestamp column header shows 'Timestamp' on the Leapwork AI Studio admin page", async () => {
+// ai-studio-step-id: pwtdkueu00
+await leapwork.step("Select \"Last 30 days\" from Time rangeLast hourTodayLast 7 daysLast 30 days", async () => {
+    // Click combobox "Time range"
+    await page.getByLabel('Time rangeLast hourTodayLast').selectOption({ label: "Last 30 days" });
+}, { action: "click" });
+
+// ai-studio-step-id: pw167tz6u0
+await leapwork.step("Validate the Leapwork Play Product Control requests table has a “Timestamp” header", async () => {
     // Assert columnheader "Timestamp" contains "Timestamp"
     await expect(page.getByRole('columnheader', { name: 'Timestamp' })).toContainText("Timestamp");
+}, { action: "validate"});
+
+// ai-studio-step-id: pwynp28h00
+await leapwork.step("Validate the “User” column header shows “User” on the Leapwork Play page", async () => {
+    // Assert columnheader "User" contains "User"
+    await expect(page.getByRole('columnheader', { name: 'User' })).toContainText("User");
 }, { action: "validate" });
 
 // ai-studio-step-id: OFleLSk6
