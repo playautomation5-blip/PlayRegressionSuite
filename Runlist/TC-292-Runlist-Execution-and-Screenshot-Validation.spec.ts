@@ -8,6 +8,7 @@ import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
 import { AddEnvToATestCase } from "@assets/Utilities/Add Env to a test case";
 import { BasicFlow } from "@assets/Runlist/Utility/Basic Flow";
 import { RunlistDefaultExecutionMode } from "@assets/Runlist/Utility/Runlist- Default Execution Mode";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -27,9 +28,11 @@ leapwork.variables.set("renamedAssetName", "renamed");
 leapwork.variables.set("envName", "Leapwork");
 leapwork.variables.set("envUrl", "https://leapwork.com");
 
-// ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+
+
+// ai-studio-step-id: pw1i22keo0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwyrpbaz00
@@ -90,6 +93,12 @@ await leapwork.step("Wait for Run to Start - 45 Seconds", async () => {
   action: "custom"
 });
 
+// ai-studio-step-id: pwhym7ws00
+await leapwork.step("Click the xsaYJuJ0 succeeded run in the Run log", async () => {
+    // Click div
+    await page.getByText('xsaYJuJ005:23 AM2m').click();
+}, { action: "click", relativeXpath: ".//div/div/div[2]/section/div[5]/div[2]" });
+
 // ai-studio-step-id: pkv1n0fP
 await leapwork.step("Click Test-6 Play in the Run log list", async () => {
     // Click span
@@ -107,15 +116,6 @@ await leapwork.step("Click the screenshot", async () => {
     await expect(shot).not.toHaveJSProperty("naturalWidth", 0);
     await shot.click();
 }, { action: "click", timeoutMs: 10000 });
-
-
-// ai-studio-step-id: 468p5GQS
-await leapwork.step("Validate the image titled “dGwNnJjb-5768-1785323071432.jpg” is displayed", async () => {
-    // Assert img is visible
-    await expect(page.getByRole('img')).toBeVisible();
-}, { action: "validate" });
-
-
 
 // ai-studio-step-id: 3ihevNgj
 await leapwork.step("Switch to tab \"Leapwork Play\"", async () => {

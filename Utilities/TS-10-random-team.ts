@@ -21,7 +21,7 @@ export const microsoftUsers = {
    "aistudio_user_2": `gamev24783@playfine.com`, // TC-201 Account & Settings - Credit
     "aistudio_user_3": "cekas29568@ofags.com", // workspace change validation
     "aistudio_user_4": "cojiki4586@ofags.com", //TC-224 BYOK-Create-Edit-Delete
-    "user_6": "test-play-6@play-isolated-7f3c9a.invalid", //TC-103 Agent-Create-Delete
+    "user_6": "misay49782@bankwen.com", //TC-103 Agent-Create-Delete
     "user_7": `kanokim415@goldvester.com`, //TC-164 Create Duplicate
     "user_8": "test-play-8@outlook.com", //TC-138 KB to BP creation validation
     "user_9": "test-play-9@outlook.com", //TC-102 Folder-Create-Delete
@@ -40,14 +40,14 @@ export const microsoftUsers = {
     "user_22": "test-play-22@outlook.com", //TC-247 Create Custom adapter
     "user_23": "Adyanna.Vargus@FusionInbox.com", //TC-177 Secret
     "user_24": "wacoga9322@playfine.com", //TC-133 Tag
-    "user_25": "test-play-25@outlook.com", //TC-142 Empty trash can
+    "user_25": "misay49782@bankwen.com", //TC-142 Empty trash can
     "user_26": "test-play-26@outlook.com", //TC-144 Delete multiple
     "user_27": "jawil87601@playfine.com", //TC-141 Restore & delete permanently
     "user_28": "seheya1228@en2ch.com", //TC-235 Logout Validation
     "user_29": "jicigo2229@emailkeep.com", //TC-238 Add Category to a test case
     "user_30": "test-play-30@play-isolated-7f3c9a.invalid", //TC-178 Record TC-RL-Add tag-Run RL- Validate RL Run
     "user_31": `rifehe6539@goldvester.com`, //TC-243 Schedule RL
-    "user_32": "test-play-32@outlook.com", //TC-236 Add tag to a test case
+    "user_32": "yogas85331@boffweb.com", //TC-236 Add tag to a test case
     "user_33": "geheke5781@playfine.com", //TC-229 Record a test case
     "user_34": "test-play-34@play-isolated-7f3c9a.invalid", //TC-223 Workspace Settings page
     "user_35": "yotefej222@macsnipe.com", //TC-176 Adapter
@@ -75,7 +75,7 @@ export const microsoftUsers = {
     "reg_1": `ridel19884@goldvester.com`, // TC-331 Context menu of a step
     "reg_2":"diheca5706@playfine.com", //TC-234 Run execution cleanup after recorder starts
     "reg_3": "regression_kd_1@play-isolated-7f3c9a.invalid",  // TC-290 CRUD TC Status
-    "reg_10": "regression-user-10@outlook.com", //TC-296 Display User Name as Owner and Fallback to Email When User Name Is Unavailable
+    "reg_10": "misay49782@bankwen.com", //TC-296 Display User Name as Owner and Fallback to Email When User Name Is Unavailable
     "reg_11": `wimaw80020@goldvester.com`, // TC-304 Import playwright from file
     "reg_12": `costanza.bury@fusioninbox.com`, // TC-372 Excel file upload
     "reg_13": "regression-user-jp-6@mailinator.com", //TC-306 Edit playwright step using chat

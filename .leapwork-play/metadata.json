@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-03T12:03:36.579Z",
+  "generatedAt": "2026-11-04T06:53:43.260Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -1125,6 +1125,13 @@
           "repoPath": "Utilities/TS-12-ConstantORExtensions.ts"
         },
         {
+          "assetId": 52351,
+          "displayId": "TC-375",
+          "name": "Create Account with Email",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-375-Create-Account-with-Email.spec.ts"
+        },
+        {
           "assetId": 18430,
           "displayId": "TC-207",
           "name": "Create New Asset",
@@ -1242,6 +1249,13 @@
           "name": "Run to here",
           "kind": "test-case",
           "repoPath": "Utilities/TC-284-Run-to-here.spec.ts"
+        },
+        {
+          "assetId": 52350,
+          "displayId": "TC-374",
+          "name": "Set password for login",
+          "kind": "test-case",
+          "repoPath": "Utilities/TC-374-Set-password-for-login.spec.ts"
         },
         {
           "assetId": 22490,
@@ -2383,6 +2397,22 @@
       "displayId": "TC-347",
       "name": "Email Password Login",
       "repoPath": "Utilities/TC-347-Email-Password-Login.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 52350,
+      "assetKind": "test-case",
+      "displayId": "TC-374",
+      "name": "Set password for login",
+      "repoPath": "Utilities/TC-374-Set-password-for-login.spec.ts",
+      "parentAssetId": 18385
+    },
+    {
+      "assetId": 52351,
+      "assetKind": "test-case",
+      "displayId": "TC-375",
+      "name": "Create Account with Email",
+      "repoPath": "Utilities/TC-375-Create-Account-with-Email.spec.ts",
       "parentAssetId": 18385
     },
     {
