@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-03T12:05:11.601Z",
+  "generatedAt": "2026-11-04T11:03:56.674Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -620,6 +620,13 @@
           "name": "Record TC-RL-Add tag-Run RL- Validate RL Run",
           "kind": "test-case",
           "repoPath": "Runlist/TC-130-Record-TC-RL-Add-tag-Run-RL-Validate-RL-Run.spec.ts"
+        },
+        {
+          "assetId": 15754,
+          "displayId": "TC-138",
+          "name": "Runlist Execution and Screenshot Validation",
+          "kind": "test-case",
+          "repoPath": "Runlist/TC-138-Runlist-Execution-and-Screenshot-Validation.spec.ts"
         },
         {
           "assetId": 15780,
@@ -1578,6 +1585,14 @@
       "displayId": "TC-130",
       "name": "Record TC-RL-Add tag-Run RL- Validate RL Run",
       "repoPath": "Runlist/TC-130-Record-TC-RL-Add-tag-Run-RL-Validate-RL-Run.spec.ts",
+      "parentAssetId": 15416
+    },
+    {
+      "assetId": 15754,
+      "assetKind": "test-case",
+      "displayId": "TC-138",
+      "name": "Runlist Execution and Screenshot Validation",
+      "repoPath": "Runlist/TC-138-Runlist-Execution-and-Screenshot-Validation.spec.ts",
       "parentAssetId": 15416
     },
     {
