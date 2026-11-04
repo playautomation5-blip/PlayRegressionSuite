@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { RandomTeam , password, passwords, microsoftUsers } from "@assets/Utilities/random-team";
+import { RandomTeam as password, passwords, microsoftUsers } from "@assets/Utilities/random-team";
 import { AddCompany } from "@assets/Utilities/Add company";
 
 leapwork.configuration({

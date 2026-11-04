@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { RandomTeam , password, passwords, microsoftUsers } from "@assets/Utilities/random-team";
+import { RandomTeam as password, passwords, microsoftUsers } from "@assets/Utilities/random-team";
 import { SetPasswordForLogin } from "@assets/Utilities/Set password for login";
 import { CreateAccountWithEmail } from "@assets/Utilities/Create Account with Email";
 
