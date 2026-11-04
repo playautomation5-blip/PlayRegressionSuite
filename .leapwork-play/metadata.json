@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-04T11:03:56.674Z",
+  "generatedAt": "2026-11-04T11:07:46.106Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -742,6 +742,13 @@
           "name": "Tag",
           "kind": "test-case",
           "repoPath": "Team configuration/TC-56-Tag.spec.ts"
+        },
+        {
+          "assetId": 15730,
+          "displayId": "TC-136",
+          "name": "Update \"Delete\" Action to \"Remove from Team\" for Team Members",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-136-Update-Delete-Action-to-Remove-from-Team-for-Team-Members.spec.ts"
         }
       ]
     },
@@ -1625,6 +1632,14 @@
       "displayId": "TC-125",
       "name": "Crud TC Status",
       "repoPath": "Team configuration/TC-125-Crud-TC-Status.spec.ts",
+      "parentAssetId": 8313
+    },
+    {
+      "assetId": 15730,
+      "assetKind": "test-case",
+      "displayId": "TC-136",
+      "name": "Update \"Delete\" Action to \"Remove from Team\" for Team Members",
+      "repoPath": "Team configuration/TC-136-Update-Delete-Action-to-Remove-from-Team-for-Team-Members.spec.ts",
       "parentAssetId": 8313
     },
     {
