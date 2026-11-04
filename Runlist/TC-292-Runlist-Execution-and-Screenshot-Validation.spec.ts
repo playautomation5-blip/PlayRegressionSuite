@@ -99,11 +99,10 @@ await leapwork.step("Click the xsaYJuJ0 succeeded run in the Run log", async () 
     await page.getByText('xsaYJuJ005:23 AM2m').click();
 }, { action: "click", relativeXpath: ".//div/div/div[2]/section/div[5]/div[2]" });
 
-// ai-studio-step-id: pkv1n0fP
-await leapwork.step("Click Test-6 Play in the Run log list", async () => {
-    // Click span
-    await page.getByText('Test-6 Play', { exact: true }).click();
-}, { action: "click" });
+// await leapwork.step("Click Test-6 Play in the Run log list", async () => {
+//     // Click span
+//     await page.getByText('Test-6 Play', { exact: true }).click();
+// }, { action: "click" });
 
 // ai-studio-step-id: pwc27fij00
 await leapwork.step("Validate the Leapwork Play run log screenshot loaded", async () => {

@@ -67,7 +67,7 @@ export const microsoftUsers = {
     "user_55": "hoyeka8846@playfine.com", //TC-252 Copy paste            Note: Don't use it for other test case
     "user_56": "xorohi9937@emailkeep.com", //TC-256 Auto create pwd secret
     "user_57": "test-play-57@play-isolated-7f3c9a.invalid", //TC-291 Git connecter
-    "user_58": "test-play-58@outlook.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
+    "user_58": "fodawiy833@boffweb.com", //TC-297  Update "Delete" Action to "Remove from Team" for Team Members
     "user_59": "mofica1084@drtall.com", // TC-335 Team                 Note: Don't use it for other test case
     "user_60": "talejes367@playfine.com", //TC-205 Salesforce connector
     "user_62": "noholih746@boffweb.com", //TC-360 Git Connector
@@ -88,6 +88,7 @@ export const microsoftUsers = {
     "user_67": "jikaces312@moblha.com", //TC-175 Source control
     "user_71": "taxici4212@hopefunder.com", // TC-102 Folder-Create-Delete
     "user_72": "pepito4562@playfine.com", //TC-203 Enable LLM Over Native Recorder
+    "user_73" : "hdh5@usako.net"
 }
 
 export const passwords = {
