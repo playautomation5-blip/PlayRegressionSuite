@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-04T11:10:23.468Z",
+  "generatedAt": "2026-11-04T11:16:06.740Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -800,6 +800,13 @@
           "name": "Add tag to a test case",
           "kind": "test-case",
           "repoPath": "Test Case/TC-141-Add-tag-to-a-test-case.spec.ts"
+        },
+        {
+          "assetId": 15825,
+          "displayId": "TC-146",
+          "name": "Display User Name as Owner and Fallback to Email When User Name Is Unavailable",
+          "kind": "test-case",
+          "repoPath": "Test Case/TC-146-Display-User-Name-as-Owner-and-Fallback-to-Email-When-User-Name-Is-Unavailable.spec.ts"
         },
         {
           "assetId": 15889,
@@ -1727,6 +1734,14 @@
       "displayId": "TC-141",
       "name": "Add tag to a test case",
       "repoPath": "Test Case/TC-141-Add-tag-to-a-test-case.spec.ts",
+      "parentAssetId": 15413
+    },
+    {
+      "assetId": 15825,
+      "assetKind": "test-case",
+      "displayId": "TC-146",
+      "name": "Display User Name as Owner and Fallback to Email When User Name Is Unavailable",
+      "repoPath": "Test Case/TC-146-Display-User-Name-as-Owner-and-Fallback-to-Email-When-User-Name-Is-Unavailable.spec.ts",
       "parentAssetId": 15413
     },
     {
