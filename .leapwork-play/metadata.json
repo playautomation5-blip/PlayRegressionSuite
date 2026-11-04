@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-04T11:16:06.740Z",
+  "generatedAt": "2026-11-04T11:18:57.108Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -866,6 +866,13 @@
           "name": "Delete multiple",
           "kind": "test-case",
           "repoPath": "Trash Can/TC-97-Delete-multiple.spec.ts"
+        },
+        {
+          "assetId": 15857,
+          "displayId": "TC-148",
+          "name": "Empty trash can",
+          "kind": "test-case",
+          "repoPath": "Trash Can/TC-148-Empty-trash-can.spec.ts"
         },
         {
           "assetId": 9723,
@@ -1791,6 +1798,14 @@
       "name": "Timeout",
       "repoPath": "Timeout/TC-183-Timeout.spec.ts",
       "parentAssetId": 23039
+    },
+    {
+      "assetId": 15857,
+      "assetKind": "test-case",
+      "displayId": "TC-148",
+      "name": "Empty trash can",
+      "repoPath": "Trash Can/TC-148-Empty-trash-can.spec.ts",
+      "parentAssetId": 9683
     },
     {
       "assetId": 9721,
