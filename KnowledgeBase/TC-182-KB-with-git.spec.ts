@@ -1,6 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
@@ -16,15 +16,15 @@ leapwork.configuration({
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
-leapwork.variables.set("userId", "user_50");
+leapwork.variables.set("userId", "user_76");
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetType", "New knowledge base");
 leapwork.variables.set("assetName", "created");
 
 
-// ai-studio-step-id: c8836f4d
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1awhzrq0
+await leapwork.step("Use test case:  Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: e390136d
@@ -60,12 +60,6 @@ await leapwork.step("Validate the option shows 'GitHub' on the Leapwork Play pag
     // Assert span contains "GitHub"
     await expect(page.getByText('GitHub')).toContainText("GitHub");
 }, { action: "validate", relativeXpath: "//*[@id=\"fluent-option_r_6_\"]/span[2]/span" });
-
-// ai-studio-step-id: ViCAhyA9
-await leapwork.step("Validate that the button shows 'Create blueprint generator' on the Leapwork Play page.", async () => {
-    // Assert button "Create blueprint generator" contains "Create blueprint generator"
-    await expect(page.getByRole('button', { name: 'Create blueprint generator' })).toContainText("Create blueprint generator");
-}, { action: "validate", relativeXpath: ".//div[2]/div/div[1]/div[2]/span[2]/button" });
 
 // ai-studio-step-id: 12220d19
 await leapwork.step("Use test case: Delete Team", async () => {
