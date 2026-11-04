@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-04T11:18:57.108Z",
+  "generatedAt": "2026-11-04T11:21:57.902Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -902,6 +902,13 @@
           "name": "Account & Settings - Credit",
           "kind": "test-case",
           "repoPath": "User Profile/TC-58-Account-&-Settings-Credit.spec.ts"
+        },
+        {
+          "assetId": 15902,
+          "displayId": "TC-151",
+          "name": "Admin Section - Validation",
+          "kind": "test-case",
+          "repoPath": "User Profile/TC-151-Admin-Section-Validation.spec.ts"
         },
         {
           "assetId": 15728,
@@ -1845,6 +1852,14 @@
       "displayId": "TC-134",
       "name": "Admin Section - Whats new",
       "repoPath": "User Profile/TC-134-Admin-Section-Whats-new.spec.ts",
+      "parentAssetId": 8314
+    },
+    {
+      "assetId": 15902,
+      "assetKind": "test-case",
+      "displayId": "TC-151",
+      "name": "Admin Section - Validation",
+      "repoPath": "User Profile/TC-151-Admin-Section-Validation.spec.ts",
       "parentAssetId": 8314
     },
     {
