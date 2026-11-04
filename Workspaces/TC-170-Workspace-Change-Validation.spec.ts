@@ -1,5 +1,6 @@
 import { leapwork } from "./leapwork";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { EnterWorkspace } from "@assets/Workspaces/Utilities/Enter Workspace";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
@@ -17,51 +18,20 @@ leapwork.configuration({
 leapwork.variables.set("text", "Automation", leapwork.storage.LOCAL);
 const lw__text = leapwork.variables.get("text", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("userId", "aistudio_user_3");
-leapwork.variables.set("passwordId", "aistudio_user_3");
+leapwork.variables.set("userId", "user_73");
 leapwork.variables.set("teamName", lw__text);
 
 // ai-studio-step-id: f3e53f9f
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-leapwork.variables.set("newWorkSpace", "AiStudio03's Workspace (AI Builder)");
-leapwork.variables.set("targetWorkspace", "AiStudio03 (Personal)")
-
-// ai-studio-step-id: 7436b5b4
-await leapwork.step("Use test case: Enter Workspace", async () => {
-    return await EnterWorkspace();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
-
-// ai-studio-step-id: a0be6e65
-await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
-    return await DeleteCreateRenameTeam();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
-
-leapwork.variables.set("newWorkSpace", "Manisha's Workspace (AI Builder)");
-leapwork.variables.set("targetWorkspace", "AiStudio03 (Manisha's Workspace)")
-
-// ai-studio-step-id: pw83bwdz00
-await leapwork.step("Use test case: Enter Workspace", async () => {
-    return await EnterWorkspace();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
-
-// ai-studio-step-id: xxn6ZMtm
-await leapwork.step("Click the Collapse folder button for My Team", async () => {
-    // Click button "Collapse folder"
-    await page.getByRole('button', { name: 'Collapse folder' }).first().click();
-}, { action: "click" });
-
-leapwork.variables.set("newWorkSpace", "AiStudio03's Workspace (AI Builder)");
-leapwork.variables.set("targetWorkspace", "AiStudio03 (Personal)")
+leapwork.variables.set("currentWorkspace", "hdh5@usako.net (Personal)");
+leapwork.variables.set("targetWorkspace", "hdh5@usako.net (thexux's Workspace)AI Builder");
+leapwork.variables.set("newWorkSpace", "thexux's Workspace (AI Builder)")
 
 // ai-studio-step-id: pw12jn21d0
 await leapwork.step("Use test case: Enter Workspace", async () => {
     return await EnterWorkspace();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: ca8a24e1
-await leapwork.step("Use test case: Delete Team", async () => {
-    return await DeleteTeam();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
