@@ -73,7 +73,7 @@ await leapwork.step("Click the Token field in the New connector form", async () 
 // ai-studio-step-id: pw1f56ao90
 await leapwork.step("Fill the Token field with a GitHub personal access token", async () => {
     // Fill textbox "Token Token requirements"
-    await page.getByRole('textbox', { name: 'Token Token requirements' }).fill(leapwork.variables.getSecret("pwd_yQCSI6Ig"));
+    await page.getByRole('textbox', { name: 'Token Token requirements' }).fill(lw__personalAccessToken);
 }, { action: "input", relativeXpath: "//*[@id=\"source-control-token\"]" });
 
 // ai-studio-step-id: pw19xop300
