@@ -21,7 +21,7 @@ await leapwork.step("Right-click the 3rd step", async () => {
 // ai-studio-step-id: pw16dg7v70
 await leapwork.step("Click Run in the step context menu", async () => {
     // Click span
-    await page.locator('span').filter({ hasText: 'Run' }).nth(1).click();
+    await page.locator('span').filter({ hasText: 'Run' }).nth(3).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw1yml0ui0
