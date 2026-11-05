@@ -84,7 +84,7 @@ await leapwork.step("Click the Token field in the New connector form", async () 
 // ai-studio-step-id: pwifhmgd00
 await leapwork.step("Fill the Personal access token field in the New connector dialog", async () => {
     // Fill textbox "Token Token requirements"
-    await page.getByRole('textbox', { name: 'Token Token requirements' }).fill(leapwork.variables.getSecret("lw__personalAccessToken"));
+    await page.getByRole('textbox', { name: 'Token Token requirements' }).fill(lw__personalAccessToken);
 }, { action: "input"});
 
 // ai-studio-step-id: pw18sywif0
