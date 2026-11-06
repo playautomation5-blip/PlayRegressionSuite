@@ -26,9 +26,9 @@ await leapwork.step("Use test case: Login", async () => {
     return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-leapwork.variables.set("currentWorkspace", "hdh5@usako.net (Personal)");
-leapwork.variables.set("targetWorkspace", "hdh5@usako.net (thexux's Workspace)AI Builder");
-leapwork.variables.set("newWorkSpace", "thexux's Workspace (AI Builder)")
+leapwork.variables.set("currentWorkspace", "hdh5@usako.net (Personal)AI Builder");
+leapwork.variables.set("targetWorkspace", "hdh5@usako.net (tmark's Workspace)AI Builder");
+leapwork.variables.set("newWorkSpace", "tmark's Workspace (AI Builder)")
 
 // ai-studio-step-id: pw12jn21d0
 await leapwork.step("Use test case: Enter Workspace", async () => {
