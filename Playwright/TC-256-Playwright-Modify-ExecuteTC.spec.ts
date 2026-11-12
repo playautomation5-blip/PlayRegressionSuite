@@ -92,7 +92,7 @@ await leapwork.step("Click the Connect button to connect to the Google Chromium 
 // ai-studio-step-id: scfvblL9
 await leapwork.step("Click the Run button in the Leapwork Play test case.", async () => {
     // Click button "Run"
-    await page.getByRole('button', { name: 'Run' }).click();
+    await page.getByRole('button', { name: 'Run', exact: true }).click();
 }, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]" });
 
 // ai-studio-step-id: pwe8sceg00
