@@ -313,12 +313,12 @@ await leapwork.step("Click Insert step in the test case steps panel", async () =
     await page.getByRole('button', { name: 'Insert step', exact: true }).click();
 }, { action: "click" });
 
-// ai-studio-step-id: pw1yiv4490
-await leapwork.step("Click the Run button in the Leapwork Play test case.", async () => {
+// ai-studio-step-id: pwrqw59600
+await leapwork.step("Click the Run button for the test case", async () => {
     // Click button "Run"
-    await page.getByRole('button', { name: 'Run' }).click();
+    await page.getByRole('button', { name: 'Run', exact: true }).click();
     await page.waitForTimeout(45000);
-}, { action: "click" });
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]" });
 
 // ai-studio-step-id: pw1c6r3o70
 await leapwork.step("Validate that all steps are executed", async () => {
