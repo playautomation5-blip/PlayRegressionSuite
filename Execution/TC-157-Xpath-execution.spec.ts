@@ -62,7 +62,7 @@ await leapwork.step("Click Connect to launch the Google Chromium browser in Nort
 // ai-studio-step-id: pw1bw2oe10
 await leapwork.step("Click the Run button to execute the test case", async () => {
     // Click button "Run"
-    await page.getByRole('button', { name: 'Run' }).click();
+    await page.getByRole('button', { name: 'Run', exact:true }).click();
 }, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]" });
 
 // ai-studio-step-id: pw1guxq120
