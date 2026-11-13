@@ -111,7 +111,7 @@ await leapwork.step("Click the Add Credits button in the Credit adjustment panel
 // ai-studio-step-id: pwqx6cjc00
 await leapwork.step("Click the Automation Account (Personal) account menu button", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Automation Account (Personal' }).click();
+    await page.getByRole('button', { name: `${lw__searchByEmail2} (Personal)` }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw8oratc00
