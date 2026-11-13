@@ -154,10 +154,12 @@ await leapwork.step("Wait for Run to Start - 45 Seconds", async () => {
 });
 
 // ai-studio-step-id: pw1t4z1bs0
-await leapwork.step("Click the succeeded run ID Ge44ZdYA in the Run log dialog", async () => {
-    // Click span
-    await page.getByText('Ge44ZdYA').click();
-}, { action: "click", relativeXpath: ".//div/div[2]/section/div[5]/div[2]/span[3]" });
+await leapwork.step("Click a succeeded run in the Run log", async () => {
+    await page.locator(".rl-run")
+        .filter({ hasText: "succeeded" })
+        .first()
+        .click();
+}, { action: "click" });
 
 // ai-studio-step-id: pwc27fij00
 await leapwork.step("Validate the Leapwork Play run log screenshot loaded", async () => {
