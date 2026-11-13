@@ -25,7 +25,7 @@ await leapwork.step(`Click the "${newWorkSpace}" workspace option`, async () => 
 // ai-studio-step-id: pw1b960e70
 await leapwork.step("Click the main editor area in Leapwork Play", async () => {
     // Click div
-    await page.locator('.editor-main').click();
+    await page.getByText('Complete the getting ready').click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw1u6n04s0
