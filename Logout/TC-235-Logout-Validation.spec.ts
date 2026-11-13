@@ -1,6 +1,7 @@
 import { leapwork } from "./leapwork";
 
 import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
+import { EmptyTrashCan } from "@assets/Trash Can/Empty trash can";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -19,10 +20,10 @@ await leapwork.step("Use test case: Email Password Login", async () => {
     return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: pw1ixa58o0
-await leapwork.step("Click the Test-28 Play (Personal) AI Builder account menu", async () => {
+// ai-studio-step-id: pw1x6qivh0
+await leapwork.step("Click the account menu for seheya1228@en2ch.com (Personal)", async () => {
     // Click span
-    await page.getByRole('button', { name: 'Test-28 Play (Personal) AI' }).click();
+    await page.getByRole('button', { name: 'seheya1228@en2ch.com (' }).click();
 }, { action: "click", relativeXpath: ".//div[3]/div[1]/div[2]/button[4]/span/span[1]" });
 
 // ai-studio-step-id: Bq3DoksX
