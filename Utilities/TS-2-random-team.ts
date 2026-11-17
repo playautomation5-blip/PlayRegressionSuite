@@ -83,7 +83,8 @@ export const microsoftUsers = {
     "user_74": "dikoxoc500@hopefunder.com", //TC-44 Invitation to alreadt existing user
     "user_75": "neraxiv383@moblha.com", //TC-47 Playwright-Modify-ExecuteTC
     "user_68": "Tyerra.Corona@FusionInbox.com", // TC-231 Secret Name
-    "user_76": "hdh5@usako.net"
+    "user_76": "hdh5@usako.net",
+    "user_77": "vabolo2846@bwingmedia.com" //TC-239 
 }
 
 export const passwords = {

@@ -4,7 +4,7 @@ import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { RandomTeam as teamName } from "@assets/Utilities/random-team";
 import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
-leapwork.variables.set("userId", "user_69");
+leapwork.variables.set("userId", "user_77");
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("envName", "Leapwork");
 leapwork.variables.set("envUrl", "https://demoapps.leapwork.ai/retail/");
@@ -40,11 +40,23 @@ await leapwork.step("Click the Explorer button in the left navigation menu", asy
 }, { action: "click" });
 
 
-// ai-studio-step-id: pw9mfwyy00
-await leapwork.step("Double-click the TC-2 test case in Leapwork Play", async () => {
-    // Double-click "Test Case"
-    await page.getByText('TC-2').dblclick();
-}, { action: "dblclick" });
+// ai-studio-step-id: pwhbd95900
+await leapwork.step("Click the Explorer button in Leapwork Play.", async () => {
+    // Click button "Explorer"
+    await page.getByRole('button', { name: 'Explorer' }).click();
+}, { action: "click", relativeXpath: ".//div[3]/div[3]/div[1]/div[1]/div/button[@aria-label=\"Explorer\"]", continueOnFailure: true });
+
+// ai-studio-step-id: pwu82gm400
+await leapwork.step("Click the Explorer button in Leapwork Play.", async () => {
+    // Click button "Explorer"
+    await page.getByRole('button', { name: 'Explorer' }).click();
+}, { action: "click", relativeXpath: ".//div[3]/div[3]/div[1]/div[1]/div/button[@aria-label=\"Explorer\"]", continueOnFailure: true });
+
+// ai-studio-step-id: pwpavuzj00
+await leapwork.step("Double-click the TC-2 “New test case” item", async () => {
+    // Double-click "New test case"
+    await page.getByText('TC-').dblclick();
+}, { action: "dblclick", relativeXpath: ".//div[2]/div[1]/div[2]/div/div/span[3]" });
 
 // ai-studio-step-id: pweuclfd00
 await leapwork.step("Click the Explorer button", async () => {
