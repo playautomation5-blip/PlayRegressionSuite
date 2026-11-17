@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-04T06:53:43.260Z",
+  "generatedAt": "2026-11-17T08:28:18.368Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -735,6 +735,13 @@
               "repoPath": "Runlist/Utility/TC-295-Runlist-Default-Execution-Mode.spec.ts"
             }
           ]
+        },
+        {
+          "assetId": 57656,
+          "displayId": "TC-390",
+          "name": "Display Run-Specific Settings for Selected Run in Run List Sidebar",
+          "kind": "test-case",
+          "repoPath": "Runlist/TC-390-Display-Run-Specific-Settings-for-Selected-Run-in-Run-List-Sidebar.spec.ts"
         },
         {
           "assetId": 10066,
@@ -1925,6 +1932,14 @@
       "displayId": "TC-292",
       "name": "Runlist Execution and Screenshot Validation",
       "repoPath": "Runlist/TC-292-Runlist-Execution-and-Screenshot-Validation.spec.ts",
+      "parentAssetId": 10065
+    },
+    {
+      "assetId": 57656,
+      "assetKind": "test-case",
+      "displayId": "TC-390",
+      "name": "Display Run-Specific Settings for Selected Run in Run List Sidebar",
+      "repoPath": "Runlist/TC-390-Display-Run-Specific-Settings-for-Selected-Run-in-Run-List-Sidebar.spec.ts",
       "parentAssetId": 10065
     },
     {
