@@ -88,7 +88,9 @@ export const microsoftUsers = {
     "user_67": "jikaces312@moblha.com", //TC-175 Source control
     "user_71": "taxici4212@hopefunder.com", // TC-102 Folder-Create-Delete
     "user_72": "pepito4562@playfine.com", //TC-203 Enable LLM Over Native Recorder
-    "user_73" : "hdh5@usako.net"
+    "user_73" : "hdh5@usako.net",
+    "user_74" : "6h4g2f@usako.net",
+    "user_75" : "yadece2826@artegin.com"
 }
 
 export const passwords = {
