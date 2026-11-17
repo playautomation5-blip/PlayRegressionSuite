@@ -90,7 +90,8 @@ export const microsoftUsers = {
     "user_72": "pepito4562@playfine.com", //TC-203 Enable LLM Over Native Recorder
     "user_73" : "hdh5@usako.net",
     "user_74" : "6h4g2f@usako.net",
-    "user_75" : "yadece2826@artegin.com"
+    "user_75" : "yadece2826@artegin.com",
+    "user_77" : "rexofid649@bwingmedia.com" // 391
 }
 
 export const passwords = {

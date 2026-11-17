@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-17T08:28:18.368Z",
+  "generatedAt": "2026-11-17T09:04:23.351Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -978,6 +978,13 @@
           "name": "Record a test Case",
           "kind": "test-case",
           "repoPath": "Test Case/TC-229-Record-a-test-Case.spec.ts"
+        },
+        {
+          "assetId": 57687,
+          "displayId": "TC-391",
+          "name": "Show Failure Reason When Test Case Fails Before Leapwork Steps Execute",
+          "kind": "test-case",
+          "repoPath": "Test Case/TC-391-Show-Failure-Reason-When-Test-Case-Fails-Before-Leapwork-Steps-Execute.spec.ts"
         }
       ]
     },
@@ -2124,6 +2131,14 @@
       "displayId": "TC-296",
       "name": "Display User Name as Owner and Fallback to Email When User Name Is Unavailable",
       "repoPath": "Test Case/TC-296-Display-User-Name-as-Owner-and-Fallback-to-Email-When-User-Name-Is-Unavailable.spec.ts",
+      "parentAssetId": 19724
+    },
+    {
+      "assetId": 57687,
+      "assetKind": "test-case",
+      "displayId": "TC-391",
+      "name": "Show Failure Reason When Test Case Fails Before Leapwork Steps Execute",
+      "repoPath": "Test Case/TC-391-Show-Failure-Reason-When-Test-Case-Fails-Before-Leapwork-Steps-Execute.spec.ts",
       "parentAssetId": 19724
     },
     {
