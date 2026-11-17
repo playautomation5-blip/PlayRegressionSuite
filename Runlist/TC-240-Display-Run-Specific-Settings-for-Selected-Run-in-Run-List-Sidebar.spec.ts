@@ -142,25 +142,17 @@ await leapwork.step("Click the “Random” selection criterion under “Filter�
 
 // ai-studio-step-id: oyyCyx7g
 await leapwork.step("Click the “Run now” button in the Selection criteria section", async () => {
-    // Click button "Run now"
-    await page.getByRole('button', { name: 'Run now' }).click();
+    await page.getByRole("button", { name: "Run now" }).click();
+    await page.waitForTimeout(45000);
 }, { action: "click" });
 
 // ai-studio-step-id: pw48phnh00
-await leapwork.step("Click the running Test-6 Play run in the Run log", async () => {
+await leapwork.step("Click a succeeded run in the Run log", async () => {
     await page.locator(".rl-run")
-        .filter({ hasText: "Test-6 Play" })
+        .filter({ hasText: "succeeded" })
+        .first()
         .click();
-}, {
-    action: "click"
-});
-
-// ai-studio-step-id: pwuorly900
-await leapwork.step("Wait for Run to Start - 1 minute", async () => {
-  await page.waitForTimeout(60000);
-}, {
-  action: "custom"
-});
+}, { action: "click" });
 
 // ai-studio-step-id: pw1jvvr0i0
 await leapwork.step("Click Run information in the run details dialog", async () => {
