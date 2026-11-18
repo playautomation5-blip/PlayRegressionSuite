@@ -57,6 +57,18 @@ await leapwork.step("Double click the \"${teamName}\" folder in Leapwork AI Stud
     await page.locator('.explorer-list').getByText(teamName, { exact: true }).dblclick();
 });
 
+// ai-studio-step-id: pwsn2awg00
+await leapwork.step("Click the \"Variables & Secrets\" tab in the Team settings navigation", async () => {
+    // Click button "Variables & Secrets"
+    await page.getByRole('button', { name: 'Variables & Secrets' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[3]" });
+
+// ai-studio-step-id: pw1kt612z0
+await leapwork.step("Click the Collapse chat button in the chat toolbar", async () => {
+    // Click button "Collapse chat"
+    await page.getByRole('button', { name: 'Collapse chat' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[2]/div/div[2]/div[1]/button[@aria-label=\"Collapse chat\"]" });
+
 // ai-studio-step-id: pwnvgug800
 await leapwork.step("Click the + Add Secret button in the Secrets section", async () => {
     // Click span
@@ -183,4 +195,3 @@ await leapwork.step("Click Delete to confirm deleting the secret", async () => {
 await leapwork.step("Use test case: Delete Team", async () => {
     return await DeleteTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
