@@ -1,7 +1,6 @@
 import { leapwork } from "./leapwork";
 
-import { RandomTeam, RandomTeam2, teamName, password } from "@assets/Utilities/random-team";
-import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
+import { RandomTeam, RandomTeam2, teamName } from "@assets/Utilities/random-team";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
 import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
@@ -9,6 +8,7 @@ import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 leapwork.variables.set("myGithubConnector", "connector", leapwork.storage.LOCAL);
 const lw__myGithubConnector = leapwork.variables.get("myGithubConnector", leapwork.storage.LOCAL) as string;
 
+//PAT token set as a team secret
 const lw__personalAccessToken = leapwork.variables.getSecret("SourceControlPAT", leapwork.storage.LOCAL) as string;
 
 leapwork.variables.set("myGithubConnector2", "connector-edited", leapwork.storage.LOCAL);
@@ -18,15 +18,15 @@ leapwork.configuration({
   timeoutMs: Number(
     leapwork.team.settings.get("timeoutMs")
     ?? leapwork.workspace.settings.get("timeoutMs")
-  ) || 10000,
+  ) || 5000,
   enableSelfHeal:
     (leapwork.team.settings.get("enableSelfHeal")
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
-  chromiumArgs: ["--deny-permission-prompts",
+  chromiumArgs:
+        ["--deny-permission-prompts",
           "--disable-notifications"
         ],
-  chromiumPrefs:
-        { "credentials_enable_service": false,
+  chromiumPrefs: { "credentials_enable_service": false,
           "profile":
           {
             "password_manager_enabled": false,
@@ -36,8 +36,8 @@ leapwork.configuration({
 });
 
 leapwork.variables.set("userId", "user_42");
-leapwork.variables.set("passwordId", "user_37");
 leapwork.variables.set("teamName", teamName);
+leapwork.variables.set("passwordId", "user_37");
 
 // ai-studio-step-id: fa95126e
 await leapwork.step("Use test case: Email Password Login", async () => {
@@ -56,13 +56,17 @@ await leapwork.step("Double click the \"${teamName}\" folder in Leapwork AI Stud
     await page.locator('.explorer-list').getByText(teamName, { exact: true }).dblclick();
 });
 
-// ai-studio-step-id: pwvq0a9b00
-await leapwork.step("Click the + New connector button to open the connector setup form", async () => {
+// ai-studio-step-id: pwjt771z00
+await leapwork.step("Click Integrations in the Team settings navigation", async () => {
+    // Click button "Integrations"
+    await page.getByRole('button', { name: 'Integrations' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[2]" });
+
+// ai-studio-step-id: pw7aaiki00
+await leapwork.step("Click the + New connector button in Leapwork Play.", async () => {
     // Click span
     await page.getByRole('button', { name: '+ New connector' }).first().click();
-}, { action: "click", relativeXpath: ".//div/div[2]/div/div[2]/button/span" });
-
-
+}, { action: "click", relativeXpath: ".//div[1]/div[2]/div/div[2]/button/span" });
 
 // ai-studio-step-id: pw1x1tq9u0
 await leapwork.step("Click the Name field in the New connector dialog", async () => {
@@ -76,17 +80,17 @@ await leapwork.step("Fill the Name field with \"${lw__myGithubConnector}\" in th
         await page.getByRole('textbox', { name: 'Name' }).fill(String(lw__myGithubConnector));
 }, { action: "input" });
 
-// ai-studio-step-id: pwyphjif00
-await leapwork.step("Click the Token field in the New connector dialog", async () => {
-    // Click textbox "Token Field help"
-    await page.getByRole('textbox', { name: 'Token Field help' }).click();
-}, { action: "click" });
+// ai-studio-step-id: pw1tocd020
+await leapwork.step("Click the Token field in the New connector form", async () => {
+    // Click textbox "Token Token requirements"
+    await page.getByRole('textbox', { name: 'Token Token requirements' }).click();
+}, { action: "click"});
 
-// ai-studio-step-id: pw1oxzuoa0
-await leapwork.step("Fill the Token field with the personal access token", async () => {
-    // Fill textbox "Token Field help"
-        await page.getByRole('textbox', { name: 'Token Field help' }).fill(String(lw__personalAccessToken));
-}, { action: "input" });
+// ai-studio-step-id: pw1xr8cuh0
+await leapwork.step("Fill the Personal access token field in the New connector dialog", async () => {
+    // Fill textbox "Token Token requirements"
+    await page.getByRole('textbox', { name: 'Token Token requirements' }).fill(lw__personalAccessToken);
+}, { action: "input"});
 
 // ai-studio-step-id: pw1awz22x0
 await leapwork.step("Click the Test connection button in the New connector form", async () => {
@@ -112,7 +116,7 @@ await leapwork.step("Click the More actions button for the connector", async () 
     const showMoreActionsButton = page.getByRole('button', { name: 'More actions for connector' });
     await showMoreActionsButton.scrollIntoViewIfNeeded();
     await showMoreActionsButton.click();
-}, { action: "click" });
+}, { action: "click", relativeXpath: ".//div/div[1]/div[2]/span[8]/div/button[@aria-label=\"More actions for connector\"]" });
 
 // ai-studio-step-id: pcLhikzc
 await leapwork.step("Click Edit for the connector in Source Control settings", async () => {
@@ -140,7 +144,6 @@ await leapwork.step("Click the Save button in the Edit connector section", async
     await page.getByRole('button', { name: 'Save' }).click();
 }, { action: "click" });
 
-
 // ai-studio-step-id: GJDeqN1s
 await leapwork.step("Click More actions for the connector-edited item", async () => {
     // Click button "More actions for connector-edited"
@@ -158,6 +161,7 @@ await leapwork.step("Click Delete to confirm deleting the “connector-edited”
     // Click button "Delete"
     await page.getByRole('button', { name: 'Delete' }).click();
 }, { action: "click", relativeXpath: ".//div[2]/div/div[3]/div/div/button[2]" });
+
 
 
 // ai-studio-step-id: c518ed5f
