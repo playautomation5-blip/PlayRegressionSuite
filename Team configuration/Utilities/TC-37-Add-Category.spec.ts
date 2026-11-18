@@ -13,6 +13,12 @@ await leapwork.step("Double-click \"${teamName}\" in the Leapwork Play explorer"
     await page.getByText('team').first().dblclick();
 }, { action: "dblclick" });
 
+// ai-studio-step-id: pwx41pp700
+await leapwork.step("Click the Test case organization button in Team settings navigation", async () => {
+    // Click button "Test case organization"
+    await page.getByRole('button', { name: 'Test case organization' }).click();
+}, { action: "click" });
+
 // ai-studio-step-id: pw17c5z190
 await leapwork.step("Click the + Add Category button", async () => {
     const addCategoryButton = page.getByRole('button', { name: '+ Add Category', exact: true });
