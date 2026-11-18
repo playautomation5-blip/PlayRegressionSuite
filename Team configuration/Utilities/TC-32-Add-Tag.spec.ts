@@ -10,6 +10,13 @@ await leapwork.step("Double-click team twice", async () => {
     await page.getByText('team').first().dblclick();
 }, { action: "dblclick" });
 
+
+// ai-studio-step-id: pw1728ub70
+await leapwork.step("Click the Test case organization tab in Team settings navigation", async () => {
+    // Click button "Test case organization"
+    await page.getByRole('button', { name: 'Test case organization' }).click();
+}, { action: "click"});
+
 // ai-studio-step-id: pw18012db0
 await leapwork.step("Click the disabled + Add Tag button in Leapwork AI Studio", async () => {
     const addTagButton = page.getByRole('button', { name: '+ Add Tag', exact: true });
