@@ -17,11 +17,16 @@ leapwork.configuration({
 //     await page.getByText(teamName, { exact: true }).dblclick();
 // });
 
+// await leapwork.step("Double-click  \"${teamName}\" ", async () => {
+//     // Double-click "team 35512"
+//     await page.getByText(teamName).first().dblclick();
+// }, { action: "dblclick" });
+
 // ai-studio-step-id: pwfij9qk00
-await leapwork.step("Double-click  \"${teamName}\" ", async () => {
-    // Double-click "team 35512"
-    await page.getByText('team').first().dblclick();
-}, { action: "dblclick" });
+await leapwork.step("Click the Test case organization tab in Team settings navigation", async () => {
+    // Click button "Test case organization"
+    await page.getByRole('button', { name: 'Test case organization' }).click();
+}, { action: "click"});
 
 // ai-studio-step-id: pwcci5pf00
 await leapwork.step("Click the + Add Status button on the Test Case Statuses page", async () => {
