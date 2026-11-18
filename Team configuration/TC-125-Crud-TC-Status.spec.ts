@@ -2,10 +2,10 @@ import { leapwork } from "./leapwork";
 
 import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
-import { AddStatus } from "@assets/Utilities/Add Status";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
+import { AddStatus } from "@assets/Team configuration/Add Status";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -35,6 +35,8 @@ await leapwork.step("Use test case: Email Password Login", async () => {
 await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
     return await DeleteCreateRenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
+
+
 
 // ai-studio-step-id: pwm0wu3000
 await leapwork.step("Use test case: Add Status", async () => {
@@ -90,6 +92,13 @@ await leapwork.step("Validate the dropdown option shows 'Regression Test Status'
 await leapwork.step(`Double-click the "${teamName}"  folder`, async () => {
     await page.getByText('team').first().dblclick();
 }, { action: "dblclick" });
+
+// ai-studio-step-id: pw1oj0pvs0
+await leapwork.step("Click the Test case organization tab in Team settings navigation", async () => {
+    // Click button "Test case organization"
+    await page.getByRole('button', { name: 'Test case organization' }).click();
+}, { action: "click"});
+
 
 // ai-studio-step-id: pwyngz3u00
 await leapwork.step("Click the More actions button for the Regression Test Status row", async () => {
