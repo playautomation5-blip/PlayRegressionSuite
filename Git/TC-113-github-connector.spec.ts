@@ -2,7 +2,7 @@ import { leapwork } from "./leapwork";
 
 import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename Team";
-import { RandomTeam as teamName } from "@assets/Utilities/random-team";
+import { teamName } from "@assets/Utilities/random-team";
 
 leapwork.variables.set("userId", "user_57");
 leapwork.variables.set("teamName", teamName);
@@ -38,11 +38,11 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
     return await DeleteCreateRenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: bCAzxXrs
-await leapwork.step("Double-click the Search field.", async () => {
-    // Double-click textbox "Search"
-    await page.getByRole('textbox', { name: 'Search' }).dblclick();
-}, { action: "dblclick" });
+// ai-studio-step-id: pw1vatvpz0
+await leapwork.step("Click the Integrations tab in the Team settings navigation", async () => {
+    // Click button "Integrations"
+    await page.getByRole('button', { name: 'Integrations' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[2]" });
 
 // ai-studio-step-id: 6iW7jVCK
 await leapwork.step("Click the + New connector button to open the connector form", async () => {
@@ -68,15 +68,15 @@ await leapwork.step("Click the Host (optional) field in the New connector form",
     await page.getByRole('textbox', { name: 'Host (optional) Field help' }).click();
 }, { action: "click" });
 
+
+
+
+
 // ai-studio-step-id: pwqg0qzx00
 await leapwork.step("Click the Token field in the New connector form", async () => {
     // Click textbox "Token Token requirements"
     await page.getByRole('textbox', { name: 'Token Token requirements' }).click();
 }, { action: "click", relativeXpath: "//*[@id=\"source-control-token\"]" });
-
-
-
-
 
 // ai-studio-step-id: pw2kiilq00
 await leapwork.step("Fill the Token field in the New connector dialog", async () => {
@@ -96,12 +96,12 @@ await leapwork.step("Click Save for the new GitHub connector setup", async () =>
     await page.getByRole('button', { name: 'Save' }).click();
 }, { action: "click"});
 
+
 // ai-studio-step-id: y5AxBmKQ
 await leapwork.step("Click More actions for the GitHub connector", async () => {
     // Click button "More actions for github connector"
     await page.getByRole('button', { name: 'More actions for github' }).click();
 }, { action: "click"});
-
 
 // ai-studio-step-id: pwmtnacf00
 await leapwork.step("Click More actions for the GitHub connector", async () => {
