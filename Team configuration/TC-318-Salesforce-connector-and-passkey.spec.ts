@@ -55,6 +55,12 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
     return await DeleteCreateRenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
+// ai-studio-step-id: pw1ggn8be0
+await leapwork.step("Click Integrations in the Team settings navigation", async () => {
+    // Click button "Integrations"
+    await page.getByRole('button', { name: 'Integrations' }).click();
+}, { action: "click" });
+
 // ai-studio-step-id: pw2ocyti00
 await leapwork.step("Click the \"+ Add auth settings\" button in the Auth settings section", async () => {
     // Click button "+ Add auth settings"
