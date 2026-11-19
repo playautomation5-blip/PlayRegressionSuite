@@ -48,8 +48,20 @@ await leapwork.step("Double click the \"${teamName}\" folder in Leapwork AI Stud
     await page.locator('.explorer-list').getByText(teamName, { exact: true }).dblclick();
 });
 
-// ai-studio-step-id: pw12ayp3d0
-await leapwork.step("Click the + Add Secret button in the Secrets section", async () => {
+// ai-studio-step-id: pwlrjs1g00
+await leapwork.step("Click the Collapse chat button on the chat toolbar", async () => {
+    // Click button "Collapse chat"
+    await page.getByRole('button', { name: 'Collapse chat' }).click();
+}, { action: "click" });
+
+// ai-studio-step-id: pwpjzqvt00
+await leapwork.step("Click the Variables & Secrets tab in the Team settings navigation", async () => {
+    // Click button "Variables & Secrets"
+    await page.getByRole('button', { name: 'Variables & Secrets' }).click();
+}, { action: "click" });
+
+// ai-studio-step-id: pw1skh3ci0
+await leapwork.step("Click the \"+ Add Secret\" button on the Secrets page", async () => {
     // Click span
     await page.getByRole('button', { name: '+ Add Secret' }).click();
 }, { action: "click" });
