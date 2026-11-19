@@ -5,7 +5,7 @@ import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename T
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
-import { AddStatus } from "@assets/Team configuration/Add Status";
+import { AddStatus } from "@assets/Utilities/Add Status";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -38,7 +38,7 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
 
 
 
-// ai-studio-step-id: 774cc8cc
+// ai-studio-step-id: pwm0wu3000
 await leapwork.step("Use test case: Add Status", async () => {
     return await AddStatus();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
