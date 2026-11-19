@@ -6,7 +6,12 @@ import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename T
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 
 leapwork.variables.set("value4", "100000", leapwork.storage.LOCAL);
-const lw__value4 = leapwork.variables.get("value4", leapwork.storage.LOCAL) as string;
+
+leapwork.variables.set("variableKey", "timeoutMs", leapwork.storage.LOCAL);
+const lw__variableKey = leapwork.variables.get("variableKey", leapwork.storage.LOCAL) as string;
+
+leapwork.variables.set("value", "100000", leapwork.storage.LOCAL);
+const lw__value = leapwork.variables.get("value", leapwork.storage.LOCAL) as string;
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -38,85 +43,78 @@ await leapwork.step("Double-click the team 74800 item in the explorer pane", asy
     await page.getByText('team').first().dblclick();
 }, { action: "dblclick", relativeXpath: ".//div[2]/div[2]/div[2]/div[1]/div/span[3]" });
 
-// ai-studio-step-id: pwhghie100
-await leapwork.step("Click More actions for the timeoutMs setting showing 5000", async () => {
-    // Click button "More actions for timeoutMs"
-    await page.getByRole('button', { name: 'More actions for timeoutMs' }).click();
-}, { action: "click", });
-
-// ai-studio-step-id: pw1xmwtjq0
-await leapwork.step("Click the Delete setting option for the timeoutMs team setting", async () => {
-    // Click span
-    await page.getByText('Delete setting').click();
-}, { action: "click"});
-
-// ai-studio-step-id: pw1e8gwn30
-await leapwork.step("Click Delete to remove the setting", async () => {
-    // Click button "Delete"
-    await page.getByRole('button', { name: 'Delete' }).click();
-}, { action: "click"});
-
-// ai-studio-step-id: pw11tie5l0
-await leapwork.step("Click the \"+ Add setting\" button in the Settings section", async () => {
-    // Click span
-    await page.getByRole('button', { name: '+ Add setting' }).click();
+// ai-studio-step-id: pwtqvf9700
+await leapwork.step("Click the \"Variables & Secrets\" tab in the Team settings navigation", async () => {
+    // Click button "Variables & Secrets"
+    await page.getByRole('button', { name: 'Variables & Secrets' }).click();
 }, { action: "click" });
 
+// ai-studio-step-id: pw1tgl9ii0
+await leapwork.step("Click the + Add variable button in the Team Variables section", async () => {
+    // Click span
+    await page.getByRole('button', { name: '+ Add variable' }).click();
+}, { action: "click"});
 
-// ai-studio-step-id: pwgrmsyg00
-await leapwork.step(`Fill the timeoutMs Value field with ${lw__value4}`, async () => {
-    // Fill spinbutton "Value"
-    await page.getByRole('spinbutton', { name: 'Value' }).fill(String(lw__value4));
+// ai-studio-step-id: pwoxaydr00
+await leapwork.step("Click the Variable key input field on the Leapwork Play page", async () => {
+    // Click textbox "Variable key"
+    await page.getByRole('textbox', { name: 'Variable key' }).click();
+}, { action: "click" });
+
+// ai-studio-step-id: pw3ulkm200
+await leapwork.step(`Fill the Variable key field with "${lw__variableKey}"`, async () => {
+    // Fill textbox "Variable key"
+    await page.getByRole('textbox', { name: 'Variable key' }).fill(String(lw__variableKey));
+}, { action: "input" });
+
+// ai-studio-step-id: pw1royqj00
+await leapwork.step("Click the Value field for the 'timeoutMs' key setting", async () => {
+    // Click textbox "Value"
+    await page.getByRole('textbox', { name: 'Value' }).click();
+}, { action: "click" });
+
+// ai-studio-step-id: pw18ik0oo0
+await leapwork.step(`Fill the Value field with "${lw__value}" for the timeoutMs team variable`, async () => {
+    // Fill textbox "Value"
+    await page.getByRole('textbox', { name: 'Value' }).fill(String(lw__value));
 }, { action: "input" });
 
 // ai-studio-step-id: pw2gp9ql00
-await leapwork.step("Click Save for the timeoutMs setting (100000) in Team Settings", async () => {
+await leapwork.step("Click the Save button to save the 'timeoutMs' team variable value of 100000", async () => {
     // Click button "Save"
     await page.getByRole('button', { name: 'Save' }).click();
-}, { action: "click"});
+}, { action: "click" });
 
-
-// ai-studio-step-id: pw1fo5qsz0
-await leapwork.step("Validate the timeoutMs setting equals timeoutMs on Leapwork Play", async () => {
-    // Assert span contains "newTimeoutMs"
+// ai-studio-step-id: pw7w591000
+await leapwork.step("Validate that the settings key 'timeoutMs' is displayed on the Leapwork Play page", async () => {
+    // Assert span contains "timeoutMs"
     await expect(page.getByText('timeoutMs')).toContainText("timeoutMs");
-}, { action: "validate", });
-
-// ai-studio-step-id: pweww5yd00
-await leapwork.step("Validate that timeoutMs is set to \"100000\" on the Leapwork Play page", async () => {
-    // Assert span contains "10000"
-    await expect(page.getByText('100000')).toContainText("100000");
-}, { action: "validate", continueOnFailure: true });
-
-// ai-studio-step-id: pwi08h3y00
-await leapwork.step("Validate the timeoutMs setting on the Leapwork Play page equals \"timeoutMs\"", async () => {
-    // Assert span contains "newTimeoutMs"
-    await expect(page.getByText('timeoutMs')).toContainText("timeoutMs");
-}, { action: "validate", });
+}, { action: "validate" });
 
 // ai-studio-step-id: pwy0fwan00
-await leapwork.step("Validate that the timeoutMs setting shows \"100000\" on the Leapwork Play page", async () => {
+await leapwork.step("Validate the timeoutMs setting shows '100000' on the Leapwork Play page", async () => {
     // Assert span contains "100000"
     await expect(page.getByText('100000')).toContainText("100000");
-}, { action: "validate", });
+}, { action: "validate"});
 
-// ai-studio-step-id: pwfpjkki00
-await leapwork.step("Click the More actions button for timeoutMs set to 100000", async () => {
-    // Click button "More actions for newTimeoutMs"
+// ai-studio-step-id: pwhghie100
+await leapwork.step("Click the \"More actions for timeoutMs\" button for the timeoutMs setting (value 100000)", async () => {
+    // Click button "More actions for timeoutMs"
     await page.getByRole('button', { name: 'More actions for timeoutMs' }).click();
-}, { action: "click", });
+}, { action: "click" });
 
-// ai-studio-step-id: pwnuxvnr00
-await leapwork.step("Click Delete setting for the timeoutMs team setting", async () => {
-    // Click div
-    await page.getByText('Delete setting').click();
-}, { action: "click", });
+// ai-studio-step-id: pw1qv0ac20
+await leapwork.step("Click the Delete variable option in the context menu for the \"timeoutMs\" team variable", async () => {
+    // Click span
+    await page.getByText('Delete variable').click();
+}, { action: "click"});
 
 // ai-studio-step-id: pwe7vw0000
-await leapwork.step("Click Delete to remove the team setting", async () => {
+await leapwork.step("Click the Delete button to confirm removing the team variable", async () => {
     // Click button "Delete"
     await page.getByRole('button', { name: 'Delete' }).click();
-}, { action: "click", });
+}, { action: "click" });
+
 
 // ai-studio-step-id: pw1jylhwo0
 await leapwork.step("Use test case: Delete Team", async () => {
