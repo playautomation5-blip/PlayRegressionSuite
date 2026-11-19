@@ -5,7 +5,7 @@ import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename T
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
-import { AddStatus } from "@assets/Team configuration/Add Status";
+import { AddStatus } from "@assets/Utilities/Add Status";
 
 leapwork.configuration({
   timeoutMs: Number(
