@@ -46,6 +46,12 @@ await leapwork.step("Double click the \"${teamName}\" folder in Leapwork AI Stud
     await page.locator('.explorer-list').getByText(teamName, { exact: true }).dblclick();
 });
 
+// ai-studio-step-id: pwjt771z00
+await leapwork.step("Click Integrations in the Team settings navigation", async () => {
+    // Click button "Integrations"
+    await page.getByRole('button', { name: 'Integrations' }).click();
+}, { action: "click"});
+
 // ai-studio-step-id: pw13fqp000
 await leapwork.step("Click the + New connector button", async () => {
     // Click span
