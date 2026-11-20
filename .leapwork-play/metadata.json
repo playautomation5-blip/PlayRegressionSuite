@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-20T06:51:07.673Z",
+  "generatedAt": "2026-11-20T08:15:37.341Z",
   "repo": {
     "connectorId": 76,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -255,6 +255,13 @@
       "name": "Execution",
       "kind": "folder",
       "children": [
+        {
+          "assetId": 22784,
+          "displayId": "TC-268",
+          "name": "MultiTab Execution Flow",
+          "kind": "test-case",
+          "repoPath": "Execution/TC-268-MultiTab-Execution-Flow.spec.ts"
+        },
         {
           "assetId": 12901,
           "displayId": "TC-234",
@@ -1584,6 +1591,14 @@
       "displayId": "TC-242",
       "name": "Self-Heal variables",
       "repoPath": "Execution/TC-242-Self-Heal-variables.spec.ts",
+      "parentAssetId": 12676
+    },
+    {
+      "assetId": 22784,
+      "assetKind": "test-case",
+      "displayId": "TC-268",
+      "name": "MultiTab Execution Flow",
+      "repoPath": "Execution/TC-268-MultiTab-Execution-Flow.spec.ts",
       "parentAssetId": 12676
     },
     {
