@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-20T07:03:27.316Z",
+  "generatedAt": "2026-11-20T08:18:19.979Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -263,6 +263,13 @@
       "name": "Execution",
       "kind": "folder",
       "children": [
+        {
+          "assetId": 35660,
+          "displayId": "TC-223",
+          "name": "MultiTab Execution Flow",
+          "kind": "test-case",
+          "repoPath": "Execution/TC-223-MultiTab-Execution-Flow.spec.ts"
+        },
         {
           "assetId": 20433,
           "displayId": "TC-157",
@@ -1399,6 +1406,14 @@
       "displayId": "TC-157",
       "name": "Xpath execution",
       "repoPath": "Execution/TC-157-Xpath-execution.spec.ts",
+      "parentAssetId": 20432
+    },
+    {
+      "assetId": 35660,
+      "assetKind": "test-case",
+      "displayId": "TC-223",
+      "name": "MultiTab Execution Flow",
+      "repoPath": "Execution/TC-223-MultiTab-Execution-Flow.spec.ts",
       "parentAssetId": 20432
     },
     {
