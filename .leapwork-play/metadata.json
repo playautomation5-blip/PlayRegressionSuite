@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-17T09:04:23.351Z",
+  "generatedAt": "2026-11-20T06:28:28.847Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -365,6 +365,13 @@
       "name": "Import-export",
       "kind": "folder",
       "children": [
+        {
+          "assetId": 59321,
+          "displayId": "TC-395",
+          "name": "ADO import",
+          "kind": "test-case",
+          "repoPath": "Import-export/TC-395-ADO-import.spec.ts"
+        },
         {
           "assetId": 26030,
           "displayId": "TC-304",
@@ -1667,6 +1674,14 @@
       "displayId": "TC-305",
       "name": "Import test case using file",
       "repoPath": "Import-export/TC-305-Import-test-case-using-file.spec.ts",
+      "parentAssetId": 2841
+    },
+    {
+      "assetId": 59321,
+      "assetKind": "test-case",
+      "displayId": "TC-395",
+      "name": "ADO import",
+      "repoPath": "Import-export/TC-395-ADO-import.spec.ts",
       "parentAssetId": 2841
     },
     {

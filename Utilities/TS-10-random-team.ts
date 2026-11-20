@@ -91,7 +91,8 @@ export const microsoftUsers = {
     "user_73" : "hdh5@usako.net",
     "user_74" : "6h4g2f@usako.net",
     "user_75" : "yadece2826@artegin.com",
-    "user_77" : "rexofid649@bwingmedia.com" // 391 ( Dont use it !! )
+    "user_77" : "rexofid649@bwingmedia.com", // 391 ( Dont use it !! )
+    "user_78": "geyiki3365@dvdee.com", // ADO import
 }
 
 export const passwords = {
