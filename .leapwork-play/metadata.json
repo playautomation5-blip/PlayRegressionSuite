@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-20T09:30:41.602Z",
+  "generatedAt": "2026-11-20T09:31:04.356Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -269,6 +269,20 @@
           "name": "MultiTab Execution Flow",
           "kind": "test-case",
           "repoPath": "Execution/TC-223-MultiTab-Execution-Flow.spec.ts"
+        },
+        {
+          "assetId": 23462,
+          "displayId": "TC-184",
+          "name": "Self-Heal variables",
+          "kind": "test-case",
+          "repoPath": "Execution/TC-184-Self-Heal-variables.spec.ts"
+        },
+        {
+          "assetId": 20846,
+          "displayId": "TC-181",
+          "name": "Xpath execution with variables",
+          "kind": "test-case",
+          "repoPath": "Execution/TC-181-Xpath-execution-with-variables.spec.ts"
         },
         {
           "assetId": 20433,
@@ -1420,6 +1434,22 @@
       "displayId": "TC-157",
       "name": "Xpath execution",
       "repoPath": "Execution/TC-157-Xpath-execution.spec.ts",
+      "parentAssetId": 20432
+    },
+    {
+      "assetId": 20846,
+      "assetKind": "test-case",
+      "displayId": "TC-181",
+      "name": "Xpath execution with variables",
+      "repoPath": "Execution/TC-181-Xpath-execution-with-variables.spec.ts",
+      "parentAssetId": 20432
+    },
+    {
+      "assetId": 23462,
+      "assetKind": "test-case",
+      "displayId": "TC-184",
+      "name": "Self-Heal variables",
+      "repoPath": "Execution/TC-184-Self-Heal-variables.spec.ts",
       "parentAssetId": 20432
     },
     {
