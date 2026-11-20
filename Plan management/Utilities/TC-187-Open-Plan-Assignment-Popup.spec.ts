@@ -41,6 +41,7 @@ await leapwork.step("Click the Company plans section", async () => {
 await leapwork.step("Search for the company by name, ID, or owner email", async () => { 
     // Fill textbox "Search by company name or company ID or owner email..." 
     await page.getByPlaceholder('Search by company name or company ID or owner email...').fill(String(lw__email)); 
+    await page.waitForTimeout(2000)
 }, { action: "input" }); 
  
 // ai-studio-step-id: pw1jm4exf0

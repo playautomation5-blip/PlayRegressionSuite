@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-20T06:58:39.396Z",
+  "generatedAt": "2026-11-20T07:03:27.316Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -525,6 +525,13 @@
           "name": "Utilities",
           "kind": "folder",
           "children": [
+            {
+              "assetId": 25317,
+              "displayId": "TC-189",
+              "name": "Assign New Plan",
+              "kind": "test-case",
+              "repoPath": "Plan management/Utilities/TC-189-Assign-New-Plan.spec.ts"
+            },
             {
               "assetId": 25316,
               "displayId": "TC-188",
@@ -1624,6 +1631,14 @@
       "displayId": "TC-188",
       "name": "Cancel Current Plan",
       "repoPath": "Plan management/Utilities/TC-188-Cancel-Current-Plan.spec.ts",
+      "parentAssetId": 25313
+    },
+    {
+      "assetId": 25317,
+      "assetKind": "test-case",
+      "displayId": "TC-189",
+      "name": "Assign New Plan",
+      "repoPath": "Plan management/Utilities/TC-189-Assign-New-Plan.spec.ts",
       "parentAssetId": 25313
     },
     {
