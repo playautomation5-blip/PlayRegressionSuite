@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-20T06:27:40.383Z",
+  "generatedAt": "2026-11-20T06:51:07.673Z",
   "repo": {
     "connectorId": 76,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -12,6 +12,21 @@
     "name": "DEVRegressionTestSuite"
   },
   "tree": [
+    {
+      "assetId": 23628,
+      "displayId": "FD-52",
+      "name": "ADO",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 23602,
+          "displayId": "TC-270",
+          "name": "ADO import",
+          "kind": "test-case",
+          "repoPath": "ADO/TC-270-ADO-import.spec.ts"
+        }
+      ]
+    },
     {
       "assetId": 8509,
       "displayId": "FD-31",
@@ -344,13 +359,6 @@
       "kind": "folder",
       "children": [
         {
-          "assetId": 23602,
-          "displayId": "TC-270",
-          "name": "ADO import",
-          "kind": "test-case",
-          "repoPath": "import-export/TC-270-ADO-import.spec.ts"
-        },
-        {
           "assetId": 8228,
           "displayId": "TC-127",
           "name": "Import playwright from file",
@@ -571,6 +579,13 @@
               "name": "Open Plan Assignment Popup",
               "kind": "test-case",
               "repoPath": "Plan management/Utilities/TC-246-Open-Plan-Assignment-Popup.spec.ts"
+            },
+            {
+              "assetId": 17691,
+              "displayId": "TC-245",
+              "name": "Validate Subscription and Usage Page",
+              "kind": "test-case",
+              "repoPath": "Plan management/Utilities/TC-245-Validate-Subscription-and-Usage-Page.spec.ts"
             }
           ]
         },
@@ -1324,6 +1339,14 @@
   ],
   "files": [
     {
+      "assetId": 23602,
+      "assetKind": "test-case",
+      "displayId": "TC-270",
+      "name": "ADO import",
+      "repoPath": "ADO/TC-270-ADO-import.spec.ts",
+      "parentAssetId": 23628
+    },
+    {
       "assetId": 8510,
       "assetKind": "test-case",
       "displayId": "TC-197",
@@ -1636,14 +1659,6 @@
       "parentAssetId": 8221
     },
     {
-      "assetId": 23602,
-      "assetKind": "test-case",
-      "displayId": "TC-270",
-      "name": "ADO import",
-      "repoPath": "import-export/TC-270-ADO-import.spec.ts",
-      "parentAssetId": 8221
-    },
-    {
       "assetId": 7947,
       "assetKind": "test-case",
       "displayId": "TC-28",
@@ -1802,6 +1817,14 @@
       "name": "Purchase an Addon",
       "repoPath": "Plan management/TC-251-Purchase-an-Addon.spec.ts",
       "parentAssetId": 17689
+    },
+    {
+      "assetId": 17691,
+      "assetKind": "test-case",
+      "displayId": "TC-245",
+      "name": "Validate Subscription and Usage Page",
+      "repoPath": "Plan management/Utilities/TC-245-Validate-Subscription-and-Usage-Page.spec.ts",
+      "parentAssetId": 17690
     },
     {
       "assetId": 17692,
