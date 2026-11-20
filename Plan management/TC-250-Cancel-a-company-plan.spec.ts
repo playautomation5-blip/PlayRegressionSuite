@@ -34,6 +34,8 @@ leapwork.variables.set("planName", "AI Builder");
 leapwork.variables.set("planStatus", "Active");
 leapwork.variables.set("parallelExecutionsIncludedCount", "1 included");
 leapwork.variables.set("remoteBrowserSessionsIncludedCount", "1 included");
+leapwork.variables.set("runDataRetentionIncludedCount", "30 included");
+leapwork.variables.set("geographicRegionIncludedCount", "1 included");
 
 // ai-studio-step-id: pw1vs03ju0
 await leapwork.step("Use test case: Email Password Login", async () => {
@@ -46,7 +48,7 @@ await leapwork.step("Use test case: Open Plan Assignemnt popup", async () => {
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwbtvl8u00
-await leapwork.step("Use test case: Cancel Current Plan", async () => {
+await leapwork.step("Use test case: Assign New Plan", async () => {
     return await AssignNewPlan();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
  

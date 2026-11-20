@@ -27,11 +27,13 @@ leapwork.variables.set("userId", userId);
 leapwork.variables.set("passwordId", userId);
 
 leapwork.variables.set("userName", userName);
-leapwork.variables.set("creditsAssigned", "1,500,000");
-leapwork.variables.set("planName", "Enterprise Hybrid (Scale Out)");
+leapwork.variables.set("creditsAssigned", "1,200,000");
+leapwork.variables.set("planName", "Enterprise");
 leapwork.variables.set("planStatus", "Active");
-leapwork.variables.set("parallelExecutionsIncludedCount", "40 included");
-leapwork.variables.set("remoteBrowserSessionsIncludedCount", "60 included");
+leapwork.variables.set("parallelExecutionsIncludedCount", "20 included");
+leapwork.variables.set("remoteBrowserSessionsIncludedCount", "10 included");
+leapwork.variables.set("runDataRetentionIncludedCount", "60 included");
+leapwork.variables.set("geographicRegionIncludedCount", "1 included");
 
 // ai-studio-step-id: pw1vs03ju0
 await leapwork.step("Use test case: Email Password Login", async () => {
@@ -49,7 +51,7 @@ await leapwork.step("Use test case: Cancel Current Plan", async () => {
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pw54sspl00
-await leapwork.step("Use test case: Cancel Current Plan", async () => {
+await leapwork.step("Use test case: Assign a new Plan", async () => {
     return await AssignNewPlan();
 }, { action: "asset_reference", linkedAssetType: "test-case" }); 
  
