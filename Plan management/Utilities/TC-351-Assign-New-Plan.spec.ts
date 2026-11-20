@@ -19,7 +19,7 @@ await leapwork.step("Open the Assign a plan accordion", async () => {
 // ai-studio-step-id: pwa8sde900
 await leapwork.step("Select \"Enterprise Hybrid (Scale Out) · v1\" from the plan dropdown", async () => { 
     // Select option from combobox "Published plan version" 
-    await page.getByLabel('Published plan versionAI').selectOption({ label: "Enterprise Hybrid (Scale Out) · v1" }); 
+    await page.getByLabel('Published plan versionAI').selectOption({ label: "Enterprise 144K · v1" }); 
 }, { action: "click" }); 
  
 // ai-studio-step-id: pwbzg5bs00
