@@ -84,7 +84,9 @@ export const microsoftUsers = {
     "user_72": "pepito4562@playfine.com", //TC-203 Enable LLM Over Native Recorder
     "user_73": "hdh5@usako.net",
     "user_74": "fm4d5g@choco.la",
-    "user_75" : "relosoc548@artegin.com" // 214 (Dont Use It !!)
+    "user_75" : "relosoc548@artegin.com", // 214 (Dont Use It !!)
+    "user_60" : "cihik75598@kranove.com", //Salesforce connector and passkey
+    "user_78": "geyiki3365@dvdee.com", // ADO import
 }
 
 export const passwords = {

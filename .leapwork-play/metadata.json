@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-17T09:14:13.070Z",
+  "generatedAt": "2026-11-20T06:29:20.307Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -330,6 +330,13 @@
       "name": "Import-export",
       "kind": "folder",
       "children": [
+        {
+          "assetId": 35616,
+          "displayId": "TC-219",
+          "name": "ADO import",
+          "kind": "test-case",
+          "repoPath": "Import-export/TC-219-ADO-import.spec.ts"
+        },
         {
           "assetId": 15770,
           "displayId": "TC-139",
@@ -1418,6 +1425,14 @@
       "displayId": "TC-139",
       "name": "import playwright from file",
       "repoPath": "Import-export/TC-139-import-playwright-from-file.spec.ts",
+      "parentAssetId": 8308
+    },
+    {
+      "assetId": 35616,
+      "assetKind": "test-case",
+      "displayId": "TC-219",
+      "name": "ADO import",
+      "repoPath": "Import-export/TC-219-ADO-import.spec.ts",
       "parentAssetId": 8308
     },
     {
