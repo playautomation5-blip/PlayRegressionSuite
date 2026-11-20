@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-03T10:32:59.136Z",
+  "generatedAt": "2026-11-20T06:27:40.383Z",
   "repo": {
     "connectorId": 76,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -344,6 +344,13 @@
       "kind": "folder",
       "children": [
         {
+          "assetId": 23602,
+          "displayId": "TC-270",
+          "name": "ADO import",
+          "kind": "test-case",
+          "repoPath": "import-export/TC-270-ADO-import.spec.ts"
+        },
+        {
           "assetId": 8228,
           "displayId": "TC-127",
           "name": "Import playwright from file",
@@ -682,13 +689,6 @@
           "name": "Record TC-RL-Add tag-Run RL- Validate RL Run",
           "kind": "test-case",
           "repoPath": "Runlist/TC-137-Record-TC-RL-Add-tag-Run-RL-Validate-RL-Run.spec.ts"
-        },
-        {
-          "assetId": 11344,
-          "displayId": "TC-222",
-          "name": "Record TC-RL-Add tag-Run RL- Validate RL Run",
-          "kind": "test-case",
-          "repoPath": "Runlist/TC-222-Record-TC-RL-Add-tag-Run-RL-Validate-RL-Run.spec.ts"
         },
         {
           "assetId": 8273,
@@ -1636,6 +1636,14 @@
       "parentAssetId": 8221
     },
     {
+      "assetId": 23602,
+      "assetKind": "test-case",
+      "displayId": "TC-270",
+      "name": "ADO import",
+      "repoPath": "import-export/TC-270-ADO-import.spec.ts",
+      "parentAssetId": 8221
+    },
+    {
       "assetId": 7947,
       "assetKind": "test-case",
       "displayId": "TC-28",
@@ -1897,14 +1905,6 @@
       "displayId": "TC-178",
       "name": "Runlist Execution and Screenshot Validation",
       "repoPath": "Runlist/TC-178-Runlist-Execution-and-Screenshot-Validation.spec.ts",
-      "parentAssetId": 8200
-    },
-    {
-      "assetId": 11344,
-      "assetKind": "test-case",
-      "displayId": "TC-222",
-      "name": "Record TC-RL-Add tag-Run RL- Validate RL Run",
-      "repoPath": "Runlist/TC-222-Record-TC-RL-Add-tag-Run-RL-Validate-RL-Run.spec.ts",
       "parentAssetId": 8200
     },
     {
