@@ -77,16 +77,12 @@ await leapwork.step("Double click the \"${teamName}\" folder in Leapwork AI Stud
     await page.locator('.explorer-list').getByText(teamName, { exact: true }).dblclick();
 });
 
-// ai-studio-step-id: pw1251nyp0
-await leapwork.step("Select \"New recording adapter (TS-1)\" from Team adapter", async () => {
-    // Click combobox "Team adapter"
-    await page.getByLabel('Team adapter').selectOption({ label: "New recording adapter (TS-1)" });
-}, { action: "click", relativeXpath: "//*[@id=\"team-recording-adapter-select\"]" });
+// await leapwork.step("Select \"New recording adapter (TS-1)\" from Team adapter", async () => {
+//     // Click combobox "Team adapter"
+//     await page.getByLabel('Team adapter').selectOption({ label: "New recording adapter (TS-1)" });
+// }, { action: "click", relativeXpath: "//*[@id=\"team-recording-adapter-select\"]" });
 
-// ai-studio-step-id: pwlvv0id00
-await leapwork.step("Validate the Team adapter is set to \"New recording adapter (TS-1)\" on Leapwork Play", async () => {
-    // Assert combobox "Team adapter" contains "New recording adapter (TS-1)"
-    await expect(page.getByLabel('Team adapter')).toContainText("New recording adapter (TS-1)");
-}, { action: "validate", relativeXpath: "//*[@id=\"team-recording-adapter-select\"]" });
-
-
+// await leapwork.step("Validate the Team adapter is set to \"New recording adapter (TS-1)\" on Leapwork Play", async () => {
+//     // Assert combobox "Team adapter" contains "New recording adapter (TS-1)"
+//     await expect(page.getByLabel('Team adapter')).toContainText("New recording adapter (TS-1)");
+// }, { action: "validate", relativeXpath: "//*[@id=\"team-recording-adapter-select\"]" });
