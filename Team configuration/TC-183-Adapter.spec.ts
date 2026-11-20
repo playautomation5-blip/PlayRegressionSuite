@@ -53,38 +53,7 @@ await leapwork.step("Click the Collapse chat button in Leapwork Play.", async ()
     await page.getByRole('button', { name: 'Collapse chat' }).click();
 }, { action: "click" });
 
-
-// await leapwork.step("Click the Create new button for \"${teamName}\"", async () => {
-//     const createNewButton = page.getByRole('button', { name: `Create new in ${teamName}`, exact: true });
-//     await expect(createNewButton).toHaveCount(1);
-//     await createNewButton.click({ force: true });
-// }, { action: "click" });
-
-// await leapwork.step("Click New typescript in the assets create new menu", async () => {
-//     const loc = page.getByText('New typescript');
-//     await loc.waitFor({ state: 'visible' });
-//     // Click div
-//     await page.getByText('New typescript').click();
-// }, { action: "click" });
-
-// await leapwork.step("Click the Collapse chat button in Leapwork AI Studio", async () => {
-//     // Click button "Collapse chat"
-//     await page.getByRole('button', { name: 'Collapse chat' }).click();
-// }, { action: "click" });
-
 // ai-studio-step-id: pwa6n2ed00
 await leapwork.step("Double click the \"${teamName}\" folder in Leapwork AI Studio", async () => {
     await page.locator('.explorer-list').getByText(teamName, { exact: true }).dblclick();
 });
-
-// ai-studio-step-id: pw1251nyp0
-await leapwork.step("Select \"New recording adapter (TS-1)\" from Team adapter", async () => {
-    // Click combobox "Team adapter"
-    await page.getByLabel('Team adapter').selectOption({ label: "New recording adapter (TS-1)" });
-}, { action: "click", relativeXpath: "//*[@id=\"team-recording-adapter-select\"]" });
-
-// ai-studio-step-id: pwlvv0id00
-await leapwork.step("Validate the Team adapter is set to \"New recording adapter (TS-1)\" on Leapwork Play", async () => {
-    // Assert combobox "Team adapter" contains "New recording adapter (TS-1)"
-    await expect(page.getByLabel('Team adapter')).toContainText("New recording adapter (TS-1)");
-}, { action: "validate", relativeXpath: "//*[@id=\"team-recording-adapter-select\"]" });
