@@ -62,13 +62,9 @@ await leapwork.step("Validate that the Feature Flags table contains “show-what
 }, { action: "validate"});
 
 // ai-studio-step-id: cUlWtrfI
-await leapwork.step("Validate the show-whats-new feature flag is Enabled on the Feature Flags page", async () => {
+await leapwork.step("Validate the show-whats-new feature flag is Enabled on the Leapwork Play admin page", async () => {
     // Assert span contains "Enabled"
-    const status = (await page
-        .locator('tr:nth-child(19) > td:nth-child(2) > .admin-status-pill')
-        .textContent())?.trim();
-
-        expect(status).toBe("Enabled");
+    await expect(page.locator('tr:nth-child(10) > td:nth-child(2) > .admin-status-pill')).toContainText("Enabled");
 }, { action: "validate" });
 
 
