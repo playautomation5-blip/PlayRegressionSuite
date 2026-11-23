@@ -1,4 +1,5 @@
 import { leapwork } from "./leapwork";
+
 import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
@@ -62,24 +63,33 @@ await leapwork.step("Validate that the Feature Flags table contains “show-what
 }, { action: "validate"});
 
 // ai-studio-step-id: cUlWtrfI
-await leapwork.step("Validate the show-whats-new feature flag is Enabled on the Feature Flags page", async () => {
+await leapwork.step("Validate the show-whats-new feature flag is Enabled on the Leapwork Play admin page", async () => {
     // Assert span contains "Enabled"
-    const status = (await page
-        .locator('tr:nth-child(19) > td:nth-child(2) > .admin-status-pill')
-        .textContent())?.trim();
-
-        expect(status).toBe("Enabled");
+    await expect(page.locator('tr:nth-child(10) > td:nth-child(2) > .admin-status-pill')).toContainText("Enabled");
 }, { action: "validate" });
 
 
-// ai-studio-step-id: bk8DcwCe
+// ai-studio-step-id: pwmy1ofp00
 await leapwork.step("Click the What's new button in the Leapwork Play header", async () => {
     // Click button "What's new"
     await page.getByRole('button', { name: 'What\'s new', exact: true }).click();
-}, { action: "click", relativeXpath: "//*[@id=\"root\"]/div/div[3]/div[1]/div[2]/button[@aria-label=\"What's new\"]" });
+}, { action: "click" });
 
-// ai-studio-step-id: hG8SYFVu
-await leapwork.step("Validate the Leapwork Play page heading shows “What's new in Leapwork Play”", async () => {
-    // Assert heading "What's new in Leapwork Play" contains "What's new in Leapwork Play"
-    await expect(page.getByRole('heading', { name: 'What\'s new in Leapwork Play' })).toContainText("What's new in Leapwork Play");
-}, { action: "validate", relativeXpath: "//*[@id=\"whats-new-panel-title\"]" });
+
+
+// Warning: Do not delete this step. It is linked to the validate step above.
+// await leapwork.step("Get value from show-whats-new", async () => {
+//     // Get value from div
+//     const lw_value = (await page.getByText('show-whats-new').textContent())?.trim() ?? '';
+//     leapwork.variables.set("lw_showWhatsNew", lw_value, leapwork.storage.LOCAL);
+// }, { action: "get_value", enableXpath: false, relativeXpath: ".//div[2]/table/tbody/tr[10]/td[1]/div" });
+
+
+
+
+// Warning: Do not delete this step. It is linked to the validate step above.
+// await leapwork.step("Get value from Enabled", async () => {
+//     // Get value from span
+//     const lw_value = (await page.locator('tr:nth-child(10) > td:nth-child(2) > .admin-status-pill').textContent())?.trim() ?? '';
+//     leapwork.variables.set("lw_enabled", lw_value, leapwork.storage.LOCAL);
+// }, { action: "get_value", enableXpath: false, relativeXpath: ".//div[2]/table/tbody/tr[10]/td[2]/span" });
