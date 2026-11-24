@@ -87,6 +87,7 @@ export const microsoftUsers = {
     "user_75" : "relosoc548@artegin.com", // 214 (Dont Use It !!)
     "user_60" : "cihik75598@kranove.com", //Salesforce connector and passkey
     "user_78": "geyiki3365@dvdee.com", // ADO import
+    "user_79": "papisan914@afronewz.com" // Mission control
 }
 
 export const passwords = {
