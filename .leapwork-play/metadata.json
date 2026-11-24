@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-20T08:16:05.001Z",
+  "generatedAt": "2026-11-24T07:36:26.225Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -559,6 +559,21 @@
           "name": "Logout Validation",
           "kind": "test-case",
           "repoPath": "Logout/TC-235-Logout-Validation.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 60381,
+      "displayId": "FD-90",
+      "name": "Mission control",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 60382,
+          "displayId": "TC-399",
+          "name": "Mission control",
+          "kind": "test-case",
+          "repoPath": "Mission control/TC-399-Mission-control.spec.ts"
         }
       ]
     },
@@ -1833,6 +1848,14 @@
       "name": "Logout Validation",
       "repoPath": "Logout/TC-235-Logout-Validation.spec.ts",
       "parentAssetId": 20096
+    },
+    {
+      "assetId": 60382,
+      "assetKind": "test-case",
+      "displayId": "TC-399",
+      "name": "Mission control",
+      "repoPath": "Mission control/TC-399-Mission-control.spec.ts",
+      "parentAssetId": 60381
     },
     {
       "assetId": 20197,
