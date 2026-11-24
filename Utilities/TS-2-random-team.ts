@@ -86,6 +86,7 @@ export const microsoftUsers = {
     "user_76": "hdh5@usako.net",
     "user_77": "vabolo2846@bwingmedia.com", //TC-239 ( Dont use it !! )
     "user_78": "geyiki3365@dvdee.com", // ADO import
+    "user_79": "papisan914@afronewz.com" // Mission control
 }
 
 export const passwords = {
