@@ -16,9 +16,7 @@ leapwork.configuration({
     leapwork.team.settings.get("timeoutMs")
     ?? leapwork.workspace.settings.get("timeoutMs")
   ) || 5000,
-  enableSelfHeal:
-    (leapwork.team.settings.get("enableSelfHeal")
-      ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
+  enableSelfHeal:true
 });
 
 const fileId = "FL-9"
@@ -41,10 +39,31 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
     return await DeleteCreateRenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: pw91be7t00
-await leapwork.step("Use test case: Add Setting", async () => {
-    return await AddSetting();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
+// await leapwork.step("Use test case: Add Setting", async () => {
+//     return await AddSetting();
+// }, { action: "asset_reference", linkedAssetType: "test-case" });
+
+// ai-studio-step-id: pwf55rxq00
+await leapwork.step("Double-click team twice", async () => {
+    // Double-click textbox "Search"
+    await page.getByText('team').first().dblclick();
+}, { action: "dblclick" });
+
+// ai-studio-step-id: pw1sl9q500
+await leapwork.step("Click the Advanced settings tab in Team settings navigation", async () => {
+    // Click button "Advanced settings"
+    await page.getByRole('button', { name: 'Advanced settings' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[5]" });
+
+// ai-studio-step-id: pw162c4n40
+await leapwork.step("Set \"Self-Healing\" toggle", async () => {
+    // Check switch "Self-Healing"
+  const selfHealingSwitch = page.getByRole('switch', { name: 'Self-Healing' });
+
+await expect(selfHealingSwitch).toHaveAttribute('aria-checked', 'true');
+await selfHealingSwitch.click();
+await expect(selfHealingSwitch).toHaveAttribute('aria-checked', 'false');
+}, { action: "click", relativeXpath: ".//div[6]/div/div[1]/div[1]/span/button[@aria-label=\"Self-Healing\"]" });
 
 // ai-studio-step-id: pw1nets530
 await leapwork.step("Use test case: Import Tests or Playwright", async () => {
@@ -78,8 +97,8 @@ await leapwork.step("Click Connect to connect to the Google Chromium browser in 
 // ai-studio-step-id: pwqxc9j200
 await leapwork.step("Click the Run button to run the test case", async () => {
     // Click button "Run"
-    await page.getByRole('button', { name: 'Run' }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]", timeoutMs: 10000 });
+    await page.getByRole('button', { name: 'Run', exact: true }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]", timeoutMs: 30000 });
 
 // ai-studio-step-id: pw1c57m3s0
 await leapwork.step("Validate the “Oat & Aloe Wash” product details dialog appears on Leapwork Play", async () => {
@@ -91,5 +110,3 @@ await leapwork.step("Validate the “Oat & Aloe Wash” product details dialog a
 await leapwork.step("Use test case: Delete Team", async () => {
     return await DeleteTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
-
-

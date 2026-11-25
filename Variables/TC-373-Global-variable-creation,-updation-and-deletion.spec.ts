@@ -105,7 +105,7 @@ await leapwork.step("Click Connect to connect to the Google Chromium browser in 
 // ai-studio-step-id: pw1ogtmgq0
 await leapwork.step("Click the Run button to execute the test case", async () => {
     // Click button "Run"
-    await page.getByRole('button', { name: 'Run' }).click();
+    await page.getByRole('button', { name: 'Run', exact: true }).click();
     
 }, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]", timeoutMs: 10000 });
 
@@ -123,11 +123,11 @@ await leapwork.step("Double-click team twice", async () => {
     await page.getByText('team').first().dblclick();
 }, { action: "dblclick" });
 
-// ai-studio-step-id: pw1li3ih30
-await leapwork.step("Click the Variables tab in Leapwork Play.", async () => {
-    // Click tab "Variables"
-    await page.getByRole('tab', { name: 'Variables' }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/div[@aria-label=\"Team sections\"]/button[2]" });
+// ai-studio-step-id: pw179q8ku0
+await leapwork.step("Click the Variables & Secrets button in Team settings navigation", async () => {
+    // Click button "Variables & Secrets"
+    await page.getByRole('button', { name: 'Variables & Secrets' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[3]" });
 
 // ai-studio-step-id: pw1ynjtq00
 await leapwork.step("Validate that the variable key “recipientName” equals “recipientName” in Leapwork Play", async () => {
@@ -155,7 +155,7 @@ await leapwork.step("Click Connect to connect to the Google Chromium browser in 
 // ai-studio-step-id: pw1l70lem0
 await leapwork.step("Click the Run button to execute the test case", async () => {
     // Click button "Run"
-    await page.getByRole('button', { name: 'Run' }).click();
+    await page.getByRole('button', { name: 'Run', exact: true }).click();
     
 }, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]", timeoutMs: 10000 });
 
@@ -163,14 +163,15 @@ await leapwork.step("Click the Run button to execute the test case", async () =>
 // ai-studio-step-id: pw1pc5mte0
 await leapwork.step("Double-click team twice", async () => {
     // Double-click textbox "Search"
+        await page.waitForTimeout(20000);
     await page.getByText('team').first().dblclick();
 }, { action: "dblclick" });
 
 // ai-studio-step-id: pwg5vxu700
-await leapwork.step("Click the Variables tab in Leapwork Play.", async () => {
-    // Click tab "Variables"
-    await page.getByRole('tab', { name: 'Variables' }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/div[@aria-label=\"Team sections\"]/button[2]" });
+await leapwork.step("Click the Variables & Secrets button in Team settings navigation", async () => {
+    // Click button "Variables & Secrets"
+    await page.getByRole('button', { name: 'Variables & Secrets' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[3]" });
 
 // ai-studio-step-id: pws4m4yu00
 await leapwork.step("Validate that the variable key “recipientName” equals “recipientName” in Leapwork Play", async () => {

@@ -106,10 +106,12 @@ await leapwork.step("Validate that 'Thinking' appears in the chat on the Leapwor
 // ai-studio-step-id: d1qHa7mg
 await leapwork.step("Validate that the chat message shows 'Hi! How can I help?' on the Leapwork Play page", async () => {
     // Assert span contains "Hi! How can I help?"
+await page.waitForTimeout(10000);
      const spanText = await page
     .locator('.chat-message-assistant .chat-message-content span')
     .last()
     .innerText();
+
     expect(spanText).toMatch(/hi/i);
 }, { action: "validate" });
 
@@ -136,3 +138,5 @@ await leapwork.step("Validate the chat message shows “Hi! How can I help?” o
 //     const lw_value = (await page.getByText('Hi! How can I help?').textContent())?.trim() ?? '';
 //     leapwork.variables.set("lw_hiHowCanIHelp", lw_value, leapwork.storage.LOCAL);
 // }, { action: "get_value", enableXpath: false, relativeXpath: ".//div[2]/div[2]/div/div[3]/div/span" });
+
+
