@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-24T07:36:26.225Z",
+  "generatedAt": "2026-11-25T06:38:53.473Z",
   "repo": {
     "connectorId": 352,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -319,6 +319,36 @@
           "name": "External Adapter Filter Hook",
           "kind": "test-case",
           "repoPath": "External Adapter/TC-251-External-Adapter-Filter-Hook.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 48551,
+      "displayId": "FD-78",
+      "name": "FNO",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 48552,
+          "displayId": "FD-79",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 48553,
+              "displayId": "TC-363",
+              "name": "D365 logic with TOTP variable",
+              "kind": "test-case",
+              "repoPath": "FNO/Utilities/TC-363-D365-logic-with-TOTP-variable.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 48554,
+          "displayId": "TC-364",
+          "name": "31/07/26 D365 execution",
+          "kind": "test-case",
+          "repoPath": "FNO/TC-364-31-07-26-D365-execution.spec.ts"
         }
       ]
     },
@@ -1656,6 +1686,22 @@
       "name": "Enable Llm Over Native Using External Adapter",
       "repoPath": "External Adapter/TC-312-Enable-Llm-Over-Native-Using-External-Adapter.spec.ts",
       "parentAssetId": 22874
+    },
+    {
+      "assetId": 48554,
+      "assetKind": "test-case",
+      "displayId": "TC-364",
+      "name": "31/07/26 D365 execution",
+      "repoPath": "FNO/TC-364-31-07-26-D365-execution.spec.ts",
+      "parentAssetId": 48551
+    },
+    {
+      "assetId": 48553,
+      "assetKind": "test-case",
+      "displayId": "TC-363",
+      "name": "D365 logic with TOTP variable",
+      "repoPath": "FNO/Utilities/TC-363-D365-logic-with-TOTP-variable.spec.ts",
+      "parentAssetId": 48552
     },
     {
       "assetId": 46224,
