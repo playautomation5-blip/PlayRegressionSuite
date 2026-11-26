@@ -13,20 +13,7 @@ const lw__url = leapwork.variables.get("url", leapwork.storage.LOCAL) as string;
 leapwork.variables.set("userId", "user_72");
 leapwork.variables.set("passwordId", "user_72");
 
-leapwork.configuration({
-  enableSelfHeal: false,
-  timeoutMs: 30000,
-  chromiumArgs: ["--deny-permission-prompts",
-          "--disable-notifications"
-        ],
-  chromiumPrefs: { "credentials_enable_service": false,
-          "profile":
-          {
-            "password_manager_enabled": false,
-            "password_manager_leak_detection": false
-          }
-        },
-});
+leapwork.configuration({ enableSelfHeal: false, timeoutMs: 30000, chromiumArgs: ["--deny-permission-prompts", "--disable-notifications"], chromiumPrefs: { "credentials_enable_service": false, "profile": {"password_manager_enabled":false,"password_manager_leak_detection":false} } });
 
 // ai-studio-step-id: pw1vs03ju0
 await leapwork.step("Use test case: Email Password Login", async () => {
@@ -59,7 +46,7 @@ await leapwork.step("Double Click on New team", async () => {
 // ai-studio-step-id: pwzxyp9200
 await leapwork.step("Click the + Add Environment button in the Environments section", async () => {
     // Click span
-    await page.getByRole('button', { name: '+ Add Environment' }).click();
+    await page.getByRole('button', { name: 'Add Environment' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw1yz8n6h0
