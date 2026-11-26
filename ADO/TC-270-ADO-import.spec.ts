@@ -50,15 +50,15 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
 
 // ai-studio-step-id: pw1rdgwa00
 await leapwork.step("Click the Integrations tab in Team settings navigation", async () => {
-    // Click button "Integrations"
-    await page.getByRole('button', { name: 'Integrations' }).click();
+    // Click tab "Integrations"
+    await page.getByRole('tab', { name: 'Integrations' }).click();
 }, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[2]" });
 
 // ai-studio-step-id: pw1xudi550
-await leapwork.step("Click the + New connection button to open the Azure DevOps connection dialog", async () => {
-    // Click span
-    await page.getByRole('button', { name: '+ New connection' }).click();
-}, { action: "click", relativeXpath: ".//div[1]/div[4]/div/div[2]/button/span" });
+await leapwork.step("Click the New connection button in the Azure DevOps connection settings.", async () => {
+    // Click button "New connection"
+    await page.getByRole('button', { name: 'New connection' }).click();
+}, { action: "click", relativeXpath: ".//div/div[1]/div[4]/div/div[2]/button" });
 
 // ai-studio-step-id: pwz52wrw00
 await leapwork.step("Click the ADO URL field in the Azure DevOps connection dialog", async () => {
@@ -157,6 +157,19 @@ await leapwork.step("Click the OK button to confirm successful import of 1 test 
     await page.getByRole('button', { name: 'OK', exact: true }).click();
 }, { action: "click", relativeXpath: ".//div[2]/div[2]/div[4]/div/div[3]/button" });
 
+// ai-studio-step-id: pw1eie90q0
+await leapwork.step("Validate that the ADO Sync bar displays 'ADO Sync available' on the Leapwork Play page", async () => {
+    // Assert span contains "ADO Sync available"
+    await expect(page.getByText('ADO Sync available')).toContainText("ADO Sync available");
+}, { action: "validate", relativeXpath: ".//div[3]/div[1]/div[2]/div[2]/div[2]/span", enableXpath: false });
+
+// Warning: Do not delete this step. It is linked to the validate step above.
+// await leapwork.step("Get value from ADO Sync available", async () => {
+//     // Get value from span
+//     const lw_value = (await page.getByText('ADO Sync available').textContent())?.trim() ?? '';
+//     leapwork.variables.set("lw_aDOSyncAvailable", lw_value, leapwork.storage.LOCAL);
+// }, { action: "get_value", enableXpath: false, relativeXpath: ".//div[3]/div[1]/div[2]/div[2]/div[2]/span" });
+
 // ai-studio-step-id: pw1srtsus0
 await leapwork.step("Click the Expand folder button for \"team 39589\"", async () => {
     // Click button "Expand folder"
@@ -219,3 +232,21 @@ await leapwork.step("Validate the explorer item name shows '13510 - test123' on 
 //     const lw_value = await page.getByText('- test123').nth(1).getAttribute('title');
 //     leapwork.variables.set("lw_13510Test123", lw_value, leapwork.storage.LOCAL);
 // }, { action: "get_value", enableXpath: false, relativeXpath: ".//div[2]/div/div[2]/div[1]/div/span[4]" });
+
+// ai-studio-step-id: pw124xazz0
+await leapwork.step("Click the \"More actions for leaptestcompany\" button to open the team row menu", async () => {
+    // Click button "More actions for leaptestcompany"
+    await page.getByRole('button', { name: 'More actions for leaptestcompany' }).click();
+}, { action: "click", relativeXpath: ".//div/div[1]/div[2]/span[4]/div/button[@aria-label=\"More actions for leaptestcompany\"]" });
+
+// ai-studio-step-id: pwvuy5d200
+await leapwork.step("Click the Delete menu item to remove the Azure DevOps connection for leaptestcompany", async () => {
+    // Click menuitem "Delete"
+    await page.getByRole('menuitem', { name: 'Delete' }).click();
+}, { action: "click", relativeXpath: ".//div[1]/div[2]/span[4]/div/div/button[3]" });
+
+// ai-studio-step-id: pw1kzbl9r0
+await leapwork.step("Click the Delete button to confirm deleting \"leaptestcompany\" connector", async () => {
+    // Click button "Delete"
+    await page.getByRole('button', { name: 'Delete' }).click();
+}, { action: "click", relativeXpath: ".//div[4]/div/div[3]/div/div/button[2]" });
