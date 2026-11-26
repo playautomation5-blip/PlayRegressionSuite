@@ -49,14 +49,14 @@ await leapwork.step("Double-click the team 74800 item in the explorer pane", asy
 // ai-studio-step-id: pwvexmhd00
 await leapwork.step("Click the \"Variables & Secrets\" tab in the Team settings navigation", async () => {
     // Click button "Variables & Secrets"
-    await page.getByRole('button', { name: 'Variables & Secrets' }).click();
+    await page.getByRole('tab', { name: 'Variables & Secrets' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pwcfc6zi00
-await leapwork.step("Click the + Add variable button in the Team Variables section", async () => {
-    // Click span
-    await page.getByRole('button', { name: '+ Add variable' }).click();
-}, { action: "click"});
+await leapwork.step("Click the Add variable button in the Team Variables panel", async () => {
+    // Click button "Add variable"
+    await page.getByRole('button', { name: 'Add variable' }).click();
+}, { action: "click" });
 
 // ai-studio-step-id: pw1qyuds10
 await leapwork.step("Click the Variable key input field on the Leapwork Play page", async () => {
