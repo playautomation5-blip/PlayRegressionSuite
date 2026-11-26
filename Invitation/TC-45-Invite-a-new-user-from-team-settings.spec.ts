@@ -36,6 +36,7 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
     return await DeleteCreateRenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
+
 // await leapwork.step(`Double-click the ${teamName} item`, async () => {
 //     // Double-click "team 33897"
 //     await page.getByText(teamName).dblclick();
@@ -47,11 +48,16 @@ await leapwork.step("Click the “team 66689” team in Leapwork Play", async ()
     await page.getByText('team').first().dblclick();
 }, { action: "click" });
 
-// ai-studio-step-id: pwf2kshn00
-await leapwork.step("Click the + Invite Team Member button", async () => {
-    // Click span
-    await page.getByRole('button', { name: '+ Invite Team Member' }).click();
-}, { action: "click" });
+// ai-studio-step-id: pw6akut000
+await leapwork.step("Click the Invite Team Member button in the Team Members section", async () => {
+    // Click button "Invite Team Member"
+    await page.getByRole('button', { name: 'Invite Team Member' }).click();
+}, { action: "click"});
+
+// await leapwork.step("Click the + Invite Team Member button", async () => {
+//     // Click span
+//     await page.getByRole('button', { name: '+ Invite Team Member' }).click();
+// }, { action: "click" });
 
 // ai-studio-step-id: pwvxnz2k00
 await leapwork.step(`Fill the Email field with ${invitationEmail}`, async () => {
@@ -59,27 +65,22 @@ await leapwork.step(`Fill the Email field with ${invitationEmail}`, async () => 
     await page.getByRole('textbox', { name: 'Email' }).fill(String(invitationEmail));
 }, { action: "input" });
 
-// ai-studio-step-id: pwuiliqx00
-await leapwork.step("Click the Role dropdown set to Write", async () => {
-    // Click span
+// ai-studio-step-id: pw1v619lp0
+await leapwork.step("Click the Role dropdown showing “Write” in the Invite Team Member popup", async () => {
+    // Click combobox "Role"
     await page.getByRole('combobox', { name: 'Role' }).click();
-}, { action: "click" });
+}, { action: "click", relativeXpath: "//*[@id=\"invite-user-role\"]" });
 
-// ai-studio-step-id: pwty8gqs00
-await leapwork.step("Validate that the Administrator selection on the Leapwork Play page is “Administrator”", async () => {
+// ai-studio-step-id: pw1d5a8sm0
+await leapwork.step("Validate the permission dropdown on Leapwork Play shows \"Administrator\"", async () => {
     // Assert option "Administrator" contains "Administrator"
-    await expect(page.getByRole('option', { name: 'Administrator' })).toContainText("Administrator");
-}, { action: "validate" });
-
-// await leapwork.step("Validate that the Administrator option shows 'Administrator' on the Leapwork Play page", async () => {
-//     // Assert span contains "Administrator"
-//     await expect(page.locator('#fluent-option_r_4_').getByText('Administrator')).toContainText("Administrator");
-// }, { action: "validate" });
+    await expect(page.locator('div[role="option"]:has-text("Administrator")')).toContainText("Administrator");
+}, { action: "validate", relativeXpath: "//*[@id=\"fluent-option_r_3_\"]" });
 
 // ai-studio-step-id: pw1nfx83d0
 await leapwork.step("Click the Read option in the Role dropdown", async () => {
     // Click option "Read"
-    await page.getByRole('option', { name: 'Read' }).click();
+    await page.locator('div[role="option"]:has-text("Read")').click();
 }, { action: "click"});
 
 // ai-studio-step-id: pwt0ca8q00

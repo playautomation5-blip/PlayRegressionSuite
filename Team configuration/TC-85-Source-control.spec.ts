@@ -59,14 +59,14 @@ await leapwork.step("Double click the \"${teamName}\" folder in Leapwork AI Stud
 // ai-studio-step-id: pwjt771z00
 await leapwork.step("Click Integrations in the Team settings navigation", async () => {
     // Click button "Integrations"
-    await page.getByRole('button', { name: 'Integrations' }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[2]" });
+    await page.getByRole('tab', { name: 'Integrations' }).click();
+}, { action: "click"});
 
 // ai-studio-step-id: pw7aaiki00
-await leapwork.step("Click the + New connector button in Leapwork Play.", async () => {
-    // Click span
-    await page.getByRole('button', { name: '+ New connector' }).first().click();
-}, { action: "click", relativeXpath: ".//div[1]/div[2]/div/div[2]/button/span" });
+await leapwork.step("Click the New connector button in the source control connectors section", async () => {
+    // Click button "New connector"
+    await page.getByRole('button', { name: 'New connector' }).first().click();
+}, { action: "click" });
 
 // ai-studio-step-id: pw1x1tq9u0
 await leapwork.step("Click the Name field in the New connector dialog", async () => {
