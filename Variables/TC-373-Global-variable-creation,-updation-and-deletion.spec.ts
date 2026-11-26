@@ -126,7 +126,7 @@ await leapwork.step("Double-click team twice", async () => {
 // ai-studio-step-id: pw179q8ku0
 await leapwork.step("Click the Variables & Secrets button in Team settings navigation", async () => {
     // Click button "Variables & Secrets"
-    await page.getByRole('button', { name: 'Variables & Secrets' }).click();
+    await page.getByRole('tab', { name: 'Variables & Secrets' }).click();
 }, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[3]" });
 
 // ai-studio-step-id: pw1ynjtq00
@@ -170,7 +170,7 @@ await leapwork.step("Double-click team twice", async () => {
 // ai-studio-step-id: pwg5vxu700
 await leapwork.step("Click the Variables & Secrets button in Team settings navigation", async () => {
     // Click button "Variables & Secrets"
-    await page.getByRole('button', { name: 'Variables & Secrets' }).click();
+    await page.getByRole('tab', { name: 'Variables & Secrets' }).click();
 }, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[3]" });
 
 // ai-studio-step-id: pws4m4yu00
@@ -232,3 +232,4 @@ await leapwork.step("Click Delete to remove the variable.", async () => {
     // Click button "Delete"
     await page.getByRole('button', { name: 'Delete' }).click();
 }, { action: "click", relativeXpath: ".//div/div/div[4]/div/div/button[2]" });
+
