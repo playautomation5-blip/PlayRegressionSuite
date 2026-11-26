@@ -67,7 +67,7 @@ await leapwork.step("Click Integrations in the Team settings navigation", async 
 await leapwork.step("Click the New connector button in the source control connectors section", async () => {
     // Click button "New connector"
     await page.getByRole('button', { name: 'New connector' }).first().click();
-}, { action: "click", relativeXpath: ".//div/div[1]/div[2]/div/div[2]/button" });
+}, { action: "click"});
 
 // ai-studio-step-id: pwgacctc00
 await leapwork.step("Click the Name field in the New connector dialog", async () => {
@@ -117,13 +117,13 @@ await leapwork.step("Click the More actions button for the connector", async () 
     const showMoreActionsButton = page.getByRole('button', { name: 'More actions for connector' });
     await showMoreActionsButton.scrollIntoViewIfNeeded();
     await showMoreActionsButton.click();
-}, { action: "click", relativeXpath: ".//div/div[1]/div[2]/span[8]/div/button[@aria-label=\"More actions for connector\"]" });
+}, { action: "click"});
 
 // ai-studio-step-id: pw1kzar6l0
 await leapwork.step("Click Edit for the connector in Source Control settings", async () => {
     // Click menuitem "Edit"
     await page.getByRole('menuitem', { name: 'Edit' }).click();
-}, { action: "click", relativeXpath: ".//div[1]/div[2]/span[8]/div/div/button[1]" });
+}, { action: "click"});
 
 
 
@@ -145,27 +145,23 @@ await leapwork.step("Click the Save button in the Edit connector section", async
     await page.getByRole('button', { name: 'Save' }).click();
 }, { action: "click" });
 
-
-
-
-
 // ai-studio-step-id: GJDeqN1s
 await leapwork.step("Click More actions for the connector-edited item", async () => {
     // Click button "More actions for connector-edited"
     await page.getByRole('button', { name: 'More actions for connector-' }).click();
-}, { action: "click", relativeXpath: ".//div/div[1]/div[2]/span[8]/div/button[@aria-label=\"More actions for connector-edited\"]" });
+}, { action: "click"});
 
 // ai-studio-step-id: ZkbihZjl
 await leapwork.step("Click Delete in the Delete Connector confirmation dialog", async () => {
     // Click menuitem "Delete"
     await page.getByRole('menuitem', { name: 'Delete' }).click();
-}, { action: "click", relativeXpath: ".//div[1]/div[2]/span[8]/div/div/button[2]" });
+}, { action: "click"});
 
 // ai-studio-step-id: 6B8PP0sR
 await leapwork.step("Click Delete to confirm deleting the “connector-edited” connector", async () => {
     // Click button "Delete"
     await page.getByRole('button', { name: 'Delete' }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div/div[3]/div/div/button[2]" });
+}, { action: "click"});
 
 
 

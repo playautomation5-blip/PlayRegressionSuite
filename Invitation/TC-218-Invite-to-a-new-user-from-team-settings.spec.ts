@@ -70,13 +70,13 @@ await leapwork.step(`Fill the Email field with ${invitationEmail}`, async () => 
 await leapwork.step("Click the Role dropdown showing “Write” in the Invite Team Member popup", async () => {
     // Click combobox "Role"
     await page.getByRole('combobox', { name: 'Role' }).click();
-}, { action: "click", relativeXpath: "//*[@id=\"invite-user-role\"]" });
+}, { action: "click"});
 
 // ai-studio-step-id: pwns92m800
 await leapwork.step("Validate the permission dropdown on Leapwork Play shows \"Administrator\"", async () => {
     // Assert option "Administrator" contains "Administrator"
     await expect(page.locator('div[role="option"]:has-text("Administrator")')).toContainText("Administrator");
-}, { action: "validate", relativeXpath: "//*[@id=\"fluent-option_r_3_\"]" });
+}, { action: "validate"});
 
 // ai-studio-step-id: pw1ijpn0g0
 await leapwork.step("Click the Read option in the Role dropdown", async () => {
