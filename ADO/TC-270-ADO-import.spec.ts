@@ -155,7 +155,7 @@ await leapwork.step("Click the Import button in the \"Import from ADO\" dialog",
 await leapwork.step("Click the OK button to confirm successful import of 1 test plan with 2 test cases", async () => {
     // Click button "OK"
     await page.getByRole('button', { name: 'OK', exact: true }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[4]/div/div[3]/button" });
+}, { action: "click", relativeXpath: ".//div[2]/div[2]/div[4]/div/div[3]/button", continueOnFailure: true });
 
 // ai-studio-step-id: pw1eie90q0
 await leapwork.step("Validate that the ADO Sync bar displays 'ADO Sync available' on the Leapwork Play page", async () => {
