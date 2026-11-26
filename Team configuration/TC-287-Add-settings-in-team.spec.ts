@@ -46,14 +46,14 @@ await leapwork.step("Double-click the team 74800 item in the explorer pane", asy
 // ai-studio-step-id: pwtqvf9700
 await leapwork.step("Click the \"Variables & Secrets\" tab in the Team settings navigation", async () => {
     // Click button "Variables & Secrets"
-    await page.getByRole('button', { name: 'Variables & Secrets' }).click();
+    await page.getByRole('tab', { name: 'Variables & Secrets' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw1tgl9ii0
-await leapwork.step("Click the + Add variable button in the Team Variables section", async () => {
-    // Click span
-    await page.getByRole('button', { name: '+ Add variable' }).click();
-}, { action: "click"});
+await leapwork.step("Click the Add variable button in the Team Variables panel", async () => {
+    // Click button "Add variable"
+    await page.getByRole('button', { name: 'Add variable' }).click();
+}, { action: "click" });
 
 // ai-studio-step-id: pwoxaydr00
 await leapwork.step("Click the Variable key input field on the Leapwork Play page", async () => {
@@ -109,7 +109,7 @@ await leapwork.step("Click the Delete variable option in the context menu for th
     await page.getByText('Delete variable').click();
 }, { action: "click"});
 
-// ai-studio-step-id: pwe7vw0000
+// ai-studio-step-id: pwjtldck00
 await leapwork.step("Click the Delete button to confirm removing the team variable", async () => {
     // Click button "Delete"
     await page.getByRole('button', { name: 'Delete' }).click();
