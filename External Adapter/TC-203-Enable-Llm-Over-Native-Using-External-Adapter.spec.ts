@@ -65,7 +65,7 @@ await leapwork.step("Double-click the \"New team\" item in the Leapwork Play exp
 // ai-studio-step-id: pwzxyp9200
 await leapwork.step("Click the + Add Environment button in the Environments section", async () => {
     // Click span
-    await page.getByRole('button', { name: '+ Add Environment' }).click();
+    await page.getByRole('button', { name: 'Add Environment' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw1yz8n6h0
