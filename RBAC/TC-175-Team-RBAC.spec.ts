@@ -31,10 +31,10 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pwwnrips00
-await leapwork.step("Click the \"+ Invite Team Member\" button on the Team Members page", async () => {
-    // Click span
-    await page.getByRole('button', { name: '+ Invite Team Member' }).click();
-}, { action: "click" });
+await leapwork.step("Click Invite Team Member in the Team Members section", async () => {
+    // Click button "Invite Team Member"
+    await page.getByRole('button', { name: 'Invite Team Member' }).click();
+}, { action: "click", relativeXpath: ".//div/div/div[1]/div[1]/div[2]/button" });
 
 // ai-studio-step-id: pw1arcshd0
 await leapwork.step(`Fill the Email field with "${lw__nameCompanyCom}"`, async () => {
@@ -49,10 +49,10 @@ await leapwork.step("Click the Role dropdown and select Write in the Invite Team
 }, { action: "click" });
 
 // ai-studio-step-id: pwoq3lmb00
-await leapwork.step("Click the Administrator role option in the Invite Team Member form", async () => {
-    // Click option "Administrator"
-    await page.getByRole('option', { name: 'Administrator' }).click();
-}, { action: "click" });
+await leapwork.step("Click the Administrator role option for the team member", async () => {
+    // Click span
+    await page.getByRole('option', { name: 'Administrator', exact: true }).last().click();
+}, { action: "click", relativeXpath: "//*[@id=\"fluent-option_r_g_\"]/span[2]" });
 
 // ai-studio-step-id: pw1k10anq0
 await leapwork.step("Click Invite to send the team member invitation", async () => {
@@ -100,17 +100,9 @@ await leapwork.step("Validate the Leapwork Play page shows the `Create new in ${
 
 // Validate the Write role: 
 
-// ai-studio-step-id: pw1n1xl5d0
-await leapwork.step("Click in the dropdown menu", async () => {
-    // Click div
-    const dropdown = page.locator('.team-member-row').filter({ hasText: 'mofica1084@drtall.com' }).locator('.team-member-permissions .text');
-    await dropdown.click();
-}, { action: "click" });
-
-// ai-studio-step-id: pwnn3p2w00
-await leapwork.step("Click the Write option in the permissions menu", async () => {
-    // Click div
-    await page.getByText('Write').click();
+// ai-studio-step-id: pw1aaflbm0
+await leapwork.step("Select \"Write\" from AdministratorWriteRead", async () => {
+    await page.locator('.team-member-row').filter({ hasText: 'mofica1084@drtall.com' }).getByRole('combobox').first().selectOption({ label: "Write" });
 }, { action: "click" });
 
 // await leapwork.step("Double click the team item in the Leapwork Play explorer", async () => {
@@ -156,17 +148,9 @@ await leapwork.step("Double click the team item in the Leapwork Play explorer", 
 
 // Validate the Read role:
 
-// ai-studio-step-id: pw1y5ejcl0
-await leapwork.step("Click in the dropdown menu", async () => {
-    // Click div
-    const dropdown = page.locator('.team-member-row').filter({ hasText: 'mofica1084@drtall.com' }).locator('.team-member-permissions .text');
-    await dropdown.click();
-}, { action: "click" });
-
-// ai-studio-step-id: pw5yzqf400
-await leapwork.step("Click the Read option in the Administrator menu", async () => {
-    // Click div
-    await page.getByText('Read', { exact: true }).click();
+// ai-studio-step-id: pw14d34hm0
+await leapwork.step("Select \"Read\" from AdministratorWriteRead", async () => {
+    await page.locator('.team-member-row').filter({ hasText: 'mofica1084@drtall.com' }).getByRole('combobox').first().selectOption({ label: "Read" });
 }, { action: "click" });
 
 // ai-studio-step-id: pw16n5a6k0

@@ -44,10 +44,10 @@ await leapwork.step("Double-click team 35512", async () => {
 
 
 // ai-studio-step-id: pw1fbkf0d0
-await leapwork.step("Click the + Add Environment button", async () => {
-    const addEnvironmentButton = page.getByRole('button', { name: '+ Add Environment', exact: true });
-    await addEnvironmentButton.click({ force: true });
-});
+await leapwork.step("Click the Add Environment button", async () => {
+    // Click button "Add Environment"
+    await page.getByRole('button', { name: 'Add Environment' }).click();
+}, { action: "click", relativeXpath: ".//div/div[1]/div[7]/div[1]/div[3]/button" });
 
 // ai-studio-step-id: pwu88vv600
 await leapwork.step("Fill the Environment name field with \"env name\"", async () => {
