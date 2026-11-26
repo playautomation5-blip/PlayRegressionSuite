@@ -58,13 +58,13 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
 // ai-studio-step-id: pw1ep6g7o0
 await leapwork.step("Click Integrations in the Team settings navigation", async () => {
     // Click button "Integrations"
-    await page.getByRole('button', { name: 'Integrations' }).click();
+    await page.getByRole('tab', { name: 'Integrations' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw2ocyti00
 await leapwork.step("Click the \"+ Add auth settings\" button in the Auth settings section", async () => {
     // Click button "+ Add auth settings"
-    await page.getByRole('button', { name: '+ Add auth settings' }).click();
+    await page.getByRole('button', { name: 'Add auth settings' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw1gp1bmx0
@@ -112,7 +112,7 @@ await leapwork.step("Click the Save button in the team settings.", async () => {
 // ai-studio-step-id: pw1ocaln70
 await leapwork.step("Click the + Add connection button in the Connections section", async () => {
     // Click span
-    await page.getByRole('button', { name: '+ Add connection' }).click();
+    await page.getByRole('button', { name: 'Add connection' }).click();
 }, { action: "click" });
 
 // ai-studio-step-id: pw1ubfyzu0
