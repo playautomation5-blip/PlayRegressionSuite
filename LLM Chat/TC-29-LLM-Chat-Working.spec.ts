@@ -5,7 +5,8 @@ import { DeleteAllTeams } from "@assets/Utilities/Delete All Teams";
 import { CreateNewTeam } from "@assets/Utilities/Create New Team";
 import { RenameTeam } from "@assets/Utilities/Rename Team";
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
-import { RandomTeam, RandomTeam2, teamName } from "@assets/Utilities/random-team";
+import { RandomTeam, teamName } from "@assets/Utilities/random-team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -17,7 +18,7 @@ leapwork.configuration({
       ?? leapwork.workspace.settings.get("enableSelfHeal")) !== "false",
 });
 
-leapwork.variables.set("userId", "user_44");
+leapwork.variables.set("userId", "user_70");
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetName", "LLM testing");
 leapwork.variables.set("assetType", "New test case");
@@ -28,8 +29,8 @@ leapwork.variables.set("askAnything", "Hi", leapwork.storage.LOCAL);
 const lw__askAnything = leapwork.variables.get("askAnything", leapwork.storage.LOCAL) as string;
 
 // ai-studio-step-id: pw1vs03ju0
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: pw1l4afq30

@@ -8,7 +8,7 @@ import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename T
 import { ImportTestsOrPlaywright } from "@assets/Utilities/Import Tests or Playwright";
 
 leapwork.variables.set("settingKey", "enableSelfHeal", leapwork.storage.LOCAL);
-leapwork.variables.set("settingValue", "false", leapwork.storage.LOCAL);
+leapwork.variables.set("settingValue", "False", leapwork.storage.LOCAL);
 
 leapwork.variables.set("email", "xagaci3338@calirona.com", leapwork.storage.LOCAL);
 const lw__email = leapwork.variables.get("email", leapwork.storage.LOCAL) as string;
@@ -33,37 +33,37 @@ leapwork.variables.set("userId", "user-70");
 leapwork.variables.set("teamName", teamName);
 
 
-// ai-studio-step-id: pwgoz4yr00
+// ai-studio-step-id: pw46dk8s00
 await leapwork.step("Click the email field on the Leapwork Play login page", async () => {
     // Click textbox "email"
     await page.getByRole('textbox', { name: 'email' }).click();
 }, { action: "click", relativeXpath: "//*[@id=\"workos-email\"]" });
 
-// ai-studio-step-id: pwpey5ow00
+// ai-studio-step-id: pw1p0nxrx0
 await leapwork.step(`Fill the email field with "${lw__email}"`, async () => {
     // Fill textbox "email"
     await page.getByRole('textbox', { name: 'email' }).fill(String(lw__email));
 }, { action: "input", relativeXpath: "//*[@id=\"workos-email\"]" });
 
-// ai-studio-step-id: pwn5a8yt00
+// ai-studio-step-id: pw176ezj20
 await leapwork.step("Set \"Remember me\" checkbox", async () => {
     // Check checkbox "Remember me"
     await page.getByRole('checkbox', { name: 'Remember me' }).check();
 }, { action: "click", relativeXpath: "//*[@id=\"checkbox-_r_3_\"]" });
 
-// ai-studio-step-id: pw13hayd40
+// ai-studio-step-id: pw1tiw4w50
 await leapwork.step("Click the “Log in with email” button on the Leapwork Play login form", async () => {
     // Click button "Log in with email"
     await page.getByRole('button', { name: 'Log in with email' }).click();
 }, { action: "click", relativeXpath: ".//section/div/div/div/form/button" });
 
-// ai-studio-step-id: pwudwrxb00
+// ai-studio-step-id: pw1k9eulc0
 await leapwork.step("Fill the Password field with the password.", async () => {
     // Fill textbox "Password*"
     await page.getByRole('textbox', { name: 'Password*' }).fill(leapwork.variables.getSecret("pwd_Am9RS1xu"));
 }, { action: "input", relativeXpath: "//*[@id=\"workos-password\"]" });
 
-// ai-studio-step-id: pw1tkye160
+// ai-studio-step-id: pw1yvclw30
 await leapwork.step("Click Sign in with password on the Leapwork Play login form", async () => {
     // Click button "Sign in with password"
     await page.getByRole('button', { name: 'Sign in with password' }).click();
@@ -74,10 +74,29 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
     return await DeleteCreateRenameTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: pw91be7t00
-await leapwork.step("Use test case: Add Setting", async () => {
-    return await AddSetting();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
+// ai-studio-step-id: pw1jyt1qp0
+await leapwork.step("Double-click team twice", async () => {
+    // Double-click textbox "Search"
+    await page.getByText('team').first().dblclick();
+}, { action: "dblclick" });
+
+// ai-studio-step-id: pwiqwux900
+await leapwork.step("Click the Advanced settings tab in Team settings navigation", async () => {
+    // Click button "Advanced settings"
+    await page.getByRole('tab', { name: 'Advanced settings' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[5]" });
+
+// ai-studio-step-id: pw2a2w0r00
+await leapwork.step("Set \"Self-Healing\" toggle", async () => {
+    // Check switch "Self-Healing"
+const selfHealingSwitch = page.getByRole('switch', { name: 'Self-Healing' });
+
+if (await selfHealingSwitch.isChecked()) {
+  await selfHealingSwitch.click();
+}
+
+await expect(selfHealingSwitch).not.toBeChecked();
+}, { action: "click", relativeXpath: ".//div[6]/div/div[1]/div[1]/span/button[@aria-label=\"Self-Healing\"]" });
 
 // ai-studio-step-id: pw1nets530
 await leapwork.step("Use test case: Import Tests or Playwright", async () => {
@@ -111,11 +130,11 @@ await leapwork.step("Click Connect to connect to the Google Chromium browser in 
 // ai-studio-step-id: pwqxc9j200
 await leapwork.step("Click the Run button to run the test case", async () => {
     // Click button "Run"
-    await page.getByRole('button', { name: 'Run' }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]", timeoutMs: 10000 });
+    await page.getByRole('button', { name: 'Run', exact: true }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]", timeoutMs: 30000 });
 
 // ai-studio-step-id: pw1dvznir0
-await leapwork.step("Validate the Leapwork Play page shows the “Oat & Aloe Wash” product details dialog", async () => {
+await leapwork.step("Validate the “Oat & Aloe Wash” product details dialog appears on Leapwork Play", async () => {
     // Assert div contains "expect(locator).toHaveCount(expected) failed Locator: getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) Expected: 1 Received: 0 Timeout: 5000ms Call log: - Expect "toHaveCount" getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) with timeout 5000ms - waiting for getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) 14 × locator resolved to 0 elements - unexpected value "0""
     await expect(page.locator('#root').getByText('expect(locator).toHaveCount(')).toContainText("expect(locator).toHaveCount(expected) failed\n\nLocator:  getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true })\nExpected: 1\nReceived: 0\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveCount\" getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) with timeout 5000ms\n  - waiting for getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true })\n    14 × locator resolved to 0 elements\n       - unexpected value \"0\"");
 }, { action: "validate", relativeXpath: ".//div[2]/div[1]/div[3]/div/div[3]/div", timeoutMs: 30000 });

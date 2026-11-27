@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-26T08:27:27.380Z",
+  "generatedAt": "2026-11-27T06:24:35.738Z",
   "repo": {
     "connectorId": 76,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -311,6 +311,36 @@
           "name": "External Adapter Filter Hook",
           "kind": "test-case",
           "repoPath": "External Adapter/TC-112-External-Adapter-Filter-Hook.spec.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 18980,
+      "displayId": "FD-43",
+      "name": "FNO",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 18981,
+          "displayId": "FD-44",
+          "name": "Utilities",
+          "kind": "folder",
+          "children": [
+            {
+              "assetId": 18982,
+              "displayId": "TC-253",
+              "name": "D365 logic with TOTP variable",
+              "kind": "test-case",
+              "repoPath": "FNO/Utilities/TC-253-D365-logic-with-TOTP-variable.spec.ts"
+            }
+          ]
+        },
+        {
+          "assetId": 18983,
+          "displayId": "TC-254",
+          "name": "31/07/26 D365 execution",
+          "kind": "test-case",
+          "repoPath": "FNO/TC-254-31-07-26-D365-execution.spec.ts"
         }
       ]
     },
@@ -1315,6 +1345,21 @@
       ]
     },
     {
+      "assetId": 19783,
+      "displayId": "FD-48",
+      "name": "Variable",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 19753,
+          "displayId": "TC-261",
+          "name": "Global variable creation, updation and deletion",
+          "kind": "test-case",
+          "repoPath": "Variable/TC-261-Global-variable-creation,-updation-and-deletion.spec.ts"
+        }
+      ]
+    },
+    {
       "assetId": 8259,
       "displayId": "FD-24",
       "name": "Workspaces",
@@ -1631,6 +1676,22 @@
       "name": "Enable Llm Over Native Using External Adapter",
       "repoPath": "External Adapter/TC-203-Enable-Llm-Over-Native-Using-External-Adapter.spec.ts",
       "parentAssetId": 8189
+    },
+    {
+      "assetId": 18983,
+      "assetKind": "test-case",
+      "displayId": "TC-254",
+      "name": "31/07/26 D365 execution",
+      "repoPath": "FNO/TC-254-31-07-26-D365-execution.spec.ts",
+      "parentAssetId": 18980
+    },
+    {
+      "assetId": 18982,
+      "assetKind": "test-case",
+      "displayId": "TC-253",
+      "name": "D365 logic with TOTP variable",
+      "repoPath": "FNO/Utilities/TC-253-D365-logic-with-TOTP-variable.spec.ts",
+      "parentAssetId": 18981
     },
     {
       "assetId": 19402,
@@ -2527,6 +2588,14 @@
       "name": "random-team",
       "repoPath": "Utilities/TS-2-random-team.ts",
       "parentAssetId": 7839
+    },
+    {
+      "assetId": 19753,
+      "assetKind": "test-case",
+      "displayId": "TC-261",
+      "name": "Global variable creation, updation and deletion",
+      "repoPath": "Variable/TC-261-Global-variable-creation,-updation-and-deletion.spec.ts",
+      "parentAssetId": 19783
     },
     {
       "assetId": 8260,

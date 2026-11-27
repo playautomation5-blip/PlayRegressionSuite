@@ -8,14 +8,14 @@ import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename T
 import { ImportTestsOrPlaywright } from "@assets/Utilities/Import Tests or Playwright";
 import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
-leapwork.variables.set("settingKey", "enableSelfHeal", leapwork.storage.LOCAL);
+leapwork.variables.set("settingKey", "Self-Healing", leapwork.storage.LOCAL);
 const lw__settingKey = leapwork.variables.get("settingKey", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("value", "false", leapwork.storage.LOCAL);
+leapwork.variables.set("value", "False", leapwork.storage.LOCAL);
 const lw__value = leapwork.variables.get("value", leapwork.storage.LOCAL) as string;
 
 leapwork.variables.set("settingKey", "enableSelfHeal", leapwork.storage.LOCAL);
-leapwork.variables.set("settingValue", "true", leapwork.storage.LOCAL);
+leapwork.variables.set("settingValue", "True", leapwork.storage.LOCAL);
 
 leapwork.configuration({
   timeoutMs: Number(
@@ -66,49 +66,60 @@ await leapwork.step("Click Workspace settings in the settings navigation", async
     await page.getByRole('button', { name: 'Workspace settings' }).click();
 }, { action: "click", relativeXpath: ".//div[2]/div[2]/div[1]/div/nav/button[2]" });
 
+
+
 // ai-studio-step-id: pwgehptg00
 await leapwork.step("Delete all settings", async () => {
     const buttonLocator = page.locator('.kv-settings-action-button');
-    await logInfo("cOUNT ", await buttonLocator.count());
   // Keep looping as long as at least one button is visible
   while (await buttonLocator.first().isVisible()) {
     // Click the first available button
-    await logInfo("INSIDE LOOP cOUNT ", await buttonLocator.count());
     await buttonLocator.first().click();
     await page.getByText('Delete setting').click();
     await page.getByRole('button', { name: 'Delete' }).click();
   }
 }, { action: "click", relativeXpath: ".//div[6]/div[5]/div/div[3]/button/span" });
 
-// ai-studio-step-id: pw1sb70p20
-await leapwork.step("Click the + Add setting button.", async () => {
-    // Click span
-    await page.getByRole('button', { name: '+ Add setting' }).click();
-}, { action: "click", relativeXpath: ".//div/div/div/div[3]/button/span" });
-
-// ai-studio-step-id: pw1upo4ij0
-await leapwork.step("Click the “Setting key” field on the Leapwork Play settings page", async () => {
-    // Click textbox "Setting key"
-    await page.getByRole('textbox', { name: 'Setting key' }).click();
-}, { action: "click", relativeXpath: ".//div/div/div[2]/div[2]/span[1]/input" });
+// ai-studio-step-id: pw1mfnkj60
+await leapwork.step("Click the Add Settings button", async () => {
+    // Click button "Add Settings"
+    await page.getByRole('button', { name: 'Add Settings' }).click();
+}, { action: "click", relativeXpath: ".//div/div/div/div/div[3]/button" });
 
 // ai-studio-step-id: pw1w9u3iy0
 await leapwork.step(`Fill the Setting key field with "${lw__settingKey}"`, async () => {
     // Fill textbox "Setting key"
-    await page.getByRole('textbox', { name: 'Setting key' }).fill(String(lw__settingKey));
-}, { action: "input", relativeXpath: ".//div/div/div[2]/div[2]/span[1]/input" });
+const settingKeyDropdown = page.getByRole('combobox', { name: 'Setting key' });
+const listbox = page.getByRole('listbox');
+const selfHealingOption = listbox.getByRole('option', { name: 'Self-Healing', exact: true });
 
-// ai-studio-step-id: pw1q4btev0
-await leapwork.step("Press Tab on the Leapwork Play settings page", async () => {
-    // Press Tab on element
-    await page.keyboard.press("Tab");
-}, { action: "keydown" });
+await settingKeyDropdown.click();
+await expect(listbox).toBeVisible();
+await selfHealingOption.click();
 
-// ai-studio-step-id: pw1jk7n080
-await leapwork.step(`Fill the Value field for enableSelfHeal with "${lw__value}"`, async () => {
-    // Fill textbox "Value"
-    await page.getByRole('textbox', { name: 'Value' }).fill(String(lw__value));
-}, { action: "input", relativeXpath: ".//div/div/div[2]/div[2]/span[2]/input" });
+// await expect(selfHealingOption).toHaveAttribute('aria-selected', 'true');
+// await expect(settingKeyDropdown).toHaveValue('Self-Healing');
+    //await page.getByRole('textbox', { name: 'Setting key' }).fill(String(lw__SettingName));
+}, { action: "input", relativeXpath: ".//div[5]/div/div[2]/div[2]/span[1]/input" });
+
+// ai-studio-step-id: pwwxgf2m00
+await leapwork.step("Unset \"enableSelfHeal\" checkbox", async () => {
+    //Uncheck checkbox "enableSelfHeal"
+const enableSelfHealSwitch = page.getByRole('switch', { name: 'enableSelfHeal' });
+
+if (await enableSelfHealSwitch.isChecked()) {
+  await enableSelfHealSwitch.click();
+}
+
+await expect(enableSelfHealSwitch).not.toBeChecked();
+}, { action: "click", relativeXpath: ".//div/div[2]/div[2]/span[2]/label[@aria-label=\"enableSelfHeal\"]/input" });
+
+// await leapwork.step(`Fill the Value field for enableSelfHeal with "${lw__value}"`, async () => {
+//     // Fill textbox "Value"
+//       await page.locator('div[aria-label="Value"]').click();
+//   await page.locator(`.options.portal .option:text-is("${lw__value}")`).click();
+//     //await page.getByRole('textbox', { name: 'Value' }).fill(String(lw__SettingValue));
+// }, { action: "input", relativeXpath: ".//div[5]/div/div[2]/div[2]/span[2]/input" });
 
 // ai-studio-step-id: pwoz7th100
 await leapwork.step("Click Save for the enableSelfHeal workspace setting", async () => {
@@ -116,10 +127,33 @@ await leapwork.step("Click Save for the enableSelfHeal workspace setting", async
     await page.getByRole('button', { name: 'Save' }).click();
 }, { action: "click", relativeXpath: ".//div/div/div[2]/div[2]/span[3]/button" });
 
-// ai-studio-step-id: pwdd6ytd00
-await leapwork.step("Use test case: Add Setting", async () => {
-    return await AddSetting();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
+// ai-studio-step-id: pw1v37w570
+await leapwork.step("Double-click team twice", async () => {
+    // Double-click textbox "Search"
+    await page.getByText('team').first().dblclick();
+}, { action: "dblclick" });
+
+// ai-studio-step-id: pw1r00sf60
+await leapwork.step("Click the Advanced settings tab in Team settings navigation", async () => {
+    // Click button "Advanced settings"
+    await page.getByRole('tab', { name: 'Advanced settings' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[5]" });
+
+// ai-studio-step-id: pw1agt8wl0
+await leapwork.step("Set \"Self-Healing\" toggle", async () => {
+    // Check switch "Self-Healing"
+const selfHealingSwitch = page.getByRole('switch', { name: 'Self-Healing' });
+
+// 1. Turn off
+if (await selfHealingSwitch.isChecked()) {
+  await selfHealingSwitch.click();
+}
+await expect(selfHealingSwitch).not.toBeChecked();
+
+// 2. Turn back on
+await selfHealingSwitch.click();
+//await expect(selfHealingSwitch).toBeChecked();
+}, { action: "click", relativeXpath: ".//div[6]/div/div[1]/div[1]/span/button[@aria-label=\"Self-Healing\"]" });
 
 // ai-studio-step-id: pw1znhxi00
 await leapwork.step("Validate the team settings error on Leapwork Play page.", async () => {
@@ -161,11 +195,13 @@ await leapwork.step("Click Connect to connect to the Google Chromium browser in 
 // ai-studio-step-id: pwa0riyr00
 await leapwork.step("Click the Run button to run the test case", async () => {
     // Click button "Run"
-    await page.getByRole('button', { name: 'Run' }).click();
+    await page.getByRole('button', { name: 'Run', exact: true }).click();
 }, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]", timeoutMs: 10000 });
 
+
+
 // ai-studio-step-id: pwcdy87g00
-await leapwork.step("Validate the Leapwork Play page shows the “Oat & Aloe Wash” product details dialog", async () => {
+await leapwork.step("Validate on Leapwork Play that the “Oat & Aloe Wash” product details dialog is displayed", async () => {
     // Assert div contains "expect(locator).toHaveCount(expected) failed Locator: getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) Expected: 1 Received: 0 Timeout: 5000ms Call log: - Expect "toHaveCount" getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) with timeout 5000ms - waiting for getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) 14 × locator resolved to 0 elements - unexpected value "0""
     await expect(page.locator('#root').getByText('expect(locator).toHaveCount(')).toContainText("expect(locator).toHaveCount(expected) failed\n\nLocator:  getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true })\nExpected: 1\nReceived: 0\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveCount\" getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) with timeout 5000ms\n  - waiting for getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true })\n    14 × locator resolved to 0 elements\n       - unexpected value \"0\"");
 }, { action: "validate", relativeXpath: ".//div[2]/div[1]/div[3]/div/div[3]/div", timeoutMs: 30000 });
