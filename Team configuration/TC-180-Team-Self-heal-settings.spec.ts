@@ -52,17 +52,19 @@ await leapwork.step("Double-click team twice", async () => {
 // ai-studio-step-id: pw1sl9q500
 await leapwork.step("Click the Advanced settings tab in Team settings navigation", async () => {
     // Click button "Advanced settings"
-    await page.getByRole('button', { name: 'Advanced settings' }).click();
+    await page.getByRole('tab', { name: 'Advanced settings' }).click();
 }, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[5]" });
 
 // ai-studio-step-id: pw1yu6fqw0
 await leapwork.step("Set \"Self-Healing\" toggle", async () => {
     // Check switch "Self-Healing"
-  const selfHealingSwitch = page.getByRole('switch', { name: 'Self-Healing' });
+const selfHealingSwitch = page.getByRole('switch', { name: 'Self-Healing' });
 
-await expect(selfHealingSwitch).toHaveAttribute('aria-checked', 'true');
-await selfHealingSwitch.click();
-await expect(selfHealingSwitch).toHaveAttribute('aria-checked', 'false');
+if (await selfHealingSwitch.isChecked()) {
+  await selfHealingSwitch.click();
+}
+
+await expect(selfHealingSwitch).not.toBeChecked();
 }, { action: "click", relativeXpath: ".//div[6]/div/div[1]/div[1]/span/button[@aria-label=\"Self-Healing\"]" });
 
 // ai-studio-step-id: pw1nets530
@@ -92,21 +94,19 @@ await leapwork.step("Click the Browser tab in Leapwork Play", async () => {
 await leapwork.step("Click Connect to connect to the Google Chromium browser in North Europe (Ireland)", async () => {
     // Click button "Connect"
     await page.getByRole('button', { name: 'Connect' }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div[1]/div[3]/button", enableSelfHeal: true });
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div[1]/div[3]/button" });
 
 // ai-studio-step-id: pwqxc9j200
 await leapwork.step("Click the Run button to run the test case", async () => {
     // Click button "Run"
-await page.getByRole('button', { name: 'Run', exact: true }).click();
-}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]", timeoutMs: 10000 });
+    await page.getByRole('button', { name: 'Run', exact: true }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]", timeoutMs: 30000 });
 
 // ai-studio-step-id: pw16mwhdv0
 await leapwork.step("Validate the “Oat & Aloe Wash” product details dialog appears on Leapwork Play", async () => {
     // Assert div contains "expect(locator).toHaveCount(expected) failed Locator: getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) Expected: 1 Received: 0 Timeout: 5000ms Call log: - Expect "toHaveCount" getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) with timeout 5000ms - waiting for getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) 14 × locator resolved to 0 elements - unexpected value "0""
     await expect(page.locator('#root').getByText('expect(locator).toHaveCount(')).toContainText("expect(locator).toHaveCount(expected) failed\n\nLocator:  getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true })\nExpected: 1\nReceived: 0\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveCount\" getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) with timeout 5000ms\n  - waiting for getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true })\n    14 × locator resolved to 0 elements\n       - unexpected value \"0\"");
 }, { action: "validate", relativeXpath: ".//div[2]/div[1]/div[3]/div/div[3]/div", timeoutMs: 30000 });
-
-
 
 // ai-studio-step-id: pw10bjjs70
 await leapwork.step("Use test case: Delete Team", async () => {

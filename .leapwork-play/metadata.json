@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-26T08:27:08.445Z",
+  "generatedAt": "2026-11-27T06:19:17.749Z",
   "repo": {
     "connectorId": 19,
     "repoSlug": "playautomation5-blip/PlayRegressionSuite",
@@ -835,6 +835,13 @@
           "name": "Update \"Delete\" Action to \"Remove from Team\" for Team Members",
           "kind": "test-case",
           "repoPath": "Team configuration/TC-136-Update-Delete-Action-to-Remove-from-Team-for-Team-Members.spec.ts"
+        },
+        {
+          "assetId": 20843,
+          "displayId": "TC-178",
+          "name": "Workspace self heal setting",
+          "kind": "test-case",
+          "repoPath": "Team configuration/TC-178-Workspace-self-heal-setting.spec.ts"
         }
       ]
     },
@@ -1185,6 +1192,21 @@
           "name": "Upload file helper",
           "kind": "typescript",
           "repoPath": "Utilities/TS-7-Upload-file-helper.ts"
+        }
+      ]
+    },
+    {
+      "assetId": 28603,
+      "displayId": "FD-46",
+      "name": "Variable",
+      "kind": "folder",
+      "children": [
+        {
+          "assetId": 28605,
+          "displayId": "TC-198",
+          "name": "Global variable creation, updation and deletion",
+          "kind": "test-case",
+          "repoPath": "Variable/TC-198-Global-variable-creation,-updation-and-deletion.spec.ts"
         }
       ]
     },
@@ -1836,6 +1858,14 @@
       "parentAssetId": 8313
     },
     {
+      "assetId": 20843,
+      "assetKind": "test-case",
+      "displayId": "TC-178",
+      "name": "Workspace self heal setting",
+      "repoPath": "Team configuration/TC-178-Workspace-self-heal-setting.spec.ts",
+      "parentAssetId": 8313
+    },
+    {
       "assetId": 20845,
       "assetKind": "test-case",
       "displayId": "TC-180",
@@ -2250,6 +2280,14 @@
       "name": "Upload file helper",
       "repoPath": "Utilities/TS-7-Upload-file-helper.ts",
       "parentAssetId": 8195
+    },
+    {
+      "assetId": 28605,
+      "assetKind": "test-case",
+      "displayId": "TC-198",
+      "name": "Global variable creation, updation and deletion",
+      "repoPath": "Variable/TC-198-Global-variable-creation,-updation-and-deletion.spec.ts",
+      "parentAssetId": 28603
     },
     {
       "assetId": 8534,
