@@ -50,11 +50,11 @@ await leapwork.step("Right-click the team 64512 item in the Leapwork Play explor
 //     await page.getByText('team').click({ button: 'right' });
 // }, { action: "click" });
 
-// ai-studio-step-id: pw6jwzj000
-await leapwork.step("Click the \"+ Invite Team Member\" button in the Team Members section", async () => {
-    // Click span
-    await page.getByRole('button', { name: '+ Invite Team Member' }).click();
-}, { action: "click", relativeXpath: ".//div/div[2]/div[1]/div[2]/button/span" });
+// ai-studio-step-id: pwnvlk6300
+await leapwork.step("Click the Invite Team Member button on the Team Members page", async () => {
+    // Click button "Invite Team Member"
+    await page.getByRole('button', { name: 'Invite Team Member' }).click();
+}, { action: "click"});
 
 // ai-studio-step-id: pw1x8pqqa0
 await leapwork.step("Click the Email field in the Invite Team Member dialog", async () => {
