@@ -8,6 +8,12 @@ import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename T
 import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { DeleteTeam } from "@assets/Utilities/Delete Team";
 
+leapwork.variables.set("categoryName", "Category 1", leapwork.storage.LOCAL);
+const lw__categoryName = leapwork.variables.get("categoryName", leapwork.storage.LOCAL) as string;
+
+leapwork.variables.set("description", "This is the first category", leapwork.storage.LOCAL);
+const lw__description = leapwork.variables.get("description", leapwork.storage.LOCAL) as string;
+
 leapwork.variables.set("userId", "user_28");
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetType", "New test case");
@@ -39,6 +45,12 @@ await leapwork.step("Use test case: Delete-Create-Rename Team", async () => {
 await leapwork.step("Use test case: Add Category", async () => {
     return await AddCategory();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
+
+// await leapwork.step("Click the Test case organization tab in Team settings navigation", async () => {
+//     // Click tab "Test case organization"
+//     await page.getByRole('tab', { name: 'Test case organization' }).click();
+// }, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[4]" });
+
 
 // ai-studio-step-id: e213f22b
 await leapwork.step("Use test case: Create New Asset", async () => {
