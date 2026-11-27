@@ -268,11 +268,16 @@ await leapwork.step("Validate on Leapwork AI Studio admin page that the Remote b
     await expect(page.getByRole('button', { name: 'Remote browser mins' })).toContainText("Remote browser mins");
 }, { action: "validate" });
 
-// ai-studio-step-id: F3oCsqh8
-await leapwork.step("Click the Overview tab under Analytics", async () => {
+// ai-studio-step-id: pw1x25p5o0
+await leapwork.step("Click the Overview tab in the Analytics section of the Admin navigation", async () => {
     // Click button "Overview"
     await page.getByRole('button', { name: 'Overview' }).click();
-}, { action: "click", relativeXpath: ".//div/div[2]/nav[@aria-label=\"Admin section tabs\"]/div/div[@aria-label=\"Analytics\"]/button[@aria-label=\"Overview\"]" });
+}, { action: "click" });
+
+// await leapwork.step("Click the Overview tab under Analytics", async () => {
+//     // Click button "Overview"
+//     await page.getByRole('tab', { name: 'Overview' }).click();
+// }, { action: "click", relativeXpath: ".//div/div[2]/nav[@aria-label=\"Admin section tabs\"]/div/div[@aria-label=\"Analytics\"]/button[@aria-label=\"Overview\"]" });
 
 
 
