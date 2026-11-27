@@ -63,10 +63,10 @@ await leapwork.step("Validate that the Feature Flags table contains “show-what
 }, { action: "validate"});
 
 // ai-studio-step-id: cUlWtrfI
-await leapwork.step("Validate the show-whats-new feature flag is Enabled on the Leapwork Play admin page", async () => {
+await leapwork.step("Validate the show-whats-new feature flag status is \"Enabled\" on Leapwork Play.", async () => {
     // Assert span contains "Enabled"
-    await expect(page.locator('tr:nth-child(10) > td:nth-child(2) > .admin-status-pill')).toContainText("Enabled");
-}, { action: "validate" });
+    await expect(page.locator('tr:nth-child(11) > td:nth-child(2) > .admin-status-pill')).toContainText("Enabled");
+}, { action: "validate"});
 
 
 // ai-studio-step-id: pwmy1ofp00
@@ -93,3 +93,12 @@ await leapwork.step("Click the What's new button in the Leapwork Play header", a
 //     const lw_value = (await page.locator('tr:nth-child(10) > td:nth-child(2) > .admin-status-pill').textContent())?.trim() ?? '';
 //     leapwork.variables.set("lw_enabled", lw_value, leapwork.storage.LOCAL);
 // }, { action: "get_value", enableXpath: false, relativeXpath: ".//div[2]/table/tbody/tr[10]/td[2]/span" });
+
+
+
+// Warning: Do not delete this step. It is linked to the validate step above.
+// await leapwork.step("Get value from Enabled", async () => {
+//     // Get value from span
+//     const lw_value = (await page.locator('tr:nth-child(11) > td:nth-child(2) > .admin-status-pill').textContent())?.trim() ?? '';
+//     leapwork.variables.set("lw_enabled", lw_value, leapwork.storage.LOCAL);
+// }, { action: "get_value", enableXpath: false, relativeXpath: ".//div[2]/table/tbody/tr[11]/td[2]/span" });
