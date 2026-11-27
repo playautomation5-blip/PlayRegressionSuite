@@ -6,13 +6,14 @@ import { CreateNewAsset } from "@assets/Utilities/Create New Asset";
 import { RandomTeam, teamName } from "@assets/Utilities/random-team";
 import { MicrosoftLogin } from "@assets/Utilities/Microsoft Login";
 import { RenameTeam } from "@assets/Utilities/Rename Team";
+import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
 leapwork.configuration({
   enableSelfHeal: false,
   timeoutMs: 5000
 });
 
-leapwork.variables.set("userId", "user_44");
+leapwork.variables.set("userId", "user_70");
 leapwork.variables.set("teamName", teamName);
 leapwork.variables.set("assetName", "LLM testing");
 leapwork.variables.set("assetType", "New test case");
@@ -23,9 +24,9 @@ leapwork.variables.set("askAnything", "Hi", leapwork.storage.LOCAL);
 const lw__askAnything = leapwork.variables.get("askAnything", leapwork.storage.LOCAL) as string;
 
 
-// ai-studio-step-id: 2d287ba3
-await leapwork.step("Use test case: Microsoft Login", async () => {
-    return await MicrosoftLogin();
+// ai-studio-step-id: pw1qh7j2z0
+await leapwork.step("Use test case: Email Password Login", async () => {
+    return await EmailPasswordLogin();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
 // ai-studio-step-id: cf6c054f
@@ -98,6 +99,9 @@ await leapwork.step("Validate that 'Thinking' appears in the chat on the Leapwor
 
 // ai-studio-step-id: pw1fsif2q0
 await leapwork.step("Validate that the chat message shows 'Hi! How can I help?' on the Leapwork Play page", async () => {
+    
+    await page.waitForTimeout(10000);
+
     const spanText = await page
     .locator('.chat-message-assistant .chat-message-content span')
     .last()
