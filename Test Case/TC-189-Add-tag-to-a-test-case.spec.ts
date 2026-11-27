@@ -75,3 +75,4 @@ await leapwork.step("Use test case: Add Tag", async () => {
 await leapwork.step("Use test case: Delete Team", async () => {
     return await DeleteTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
+
