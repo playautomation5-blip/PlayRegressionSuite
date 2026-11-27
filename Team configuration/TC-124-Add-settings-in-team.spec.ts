@@ -12,6 +12,9 @@ const lw__value4 = leapwork.variables.get("variableKey", leapwork.storage.LOCAL)
 leapwork.variables.set("value", "100000", leapwork.storage.LOCAL);
 const lw__value = leapwork.variables.get("value", leapwork.storage.LOCAL) as string;
 
+leapwork.variables.set("variableKey", "timeoutMs", leapwork.storage.LOCAL);
+const lw__variableKey = leapwork.variables.get("variableKey", leapwork.storage.LOCAL) as string;
+
 leapwork.configuration({
   timeoutMs: Number(
     leapwork.team.settings.get("timeoutMs")
