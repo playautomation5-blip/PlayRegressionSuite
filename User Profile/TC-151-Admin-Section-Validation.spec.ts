@@ -271,10 +271,10 @@ await leapwork.step("Validate on Leapwork AI Studio admin page that the Remote b
 }, { action: "validate" });
 
 // ai-studio-step-id: F3oCsqh8
-await leapwork.step("Click the Overview tab under Analytics", async () => {
+await leapwork.step("Click the Overview tab in the Analytics section of the Admin navigation", async () => {
     // Click button "Overview"
     await page.getByRole('button', { name: 'Overview' }).click();
-}, { action: "click", relativeXpath: ".//div/div[2]/nav[@aria-label=\"Admin section tabs\"]/div/div[@aria-label=\"Analytics\"]/button[@aria-label=\"Overview\"]" });
+}, { action: "click" });
 
 
 
