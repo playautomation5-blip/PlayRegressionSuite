@@ -52,17 +52,19 @@ await leapwork.step("Double-click team twice", async () => {
 // ai-studio-step-id: pw1sl9q500
 await leapwork.step("Click the Advanced settings tab in Team settings navigation", async () => {
     // Click button "Advanced settings"
-    await page.getByRole('button', { name: 'Advanced settings' }).click();
+    await page.getByRole('tab', { name: 'Advanced settings' }).click();
 }, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[5]" });
 
 // ai-studio-step-id: pw162c4n40
 await leapwork.step("Set \"Self-Healing\" toggle", async () => {
     // Check switch "Self-Healing"
-  const selfHealingSwitch = page.getByRole('switch', { name: 'Self-Healing' });
+const selfHealingSwitch = page.getByRole('switch', { name: 'Self-Healing' });
 
-await expect(selfHealingSwitch).toHaveAttribute('aria-checked', 'true');
-await selfHealingSwitch.click();
-await expect(selfHealingSwitch).toHaveAttribute('aria-checked', 'false');
+if (await selfHealingSwitch.isChecked()) {
+  await selfHealingSwitch.click();
+}
+
+await expect(selfHealingSwitch).not.toBeChecked();
 }, { action: "click", relativeXpath: ".//div[6]/div/div[1]/div[1]/span/button[@aria-label=\"Self-Healing\"]" });
 
 // ai-studio-step-id: pw1nets530

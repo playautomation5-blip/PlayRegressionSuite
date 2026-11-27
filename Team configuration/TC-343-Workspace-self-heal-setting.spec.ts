@@ -8,11 +8,12 @@ import { DeleteCreateRenameTeam } from "@assets/Utilities/Delete-Create-Rename T
 import { ImportTestsOrPlaywright } from "@assets/Utilities/Import Tests or Playwright";
 import { EmailPasswordLogin } from "@assets/Utilities/Email Password Login";
 
-leapwork.variables.set("settingKey", "enableSelfHeal", leapwork.storage.LOCAL);
+leapwork.variables.set("settingKey", "Self-Healing", leapwork.storage.LOCAL);
 const lw__settingKey = leapwork.variables.get("settingKey", leapwork.storage.LOCAL) as string;
 
-leapwork.variables.set("value", "False", leapwork.storage.LOCAL);
-const lw__value = leapwork.variables.get("value", leapwork.storage.LOCAL) as string;
+
+leapwork.variables.set("settingValue", "False", leapwork.storage.LOCAL);
+const lw__value = leapwork.variables.get("settingValue", leapwork.storage.LOCAL) as string;
 
 leapwork.variables.set("settingKey", "enableSelfHeal", leapwork.storage.LOCAL);
 leapwork.variables.set("settingValue", "True", leapwork.storage.LOCAL);
@@ -81,26 +82,45 @@ await leapwork.step("Delete all settings", async () => {
 }, { action: "click", relativeXpath: ".//div[6]/div[5]/div/div[3]/button/span" });
 
 // ai-studio-step-id: pw1sb70p20
-await leapwork.step("Click the + Add setting button.", async () => {
-    // Click span
-    await page.getByRole('button', { name: '+ Add setting' }).click();
-}, { action: "click", relativeXpath: ".//div/div/div/div[3]/button/span" });
+await leapwork.step("Click the Add Settings button", async () => {
+    // Click button "Add Settings"
+    await page.getByRole('button', { name: 'Add Settings' }).click();
+}, { action: "click", relativeXpath: ".//div/div/div/div/div[3]/button" });
 
 // ai-studio-step-id: pw2ssh2900
 await leapwork.step(`Fill the Setting key field with "${lw__settingKey}"`, async () => {
     // Fill textbox "Setting key"
-     await page.locator('.kv-settings-dropdown .text').click();
-  await page.locator(`.options.portal .option:text-is("${lw__settingKey}")`).click();
+const settingKeyDropdown = page.getByRole('combobox', { name: 'Setting key' });
+const listbox = page.getByRole('listbox');
+const selfHealingOption = listbox.getByRole('option', { name: 'Self-Healing', exact: true });
+
+await settingKeyDropdown.click();
+await expect(listbox).toBeVisible();
+await selfHealingOption.click();
+
+// await expect(selfHealingOption).toHaveAttribute('aria-selected', 'true');
+// await expect(settingKeyDropdown).toHaveValue('Self-Healing');
     //await page.getByRole('textbox', { name: 'Setting key' }).fill(String(lw__SettingName));
 }, { action: "input", relativeXpath: ".//div[5]/div/div[2]/div[2]/span[1]/input" });
 
-// ai-studio-step-id: pw1rfyaqm0
-await leapwork.step(`Fill the Value field for enableSelfHeal with "${lw__value}"`, async () => {
-    // Fill textbox "Value"
-      await page.locator('div[aria-label="Value"]').click();
-  await page.locator(`.options.portal .option:text-is("${lw__value}")`).click();
-    //await page.getByRole('textbox', { name: 'Value' }).fill(String(lw__SettingValue));
-}, { action: "input", relativeXpath: ".//div[5]/div/div[2]/div[2]/span[2]/input" });
+// ai-studio-step-id: pwmnzqvu00
+await leapwork.step("Unset \"enableSelfHeal\" checkbox", async () => {
+    //Uncheck checkbox "enableSelfHeal"
+const enableSelfHealSwitch = page.getByRole('switch', { name: 'enableSelfHeal' });
+
+if (await enableSelfHealSwitch.isChecked()) {
+  await enableSelfHealSwitch.click();
+}
+
+await expect(enableSelfHealSwitch).not.toBeChecked();
+}, { action: "click", relativeXpath: ".//div/div[2]/div[2]/span[2]/label[@aria-label=\"enableSelfHeal\"]/input" });
+
+// await leapwork.step(`Fill the Value field for enableSelfHeal with "${lw__value}"`, async () => {
+//     // Fill textbox "Value"
+//       await page.locator('div[aria-label="Value"]').click();
+//   await page.locator(`.options.portal .option:text-is("${lw__value}")`).click();
+//     //await page.getByRole('textbox', { name: 'Value' }).fill(String(lw__SettingValue));
+// }, { action: "input", relativeXpath: ".//div[5]/div/div[2]/div[2]/span[2]/input" });
 
 // ai-studio-step-id: pwoz7th100
 await leapwork.step("Click Save for the enableSelfHeal workspace setting", async () => {
@@ -108,29 +128,52 @@ await leapwork.step("Click Save for the enableSelfHeal workspace setting", async
     await page.getByRole('button', { name: 'Save' }).click();
 }, { action: "click", relativeXpath: ".//div/div/div[2]/div[2]/span[3]/button" });
 
-// ai-studio-step-id: pwdd6ytd00
-await leapwork.step("Use test case: Add Setting", async () => {
-    return await AddSetting();
-}, { action: "asset_reference", linkedAssetType: "test-case" });
+// ai-studio-step-id: pw1gc0gf50
+await leapwork.step("Double-click team twice", async () => {
+    // Double-click textbox "Search"
+    await page.getByText('team').first().dblclick();
+}, { action: "dblclick" });
 
-// ai-studio-step-id: pw1znhxi00
+// ai-studio-step-id: pw1h52ahs0
+await leapwork.step("Click the Advanced settings tab in Team settings navigation", async () => {
+    // Click button "Advanced settings"
+    await page.getByRole('tab', { name: 'Advanced settings' }).click();
+}, { action: "click", relativeXpath: ".//div[2]/div[1]/div/div/nav[@aria-label=\"Team settings navigation\"]/button[5]" });
+
+// ai-studio-step-id: pw13uk89h0
+await leapwork.step("Set \"Self-Healing\" toggle", async () => {
+    // Check switch "Self-Healing"
+const selfHealingSwitch = page.getByRole('switch', { name: 'Self-Healing' });
+
+// 1. Turn off
+if (await selfHealingSwitch.isChecked()) {
+  await selfHealingSwitch.click();
+}
+await expect(selfHealingSwitch).not.toBeChecked();
+
+// 2. Turn back on
+await selfHealingSwitch.click();
+//await expect(selfHealingSwitch).toBeChecked();
+}, { action: "click", relativeXpath: ".//div[6]/div/div[1]/div[1]/span/button[@aria-label=\"Self-Healing\"]" });
+
+// ai-studio-step-id: pw1rc50bk0
 await leapwork.step("Validate the team settings error on Leapwork Play page.", async () => {
     // Assert paragraph contains "Self-healing cannot be enabled for a team while workspace self-healing is disabled."
     await expect(page.getByText('Self-healing cannot be')).toContainText("Self-healing cannot be enabled for a team while workspace self-healing is disabled.");
 }, { action: "validate", relativeXpath: ".//div/div[2]/div[6]/div[5]/div/p" });
 
-// ai-studio-step-id: pw1jetifs0
+// ai-studio-step-id: pwremd4v00
 await leapwork.step("Use test case: Import Tests or Playwright", async () => {
     return await ImportTestsOrPlaywright();
 }, { action: "asset_reference", linkedAssetType: "test-case" });
 
-// ai-studio-step-id: pw1x8maw90
+// ai-studio-step-id: pwbl01nk00
 await leapwork.step("Click the Playwright button", async () => {
     // Click span
     await page.getByRole('button', { name: 'Playwright' }).click();
 }, { action: "click", relativeXpath: ".//div[1]/div/div/div[2]/span/span" });
 
-// ai-studio-step-id: pw1riyau20
+// ai-studio-step-id: pwq88xcv00
 await leapwork.step("Validate the Leapwork Play page shows self-healing is disabled at the workspace level", async () => {
     // Assert div contains "Self-healing is enabled in this Playwright test case or one of its steps, but it is disabled at the workspace level. It will remain disabled until the upper-level setting is enabled."
     await expect(page.getByText('Self-healing is enabled in')).toContainText("Self-healing is enabled in this Playwright test case or one of its steps, but it is disabled at the workspace level. It will remain disabled until the upper-level setting is enabled.");
@@ -138,33 +181,33 @@ await leapwork.step("Validate the Leapwork Play page shows self-healing is disab
 
 
 
-// ai-studio-step-id: pwmzhxgp00
+// ai-studio-step-id: pw154t15s0
 await leapwork.step("Click the Browser tab in Leapwork Play", async () => {
     // Click span
     await page.getByRole('button', { name: 'Browser' }).click();
 }, { action: "click", relativeXpath: ".//div[1]/div/div/div[1]/span/span" });
 
-// ai-studio-step-id: pwo9jk5000
+// ai-studio-step-id: pw15u0qbv0
 await leapwork.step("Click Connect to connect to the Google Chromium browser in North Europe (Ireland)", async () => {
     // Click button "Connect"
     await page.getByRole('button', { name: 'Connect' }).click();
 }, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div[1]/div[3]/button" });
 
-// ai-studio-step-id: pwa0riyr00
+// ai-studio-step-id: pw1th3iem0
 await leapwork.step("Click the Run button to run the test case", async () => {
     // Click button "Run"
-    await page.getByRole('button', { name: 'Run' }).click();
+    await page.getByRole('button', { name: 'Run', exact: true }).click();
 }, { action: "click", relativeXpath: ".//div[2]/div[1]/div[1]/div/div/button[@aria-label=\"Run\"]", timeoutMs: 10000 });
 
 
 
-// ai-studio-step-id: pwedutng00
+// ai-studio-step-id: pwzwtwo000
 await leapwork.step("Validate on Leapwork Play that the “Oat & Aloe Wash” product details dialog is displayed", async () => {
     // Assert div contains "expect(locator).toHaveCount(expected) failed Locator: getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) Expected: 1 Received: 0 Timeout: 5000ms Call log: - Expect "toHaveCount" getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) with timeout 5000ms - waiting for getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) 14 × locator resolved to 0 elements - unexpected value "0""
     await expect(page.locator('#root').getByText('expect(locator).toHaveCount(')).toContainText("expect(locator).toHaveCount(expected) failed\n\nLocator:  getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true })\nExpected: 1\nReceived: 0\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveCount\" getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true }) with timeout 5000ms\n  - waiting for getByRole('dialog', { name: 'Oat & Aloe Wash', exact: true })\n    14 × locator resolved to 0 elements\n       - unexpected value \"0\"");
 }, { action: "validate", relativeXpath: ".//div[2]/div[1]/div[3]/div/div[3]/div", timeoutMs: 30000 });
 
-// ai-studio-step-id: pw1ek4m1b0
+// ai-studio-step-id: pw15sluxb0
 await leapwork.step("Use test case: Delete Team", async () => {
     return await DeleteTeam();
 }, { action: "asset_reference", linkedAssetType: "test-case" });

@@ -185,11 +185,11 @@ await leapwork.step("Validate the recipientName variable shows \"Receipient name
     await expect(page.getByText('Receipient name')).toContainText("Receipient name updated");
 }, { action: "validate", relativeXpath: ".//div[3]/div/div/div[3]/div[2]/span[2]" });
 
-// ai-studio-step-id: pw1ug7lc30
-await leapwork.step("Click \"+ Add variable\" in the Team Variables section", async () => {
-    // Click span
-    await page.getByRole('button', { name: '+ Add variable' }).click();
-}, { action: "click", relativeXpath: ".//div[3]/div/div/div[1]/button/span" });
+// ai-studio-step-id: pwcyubkm00
+await leapwork.step("Click the Add variable button in Team Variables.", async () => {
+    // Click button "Add variable"
+    await page.getByRole('button', { name: 'Add variable' }).click();
+}, { action: "click", relativeXpath: ".//div/div[2]/div/div/div[4]/button" });
 
 // ai-studio-step-id: pw1jhuxy80
 await leapwork.step(`Fill the Variable key field with "${lw__variableKey}"`, async () => {
@@ -232,4 +232,3 @@ await leapwork.step("Click Delete to remove the variable.", async () => {
     // Click button "Delete"
     await page.getByRole('button', { name: 'Delete' }).click();
 }, { action: "click", relativeXpath: ".//div/div/div[4]/div/div/button[2]" });
-
